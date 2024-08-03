@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -14,6 +16,7 @@
     "vite-plugin-inspect": "^0.8.5"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
     "swiper": "^11.1.9",
