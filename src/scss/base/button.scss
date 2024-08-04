@@ -1,0 +1,73 @@
+@import "../global/vars";
+
+.green_button {
+    padding: 13px 36px;
+    color: $backgroundColor;
+    background: $mainGreen;
+    font-weight: 700;
+    border: 2px solid $mainGreen;
+
+    &:hover {
+        color: $mainGreen;
+        background: transparent;
+    }
+}
+
+.transparent_button {
+    padding: 13px 36px;
+    color: $mainGreen;
+    font-weight: 700;
+    border: 2px solid $mainGreen;
+
+    &:hover {
+        color: $backgroundColor;
+        background: $mainGreen;
+    }
+}
+
+.play_button {
+    border-radius: 100%;
+    padding: 18px 18px 18px 20px;
+    width: 61px;
+    height: 61px;
+    border: solid 2px $textColor;
+    transition:
+        fill,
+        border,
+        background-color 0.5s ease-in-out;
+
+    &_svg {
+        fill: $textColor;
+        width: 12px;
+        height: 20px;
+        transition: fill 0.5s ease-in-out;
+    }
+
+    &:hover {
+        border: solid 2px $mainGreen;
+        background: $mainGreen;
+
+        .play_button_svg {
+            fill: $backgroundColor;
+        }
+    }
+}
+
+.search_button {
+    padding: 12px;
+    border-radius: 100%;
+    background: $subGreat;
+    width: 45px;
+    height: 45px;
+    transition: background-color 0.5s ease-in-out;
+
+    &_svg {
+        width: 18px;
+        height: 18px;
+        fill: $backgroundColor;
+    }
+
+    &:hover {
+        background: $mainGreen;
+    }
+}

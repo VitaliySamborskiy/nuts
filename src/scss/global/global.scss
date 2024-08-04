@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $backgroundColor;
+    font-family: $mainFont;
+}
+
+p {
+    color: $textColor;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $mainFont;
+    font-weight: 800;
+    color: $textColor;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 45px;
+}
+
+h1 {
+    font-size: 62px;
+}
+
+a {
+    font-size: 22px;
+    color: $textColor;
+    font-family: $mainFont;
+    font-weight: 500;
+}
+
+ul,
+ol {
+    color: $textColor;
+}
+
+button {
+    font-family: $mainFont;
+    letter-spacing: 0.02em;
+    transition:
+        color,
+        background-color 0.5s ease-in-out;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 1290px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include breakpoints(xl) {
+        padding: 0 20px;
+    }
+
+    @include breakpoints(sm) {
+        padding: 0 15px;
+    }
+}

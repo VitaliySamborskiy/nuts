@@ -1,13 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="stylesheet" href="src/scss/main.scss" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <load src="src/components/base/header.html" />
+        <load
+            src="src/components/base/button.html"
+            class_button="green_button"
+            class_button_text="nvcn"
+            component_class=""
+            button_text="Купить"
+            svg=""
+        />
+        <load
+            src="src/components/base/button.html"
+            class_button="transparent_button"
+            component_class=""
+            class_button_text="nvcn"
+            button_text="Купить"
+            svg=""
+        />
+        <!--        <load-->
+        <!--            src="src/components/base/button.html"-->
+        <!--            class_button="play_button"-->
+        <!--            component_class=""-->
+        <!--            class_button_text="nvcn"-->
+        <!--            button_text=""-->
+        <!--            svg="<svg class=play_button_svg><use href=#play></use></svg>"-->
+        <!--        />-->
+        <!--        <load-->
+        <!--            src="src/components/base/button.html"-->
+        <!--            class_button="search_button"-->
+        <!--            component_class=""-->
+        <!--            class_button_text=""-->
+        <!--            button_text=""-->
+        <!--            svg="<svg class=search_button_svg><use href=#search></use></svg>"-->
+        <!--        />-->
+
+        <load src="src/components/base/sprite.html" />
+        <script type="module" src="/main.js"></script>
+    </body>
 </html>
