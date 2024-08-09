@@ -1,11 +1,7 @@
-<div class="select">
-    <div class="select__header">
-        <span class="select__current">Ru</span>
-        <svg class="select__svg"><use href="#arrow_down"></use></svg>
+<div class="select {=$select_support_class}">
+    <div class="select__header {=$header_support_class}">
+        <span class="select__current">{=$current_selector}</span>
+        <svg class="select__svg {=$svg_select}"><use href="#arrow_down"></use></svg>
     </div>
-    <div class="select__body">
-        <div class="select__item">UA</div>
-        <div class="select__item">EN</div>
-        <div class="select__item">Ru</div>
-    </div>
+    <div class="select__body {=$body_support_class}">{=$body_selector}</div>
 </div>

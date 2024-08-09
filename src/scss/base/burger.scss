@@ -1,0 +1,158 @@
+.burger {
+    display: none;
+
+    @include breakpoints(sm) {
+        display: block;
+    }
+
+    &__icon {
+        cursor: pointer;
+
+        &-svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: -400px;
+        left: 0;
+        width: 100%;
+        background: $backgroundColor;
+        z-index: 2;
+        transition: top 0.5s ease-in-out;
+        max-height: 400px;
+        height: 100vh;
+    }
+
+    &__background_active {
+        top: 0;
+    }
+
+    &__scroll {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__top-block {
+        width: 99.5%;
+        padding: 12px 10px 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-img {
+        width: 35px;
+    }
+
+    &__logo-text {
+        margin: 3px 0 0 7px;
+        font-weight: 800;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        width: 100px;
+    }
+
+    &__gray-block {
+        padding: 12px 10px 10px;
+        background: $headerTopBackground;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__authentication {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+    }
+
+    &__entrance {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        padding: 1px;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        border-radius: 100%;
+    }
+
+    &__text-entrance {
+        font-size: 14px;
+        letter-spacing: 0.02em;
+    }
+
+    &__registration {
+        font-size: 14px;
+        letter-spacing: 0.02em;
+    }
+
+    &__links {
+        margin-top: 0px;
+    }
+
+    &__links-communication {
+        display: flex;
+        padding-left: 16px;
+        gap: 23px;
+    }
+
+    &__link {
+        cursor: pointer;
+
+        &:hover {
+            .burger__svg {
+                fill: $subGreat;
+            }
+        }
+    }
+
+    &__link-section {
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        padding: 16px 11px 12px;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &::after {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: $listBorder;
+            width: 95%;
+            height: 1px;
+            margin: 0 10px 0 10px;
+        }
+    }
+
+    &__svg {
+        fill: $headerSvg;
+        width: 15px;
+        height: 15px;
+        transition: fill 0.5s ease-in-out;
+    }
+
+    &__menu {
+    }
+}

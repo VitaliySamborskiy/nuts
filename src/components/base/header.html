@@ -1,27 +1,221 @@
 <header>
-    <div>
-        <ul>
-            <li>
-                <a
-                    ><svg><use></use></svg
-                ></a>
-            </li>
-            <li>
-                <a
-                    ><svg><use></use></svg
-                ></a>
-            </li>
-            <li>
-                <a
-                    ><svg><use></use></svg
-                ></a>
-            </li>
-        </ul>
-        <p>Ваша персональная скидка - 5%</p>
-        <div>
-            <a><img src="" /><span>Вход</span></a>
-            <a>Регистрация</a>
-            <load src="src/components/base/select.html" />
+    <div class="header">
+        <div class="header__top">
+            <div class="header__container">
+                <div class="header__top-block">
+                    <ul class="header__top-links">
+                        <li class="header__top-link">
+                            <a href="#"
+                                ><svg class="header__top-svg"><use href="#facebook"></use></svg
+                            ></a>
+                        </li>
+                        <li class="header__top-link">
+                            <a href="#"
+                                ><svg class="header__top-svg"><use href="#instagram"></use></svg
+                            ></a>
+                        </li>
+                        <li class="header__top-link">
+                            <a href="#"
+                                ><svg class="header__top-svg"><use href="#youtube"></use></svg
+                            ></a>
+                        </li>
+                    </ul>
+                    <div class="header__top-authentication-block">
+                        <a
+                            class="header__top-mobile-phone header__center-phone"
+                            href="tel:+38 (044) 750-50-11"
+                            ><svg class="header__top-mobile-phone-svg">
+                                <use href="#phone"></use></svg
+                            ><span class="header__center-green">+38 (044)</span> 750-50-11</a
+                        >
+                        <load
+                            src="src/components/base/button.html"
+                            class_button="header__top-mobile-order"
+                            class_button_text=""
+                            component_class=""
+                            button_text="Заказать звонок"
+                            svg=""
+                        />
+                        <p class="header__top-personal">Ваша персональная скидка - 5%</p>
+                        <div class="header__top-authentication">
+                            <a class="header__top-entrance" href="#">
+                                <img class="header__top-img" src="" />
+                                <span class="header__top-text-entrance">Вход</span></a
+                            >
+                            <a class="header__top-registration" href="#">Регистрация</a>
+                            <load
+                                src="src/components/base/select.html"
+                                body_selector="<div class='select__item header__select-item'>UA</div>
+                                <div class='select__item header__select-item'>EN</div>
+                                <div class='select__item header__select-item'>Ru</div>"
+                                current_selector="Ru"
+                                select_support_class="header__select"
+                                header_support_class="header__select-header"
+                                body_support_class="header__select-body"
+                                svg_select=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__container">
+            <div class="header__center">
+                <div class="burger">
+                    <div class="burger__icon">
+                        <svg class="burger__icon-svg">
+                            <use href="#burger-menu"></use>
+                        </svg>
+                    </div>
+                    <div class="burger__background">
+                        <div class="burger__scroll">
+                            <div class="burger__top-block">
+                                <a class="burger__link-logo" href="#"
+                                    ><img class="burger__logo-img" src="" /><span
+                                        class="burger__logo-text"
+                                        >ОРЕХ ПРИЧЕРНОМОРЬЯ</span
+                                    ></a
+                                >
+                                <div class="burger__close burger__link">
+                                    <svg class="burger__svg">
+                                        <use href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="burger__gray-block">
+                                <div class="burger__authentication">
+                                    <a class="burger__entrance" href="#">
+                                        <img class="burger__img" src="" />
+                                        <span class="burger__text-entrance">Вход</span></a
+                                    >
+                                    <a class="burger__registration" href="#">Регистрация</a>
+                                </div>
+                                <ul class="burger__links-communication">
+                                    <li class="burger__link">
+                                        <a href="#"
+                                            ><svg class="burger__svg">
+                                                <use href="#facebook"></use></svg
+                                        ></a>
+                                    </li>
+                                    <li class="burger__link">
+                                        <a href="#"
+                                            ><svg class="burger__svg">
+                                                <use href="#instagram"></use></svg
+                                        ></a>
+                                    </li>
+                                    <li class="burger__link">
+                                        <a href="#"
+                                            ><svg class="burger__svg">
+                                                <use href="#youtube"></use></svg
+                                        ></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="burger__menu">
+                                <ul class="burger__links">
+                                    <li>
+                                        <a class="burger__link-section select__item" href="#"
+                                            >Магазин</a
+                                        >
+                                    </li>
+                                    <li class="burger__button">
+                                        <a class="burger__link-section select__item" href="#"
+                                            >О производстве
+                                        </a>
+                                    </li>
+                                    <li class="burger__button">
+                                        <a class="burger__link-section select__item" href="#"
+                                            >Оплата и доставка</a
+                                        >
+                                    </li>
+                                    <li class="burger__button">
+                                        <a class="burger__link-section select__item" href="#"
+                                            >Оптовым и корпоративным клиентам</a
+                                        >
+                                    </li>
+                                    <li class="burger__button">
+                                        <a class="burger__link-section select__item" href="#"
+                                            >Новости и статьи</a
+                                        >
+                                    </li>
+                                    <li class="burger__button">
+                                        <a class="burger__link-section select__item" href="#"
+                                            >Контакты</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="header__center-link" href="#"
+                    ><img class="header__center-logo" src="" /><span
+                        class="header__center-logo-text"
+                        >ОРЕХ ПРИЧЕРНОМОРЬЯ</span
+                    ></a
+                >
+                <div class="header__center-block">
+                    <div class="header__center-communication">
+                        <ul class="header__center-buttons">
+                            <li>
+                                <a href="#" class="header__center-button"
+                                    ><svg class="header__center-button-svg">
+                                        <use href="#viber"></use></svg
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#" class="header__center-button"
+                                    ><svg class="header__center-button-svg">
+                                        <use href="#whatsApp"></use></svg
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#" class="header__center-button"
+                                    ><svg class="header__center-button-svg">
+                                        <use href="#telegram"></use></svg
+                                ></a>
+                            </li>
+                        </ul>
+                        <div class="header__center-phones">
+                            <a class="header__center-phone" href="tel:+38 (044) 750-50-11"
+                                ><span class="header__center-green">+38 (044)</span> 750-50-11</a
+                            >
+                            <a class="header__center-phone" href="tel:+38 (097) 775-50-51"
+                                ><span class="header__center-green">+38 (097)</span> 775-50-51</a
+                            >
+                        </div>
+                    </div>
+                    <div class="header__center-order">
+                        <load
+                            src="src/components/base/button.html"
+                            class_button="green-button header__center-button-order"
+                            class_button_text="nvcn"
+                            component_class=""
+                            button_text="Заказать звонок"
+                            svg=""
+                        />
+                        <p class="header__center-text">Ждем Вашего звонка ежедневно с 9 до 18</p>
+                    </div>
+                    <div class="header__center-basket">
+                        <svg class="header__center-svg"><use href="#basket"></use></svg
+                        ><span class="header__center-counter">O</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom-line"></div>
+        <p class="header__mobile-discount">Ваша персональная скидка - 5%</p>
+        <div class="header__container">
+            <ul class="header__button-links">
+                <li><a class="header__bottom-link" href="#">Магазин</a></li>
+                <li><a class="header__bottom-link" href="#">О производстве </a></li>
+                <li><a class="header__bottom-link" href="#">Оплата и доставка</a></li>
+                <li>
+                    <a class="header__bottom-link" href="#">Оптовым и корпоративным клиентам</a>
+                </li>
+                <li><a class="header__bottom-link" href="#">Новости и статьи</a></li>
+                <li><a class="header__bottom-link" href="#">Контакты</a></li>
+            </ul>
         </div>
     </div>
 </header>

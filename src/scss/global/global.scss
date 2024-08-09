@@ -68,7 +68,7 @@ button {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    //overflow: hidden;
 }
 
 .main {
@@ -76,16 +76,15 @@ button {
 }
 
 [class*="__container"] {
-    max-width: 1290px;
+    max-width: 1320px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
 
     @include breakpoints(xl) {
         padding: 0 20px;
     }
 
     @include breakpoints(sm) {
-        padding: 0 15px;
+        padding: 0 12px;
     }
 }

@@ -1,0 +1,60 @@
+.homepage {
+    &__text-block {
+        margin: 197px 0;
+
+        @include breakpoints(md) {
+            margin: 140px 0;
+        }
+
+        @include breakpoints(sm) {
+            margin: 100px 0;
+        }
+    }
+
+    &__margin-play {
+        margin-top: 10px;
+    }
+
+    &__block-img {
+        height: 600px;
+
+        @include breakpoints(md) {
+            height: 500px;
+        }
+
+        @include breakpoints(sm) {
+            height: 400px;
+        }
+    }
+
+    &__img {
+    }
+
+    &__text-block {
+        gap: 15px;
+    }
+
+    &__title {
+        @include breakpoints(md) {
+            font-size: 44px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 0 auto;
+            width: 80%;
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        @include breakpoints(md) {
+            width: 60%;
+            font-size: 18px;
+        }
+
+        @include breakpoints(sm) {
+            width: 90%;
+            font-size: 14px;
+        }
+    }
+}

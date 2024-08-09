@@ -3,36 +3,45 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="icon" type="image/svg+xml" href="src/assets/img/logo-1.svg" />
         <link rel="stylesheet" href="src/scss/main.scss" />
-        <title>Vite App</title>
+        <title>ОРЕХ ПРИЧЕРНОМОРЬЯ</title>
     </head>
     <body>
-        <div id="app"></div>
-        <load src="src/components/base/header.html" />
-        <load
-            src="src/components/base/button.html"
-            class_button="green_button"
-            class_button_text="nvcn"
-            component_class=""
-            button_text="Купить"
-            svg=""
-        />
-        <load
-            src="src/components/base/button.html"
-            class_button="transparent_button"
-            component_class=""
-            class_button_text="nvcn"
-            button_text="Купить"
-            svg=""
-        />
+        <div class="wrapper">
+            <load src="src/components/base/header.html" />
+            <main class="main">
+                <load
+                    src="src/components/base/main-page.html"
+                    main-page-title="Орех Причерноморья"
+                    main-page-text="Единственный в Украине сад совместного
+выращивание фундука и грецкого ореха"
+                    main-page-text-block-class="homepage__text-block"
+                    main-page-class=""
+                    main-page-play-class="homepage__margin-play"
+                    main-page-img-block-class="homepage__block-img"
+                    main-page-img-class="homepage__img"
+                    main-page-title-class="homepage__title"
+                    main-page-text-class="homepage__text"
+                />
+            </main>
+            <load src="src/components/base/sprite.html" />
+        </div>
         <!--        <load-->
         <!--            src="src/components/base/button.html"-->
-        <!--            class_button="play_button"-->
+        <!--            class_button="green_button"-->
+        <!--            class_button_text="nvcn"-->
+        <!--            component_class=""-->
+        <!--            button_text="Купить"-->
+        <!--            svg=""-->
+        <!--        />-->
+        <!--        <load-->
+        <!--            src="src/components/base/button.html"-->
+        <!--            class_button="transparent_button"-->
         <!--            component_class=""-->
         <!--            class_button_text="nvcn"-->
-        <!--            button_text=""-->
-        <!--            svg="<svg class=play_button_svg><use href=#play></use></svg>"-->
+        <!--            button_text="Купить"-->
+        <!--            svg=""-->
         <!--        />-->
         <!--        <load-->
         <!--            src="src/components/base/button.html"-->
@@ -42,8 +51,6 @@
         <!--            button_text=""-->
         <!--            svg="<svg class=search_button_svg><use href=#search></use></svg>"-->
         <!--        />-->
-
-        <load src="src/components/base/sprite.html" />
-        <script type="module" src="/main.js"></script>
+        <script type="module" src="/composableApp.js"></script>
     </body>
 </html>

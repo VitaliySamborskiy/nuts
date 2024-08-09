@@ -39,6 +39,20 @@ $supportFonts: "Montserrat";
 @font-face {
     font-display: swap;
     font-family: $supportFonts;
+    font-weight: 700;
+    src: url("/src/assets/forms/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: $supportFonts;
+    font-weight: 600;
+    src: url("/src/assets/forms/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: $supportFonts;
     font-weight: 500;
     src: url("/src/assets/forms/Montserrat-Medium.woff") format("woff");
 }

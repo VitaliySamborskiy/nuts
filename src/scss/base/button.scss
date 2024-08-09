@@ -1,7 +1,6 @@
 @import "../global/vars";
 
-.green_button {
-    padding: 13px 36px;
+.green-button {
     color: $backgroundColor;
     background: $mainGreen;
     font-weight: 700;
@@ -13,7 +12,7 @@
     }
 }
 
-.transparent_button {
+.transparent-button {
     padding: 13px 36px;
     color: $mainGreen;
     font-weight: 700;
@@ -25,7 +24,7 @@
     }
 }
 
-.play_button {
+.play-button {
     border-radius: 100%;
     padding: 18px 18px 18px 20px;
     width: 61px;
@@ -36,7 +35,7 @@
         border,
         background-color 0.5s ease-in-out;
 
-    &_svg {
+    &-svg {
         fill: $textColor;
         width: 12px;
         height: 20px;
@@ -47,13 +46,13 @@
         border: solid 2px $mainGreen;
         background: $mainGreen;
 
-        .play_button_svg {
+        .play-button-svg {
             fill: $backgroundColor;
         }
     }
 }
 
-.search_button {
+.circle-button {
     padding: 12px;
     border-radius: 100%;
     background: $subGreat;
@@ -61,7 +60,7 @@
     height: 45px;
     transition: background-color 0.5s ease-in-out;
 
-    &_svg {
+    &-svg {
         width: 18px;
         height: 18px;
         fill: $backgroundColor;
@@ -70,4 +69,7 @@
     &:hover {
         background: $mainGreen;
     }
+}
+
+.link {
 }
