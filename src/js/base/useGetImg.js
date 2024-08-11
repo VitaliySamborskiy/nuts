@@ -7,3 +7,12 @@ export function useGetImg(url, element) {
         element.src = res;
     });
 }
+
+export function useGetImgCard(url) {
+    const storage = getStorage();
+    const fileRef = ref(storage, url);
+
+    getDownloadURL(fileRef).then((res) => {
+        return res;
+    });
+}

@@ -75,6 +75,10 @@ button {
     flex: 1 1 auto;
 }
 
+.hidden {
+    display: none;
+}
+
 [class*="__container"] {
     max-width: 1320px;
     width: 100%;
