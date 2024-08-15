@@ -1,0 +1,18 @@
+<section class="main-page {=$main-goal-class}">
+    <div class="main-page__img-block {=$main-goal-img-block-class}">
+        <img class="main-page__img {=$main-goal-img-class}" src="" />
+    </div>
+    <div class="main-page__container {=$main-goal-text-block-class}">
+        <h2 class="main-page__title {=$main-goal-title-class}">{=$main-goal-title}</h2>
+        <a href="#" class="main-page__play-block {=$main-goal-play-class}">
+            <load
+                src="src/components/base/button.html"
+                class_button="play-button main-page__play"
+                component_class=""
+                class_button_text=""
+                button_text="<svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg>"
+            />
+        </a>
+        <p class="main-page__text {=$main-goal-text-class}">{=$main-goal-text}</p>
+    </div>
+</section>

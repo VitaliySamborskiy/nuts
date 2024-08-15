@@ -1,0 +1,249 @@
+.manufacturing {
+    &__background {
+        background: $manufacturingBackground;
+        margin-top: 90px;
+        padding: 100px 0 90px 0;
+
+        @include breakpoints(md) {
+            padding: 80px 0;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 45px;
+            padding: 45px 0;
+        }
+
+        @include breakpoints(xs) {
+            padding: 30px 0;
+        }
+    }
+
+    &__content {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 99%;
+        gap: 25px;
+
+        @include breakpoints(xl) {
+            width: 96%;
+        }
+
+        @include breakpoints(md) {
+            width: 75%;
+            flex-direction: column;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+            gap: 20px;
+        }
+    }
+
+    &__text-block {
+        margin: 29px 0 0 17px;
+        width: 40%;
+
+        @include breakpoints(xl) {
+            width: 43%;
+            margin: 0;
+        }
+
+        @include breakpoints(md) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        font-size: 45px;
+        letter-spacing: 0.02em;
+
+        @include breakpoints(md) {
+            text-align: center;
+        }
+
+        @include breakpoints(sm) {
+            font-size: 30px;
+        }
+    }
+
+    &__text-first {
+        width: 88%;
+        margin-top: 43px;
+        line-height: 1.6;
+
+        @include breakpoints(xl) {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        @include breakpoints(md) {
+            text-align: center;
+        }
+    }
+
+    &__text-green {
+        font-weight: 600;
+    }
+
+    &__text-second {
+        margin-top: 25px;
+        line-height: 1.6;
+
+        @include breakpoints(md) {
+            text-align: center;
+        }
+    }
+
+    &__text-first,
+    &__text-second {
+        @include breakpoints(sm) {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+
+    &__text-button {
+        margin-top: 43px;
+        font-size: 14px;
+        padding: 17px 43px;
+
+        @include breakpoints(xl) {
+            margin-top: 28px;
+        }
+
+        @include breakpoints(md) {
+            margin: 28px auto 0;
+        }
+
+        @include breakpoints(sm) {
+            margin: 20px auto 0;
+            padding: 13px 45px;
+        }
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+        width: 700px;
+        aspect-ratio: 16/10.8;
+
+        @include breakpoints(md) {
+            margin: 0 auto;
+            width: 85%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__slide {
+        overflow: hidden;
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 73px;
+        height: 73px;
+        padding: 5px 0 0 5px;
+        //background: $subGreat;
+        border: 2px solid $subGreat;
+        //opacity: 0;
+    }
+
+    &__play-svg {
+        width: 25px;
+        height: 25px;
+        fill: $backgroundColor;
+    }
+
+    &__player {
+        width: 700px;
+        background: $gray;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        width: 124px;
+        position: absolute;
+        left: 8px;
+        bottom: -8px;
+        z-index: 2;
+
+        @include breakpoints(md) {
+            width: 100px;
+        }
+
+        @include breakpoints(xs) {
+            left: 5px;
+            width: 90px;
+        }
+    }
+
+    &__button-prev,
+    &__button-next {
+        padding: 24px 19px;
+        background: $mainGreen;
+        cursor: pointer;
+
+        @include breakpoints(md) {
+            padding: 18px 13px;
+        }
+
+        @include breakpoints(xs) {
+            padding: 15px 13px;
+        }
+
+        &:hover {
+            .manufacturing__svg-prev,
+            .manufacturing__svg-next {
+                fill: $backgroundColor;
+            }
+        }
+    }
+
+    &__svg-prev,
+    &__svg-next {
+        width: 16px;
+        height: 18px;
+        fill: $manufacturingButtonArrow;
+        transition: fill 0.5s ease-in-out;
+    }
+
+    &__button-next {
+        transform: rotate(270deg);
+    }
+
+    &__button-prev {
+        transform: rotate(90deg);
+    }
+
+    &__svg-next {
+    }
+
+    &__youtube-container {
+        background: $manufacturingBackground;
+        overflow: hidden;
+        width: 100%;
+        //padding: 40px 0;
+        /* Keep it the right aspect-ratio */
+        aspect-ratio: 16/10.8;
+        /* No clicking/hover effects */
+        //pointer-events: none;
+
+        iframe {
+            /* Extend it beyond the viewport... */
+            width: 300%;
+            height: 100%;
+            /* ...and bring it back again */
+            margin-left: -100%;
+        }
+    }
+}

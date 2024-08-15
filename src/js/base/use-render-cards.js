@@ -2,59 +2,35 @@ import { useGetImg } from "./useGetImg.js";
 
 export function useRenderCards(arrData, element) {
     let fragment = document.createDocumentFragment();
+    let swiperArr = [];
+
     if (arrData.length === 0) {
         return (element.innerHTML = `<p>Сталася помилка. Або продукція відсутня</p>`);
     }
 
-    arrData.forEach(async (data) => {
+    for (let data of arrData) {
         let html = "";
-        let flag = "";
-        let prise = "";
+        let img = "";
 
-        if (data.action || data.newProduct) {
-            flag = `<div class="product__card-flag ${data.action ? "product__card-flag-discount" : "product__card-flag-new"}">
-                <p class="product__card-flag-text">${data.action ? "АКЦИЯ" : "НОВИНКА"}</p>
-            </div>`;
-        } else {
-            flag = null;
-        }
+        data.imgUrl.forEach(() => {
+            img += `<div class="swiper-slide"><img class="product__slide" src="" /></div>`;
+        });
 
-        if (data.priсe && data.cationPrice) {
-            prise = `<p class="product__card-bottom-price-discount product__card-bottom-price-green">
-                        ${data.cationPrice}
-                        <span>грн.</span>
-                    </p>
-                    <p class="product__card-bottom-price-regular product__card-bottom-price-gray">
-                        ${data.priсe}
-                        <span>грн.</span>
-                    </p>`;
-        } else {
-            prise = `
-                    <p class="product__card-bottom-price-regular product__card-bottom-price-green">
-                        ${data.priсe}
-                        <span>грн.</span>
-                    </p>`;
-        }
-
-        html = `
-            ${flag}  
+        html = `${data.action || data.newProduct ? `<div class ="product__card-flag ${data.action ? 'product__card-flag-discount' :
+            'product__card-flag-new' }">
+                <p class ="product__card-flag-text">${data.action ? "АКЦИЯ" : "НОВИНКА"}</p>
+            </div>` : '' }  
             <a href="#" class="">
                 <div class="product__card-swiper">
                     <div class="product__card-search">
-                        <load
-                            src="src/components/base/button.html"
-                            class_button="circle-button"
-                            class_button_text=""
-                            component_class=""
-                            button_text="<svg class='circle-button-svg'>
-                        <use href='#search'></use></svg>"
-                        />
+                    <button class="circle-button">
+                    <svg class='circle-button-svg'>
+                        <use href='#search'></use></svg>
+                        </button>
                     </div>
                     <div class="swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img class="product__slide-1" src="" /></div>
-                            <div class="swiper-slide"><img class="product__slide-2" src="" /></div>
-                            <div class="swiper-slide"><img class="product__slide-3" src="" /></div>
+                        ${img}
                         </div>
                     </div>
                     <div class="product__card-button-prev">
@@ -95,15 +71,15 @@ export function useRenderCards(arrData, element) {
                     <div class="product__card-bottom">
                         <div class="product__card-bottom-price">
                             <p class="product__card-bottom-price-text">Цена:</p>
-                            ${prise}
+                            ${data.price && data.cationPrice ? `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
+                            ${data.cationPrice}<span>грн.</span></p>
+                            <p class="product__card-bottom-price-discount product__card-bottom-price-gray">
+                            ${data.price}<span>грн.</span></p>` : `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
+                            ${data.price}<span>грн.</span></p>`}
                         </div>
-                        <load
-                            src="src/components/base/button.html"
-                            class_button="green-button product__card-bottom-buy"
-                            class_button_text=""
-                            component_class=""
-                            button_text="Купить"
-                        />
+                        <button class="green-button product__card-bottom-buy">
+                            <span>Купить</span>
+                        </button>
                     </div>
                 </div>
             </a>`;
@@ -112,11 +88,25 @@ export function useRenderCards(arrData, element) {
         cardProduct.classList.add("product__card");
         cardProduct.setAttribute("data-arc", data.art);
         cardProduct.innerHTML = html;
-        useGetImg(data.imgUrl, cardProduct.querySelector(".product__slide-1"));
-        useGetImg(data.imgUrl, cardProduct.querySelector(".product__slide-2"));
-        useGetImg(data.imgUrl, cardProduct.querySelector(".product__slide-3"));
+
+        swiperArr.push({
+            swiper: cardProduct.querySelector(`.swiper`),
+            next: cardProduct.querySelector(`.product__card-button-next`),
+            prev: cardProduct.querySelector(`.product__card-button-prev`),
+        });
+
+
+        for (let i = 0; i < data.imgUrl.length; ++i) {
+            const imgElement = cardProduct.querySelectorAll(`.product__slide`);
+            let index = 0
+            imgElement.forEach(element => {
+                useGetImg(data.imgUrl[index++], element);
+            })
+        }
+
         fragment.append(cardProduct);
-    });
+    }
 
     element.append(fragment);
+    return swiperArr;
 }

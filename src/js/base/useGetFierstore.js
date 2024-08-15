@@ -1,6 +1,7 @@
-import { getFirestore, doc, getDocs, setDoc, collection } from "firebase/firestore";
+import { getFirestore, doc, getDocs, getDoc, setDoc, collection } from "firebase/firestore";
 
 export async function useSetProduct(app, documentId, data) {
+    const db = getFirestore(app);
     const productsRef = collection(db, "products");
     await setDoc(doc(productsRef, documentId), {
         action: data.action,
@@ -14,19 +15,31 @@ export async function useSetProduct(app, documentId, data) {
         newProduct: data.newProduct,
         nutsType: data.nutsType,
         packaging: data.packaging,
-        priсe: data.priсe,
+        price: data.price,
         text: data.text,
         title: data.title,
         weight: data.weight,
     });
 }
 
-export async function useGetFirestore(app, collectionName) {
+export async function useGetFirestore(app, collectionName, documentId = null) {
     const db = getFirestore(app);
-    let data = [];
-    const querySnapshot = await getDocs(collection(db, collectionName));
-    querySnapshot.forEach((doc) => {
-        data.push(doc.data());
-    });
+    let data = documentId ? undefined : [];
+    if (documentId) {
+        const docRef = doc(db, collectionName, documentId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            data = docSnap.data();
+        }
+    } else {
+        const querySnapshot = await getDocs(collection(db, collectionName));
+        querySnapshot.forEach((doc) => {
+            data.push(doc.data());
+        });
+    }
     return data;
 }
+
+// async function getDocument(app, collectionName, documentId) {
+//     const db = getFirestore(app);
+// }

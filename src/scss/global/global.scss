@@ -19,6 +19,7 @@ p {
     font-family: $mainFont;
     font-weight: 500;
     font-size: 16px;
+    letter-spacing: 0.01em;
 }
 
 h1,
@@ -68,7 +69,7 @@ button {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    //overflow: hidden;
+    overflow: hidden;
 }
 
 .main {
@@ -77,6 +78,10 @@ button {
 
 .hidden {
     display: none;
+}
+
+.green {
+    color: $mainGreen;
 }
 
 [class*="__container"] {

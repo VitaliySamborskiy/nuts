@@ -11,10 +11,10 @@
 }
 
 .transparent-button {
-    padding: 13px 36px;
     color: $mainGreen;
     font-weight: 700;
     border: 2px solid $mainGreen;
+    transition: color, background 0.5s ease-in-out;
 
     &:hover {
         color: $backgroundColor;
