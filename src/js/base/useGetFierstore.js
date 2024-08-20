@@ -22,6 +22,17 @@ export async function useSetProduct(app, documentId, data) {
     });
 }
 
+export async function useSetNews(app, documentId, data) {
+    const db = getFirestore(app);
+    const productsRef = collection(db, "news");
+    await setDoc(doc(productsRef, documentId), {
+        date: data.date,
+        mainTitle: data.mainTitle,
+        url: data.url,
+        summary: data.summary,
+    });
+}
+
 export async function useGetFirestore(app, collectionName, documentId = null) {
     const db = getFirestore(app);
     let data = documentId ? undefined : [];
@@ -39,7 +50,3 @@ export async function useGetFirestore(app, collectionName, documentId = null) {
     }
     return data;
 }
-
-// async function getDocument(app, collectionName, documentId) {
-//     const db = getFirestore(app);
-// }

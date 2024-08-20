@@ -1,0 +1,234 @@
+.benefits {
+    &__content {
+        margin: 82px auto 0;
+        width: 99%;
+
+        @include breakpoints(md) {
+            margin: 50px auto 0;
+            width: 80%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        @include breakpoints(md) {
+            font-size: 30px;
+        }
+    }
+
+    &__title-block {
+    }
+
+    &__title-text {
+        margin: 30px auto 0;
+        width: 45%;
+        font-size: 18px;
+        line-height: 152%;
+        letter-spacing: 0.01em;
+        text-align: center;
+
+        @include breakpoints(md) {
+            margin: 15px auto 0;
+            font-size: 14px;
+            width: 65%;
+        }
+
+        @include breakpoints(sm) {
+            width: 80%;
+        }
+
+        @include breakpoints(xs) {
+            width: 100%;
+        }
+    }
+
+    &__cards-block {
+        margin-top: 64px;
+        padding: 0 0 0 18px;
+        display: flex;
+        gap: 28px;
+        text-align: center;
+
+        @include breakpoints(xl) {
+            padding: 0;
+            gap: 19px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+            gap: 10px;
+        }
+
+        @include breakpoints(sm) {
+            grid-template-columns: repeat(auto-fit, minmax(290px, 2fr));
+        }
+    }
+
+    &__card {
+        &-title-block {
+            position: absolute;
+            top: 35%;
+            padding: 0 40px;
+            z-index: 1;
+            transition: top 0.5s ease-in-out;
+
+            @include breakpoints(xl) {
+                top: 30%;
+                padding: 0 30px;
+            }
+
+            @include breakpoints(md) {
+                top: 35%;
+                padding: 0 20px;
+            }
+
+            @include breakpoints(sm) {
+                top: 27%;
+            }
+
+            @include breakpoints(xs) {
+                top: 30%;
+            }
+
+            &:hover {
+                top: 17%;
+
+                @include breakpoints(xl) {
+                    top: 5%;
+                }
+
+                @include breakpoints(md) {
+                    top: 10%;
+                }
+
+                @include breakpoints(xs) {
+                    top: 6%;
+                }
+
+                .benefits__card-background {
+                    opacity: 0.95;
+                }
+
+                .benefits__card-text {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-block {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+
+            @include breakpoints(sm) {
+                height: 330px;
+            }
+        }
+
+        &-block:nth-child(3) {
+            @include breakpoints(md) {
+                margin: 0 auto;
+                height: 350px;
+                grid-column: span 2;
+            }
+
+            @include breakpoints(sm) {
+                grid-column: span 1;
+                height: 330px;
+            }
+        }
+
+        &-img {
+            z-index: -2;
+            width: 100%;
+        }
+
+        &-background {
+            position: absolute;
+            top: -65%;
+            left: 0;
+            height: 80vh;
+            width: 100%;
+            background: $mainGreen;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            z-index: -2;
+
+            @include breakpoints(xl) {
+                top: -40%;
+            }
+
+            @include breakpoints(md) {
+                top: -70%;
+            }
+        }
+
+        &-title {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 40px;
+            color: $backgroundColor;
+
+            @include breakpoints(md) {
+                font-size: 30px;
+            }
+        }
+
+        &-text {
+            margin-top: 20px;
+            color: $backgroundColor;
+            font-size: 18px;
+            line-height: 130%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+            @include breakpoints(md) {
+                font-size: 14px;
+            }
+
+            @include breakpoints(sm) {
+                margin-top: 12px;
+            }
+        }
+    }
+
+    &__svg {
+        &-nuts {
+            margin-top: 5px;
+            width: 77px;
+            height: 77px;
+
+            @include breakpoints(md) {
+                width: 65px;
+                height: 65px;
+            }
+        }
+        &-hazelnut {
+            margin: 14px 0 10px;
+            width: 55px;
+            height: 55px;
+
+            @include breakpoints(md) {
+                width: 43px;
+                height: 43px;
+            }
+        }
+        &-rosehip {
+            margin: 12px 0 10px;
+            width: 60px;
+            height: 60px;
+
+            @include breakpoints(md) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+}

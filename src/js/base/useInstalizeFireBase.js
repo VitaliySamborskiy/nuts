@@ -10,6 +10,5 @@ export function initializeFireBase() {
         appId: "1:989266237693:web:814a4d601b3db0dee74694",
     };
 
-    const app = initializeApp(firebaseConfig);
-    return app;
+    return initializeApp(firebaseConfig);
 }

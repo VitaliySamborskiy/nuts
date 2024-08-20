@@ -1,0 +1,84 @@
+.eco {
+    &__content {
+        margin-top: 98px;
+
+        @include breakpoints(md) {
+            margin-top: 80px;
+        }
+    }
+
+    &__block {
+        padding: 225px 0 0;
+        gap: 25px;
+
+        @include breakpoints(xl) {
+            padding: 160px 0 0;
+        }
+
+        @include breakpoints(md) {
+            padding: 110px 0 0;
+        }
+
+        @include breakpoints(sm) {
+            padding: 90px 0 0;
+        }
+    }
+
+    &__title {
+        margin-top: 17px;
+        font-size: 45px;
+        letter-spacing: 0.01em;
+
+        @include breakpoints(md) {
+            font-size: 30px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 10px;
+        }
+    }
+
+    &__svg {
+        margin: 0 auto;
+        width: 74px;
+        height: 74px;
+
+        @include breakpoints(sm) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 135%;
+        letter-spacing: 0.01em;
+        width: 50%;
+
+        @include breakpoints(md) {
+            font-size: 16px;
+            width: 60%;
+        }
+
+        @include breakpoints(sm) {
+            font-size: 14px;
+            width: 90%;
+        }
+    }
+
+    &__img-block {
+        height: 740px;
+
+        @include breakpoints(xl) {
+            height: 600px;
+        }
+        @include breakpoints(md) {
+            height: 450px;
+        }
+
+        @include breakpoints(sm) {
+            height: 400px;
+        }
+    }
+}

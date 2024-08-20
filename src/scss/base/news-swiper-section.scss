@@ -1,0 +1,283 @@
+.news-swiper {
+    &__content {
+        width: 99%;
+        margin: 85px auto 0;
+        padding-left: 12px;
+        overflow: hidden;
+
+        @include breakpoints(md) {
+            width: 90%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+            overflow: visible;
+        }
+    }
+
+    &__title-block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-block {
+    }
+
+    &__title {
+        @include breakpoints(md) {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 122%;
+        letter-spacing: 0.01em;
+
+        @include breakpoints(md) {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+
+    &__navigation {
+        margin-top: 9px;
+        width: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoints(md) {
+            width: 100px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 0;
+        }
+    }
+
+    &__svg {
+        fill: $manufacturingButtonArrow;
+        width: 20px;
+        height: 25px;
+
+        @include breakpoints(sm) {
+            width: 16px;
+            height: 21px;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        background: $mainGreen;
+        width: 72px;
+
+        @include breakpoints(md) {
+            width: 50px;
+        }
+
+        &:hover {
+            .news-swiper__svg {
+                fill: $backgroundColor;
+            }
+        }
+    }
+
+    &__prev {
+        &-button {
+            padding: 18px 18px 10px 27px;
+
+            @include breakpoints(md) {
+                padding: 10px 12px 7px 15px;
+            }
+
+            @include breakpoints(sm) {
+                padding: 10px 10px 7px 15px;
+            }
+        }
+
+        &-svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__next {
+        &-button {
+            padding: 17px 25px 11px 22px;
+
+            @include breakpoints(md) {
+                padding: 10px 15px 7px 12px;
+            }
+
+            @include breakpoints(sm) {
+                padding: 10px 10px 7px 15px;
+            }
+        }
+
+        &-svg {
+            transform: rotate(270deg);
+        }
+    }
+
+    &__cards {
+        width: 99%;
+        margin: 65px auto 0;
+
+        @include breakpoints(md) {
+            margin: 40px auto 0;
+        }
+
+        @include breakpoints(sm) {
+            margin: 30px auto 0;
+        }
+    }
+
+    &__card {
+        width: 410px;
+
+        @include breakpoints(xl) {
+            width: 100%;
+        }
+
+        &-img {
+            aspect-ratio: 16/10.5;
+            width: 100%;
+        }
+
+        &-text-block {
+            padding: 23px;
+            display: flex;
+            flex-direction: column;
+            height: 270px;
+
+            @include breakpoints(md) {
+                padding: 13px 18px;
+                height: 210px;
+            }
+
+            @include breakpoints(sm) {
+                padding: 10px 15px;
+                height: 180px;
+            }
+        }
+
+        &-date {
+            color: $gray;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 169%;
+            font-family: $supportFonts;
+            letter-spacing: 0.01em;
+
+            @include breakpoints(md) {
+                font-size: 10px;
+            }
+        }
+
+        &-title {
+            margin-top: 11px;
+            width: 90%;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: 0.01em;
+
+            @include breakpoints(xl) {
+                width: 100%;
+                height: 50px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                word-wrap: break-word;
+            }
+
+            @include breakpoints(sm) {
+                height: 36px;
+            }
+
+            @include breakpoints(md) {
+                margin-top: 5px;
+                font-size: 14px;
+            }
+        }
+
+        &-text {
+            margin: 11px 0 0;
+            font-size: 14px;
+            line-height: 143%;
+            letter-spacing: 0.01em;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 4;
+            max-height: 50%;
+            word-wrap: break-word;
+
+            @include breakpoints(md) {
+                font-size: 12px;
+            }
+
+            @include breakpoints(sm) {
+                -webkit-line-clamp: 3;
+            }
+        }
+
+        &-link {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 143%;
+            letter-spacing: 0.01em;
+
+            &:hover {
+                .news-swiper__card-svg {
+                    fill: $mainGreen;
+                }
+
+                .news-swiper__card-link-text {
+                    color: $mainGreen;
+                }
+            }
+        }
+
+        &-link-arrow {
+            padding-left: 7px;
+        }
+
+        &-link-text {
+            padding-bottom: 8px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        &-svg {
+            fill: $textColor;
+            width: 19px;
+            height: 26px;
+            transition: fill 0.3s ease-in-out;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 230px;
+        margin: 64px auto 0;
+        padding: 16px 24px;
+        font-weight: 700;
+        font-size: 15px;
+
+        @include breakpoints(md) {
+            margin: 35px auto 0;
+            padding: 12px 21px;
+            width: 210px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 15px auto 0;
+        }
+    }
+}

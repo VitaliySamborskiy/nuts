@@ -80,9 +80,6 @@
 
         @include breakpoints(sm) {
             font-size: 14px;
-        }
-
-        @include breakpoints(sm) {
             width: 100%;
         }
     }
