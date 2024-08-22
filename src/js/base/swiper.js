@@ -1,7 +1,6 @@
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 import { onYouTubeIframeAPIReady } from "./youtube-app.js";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

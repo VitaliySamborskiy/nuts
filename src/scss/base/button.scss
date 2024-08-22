@@ -14,7 +14,9 @@
     color: $mainGreen;
     font-weight: 700;
     border: 2px solid $mainGreen;
-    transition: color, background 0.5s ease-in-out;
+    transition:
+        color,
+        background 0.5s ease-in-out;
 
     &:hover {
         color: $backgroundColor;
@@ -51,21 +53,20 @@
 }
 
 .circle-button {
-    padding: 12px;
     border-radius: 100%;
-    background: $subGreat;
+    background: $mainGreen;
     width: 45px;
     height: 45px;
     transition: background-color 0.5s ease-in-out;
 
     &-svg {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         fill: $backgroundColor;
     }
 
     &:hover {
-        background: $mainGreen;
+        background: $subGreat;
     }
 }
 

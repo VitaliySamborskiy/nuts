@@ -6,6 +6,10 @@
         <link rel="icon" type="image/svg+xml" href="src/assets/img/logo-1.svg" />
         <link rel="stylesheet" href="src/scss/main.scss" />
         <title>ОРЕХ ПРИЧЕРНОМОРЬЯ</title>
+        <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
+        ></script>
     </head>
     <body>
         <div class="wrapper">
@@ -23,6 +27,7 @@
                     main-page-img-class="homepage__img"
                     main-page-title-class="homepage__title"
                     main-page-text-class="homepage__text"
+                    product-button-class="hidden"
                 />
                 <load src="src/components/base/products-section.html" class-filter="hidden" />
                 <load src="src/components/main-page/about-manufacturer.html" />
@@ -53,7 +58,9 @@
                     eco-img-block-class="eco__img-block"
                 />
                 <load src="src/components/base/news-swiper-section.html" />
+                <load src="src/components/base/contact.html" />
             </main>
+            <load src="src/components/base/footer.html" />
             <load src="src/components/base/sprite.html" />
         </div>
         <script src="https://www.youtube.com/iframe_api"></script>

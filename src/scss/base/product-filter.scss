@@ -1,0 +1,141 @@
+.product-filter {
+    &__shop-block {
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: 0.01em;
+    }
+
+    &__svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    &__filter-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__select {
+        &-taste {
+        }
+
+        &-header-taste,
+        &-header-weight {
+            padding: 15px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            justify-content: space-between;
+            border: 2px solid $filter;
+            transition: border 0.5s ease-in-out;
+
+            &:hover {
+                border: 2px solid $subGreat;
+            }
+        }
+
+        &-header-taste {
+            width: 283px;
+        }
+
+        &-header-weight {
+            width: 171px;
+        }
+
+        &-body-taste {
+            width: 283px;
+            z-index: 3;
+        }
+
+        //&-svg {
+        //    width: 23px;
+        //    height: 23px;
+        //}
+
+        &-weight {
+        }
+
+        &-body-weight {
+            width: 171px;
+            z-index: 3;
+        }
+    }
+
+    &__item {
+        padding: 14px 14px 0;
+        font-size: 16px;
+
+        &:after {
+            margin-top: 15px;
+        }
+
+        &:last-child {
+            padding-bottom: 14px;
+        }
+    }
+
+    &__cost {
+        &-block {
+            display: flex;
+            align-items: center;
+        }
+
+        &-text {
+            font-weight: 700;
+            font-size: 17px;
+            letter-spacing: 0.01em;
+        }
+
+        &-arrows {
+            margin-top: 5px;
+            gap: 4px;
+            display: flex;
+        }
+
+        &-button {
+        }
+
+        &-svg-button,
+        &-svg-top {
+            width: 15px;
+            height: 15px;
+            fill: $gray;
+            transition: fill 0.5s ease-in-out;
+
+            &:hover {
+                fill: $mainGreen;
+            }
+        }
+
+        &-svg-top {
+            transform: rotate(180deg);
+        }
+
+        &-svg-button {
+        }
+    }
+
+    &__apply-button {
+    }
+
+    &__cross-button {
+    }
+
+    &__cross-svg {
+        width: 15px;
+        height: 15px;
+    }
+}

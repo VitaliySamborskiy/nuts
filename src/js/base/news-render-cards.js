@@ -1,12 +1,7 @@
-import { getImages } from "../get-images.js";
 import { useGetImg } from "./useGetImg.js";
 
 export function useRenderNewsCards(arrData, elements) {
     let fragment = document.createDocumentFragment();
-
-    arrData.sort((a, b) => {
-        return new Date(b.date) - new Date(a.date);
-    });
 
     arrData.forEach((data) => {
         let html = ``;

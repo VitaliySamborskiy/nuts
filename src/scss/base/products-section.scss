@@ -80,7 +80,7 @@
             left: -3px;
             width: 82px;
             height: 31px;
-            z-index: 2;
+            z-index: 0;
             clip-path: polygon(
                 5.042% 0%,
                 5.042% 0%,
@@ -208,7 +208,7 @@
         }
 
         .product__slide {
-            margin:0 auto;
+            margin: 0 auto;
 
             @include breakpoints(xl) {
                 width: 80%;

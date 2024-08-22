@@ -6,76 +6,87 @@
             в удобной, надежной, вакуумной упаковке разного объема
         </p>
     </div>
-    <div class="product__shop-filter {=$class-filter}">
-        <load
-            src="src/components/base/select.html"
-            body_selector="<div class='select__item'>Вкус</div>
-                           <div class='select__item'>сладкий</div>
-                           <div class='select__item'>гіркий</div>"
-            current_selector="Вкус"
-            select_support_class="header__select"
-            header_support_class="header__select-header"
-            body_support_class="header__select-body"
-            svg_select=""
-        />
-        <load
-            src="src/components/base/select.html"
-            body_selector="<div class='select__item'>Масса</div>
-                           <div class='select__item'>30</div>
-                           <div class='select__item'>40</div>
-                           <div class='select__item'>50</div>
-                           <div class='select__item'>60</div>
-                           <div class='select__item'>70</div>
-                           <div class='select__item'>100+</div>"
-            current_selector="Масса"
-            select_support_class="header__select"
-            header_support_class="header__select-header"
-            body_support_class="header__select-body"
-            svg_select=""
-        />
-        <div class="">
-            <p class="">Стоимость</p>
+    <div class="product-filter__shop-block {=$class-filter}">
+        <div class="product-filter__block">
+            <p class="product-filter__text">Фильтр</p>
+            <svg class="product-filter__svg"><use href="#filter"></use></svg>
+        </div>
+        <div class="product-filter__filter-block">
             <load
-                src="src/components/base/button.html"
-                class_button="green-button"
-                class_button_text=""
-                component_class=""
-                button_text="<svg class='header__top-mobile-phone-svg'>
+                src="src/components/base/select.html"
+                body_selector="<div class='select__item product-filter__item'>Вкус</div>
+                           <div class='select__item product-filter__item'>сладкий</div>
+                           <div class='select__item product-filter__item'>гіркий</div>"
+                current_selector="Вкус"
+                select_support_class="product-filter__select-taste"
+                header_support_class="product-filter__select-header-taste"
+                body_support_class="product-filter__select-body-taste"
+                svg_select="product-filter__select-svg"
+            />
+            <load
+                src="src/components/base/select.html"
+                body_selector="<div class='select__item product-filter__item'>Масса</div>
+                           <div class='select__item product-filter__item'>30</div>
+                           <div class='select__item product-filter__item'>40</div>
+                           <div class='select__item product-filter__item'>50</div>
+                           <div class='select__item product-filter__item'>60</div>
+                           <div class='select__item product-filter__item'>70</div>
+                           <div class='select__item product-filter__item'>100+</div>"
+                current_selector="Масса"
+                select_support_class="product-filter__select-weight"
+                header_support_class="product-filter__select-header-weight"
+                body_support_class="product-filter__select-body-weight"
+                svg_select="product-filter__select-svg"
+            />
+            <div class="product-filter__cost-block">
+                <p class="product-filter__cost-text">Стоимость</p>
+                <div class="product-filter__cost-arrows">
+                    <load
+                        src="src/components/base/button.html"
+                        class_button="product-filter__cost-button"
+                        class_button_text=""
+                        component_class=""
+                        button_text="<svg class='product-filter__cost-svg-top'>
                 <use href='#arrow'></use></svg>"
-            />
-            <load
-                src="src/components/base/button.html"
-                class_button="green-button"
-                class_button_text=""
-                component_class=""
-                button_text="<svg class='header__top-mobile-phone-svg'>
+                    />
+                    <load
+                        src="src/components/base/button.html"
+                        class_button="product-filter__cost-button"
+                        class_button_text=""
+                        component_class=""
+                        button_text="<svg class='product-filter__cost-svg-button'>
                     <use href='#arrow'></use></svg>"
-            />
+                    />
+                </div>
+            </div>
         </div>
         <load
             src="src/components/base/button.html"
-            class_button="green-button"
+            class_button="green-button product-filter__apply-button"
             class_button_text=""
             component_class=""
             button_text="Применить"
         />
         <load
             src="src/components/base/button.html"
-            class_button="green-button"
+            class_button="product-filter__cross-button"
             class_button_text=""
             component_class=""
-            button_text="<svg class='header__top-mobile-phone-svg'>
+            button_text="<svg class='product-filter__cross-svg'>
                     <use href='#cross'></use></svg> Сбросить"
         />
     </div>
-    <div class="product__cards">
-    </div>
-    <a href="#" class="transparent-button product__button">Перейти в магазин</a>
-    <!--    <load-->
-    <!--        src="src/components/base/button.html"-->
-    <!--        class_button=""-->
-    <!--        class_button_text=""-->
-    <!--        component_class=""-->
-    <!--        button_text="{=$product-button-text}"-->
-    <!--    />-->
+    <div class="product__cards"></div>
+    <a
+        href="/nuts/src/pages/catalog-products.html"
+        class="transparent-button product__button {=$product-link-class}"
+        >Перейти в магазин</a
+    >
+    <load
+        src="src/components/base/button.html"
+        class_button="{=$product-button-class}"
+        class_button_text=""
+        component_class=""
+        button_text="{=$product-button-text}"
+    />
 </section>

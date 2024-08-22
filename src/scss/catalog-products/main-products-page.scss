@@ -1,0 +1,50 @@
+.products-page {
+    &__text-block {
+        margin-top: 126px;
+
+        @include breakpoints(md) {
+            margin-top: 85px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 60px;
+        }
+
+        @include breakpoints(xs) {
+            margin-top: 45px;
+        }
+    }
+
+    &__block-img {
+        height: 300px;
+
+        @include breakpoints(md) {
+            height: 230px;
+        }
+
+        @include breakpoints(sm) {
+            height: 160px;
+        }
+
+        @include breakpoints(xs) {
+            height: 130px;
+        }
+    }
+
+    &__img {
+    }
+
+    &__title {
+        @include breakpoints(md) {
+            font-size: 45px;
+        }
+
+        @include breakpoints(sm) {
+            font-size: 30px;
+        }
+
+        @include breakpoints(xs) {
+            font-size: 25px;
+        }
+    }
+}
