@@ -1,18 +1,17 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
-        <title>ОРЕХ ПРИЧЕРНОМОРЬЯ</title>
-        <script
-            async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
-        ></script>
-      <script type="module" crossorigin src="/nuts/assets/main-BWMApqL1.js"></script>
-      <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/main-rWmkSgBj.css">
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
+    <title>Каталог продукции</title>
+    <script
+        async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <script type="module" crossorigin src="/nuts/assets/main-BWMApqL1.js"></script>
+    <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
+    <link rel="stylesheet" crossorigin href="/nuts/assets/catalog-products-D1LBHuXJ.css">
+
     <body>
         <div class="wrapper">
             <header>
@@ -230,15 +229,14 @@
 </header>
 
             <main class="main">
-                <section class="main-page ">
-    <div class="main-page__img-block homepage__block-img">
-        <img class="main-page__img homepage__img" src="" />
+                <section class="main-page {=$main-page-class}">
+    <div class="main-page__img-block products-page__block-img">
+        <img class="main-page__img products-page__img" src="" />
     </div>
-    <div class="main-page__container homepage__text-block">
-        <h2 class="main-page__title homepage__title">Орех Причерноморья</h2>
-        <p class="main-page__text homepage__text">Единственный в Украине сад совместного
-                    выращивание фундука и грецкого ореха</p>
-        <a href="#" class="main-page__play-block homepage__margin-play">
+    <div class="main-page__container products-page__text-block">
+        <h2 class="main-page__title products-page__title">Каталог продукции</h2>
+        <p class="main-page__text hidden">{=$main-page-text}</p>
+        <a href="#" class="main-page__play-block hidden">
             <button class="play-button main-page__play">
     <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
@@ -248,14 +246,14 @@
 </section>
 
                 <section class="product product__container">
-    <div class="product__main-page {=$class-title}">
+    <div class="product__main-page hidden">
         <h2 class="product__main-page-title">Продукция</h2>
         <p class="product__main-page-text">
             Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника
             в удобной, надежной, вакуумной упаковке разного объема
         </p>
     </div>
-    <div class="product-filter__shop-block hidden">
+    <div class="product-filter__shop-block {=$class-filter}">
         <div class="product-filter__block">
             <p class="product-filter__text">Фильтр</p>
             <svg class="product-filter__svg"><use href="#filter"></use></svg>
@@ -314,7 +312,7 @@
     <div class="product__cards"></div>
     <a
         href="/nuts/src/pages/catalog-products.html"
-        class="transparent-button product__button {=$product-link-class}"
+        class="transparent-button product__button hidden"
         >Перейти в магазин</a
     >
     <button class="{=$product-button-class}">
@@ -323,338 +321,8 @@
 
 </section>
 
-                <section class="manufacturing__background">
-    <div class="manufacturing__container">
-        <div class="manufacturing__content">
-            <div class="manufacturing__text-block">
-                <h2 class="manufacturing__title">О производителе</h2>
-                <p class="manufacturing__text-first">
-                    <span class="green manufacturing__text-green"
-                        >Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья”</span
-                    >
-                    выращивает смешанные сады ореха грецкого с фундуком, а также ореха грецкого с
-                    шиповником, на площади более 150 гектаров.
-                </p>
-                <p class="manufacturing__text-second">
-                    Помимо этого кооператив занимается выращиванием посадочного материала, саженцов
-                    привитого и непривитого грецкого ореха, фундука и шиповника.
-                </p>
-                <button class="transparent-button manufacturing__text-button">
-    <span class="">Подробнее</span>
-</button>
-
-            </div>
-            <div class="manufacturing__swiper">
-                <div class="swiper manufacturing__swiper-video">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="manufacturing__youtube-container">
-                                <!--                                <load-->
-                                <!--                                    src="src/components/base/button.html"-->
-                                <!--                                    class_button="play-button manufacturing__play"-->
-                                <!--                                    component_class=""-->
-                                <!--                                    class_button_text=""-->
-                                <!--                                    button_text="<svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg>"-->
-                                <!--                                />-->
-                                <div class="manufacturing__player"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <!--                            <load-->
-                            <!--                                src="src/components/base/button.html"-->
-                            <!--                                class_button="play-button manufacturing__play"-->
-                            <!--                                component_class=""-->
-                            <!--                                class_button_text=""-->
-                            <!--                                button_text="<svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg>"-->
-                            <!--                            />-->
-                            <div class="manufacturing__youtube-container">
-                                <div class="manufacturing__player"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="manufacturing__navigation">
-                        <div class="manufacturing__button-prev">
-                            <svg class="manufacturing__svg-prev">
-                                <use href="#arrow"></use>
-                            </svg>
-                        </div>
-                        <div class="manufacturing__button-next">
-                            <svg class="manufacturing__svg-next">
-                                <use href="#arrow"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-                <section class="hectares__container">
-    <div class="hectares__content">
-        <div class="hectares__text-block">
-            <div class="hectares__title-block">
-                <h3 class="hectares__title">240</h3>
-                <p class="hectares__title-support">Га</p>
-            </div>
-            <p class="hectares__text">Cмешанных садов</p>
-        </div>
-        <div class="hectares__text-block">
-            <div class="hectares__title-block">
-                <h3 class="hectares__title">1</h3>
-                <p class="hectares__title-support">Га</p>
-            </div>
-            <p class="hectares__text">Тепличного комплекса</p>
-        </div>
-        <div class="hectares__text-block">
-            <div class="hectares__title-block">
-                <h3 class="hectares__title">10</h3>
-                <p class="hectares__title-support">Га</p>
-            </div>
-            <p class="hectares__text">Первая промышленная плантация шиповника в Украине</p>
-        </div>
-        <div class="hectares__text-block">
-            <div class="hectares__title-block">
-                <h3 class="hectares__title">80</h3>
-                <p class="hectares__title-support">%</p>
-            </div>
-            <p class="hectares__text">Приживаемости саженцев</p>
-        </div>
-    </div>
-</section>
-
-                <section class="main-page main-goal__content">
-    <div class="main-page__img-block main-goal__img-block">
-        <img class="main-page__img main-goal__img" src="" />
-    </div>
-    <div class="main-page__container main-goal__block">
-        <h2 class="main-page__title main-goal__title">Наша главная цель - получить максимальную прибыль с одного гектара</h2>
-        <a href="#" class="main-page__play-block main-goal__button">
-            <button class="play-button main-page__play">
-    <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
-</button>
-
-        </a>
-        <p class="main-page__text main-goal__text">Cмотреть видео о производстве</p>
-    </div>
-</section>
-
-                <section class="benefits__container">
-    <div class="benefits__content">
-        <div class="benefits__title-block">
-            <h2 class="benefits__title">О пользе продукта</h2>
-            <p class="benefits__title-text">
-                Каждый вид ореха содержит свой неповторимый уникальный баланс витаминов, и
-                микроэлементов
-            </p>
-        </div>
-        <div class="benefits__cards-block">
-            <div class="benefits__card-block">
-                <img class="benefits__card-img benefits__nuts" src="" />
-                <div class="benefits__card-title-block">
-                    <svg class="benefits__card-svg benefits__svg-nuts">
-                        <use href="#nut"></use>
-                    </svg>
-                    <h3 class="benefits__card-title">Грецкий орех</h3>
-                    <p class="benefits__card-text">
-                        Дерево жизни - так часто величают грецкий орех, поскольку с давних пор он
-                        кормил, восстанавливал силы и лечил человека.
-                    </p>
-                    <p class="benefits__card-text">
-                        Даже небольшая горсть грецких орехов - это кладезь витаминов и хорошая
-                        профилактика многих заболеваний
-                    </p>
-                    <div class="benefits__card-background"></div>
-                </div>
-            </div>
-            <div class="benefits__card-block">
-                <img class="benefits__card-img benefits__hazelnut" src="" />
-                <div class="benefits__card-title-block">
-                    <svg class="benefits__card-svg benefits__svg-hazelnut">
-                        <use href="#hazelnut"></use>
-                    </svg>
-                    <h3 class="benefits__card-title">Фундук</h3>
-                    <p class="benefits__card-text">
-                        Дерево жизни - так часто величают грецкий орех, поскольку с давних пор он
-                        кормил, восстанавливал силы и лечил человека.
-                    </p>
-                    <p class="benefits__card-text">
-                        Даже небольшая горсть грецких орехов - это кладезь витаминов и хорошая
-                        профилактика многих заболеваний
-                    </p>
-                    <div class="benefits__card-background"></div>
-                </div>
-            </div>
-            <div class="benefits__card-block">
-                <img class="benefits__card-img benefits__rosehip" src="" />
-                <div class="benefits__card-title-block">
-                    <svg class="benefits__card-svg benefits__svg-rosehip">
-                        <use href="#rosehip"></use>
-                    </svg>
-                    <h3 class="benefits__card-title">Шиповник</h3>
-                    <p class="benefits__card-text">
-                        Дерево жизни - так часто величают грецкий орех, поскольку с давних пор он
-                        кормил, восстанавливал силы и лечил человека.
-                    </p>
-                    <p class="benefits__card-text">
-                        Даже небольшая горсть грецких орехов - это кладезь витаминов и хорошая
-                        профилактика многих заболеваний
-                    </p>
-                    <div class="benefits__card-background"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-                <section class="main-page eco__content">
-    <div class="main-page__img-block eco__img-block">
-        <img class="main-page__img eco__img" src="" />
-    </div>
-    <div class="main-page__container eco__block">
-        <svg class="eco__svg">
-            <use href="#eco"></use>
-        </svg>
-        <h2 class="main-page__title eco__title">Эко продукция</h2>
-        <p class="main-page__text eco__text">Выращиваем каждое деревцо с любовью, на экологически
-                    чистой земле, без использования пестицидов и химии</p>
-    </div>
-</section>
-
-                <section class="news-swiper__container">
-    <div class="news-swiper__content">
-        <div class="news-swiper__title-block">
-            <div class="news-swiper__text-block">
-                <h2 class="news-swiper__title">Новости</h2>
-                <p class="news-swiper__text">Свежие новости и полезная информация</p>
-            </div>
-            <div class="news-swiper__navigation">
-                <div class="news-swiper__prev-button news-swiper__button">
-                    <svg class="news-swiper__prev-svg news-swiper__svg">
-                        <use href="#arrow"></use>
-                    </svg>
-                </div>
-                <div class="news-swiper__next-button news-swiper__button">
-                    <svg class="news-swiper__next-svg news-swiper__svg">
-                        <use href="#arrow"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div class="news-swiper__cards">
-            <div class="swiper-wrapper news-swiper__renders">
-                <!--                <div class="swiper-slide">-->
-                <!--                    <div class="news-swiper__card">-->
-                <!--                        <img class="news-swiper__card-img" src="#" />-->
-                <!--                        <div class="news-swiper__card-text-block">-->
-                <!--                            <p class="news-swiper__card-date">12.04.2019</p>-->
-                <!--                            <h3 class="news-swiper__card-title">-->
-                <!--                                Центр поддержки экспорта, в студии Павел Тулба-->
-                <!--                            </h3>-->
-                <!--                            <p class="news-swiper__card-text">-->
-                <!--                                Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень-->
-                <!--                                недооценена среди наших садоводов, не смотря на большой спрос в-->
-                <!--                                Европе и отличную Как уже упоминал Павел Тулба, шиповник цветёт. Эта-->
-                <!--                                культура очень недооценена среди наших садоводов, не смотря на-->
-                <!--                                большой спрос в Европе и отличную-->
-                <!--                            </p>-->
-                <!--                            <a class="news-swiper__card-link" href="#"-->
-                <!--                                ><span class="news-swiper__card-link-text"> Читать </span-->
-                <!--                                ><span class="news-swiper__card-link-arrow">-->
-                <!--                                    <svg class="news-swiper__card-svg">-->
-                <!--                                        <use href="#long-arrow"></use>-->
-                <!--                                    </svg>-->
-                <!--                                </span>-->
-                <!--                            </a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="swiper-slide">-->
-                <!--                    <div class="news-swiper__card">-->
-                <!--                        <img class="news-swiper__card-img" src="#" />-->
-                <!--                        <div class="news-swiper__card-text-block">-->
-                <!--                            <p class="news-swiper__card-date">12.04.2019</p>-->
-                <!--                            <h3 class="news-swiper__card-title">-->
-                <!--                                Центр поддержки экспорта, в студии Павел Тулба-->
-                <!--                            </h3>-->
-                <!--                            <p class="news-swiper__card-text">-->
-                <!--                                Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень-->
-                <!--                                недооценена среди наших садоводов, не смотря на большой спрос в-->
-                <!--                                Европе и отличную Как уже упоминал Павел Тулба, шиповник цветёт. Эта-->
-                <!--                                культура очень недооценена среди наших садоводов, не смотря на-->
-                <!--                                большой спрос в Европе и отличную-->
-                <!--                            </p>-->
-                <!--                            <a class="news-swiper__card-link" href="#"-->
-                <!--                                ><span class="news-swiper__card-link-text"> Читать </span-->
-                <!--                                ><span class="news-swiper__card-link-arrow">-->
-                <!--                                    <svg class="news-swiper__card-svg">-->
-                <!--                                        <use href="#long-arrow"></use>-->
-                <!--                                    </svg>-->
-                <!--                                </span>-->
-                <!--                            </a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="swiper-slide">-->
-                <!--                    <div class="news-swiper__card">-->
-                <!--                        <img class="news-swiper__card-img" src="#" />-->
-                <!--                        <div class="news-swiper__card-text-block">-->
-                <!--                            <p class="news-swiper__card-date">12.04.2019</p>-->
-                <!--                            <h3 class="news-swiper__card-title">-->
-                <!--                                Центр поддержки экспорта, в студии Павел Тулба-->
-                <!--                            </h3>-->
-                <!--                            <p class="news-swiper__card-text">-->
-                <!--                                Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень-->
-                <!--                                недооценена среди наших садоводов, не смотря на большой спрос в-->
-                <!--                                Европе и отличную Как уже упоминал Павел Тулба, шиповник цветёт. Эта-->
-                <!--                                культура очень недооценена среди наших садоводов, не смотря на-->
-                <!--                                большой спрос в Европе и отличную-->
-                <!--                            </p>-->
-                <!--                            <a class="news-swiper__card-link" href="#"-->
-                <!--                                ><span class="news-swiper__card-link-text"> Читать </span-->
-                <!--                                ><span class="news-swiper__card-link-arrow">-->
-                <!--                                    <svg class="news-swiper__card-svg">-->
-                <!--                                        <use href="#long-arrow"></use>-->
-                <!--                                    </svg>-->
-                <!--                                </span>-->
-                <!--                            </a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="swiper-slide">-->
-                <!--                    <div class="news-swiper__card">-->
-                <!--                        <img class="news-swiper__card-img" src="#" />-->
-                <!--                        <div class="news-swiper__card-text-block">-->
-                <!--                            <p class="news-swiper__card-date">12.04.2019</p>-->
-                <!--                            <h3 class="news-swiper__card-title">-->
-                <!--                                Центр поддержки экспорта, в студии Павел Тулба-->
-                <!--                            </h3>-->
-                <!--                            <p class="news-swiper__card-text">-->
-                <!--                                Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень-->
-                <!--                                недооценена среди наших садоводов, не смотря на большой спрос в-->
-                <!--                                Европе и отличную Как уже упоминал Павел Тулба, шиповник цветёт. Эта-->
-                <!--                                культура очень недооценена среди наших садоводов, не смотря на-->
-                <!--                                большой спрос в Европе и отличную-->
-                <!--                            </p>-->
-                <!--                            <a class="news-swiper__card-link" href="#"-->
-                <!--                                ><span class="news-swiper__card-link-text"> Читать </span-->
-                <!--                                ><span class="news-swiper__card-link-arrow">-->
-                <!--                                    <svg class="news-swiper__card-svg">-->
-                <!--                                        <use href="#long-arrow"></use>-->
-                <!--                                    </svg>-->
-                <!--                                </span>-->
-                <!--                            </a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-            </div>
-        </div>
-        <a href="#" class="transparent-button news-swiper__link">Смотреть все новости</a>
-    </div>
-</section>
-
                 <section class="contact__container">
-    <div class="contact__content {=$margin-top}">
+    <div class="contact__content error__margin-contact">
         <h2 class="contact__title-mobile">Контакты</h2>
         <div class="contact__info">
             <h2 class="contact__info-title">Контакты</h2>
@@ -739,7 +407,7 @@
 
             </main>
             <footer class="footer__container">
-    <div class="footer__content {=$margin-top}">
+    <div class="footer__content error__margin-footer">
         <div class="footer__links-block">
             <a class="footer__logo-link" href="/nuts/index.html"
                 ><img class="footer__logo-img" src="" />
@@ -1296,6 +964,5 @@
 </svg>
 
         </div>
-        <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>
