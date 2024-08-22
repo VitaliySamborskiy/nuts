@@ -11,7 +11,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, "index.html"),
                 404: resolve(__dirname, "404.html"),
-                catalogProducts: resolve(__dirname, "src/components/pages/catalog-products.html"),
+                catalogProducts: resolve(__dirname, "src/pages/catalog-products.html"),
             },
         },
     },
