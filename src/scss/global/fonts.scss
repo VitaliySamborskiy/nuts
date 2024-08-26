@@ -1,5 +1,6 @@
 $mainFont: "Raleway";
 $supportFonts: "Montserrat";
+$productFonts: "Lato";
 
 @font-face {
     font-display: swap;
@@ -55,4 +56,11 @@ $supportFonts: "Montserrat";
     font-family: $supportFonts;
     font-weight: 500;
     src: url("/src/assets/forms/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: $productFonts;
+    font-weight: 500;
+    src: url("/src/assets/forms/Lato-Medium.woff") format("woff");
 }

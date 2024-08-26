@@ -318,3 +318,15 @@
         }
     }
 }
+
+.catalog-products__margin-contact {
+    margin-top: 150px;
+
+    @include breakpoints(md) {
+        margin-top: 150px;
+    }
+
+    @include breakpoints(sm) {
+        margin-top: 90px;
+    }
+}

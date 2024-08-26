@@ -22,7 +22,6 @@ export function onYouTubeIframeAPIReady(videoId, element, targetObserver) {
                     });
 
                     autoStopVideo.observe(target);
-                    console.log(event.target.getPlayerState());
                 },
             },
         });

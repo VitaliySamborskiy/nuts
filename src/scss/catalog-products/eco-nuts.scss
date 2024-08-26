@@ -1,0 +1,164 @@
+.eco-nuts {
+    &__content {
+        display: flex;
+        width: 99%;
+        margin: 193px auto 0;
+        gap: 30px;
+
+        @include breakpoints(xl) {
+            margin: 150px auto 0;
+        }
+
+        @include breakpoints(md) {
+            margin: 90px auto 0;
+            flex-direction: column;
+        }
+
+        @include breakpoints(sm) {
+            margin: 50px auto 0;
+            gap: 0;
+        }
+    }
+
+    &__text-block {
+        padding-left: 20px;
+        width: 50%;
+
+        @include breakpoints(xl) {
+            padding-left: 0;
+        }
+
+        @include breakpoints(md) {
+            margin: 0 auto;
+            width: 75%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        line-height: 110%;
+
+        @include breakpoints(md) {
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+
+    &__title-sub {
+        margin-top: 4px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 208%;
+
+        @include breakpoints(md) {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    &__text-scroll-block {
+        margin-top: 13px;
+        position: relative;
+
+        @include breakpoints(sm) {
+            margin-top: 7px;
+        }
+    }
+
+    &__scrollbar {
+        position: absolute;
+        display: flex;
+        right: 36px;
+        width: 2px;
+        height: 313px;
+        border-radius: 2px;
+        background: $scrollTrack;
+
+        @include breakpoints(xl) {
+            right: 6.5%;
+            height: 235px;
+        }
+
+        @include breakpoints(md) {
+            right: 4.4%;
+        }
+
+        @include breakpoints(sm) {
+            right: 0.8%;
+        }
+    }
+
+    &__text-scroll {
+        position: relative;
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        overflow-y: scroll;
+        height: 318px;
+
+        @include breakpoints(xl) {
+            height: 235px;
+        }
+
+        @include breakpoints(md) {
+            width: 96%;
+            gap: 20px;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            width: 6px;
+            border-radius: 6px;
+            background: $mainGreen;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        font-family: $productFonts;
+        width: 86%;
+        line-height: 156%;
+
+        @include breakpoints(xl) {
+            width: 95%;
+        }
+
+        @include breakpoints(md) {
+            width: 97%;
+            text-align: center;
+        }
+    }
+
+    &__swiper-block {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        aspect-ratio: 16/11;
+        width: 61%;
+
+        @include breakpoints(md) {
+            margin: 20px auto 0;
+            width: 65%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

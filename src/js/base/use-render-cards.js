@@ -16,10 +16,15 @@ export function useRenderCards(arrData, element) {
             img += `<div class="swiper-slide"><img class="product__slide" src="" /></div>`;
         });
 
-        html = `${data.action || data.newProduct ? `<div class ="product__card-flag ${data.action ? 'product__card-flag-discount' :
-            'product__card-flag-new' }">
+        html = `${
+            data.action || data.newProduct
+                ? `<div class ="product__card-flag ${
+                      data.action ? "product__card-flag-discount" : "product__card-flag-new"
+                  }">
                 <p class ="product__card-flag-text">${data.action ? "АКЦИЯ" : "НОВИНКА"}</p>
-            </div>` : '' }  
+            </div>`
+                : ""
+        }  
             <a href="#" class="">
                 <div class="product__card-swiper">
                     <div class="product__card-search">
@@ -71,11 +76,15 @@ export function useRenderCards(arrData, element) {
                     <div class="product__card-bottom">
                         <div class="product__card-bottom-price">
                             <p class="product__card-bottom-price-text">Цена:</p>
-                            ${data.price && data.cationPrice ? `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
+                            ${
+                                data.price && data.cationPrice
+                                    ? `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
                             ${data.cationPrice}<span>грн.</span></p>
                             <p class="product__card-bottom-price-discount product__card-bottom-price-gray">
-                            ${data.price}<span>грн.</span></p>` : `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
-                            ${data.price}<span>грн.</span></p>`}
+                            ${data.price}<span>грн.</span></p>`
+                                    : `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
+                            ${data.price}<span>грн.</span></p>`
+                            }
                         </div>
                         <button class="green-button product__card-bottom-buy">
                             <span>Купить</span>
@@ -87,6 +96,7 @@ export function useRenderCards(arrData, element) {
         const cardProduct = document.createElement("div");
         cardProduct.classList.add("product__card");
         cardProduct.setAttribute("data-arc", data.art);
+        cardProduct.setAttribute("data-weight", data.weight);
         cardProduct.innerHTML = html;
 
         swiperArr.push({
@@ -95,13 +105,12 @@ export function useRenderCards(arrData, element) {
             prev: cardProduct.querySelector(`.product__card-button-prev`),
         });
 
-
         for (let i = 0; i < data.imgUrl.length; ++i) {
             const imgElement = cardProduct.querySelectorAll(`.product__slide`);
-            let index = 0
-            imgElement.forEach(element => {
+            let index = 0;
+            imgElement.forEach((element) => {
                 useGetImg(data.imgUrl[index++], element);
-            })
+            });
         }
 
         fragment.append(cardProduct);

@@ -37,4 +37,13 @@ export function getImages() {
         "gs://nuts-17b69.appspot.com/product_catalog/product_catalog_1.webp",
         getElement(".products-page__img"),
     );
+    const productCatalogImages = [
+        "gs://nuts-17b69.appspot.com/product_catalog/product_catalog_2.webp",
+        "gs://nuts-17b69.appspot.com/main_page/main_page-2.webp",
+        "gs://nuts-17b69.appspot.com/companies/companies_2.webp",
+    ];
+    const productCatalogElement = getElement(".eco-nuts__img", true);
+    for (let i = 0; i < productCatalogElement.length; i++) {
+        useGetImg(productCatalogImages[i], productCatalogElement[i]);
+    }
 }

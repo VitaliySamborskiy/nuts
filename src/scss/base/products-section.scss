@@ -172,7 +172,7 @@
             top: 26%;
             width: 23px;
             height: 23px;
-            z-index: 2;
+            z-index: 0;
 
             @include breakpoints(sm) {
                 width: 18px;
@@ -481,6 +481,24 @@
             margin: 40px auto 0;
             padding: 10px 27px;
             font-size: 12px;
+        }
+    }
+
+    &__button-load-card {
+        padding: 14px 30px;
+        margin: 70px auto 0;
+        width: 205px;
+
+        @include breakpoints(md) {
+            margin: 50px auto 0;
+            font-size: 14px;
+            padding: 12px 20px;
+            width: 190px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 35px auto 0;
+            width: 160px;
         }
     }
 }

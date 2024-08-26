@@ -86,7 +86,6 @@
 
     &__link-item {
         display: flex;
-        margin: 0 auto;
     }
 
     &__link {
@@ -134,5 +133,17 @@
         font-weight: 400;
         font-size: 12px;
         font-family: $supportFonts;
+    }
+}
+
+.catalog-products__margin-footer {
+    margin-top: 95px;
+
+    @include breakpoints(md) {
+        margin-top: 90px;
+    }
+
+    @include breakpoints(sm) {
+        margin-top: 45px;
     }
 }

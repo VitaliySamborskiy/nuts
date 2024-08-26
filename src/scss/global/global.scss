@@ -126,6 +126,67 @@ button {
     }
 }
 
+//green button
+
+.swiper {
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        width: 124px;
+        position: absolute;
+        left: 7px;
+        bottom: -8px;
+        z-index: 4;
+
+        @include breakpoints(md) {
+            width: 100px;
+        }
+
+        @include breakpoints(xs) {
+            left: 5px;
+            width: 90px;
+        }
+    }
+
+    &__button-prev,
+    &__button-next {
+        padding: 24px 19px;
+        background: $mainGreen;
+        cursor: pointer;
+
+        @include breakpoints(md) {
+            padding: 18px 13px;
+        }
+
+        @include breakpoints(xs) {
+            padding: 15px 13px;
+        }
+
+        &:hover {
+            .swiper__svg-prev,
+            .swiper__svg-next {
+                fill: $backgroundColor;
+            }
+        }
+    }
+
+    &__svg-prev,
+    &__svg-next {
+        width: 16px;
+        height: 18px;
+        fill: $manufacturingButtonArrow;
+        transition: fill 0.5s ease-in-out;
+    }
+
+    &__button-next {
+        transform: rotate(270deg);
+    }
+
+    &__button-prev {
+        transform: rotate(90deg);
+    }
+}
+
 .swiper {
     z-index: -1 !important;
 }
