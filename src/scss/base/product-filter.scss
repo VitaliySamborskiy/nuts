@@ -279,7 +279,7 @@
         &-button {
         }
 
-        &-svg-button,
+        &-svg-bottom,
         &-svg-top {
             width: 15px;
             height: 15px;
@@ -296,10 +296,14 @@
             }
         }
 
+        &-svg-active {
+            fill: $mainGreen;
+        }
+
         &-svg-top {
         }
 
-        &-svg-button {
+        &-svg-bottom {
             transform: rotate(180deg);
         }
     }
