@@ -14,8 +14,7 @@
         <div class="product-filter__filter-block">
             <load
                 src="src/components/base/select.html"
-                body_selector="<div class='select__item product-filter__item'>Вкус</div>
-                           <div class='select__item product-filter__item'>сладкий</div>
+                body_selector="<div class='select__item product-filter__item'>сладкий</div>
                            <div class='select__item product-filter__item'>солоний</div>"
                 current_selector="Вкус"
                 select_support_class="product-filter__select-taste"
@@ -44,7 +43,7 @@
                 <div class="product-filter__cost-arrows">
                     <load
                         src="src/components/base/button.html"
-                        class_button="product-filter__cost-button"
+                        class_button="product-filter__cost-button product-filter__higher-price"
                         class_button_text=""
                         component_class=""
                         button_text="<svg class='product-filter__cost-svg-top'>
@@ -52,7 +51,7 @@
                     />
                     <load
                         src="src/components/base/button.html"
-                        class_button="product-filter__cost-button"
+                        class_button="product-filter__cost-button product-filter__lower-price"
                         class_button_text=""
                         component_class=""
                         button_text="<svg class='product-filter__cost-svg-button'>
