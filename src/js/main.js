@@ -6,7 +6,7 @@ import { getImages } from "./get-images.js";
 import { swiperInit } from "./swiper-init.js";
 import { renders } from "./renders.js";
 import { getElement } from "./base/get-element-dom.js";
-import { filterProducts } from "./catalog-products/filter-products.js";
+import { filterProductsWeight } from "./catalog-products/filter-products.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = await initializeFireBase();
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     burgerMenu();
     await swiperInit(app);
     await renders(app);
-    filterProducts(
+    filterProductsWeight(
         getElement(".product__card", true),
         getElement(".product-filter__apply-button"),
         getElement(".product-filter__cross-button"),

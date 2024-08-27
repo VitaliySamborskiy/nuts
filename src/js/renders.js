@@ -11,5 +11,5 @@ export async function renders(app) {
     swipersCard.forEach((element) => {
         swiper(element.swiper, element.prev, element.next, "auto", 0);
     });
-    useRenderNewsCards(dataNews, getElement(".news-swiper__renders"));
+    // useRenderNewsCards(dataNews, getElement(".news-swiper__renders"));
 }

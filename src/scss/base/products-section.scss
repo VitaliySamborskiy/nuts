@@ -38,9 +38,9 @@
         margin: 62px auto 0;
         width: 96%;
         display: grid;
-        column-gap: 55px;
+        column-gap: 30px;
         row-gap: 45px;
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
 
         @include breakpoints(md) {
             margin: 35px auto 0;
