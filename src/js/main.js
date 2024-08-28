@@ -7,19 +7,12 @@ import { swiperInit } from "./swiper-init.js";
 import { renders } from "./renders.js";
 import { getElement } from "./base/get-element-dom.js";
 import { filterProducts } from "./catalog-products/filter-products.js";
+import { selects } from "./selects.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = await initializeFireBase();
     getImages();
-    select(getElement(".header__select-language", true), getElement(".header__select", true));
-    select(
-        getElement(".product-filter__current-weight", true),
-        getElement(".product-filter__select-weight", true),
-    );
-    select(
-        getElement(".product-filter__current-taste", true),
-        getElement(".product-filter__select-taste", true),
-    );
+    selects();
     burgerMenu();
     await swiperInit(app);
     await renders(app);

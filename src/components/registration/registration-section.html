@@ -1,0 +1,92 @@
+<section class="registration__container">
+    <div class="registration__content">
+        <h2 class="registration__title">Регистрация</h2>
+        <h3 class="registration__">1. Контактные данные</h3>
+        <div class="registration__buttons-block">
+            <load
+                src="src/components/base/button.html"
+                class_button="registration__"
+                class_button_text=""
+                button_text="Физическое лицо"
+            />
+            <load
+                src="src/components/base/button.html"
+                class_button="registration__"
+                class_button_text=""
+                button_text="Юридическое лицо"
+            />
+        </div>
+        <div class="registration__forms-block">
+            <div class="registration__">
+                <form class="registration__">
+                    <div class="registration__">
+                        <label class="registration__label">ФИО*</label>
+                        <input class="registration__input" />
+                    </div>
+                    <div class="registration__">
+                        <label class="registration__label">Email*</label>
+                        <input class="registration__input" />
+                    </div>
+                    <div class="registration__">
+                        <label class="registration__label">Телефон*</label>
+                        <input class="registration__input" />
+                    </div>
+                </form>
+            </div>
+            <div class="registration__">
+                <h3 class="registration__">2. Адрес</h3>
+                <form class="registration__">
+                    <load
+                        src="src/components/base/select.html"
+                        body_selector="<div class='select__item'>Україна</div>
+                           <div class='select__item'>Молдова</div>
+                           <div class='select__item'>Польша</div>
+                           <div class='select__item'>Румунія</div>
+                           <div class='select__item'>Німечіна</div>"
+                        current_selector="Страна"
+                        select_support_class="registration__select-country"
+                        header_support_class="registration__select-header-country"
+                        body_support_class="registration__select-body-country"
+                        svg_select="registration__select-svg"
+                        current-class="registration__current-country"
+                    />
+                    <load
+                        src="src/components/base/select.html"
+                        body_selector="<div class='select__item'>Україна</div>
+                           <div class='select__item'>Молдова</div>
+                           <div class='select__item'>Польша</div>
+                           <div class='select__item'>Румунія</div>
+                           <div class='select__item'>Німечіна</div>"
+                        current_selector="Область"
+                        select_support_class="product-filter__select-weight"
+                        header_support_class="product-filter__select-header-weight"
+                        body_support_class="product-filter__select-body-weight"
+                        svg_select="product-filter__select-svg"
+                        current-class="product-filter__current-weight"
+                    />
+                    <div class="registration__">
+                        <label class="registration__label">Город*</label>
+                        <input class="registration__input" />
+                    </div>
+                    <div class="registration__">
+                        <label class="registration__label">Адрес</label>
+                        <input class="registration__input" />
+                    </div>
+                </form>
+            </div>
+            <div class="registration__">
+                <h3 class="registration__">3. Пароль</h3>
+                <form class="registration__">
+                    <div class="registration__">
+                        <label class="registration__label">Пароль*</label>
+                        <input class="registration__input" />
+                    </div>
+                    <div class="registration__">
+                        <label class="registration__label">Подтвердите пароль*</label>
+                        <input class="registration__input" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
