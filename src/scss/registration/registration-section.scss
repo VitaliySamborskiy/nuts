@@ -1,0 +1,71 @@
+.registration {
+    &__content {
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 100%;
+    }
+
+    &__sub-title {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 188%;
+    }
+
+    &__tabs-block {
+        display: flex;
+    }
+
+    &__tab {
+        font-size: 15px;
+        line-height: 113%;
+    }
+
+    &__forms-block {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__personal-block {
+    }
+
+    &__form {
+    }
+
+    &__input-block {
+        position: relative;
+    }
+
+    &__label,
+    &__input {
+        font-size: 14px;
+        line-height: 121%;
+        font-family: $supportFonts;
+    }
+
+    &__label {
+        //padding: 15px 17px;
+        position: absolute;
+        top: 12px;
+        left: 17px;
+
+        &_active {
+            top: -12px;
+        }
+    }
+
+    &__input {
+        padding: 15px 17px;
+        height: 40px;
+        width: 400px;
+        border: 1px solid $headerLine;
+    }
+
+    &__addresses-block {
+    }
+
+    &__password-block {
+    }
+}
