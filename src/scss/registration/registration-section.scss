@@ -1,5 +1,7 @@
 .registration {
     &__content {
+        margin: 98px auto 0;
+        padding-left: 20px;
     }
 
     &__title {
@@ -11,27 +13,46 @@
         font-weight: 700;
         font-size: 17px;
         line-height: 188%;
+        font-family: $supportFonts;
     }
 
     &__tabs-block {
+        width: 36%;
+        margin-top: 30px;
         display: flex;
+        justify-content: space-between;
+        padding-bottom: 13px;
+        border-bottom: 1px solid $registrationBorder;
     }
 
     &__tab {
         font-size: 15px;
         line-height: 113%;
+        font-family: $supportFonts;
+        font-weight: 500;
+    }
+
+    &__tab-text {
+        &-first {
+            margin-left: 32px;
+        }
+        &-second {
+            margin-right: 38px;
+        }
     }
 
     &__forms-block {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+        margin: 20px 0 0 2px;
     }
 
     &__personal-block {
+        margin-top: 40px;
     }
 
     &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
     }
 
     &__input-block {
@@ -46,9 +67,8 @@
     }
 
     &__label {
-        //padding: 15px 17px;
         position: absolute;
-        top: 12px;
+        top: 19px;
         left: 17px;
 
         &_active {
@@ -57,15 +77,60 @@
     }
 
     &__input {
-        padding: 15px 17px;
-        height: 40px;
-        width: 400px;
-        border: 1px solid $headerLine;
+        padding: 15px 15px;
+        width: 37%;
+        border: 1px solid $registrationBorder;
+        transition: border 0.5s ease-in-out;
+
+        &:hover {
+            border: 1px solid $mainGreen;
+        }
+    }
+
+    &__select-country {
+        margin-top: 21px;
+        z-index: 2;
+    }
+
+    &__select-region {
+    }
+
+    &__select-header {
+        padding: 15px 19px;
+        width: 37%;
+        line-height: 121%;
+        font-weight: 500;
+        border: 1px solid $registrationBorder;
+        justify-content: space-between;
+        font-family: $supportFonts;
+        display: flex;
+        z-index: 0;
+    }
+
+    &__select-body {
+        width: 37%;
+    }
+
+    &__item {
+        padding: 15px 19px 0 19px;
+
+        &:after {
+            margin-top: 15px;
+        }
+
+        &:last-child {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__select-svg {
     }
 
     &__addresses-block {
+        margin-top: 48px;
     }
 
     &__password-block {
+        margin-top: 48px;
     }
 }

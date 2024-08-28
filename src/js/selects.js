@@ -11,4 +11,12 @@ export function selects() {
         getElement(".product-filter__current-taste", true),
         getElement(".product-filter__select-taste", true),
     );
+    select(
+        getElement(".registration__current-country", true),
+        getElement(".registration__select-country", true),
+    );
+    select(
+        getElement(".registration__current-region", true),
+        getElement(".registration__select-region", true),
+    );
 }

@@ -1,22 +1,23 @@
 <section class="registration__container">
     <div class="registration__content">
         <h2 class="registration__title">Регистрация</h2>
-        <h3 class="registration__sub-title">1. Контактные данные</h3>
-        <div class="registration__tabs-block">
-            <load
-                src="src/components/base/button.html"
-                class_button="registration__tab"
-                class_button_text=""
-                button_text="Физическое лицо"
-            />
-            <load
-                src="src/components/base/button.html"
-                class_button="registration__tab"
-                class_button_text=""
-                button_text="Юридическое лицо"
-            />
-        </div>
+
         <div class="registration__forms-block">
+            <h3 class="registration__sub-title">1. Контактные данные</h3>
+            <div class="registration__tabs-block">
+                <load
+                    src="src/components/base/button.html"
+                    class_button="registration__tab"
+                    class_button_text="registration__tab-text-first"
+                    button_text="Физическое лицо"
+                />
+                <load
+                    src="src/components/base/button.html"
+                    class_button="registration__tab"
+                    class_button_text="registration__tab-text-second"
+                    button_text="Юридическое лицо"
+                />
+            </div>
             <div class="registration__personal-block">
                 <form class="registration__form">
                     <div class="registration__input-block">
@@ -38,31 +39,31 @@
                 <form class="registration__form">
                     <load
                         src="src/components/base/select.html"
-                        body_selector="<div class='select__item'>Україна</div>
-                           <div class='select__item'>Молдова</div>
-                           <div class='select__item'>Польша</div>
-                           <div class='select__item'>Румунія</div>
-                           <div class='select__item'>Німечіна</div>"
+                        body_selector="<div class='select__item registration__item'>Україна</div>
+                           <div class='select__item registration__item'>Молдова</div>
+                           <div class='select__item registration__item'>Польша</div>
+                           <div class='select__item registration__item'>Румунія</div>
+                           <div class='select__item registration__item'>Німечіна</div>"
                         current_selector="Страна"
                         select_support_class="registration__select-country"
-                        header_support_class="registration__select-header-country"
-                        body_support_class="registration__select-body-country"
+                        header_support_class="registration__select-header"
+                        body_support_class="registration__select-body"
                         svg_select="registration__select-svg"
                         current-class="registration__current-country"
                     />
                     <load
                         src="src/components/base/select.html"
-                        body_selector="<div class='select__item'>Україна</div>
-                           <div class='select__item'>Молдова</div>
-                           <div class='select__item'>Польша</div>
-                           <div class='select__item'>Румунія</div>
-                           <div class='select__item'>Німечіна</div>"
+                        body_selector="<div class='select__item registration__item'>Україна</div>
+                           <div class='select__item registration__item'>Молдова</div>
+                           <div class='select__item registration__item'>Польша</div>
+                           <div class='select__item registration__item'>Румунія</div>
+                           <div class='select__item registration__item'>Німечіна</div>"
                         current_selector="Область"
-                        select_support_class="product-filter__select-weight"
-                        header_support_class="product-filter__select-header-weight"
-                        body_support_class="product-filter__select-body-weight"
-                        svg_select="product-filter__select-svg"
-                        current-class="product-filter__current-weight"
+                        select_support_class="registration__select-region"
+                        header_support_class="registration__select-header"
+                        body_support_class="registration__select-body"
+                        svg_select="registration__select-svg"
+                        current-class="registration__current-region"
                     />
                     <div class="registration__input-block">
                         <label class="registration__label" for="city">Город*</label>
