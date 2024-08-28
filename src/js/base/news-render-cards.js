@@ -32,5 +32,7 @@ export function useRenderNewsCards(arrData, elements) {
         fragment.appendChild(cardNews);
     });
 
-    elements.append(fragment);
+    if (elements) {
+        elements.append(fragment);
+    }
 }

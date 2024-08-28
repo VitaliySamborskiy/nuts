@@ -7,7 +7,7 @@ import { renders } from "./renders.js";
 import { getElement } from "./base/get-element-dom.js";
 import { filterProducts } from "./catalog-products/filter-products.js";
 import { selects } from "./selects.js";
-import { inputActive } from "./registration/input-active.js";
+import { useInputActive } from "./registration/input-active.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = await initializeFireBase();
@@ -24,5 +24,5 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".product-filter__lower-price"),
         getElement(".product__cards"),
     );
-    inputActive(getElement(".registration__input", true));
+    useInputActive(getElement(".registration__input", true));
 });

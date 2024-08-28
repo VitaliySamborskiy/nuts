@@ -11,70 +11,76 @@ export function filterProducts(
     const cardsPrice = Array.from(arrCards);
     let arrowStatus;
 
-    loverPrice.addEventListener("click", () => {
-        arrowStatus = "lover";
-        activeArrow();
-        cardsPrice.sort((a, b) => {
-            return parseInt(a.getAttribute("data-price")) - parseInt(b.getAttribute("data-price"));
+    if (mainContainer) {
+        loverPrice.addEventListener("click", () => {
+            arrowStatus = "lover";
+            activeArrow();
+            cardsPrice.sort((a, b) => {
+                return (
+                    parseInt(a.getAttribute("data-price")) - parseInt(b.getAttribute("data-price"))
+                );
+            });
+
+            cardsPrice.forEach((element) => {
+                mainContainer.appendChild(element);
+            });
         });
 
-        cardsPrice.forEach((element) => {
-            mainContainer.appendChild(element);
+        higherPrice.addEventListener("click", () => {
+            arrowStatus = "higher";
+            activeArrow();
+            cardsPrice.sort((a, b) => {
+                return (
+                    parseInt(b.getAttribute("data-price")) - parseInt(a.getAttribute("data-price"))
+                );
+            });
+
+            cardsPrice.forEach((element) => {
+                mainContainer.appendChild(element);
+            });
         });
-    });
 
-    higherPrice.addEventListener("click", () => {
-        arrowStatus = "higher";
-        activeArrow();
-        cardsPrice.sort((a, b) => {
-            return parseInt(b.getAttribute("data-price")) - parseInt(a.getAttribute("data-price"));
-        });
+        applyButton.addEventListener("click", () => {
+            appliedFilters.weight = document
+                .querySelector(".product-filter__current-weight")
+                .textContent.trim();
 
-        cardsPrice.forEach((element) => {
-            mainContainer.appendChild(element);
-        });
-    });
+            appliedFilters.taste = document
+                .querySelector(".product-filter__current-taste")
+                .textContent.trim();
 
-    applyButton.addEventListener("click", () => {
-        appliedFilters.weight = document
-            .querySelector(".product-filter__current-weight")
-            .textContent.trim();
+            arrCards.forEach((card) => {
+                let filterChange = true;
 
-        appliedFilters.taste = document
-            .querySelector(".product-filter__current-taste")
-            .textContent.trim();
-
-        arrCards.forEach((card) => {
-            let filterChange = true;
-
-            if (appliedFilters.weight !== "Масса") {
-                const itemWeight = parseInt(card.getAttribute("data-weight"));
-                const [min, max] = appliedFilters.weight.split("-").map(Number);
-                if (itemWeight < min || itemWeight > max) {
-                    filterChange = false;
+                if (appliedFilters.weight !== "Масса") {
+                    const itemWeight = parseInt(card.getAttribute("data-weight"));
+                    const [min, max] = appliedFilters.weight.split("-").map(Number);
+                    if (itemWeight < min || itemWeight > max) {
+                        filterChange = false;
+                    }
                 }
-            }
 
-            if (appliedFilters.taste !== "Вкус") {
-                const itemTaste = card.getAttribute("data-taste");
-                if (appliedFilters.taste !== itemTaste) {
-                    filterChange = false;
+                if (appliedFilters.taste !== "Вкус") {
+                    const itemTaste = card.getAttribute("data-taste");
+                    if (appliedFilters.taste !== itemTaste) {
+                        filterChange = false;
+                    }
                 }
-            }
 
-            card.classList.toggle("hidden", !filterChange);
+                card.classList.toggle("hidden", !filterChange);
+            });
         });
-    });
 
-    crossButton.addEventListener("click", () => {
-        resetFilter(arrCards, ".product-filter__current-weight", "Масса");
-        resetFilter(arrCards, ".product-filter__current-taste", "Вкус");
-        saveCards.forEach((element) => {
-            mainContainer.appendChild(element);
+        crossButton.addEventListener("click", () => {
+            resetFilter(arrCards, ".product-filter__current-weight", "Масса");
+            resetFilter(arrCards, ".product-filter__current-taste", "Вкус");
+            saveCards.forEach((element) => {
+                mainContainer.appendChild(element);
+            });
+            arrowStatus = null;
+            activeArrow();
         });
-        arrowStatus = null;
-        activeArrow();
-    });
+    }
 
     function activeArrow() {
         switch (arrowStatus) {

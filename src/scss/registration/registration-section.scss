@@ -1,7 +1,7 @@
 .registration {
     &__content {
         margin: 98px auto 0;
-        padding-left: 15px;
+        padding-left: 20px;
     }
 
     &__title {
@@ -18,7 +18,7 @@
     }
 
     &__tabs-block {
-        width: 36%;
+        width: 61%;
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
@@ -38,12 +38,17 @@
             margin-left: 32px;
         }
         &-second {
-            margin-right: 38px;
+            margin-right: 48px;
         }
     }
 
     &__forms-block {
+        display: flex;
         margin: 20px 0 0 2px;
+    }
+
+    &__forms-personal-data {
+        width: 60%;
     }
 
     &__personal-block {
@@ -69,17 +74,24 @@
 
     &__label {
         position: absolute;
-        top: 19px;
+        display: block;
+        top: 17px;
         left: 17px;
+        //opacity: 1;
+        //transition:
+        //    opacity,
+        //    0.3s ease-in-out;
 
         &_active {
-            top: -12px;
+            display: none;
+            //top: -12px;
+            //opacity: 0;
         }
     }
 
     &__input {
         padding: 15px 15px;
-        width: 37%;
+        width: 60%;
         border: 1px solid $registrationBorder;
         transition: border 0.5s ease-in-out;
 
@@ -89,7 +101,6 @@
     }
 
     &__select-country {
-        //margin-top: 21px;
         z-index: 2;
     }
 
@@ -98,7 +109,7 @@
 
     &__select-header {
         padding: 15px 19px;
-        width: 37%;
+        width: 61%;
         line-height: 121%;
         font-weight: 500;
         border: 1px solid $registrationBorder;
@@ -109,7 +120,7 @@
     }
 
     &__select-body {
-        width: 37%;
+        width: 61%;
     }
 
     &__item {
@@ -128,7 +139,7 @@
     }
 
     &__addresses-block {
-        margin-top: 48px;
+        margin-top: 45px;
     }
 
     &__password-block {
