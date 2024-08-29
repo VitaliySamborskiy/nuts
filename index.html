@@ -3,15 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
+        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
         <title>ОРЕХ ПРИЧЕРНОМОРЬЯ</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/main-I_xi23O6.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/main-CPrsgRWU.js"></script>
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/main-CJHaTWMa.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/main-znLJJksO.css">
     </head>
     <body>
         <div class="wrapper">
@@ -56,10 +56,14 @@
                                 <img class="header__top-img" src="" />
                                 <span class="header__top-text-entrance">Вход</span></a
                             >
-                            <a class="header__top-registration" href="#">Регистрация</a>
+                            <a
+                                class="header__top-registration"
+                                href="/nuts/src/pages/registration.html"
+                                >Регистрация</a
+                            >
                             <div class="select header__select">
-    <div class="select__header header__select-header">
-        <span class="select__current">Ru</span>
+    <div class="header__select-header select__header">
+        <span class="select__current header__select-language">Ru</span>
         <svg class="select__svg "><use href="#arrow_down"></use></svg>
     </div>
     <div class="select__body header__select-body"><div class='select__item header__select-item'>UA</div>
@@ -262,54 +266,54 @@
         </div>
         <div class="product-filter__filter-block">
             <div class="select product-filter__select-taste">
-    <div class="select__header product-filter__select-header-taste">
-        <span class="select__current">Вкус</span>
+    <div class="product-filter__select-header-taste select__header">
+        <span class="select__current product-filter__current-taste">Вкус</span>
         <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
     </div>
-    <div class="select__body product-filter__select-body-taste"><div class='select__item product-filter__item'>Вкус</div>
-                           <div class='select__item product-filter__item'>сладкий</div>
-                           <div class='select__item product-filter__item'>гіркий</div></div>
+    <div class="select__body product-filter__select-body-taste"><div class='select__item product-filter__item'>сладкий</div>
+                           <div class='select__item product-filter__item'>солоний</div></div>
 </div>
 
             <div class="select product-filter__select-weight">
-    <div class="select__header product-filter__select-header-weight">
-        <span class="select__current">Масса</span>
+    <div class="product-filter__select-header-weight select__header">
+        <span class="select__current product-filter__current-weight">Масса</span>
         <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
     </div>
-    <div class="select__body product-filter__select-body-weight"><div class='select__item product-filter__item'>Масса</div>
-                           <div class='select__item product-filter__item'>30</div>
-                           <div class='select__item product-filter__item'>40</div>
-                           <div class='select__item product-filter__item'>50</div>
-                           <div class='select__item product-filter__item'>60</div>
-                           <div class='select__item product-filter__item'>70</div>
-                           <div class='select__item product-filter__item'>100+</div></div>
+    <div class="select__body product-filter__select-body-weight"><div class='select__item product-filter__item'>30-39</div>
+                           <div class='select__item product-filter__item'>40-49</div>
+                           <div class='select__item product-filter__item'>50-59</div>
+                           <div class='select__item product-filter__item'>60-69</div>
+                           <div class='select__item product-filter__item'>70-99</div>
+                           <div class='select__item product-filter__item'>100-250</div></div>
 </div>
 
             <div class="product-filter__cost-block">
                 <p class="product-filter__cost-text">Стоимость</p>
                 <div class="product-filter__cost-arrows">
-                    <button class="product-filter__cost-button">
+                    <button class="product-filter__cost-button product-filter__higher-price">
     <span class=""><svg class='product-filter__cost-svg-top'>
                 <use href='#arrow'></use></svg></span>
 </button>
 
-                    <button class="product-filter__cost-button">
-    <span class=""><svg class='product-filter__cost-svg-button'>
+                    <button class="product-filter__cost-button product-filter__lower-price">
+    <span class=""><svg class='product-filter__cost-svg-bottom'>
                     <use href='#arrow'></use></svg></span>
 </button>
 
                 </div>
             </div>
         </div>
-        <button class="green-button product-filter__apply-button">
+        <div class="product-filter__end-buttons">
+            <button class="green-button product-filter__apply-button">
     <span class="">Применить</span>
 </button>
 
-        <button class="product-filter__cross-button">
+            <button class="product-filter__cross-button">
     <span class=""><svg class='product-filter__cross-svg'>
                     <use href='#cross'></use></svg> Сбросить</span>
 </button>
 
+        </div>
     </div>
     <div class="product__cards"></div>
     <a
@@ -317,8 +321,8 @@
         class="transparent-button product__button {=$product-link-class}"
         >Перейти в магазин</a
     >
-    <button class="hidden">
-    <span class="">{=$product-button-text}</span>
+    <button class="transparent-button hidden">
+    <span class="">Загрузить еще</span>
 </button>
 
 </section>
@@ -701,12 +705,11 @@
         />
     </symbol>
 
-    <symbol id="arrow_down">
+    <symbol id="arrow_down" viewBox="0 0 8 5">
         <path
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M3.99485 3.07389L0.978121 0.2L0 1.20892L3.99485 5L8 1.20892L7.02188 0.2L3.99485 3.07389Z"
-            fill="#93B474"
         />
     </symbol>
 
@@ -1191,6 +1194,6 @@
 </svg>
 
         </div>
-        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>
