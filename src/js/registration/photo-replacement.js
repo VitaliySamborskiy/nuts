@@ -1,5 +1,10 @@
 export function usePhotoReplacement(elementImg, imgInput) {
     imgInput.addEventListener("input", () => {
-        const imgUrl = imgInput.value;
+        const fileReader = new FileReader();
+        const imageUrl = imgInput.files[0];
+        fileReader.readAsDataURL(imageUrl);
+        fileReader.onload = () => {
+            elementImg.src = fileReader.result;
+        };
     });
 }

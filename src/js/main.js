@@ -8,6 +8,7 @@ import { getElement } from "./base/get-element-dom.js";
 import { filterProducts } from "./catalog-products/filter-products.js";
 import { selects } from "./selects.js";
 import { useInputActive } from "./registration/input-active.js";
+import { usePhotoReplacement } from "./registration/photo-replacement.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = await initializeFireBase();
@@ -25,4 +26,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".product__cards"),
     );
     useInputActive(getElement(".registration__input", true));
+    usePhotoReplacement(
+        getElement(".registration__input-img"),
+        getElement(".registration__photo-input"),
+    );
 });
