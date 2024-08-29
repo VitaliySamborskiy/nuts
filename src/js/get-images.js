@@ -46,4 +46,5 @@ export function getImages() {
     for (let i = 0; i < productCatalogElement.length; i++) {
         useGetImg(productCatalogImages[i], productCatalogElement[i]);
     }
+    useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".registration__input-img"));
 }

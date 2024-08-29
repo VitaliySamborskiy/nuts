@@ -18,7 +18,7 @@
     }
 
     &__tabs-block {
-        width: 61%;
+        width: 64%;
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
@@ -48,7 +48,7 @@
     }
 
     &__forms-personal-data {
-        width: 60%;
+        width: 57%;
     }
 
     &__personal-block {
@@ -91,7 +91,7 @@
 
     &__input {
         padding: 15px 15px;
-        width: 60%;
+        width: 64%;
         border: 1px solid $registrationBorder;
         transition: border 0.5s ease-in-out;
 
@@ -109,7 +109,7 @@
 
     &__select-header {
         padding: 15px 19px;
-        width: 61%;
+        width: 64%;
         line-height: 121%;
         font-weight: 500;
         border: 1px solid $registrationBorder;
@@ -144,5 +144,30 @@
 
     &__password-block {
         margin-top: 48px;
+    }
+
+    &__forms-applications-data {
+        margin-top: 65px;
+    }
+
+    &__photo {
+        &-block {
+            width: 130px;
+            position: relative;
+        }
+
+        &-label {
+        }
+
+        &-input {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+        }
+    }
+
+    &__input-img {
+        width: 100%;
     }
 }
