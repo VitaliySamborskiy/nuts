@@ -5,7 +5,10 @@
         <form class="registration__forms-block">
             <div class="registration__forms-personal-data">
                 <h3 class="registration__sub-title">1. Контактные данные</h3>
-                <div class="registration__tabs-block">
+                <ul class="registration__tabs-block">
+                    <li class="registration__tab">
+                        <a class="registration__tab-text-first" href="#form-1">Физическое лицо</a>
+                    </li>
                     <load
                         src="src/components/base/button.html"
                         class_button="registration__tab"
@@ -18,7 +21,7 @@
                         class_button_text="registration__tab-text-second"
                         button_text="Юридическое лицо"
                     />
-                </div>
+                </ul>
                 <div class="registration__personal-block">
                     <div class="registration__form">
                         <div class="registration__input-block">
@@ -116,17 +119,90 @@
                         />
                     </label>
                 </div>
-                <div class="registration__fop-block">
-                    <input class="checkbox__input" type="checkbox" name="mycheckbox" id="fop" />
-                    <label for="fop" class="checkbox__label registration__checkbox-label">
-                        <svg
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="checkbox__svg registration__checkbox"
+                <div class="registration__option-form registration_active" id="form-1">
+                    <div class="registration__fop-block">
+                        <input class="checkbox__input" type="checkbox" name="mycheckbox" id="fop" />
+                        <label for="fop" class="checkbox__label registration__checkbox-label">
+                            <svg
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="checkbox__svg registration__checkbox"
+                            >
+                                <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+                            </svg>
+                            <span class="registration__checkbox-text">Являюсь ФОП</span></label
                         >
-                            <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" /></svg
-                        ><span class="registration__checkbox-text">Являюсь ФОП</span>
-                    </label>
+                    </div>
+                </div>
+                <div class="registration__option-form hidden" id="form-2">
+                    <div class="registration__radiobuttons-block">
+                        <label class="radio registration__radiobutton-radio">
+                            <input name="radio" type="radio" checked />
+                            <span class="registration__radiobutton-text">Юр. лицо</span>
+                        </label>
+                        <label class="radio registration__radiobutton-radio">
+                            <input name="radio" type="radio" />
+                            <span class="registration__radiobutton-text">ФОП</span>
+                        </label>
+                    </div>
+                    <div class="registration__details-block">
+                        <h3 class="registration__sub-title">1. Реквизиты</h3>
+                        <div class="registration__input-block">
+                            <label class="registration__label" for="details">ОКПО</label>
+                            <input class="registration__input" id="details" type="password" />
+                        </div>
+                    </div>
+                    <div class="registration__details-legal">
+                        <h3 class="registration__sub-title">2. Юридический адрес</h3>
+                        <div class="registration__form">
+                            <load
+                                src="src/components/base/select.html"
+                                body_selector="<div class='select__item registration__item'>Україна</div>
+                           <div class='select__item registration__item'>Молдова</div>
+                           <div class='select__item registration__item'>Польша</div>
+                           <div class='select__item registration__item'>Румунія</div>
+                           <div class='select__item registration__item'>Німечіна</div>"
+                                current_selector="Страна"
+                                select_support_class="registration__select-country"
+                                header_support_class="registration__select-header"
+                                body_support_class="registration__select-body"
+                                svg_select="registration__select-svg"
+                                current-class="registration__current-country"
+                            />
+                            <load
+                                src="src/components/base/select.html"
+                                body_selector="<div class='select__item registration__item'>Україна</div>
+                           <div class='select__item registration__item'>Молдова</div>
+                           <div class='select__item registration__item'>Польша</div>
+                           <div class='select__item registration__item'>Румунія</div>
+                           <div class='select__item registration__item'>Німечіна</div>"
+                                current_selector="Область"
+                                select_support_class="registration__select-region"
+                                header_support_class="registration__select-header"
+                                body_support_class="registration__select-body"
+                                svg_select="registration__select-svg"
+                                current-class="registration__current-region"
+                            />
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="city-legal">Город*</label>
+                                <input class="registration__input" id="city-legal" type="text" />
+                            </div>
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="addresses-legal"
+                                    >Адрес</label
+                                >
+                                <input
+                                    class="registration__input"
+                                    id="addresses-legal"
+                                    type="text"
+                                />
+                            </div>
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="index-legal">Индекс</label>
+                                <input class="registration__input" id="index-legal" type="text" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>

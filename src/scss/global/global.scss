@@ -222,3 +222,50 @@ button {
         border: 2px solid $mainGreen;
     }
 }
+
+.radio {
+    display: block;
+    cursor: pointer;
+    //user-select: none;
+    text-align: left;
+
+    input {
+        display: none;
+
+        & + span {
+            display: inline-block;
+            position: relative;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                margin-right: 5px;
+                width: 15px;
+                height: 15px;
+                border: 2px solid $mainGreen;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                width: 7px;
+                height: 7px;
+                background: $mainGreen;
+                position: absolute;
+                border-radius: 50%;
+                top: 4px;
+                left: 4px;
+                transform: scale(0, 0);
+                transition: all 0.3s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+            }
+        }
+
+        &:checked + span:after {
+            transform: scale(1, 1);
+        }
+    }
+}
