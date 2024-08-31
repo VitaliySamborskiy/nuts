@@ -186,3 +186,46 @@
         }
     }
 }
+
+.checkbox {
+    border: 1px solid;
+    color: #000;
+    padding: 2px;
+    width: 20px;
+
+    path {
+        fill: currentColor;
+    }
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    &:focus + label .checkbox {
+        outline: 1px solid;
+    }
+
+    &:not(:checked) + label path {
+        display: none;
+    }
+}
+
+.checkbox {
+    &__label {
+        cursor: pointer;
+        display: flex;
+    }
+
+    &__input {
+    }
+}
+
+label {
+    .checkbox {
+        fill: #1a2f3f;
+        margin-right: 0.35rem;
+    }
+}
