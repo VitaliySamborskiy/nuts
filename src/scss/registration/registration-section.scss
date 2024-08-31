@@ -75,11 +75,18 @@
     &__label {
         position: absolute;
         display: block;
+        padding: 0 5px;
         top: 17px;
-        left: 17px;
+        left: 12px;
+        transition:
+            top,
+            0.5s ease-in-out;
 
         &_active {
-            display: none;
+            //width: 5%;
+            background-color: $backgroundColor;
+            font-size: 6px;
+            top: 0px;
         }
     }
 
@@ -114,7 +121,7 @@
     }
 
     &__select-body {
-        width: 61%;
+        width: 64%;
     }
 
     &__item {
@@ -173,59 +180,20 @@
         align-items: center;
     }
 
-    &__checkbox:checked {
-        background-color: $mainGreen;
+    &__checkbox {
         width: 14px;
         height: 14px;
         border: 2px solid $mainGreen;
+
+        &-label {
+            display: flex;
+            align-items: center;
+        }
 
         &-text {
             font-size: 13px;
             line-height: 246%;
             font-family: $supportFonts;
         }
-    }
-}
-
-.checkbox {
-    border: 1px solid;
-    color: #000;
-    padding: 2px;
-    width: 20px;
-
-    path {
-        fill: currentColor;
-    }
-}
-
-input[type="checkbox"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    position: absolute;
-
-    &:focus + label .checkbox {
-        outline: 1px solid;
-    }
-
-    &:not(:checked) + label path {
-        display: none;
-    }
-}
-
-.checkbox {
-    &__label {
-        cursor: pointer;
-        display: flex;
-    }
-
-    &__input {
-    }
-}
-
-label {
-    .checkbox {
-        fill: #1a2f3f;
-        margin-right: 0.35rem;
     }
 }

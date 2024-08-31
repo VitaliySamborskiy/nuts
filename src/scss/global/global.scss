@@ -58,6 +58,21 @@ ol {
     color: $textColor;
 }
 
+input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    &:focus + label .checkbox {
+        outline: 0 solid;
+    }
+
+    &:not(:checked) + label path {
+        display: none;
+    }
+}
+
 button {
     font-family: $mainFont;
     letter-spacing: 0.02em;
@@ -170,6 +185,8 @@ button {
         }
     }
 
+    // swiper-button
+
     &__svg-prev,
     &__svg-next {
         width: 16px;
@@ -189,4 +206,19 @@ button {
 
 .swiper {
     z-index: -1 !important;
+}
+
+// checkbox
+
+.checkbox {
+    &__label {
+        cursor: pointer;
+        display: flex;
+    }
+
+    &__svg {
+        padding: 1px;
+        fill: $mainGreen;
+        border: 2px solid $mainGreen;
+    }
 }
