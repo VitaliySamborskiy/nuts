@@ -19,4 +19,12 @@ export function selects() {
         getElement(".registration__current-region", true),
         getElement(".registration__select-region", true),
     );
+    select(
+        getElement(".registration__current-country-legal", true),
+        getElement(".registration__select-country-legal", true),
+    );
+    select(
+        getElement(".registration__current-region-legal", true),
+        getElement(".registration__select-region-legal", true),
+    );
 }

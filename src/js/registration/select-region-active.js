@@ -1,10 +1,10 @@
-export function selectRegion(currentCountry, arrRegionsItems) {
+export function selectRegion(currentCountry, arrRegionsItems, currentText, classElementAction) {
     let currentObserve = new MutationObserver(() => {
         if (currentCountry.textContent === "Страна") {
             return null;
         }
 
-        document.querySelector(".region").classList.remove("registration__select-header-inactive");
+        classElementAction.classList.remove("registration__select-header-inactive");
 
         arrRegionsItems.forEach((item) => {
             item.classList.remove("select__body");
@@ -13,6 +13,7 @@ export function selectRegion(currentCountry, arrRegionsItems) {
         arrRegionsItems.forEach((element) => {
             if (element.dataset.region === currentCountry.textContent) {
                 element.classList.add("select__body");
+                currentText.textContent = element.dataset.administrative;
             }
         });
     });
