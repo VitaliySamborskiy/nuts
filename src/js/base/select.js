@@ -1,6 +1,4 @@
 export function select(currentElement, selectors) {
-    // const selectors = document.querySelectorAll(".select");
-
     selectors.forEach((selector) => {
         const selectSvg = selector.querySelector(".select__svg");
         const selectBody = selector.querySelector(".select__body");
@@ -15,9 +13,6 @@ export function select(currentElement, selectors) {
             }
             if (clickItem) {
                 getSelect(selectHeader, selectBody, selectSvg);
-                // for (let item of currentElement) {
-                //     item.textContent = clickItem.textContent;
-                // }
                 currentElement.forEach((item) => {
                     item.textContent = clickItem.textContent;
                 });

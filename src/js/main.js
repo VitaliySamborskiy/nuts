@@ -9,6 +9,8 @@ import { filterProducts } from "./catalog-products/filter-products.js";
 import { selects } from "./selects.js";
 import { useInputActive } from "./registration/input-active.js";
 import { usePhotoReplacement } from "./registration/photo-replacement.js";
+import { useFormChange } from "./registration/form-change.js";
+import { selectRegion } from "./registration/select-region-active.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = await initializeFireBase();
@@ -29,5 +31,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     usePhotoReplacement(
         getElement(".registration__input-img"),
         getElement(".registration__photo-input"),
+    );
+    useFormChange(
+        getElement(".registration__tab-text", true),
+        getElement(".registration__option-form", true),
+    );
+    selectRegion(
+        getElement(".registration__current-country"),
+        getElement(".registration__select-body-wrapper", true),
     );
 });
