@@ -2,7 +2,7 @@ import { selectRegion } from "./registration/select-region-active.js";
 import { getElement } from "./base/get-element-dom.js";
 import { useInputActive } from "./registration/input-active.js";
 import { usePhotoReplacement } from "./registration/photo-replacement.js";
-import { useFormChange } from "./registration/form-change.js";
+import { useFormChange, useFormChangeRadio } from "./registration/form-change.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     useInputActive(getElement(".registration__input", true));
@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     useFormChange(
         getElement(".registration__tab-text", true),
         getElement(".registration__option-form", true),
+    );
+    useFormChangeRadio(
+        getElement(".registration__change-form", true),
+        getElement(".registration__option-sub-form", true),
     );
     selectRegion(
         getElement(".registration__current-country"),

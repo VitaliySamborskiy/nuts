@@ -14,4 +14,16 @@ export function useFormChange(headerTabs, bodyTabs) {
     });
 }
 
-export function useFormChangeRadio(headerTabs, bodyTabs) {}
+export function useFormChangeRadio(radioInputs, bodyChangesItems) {
+    radioInputs.forEach((item, index) => {
+        item.addEventListener("change", () => {
+            for (let changeItems of bodyChangesItems) {
+                changeItems.classList.remove("registration__body_active");
+            }
+
+            if (item.value === bodyChangesItems[index].id) {
+                bodyChangesItems[index].classList.add("registration__body_active");
+            }
+        });
+    });
+}

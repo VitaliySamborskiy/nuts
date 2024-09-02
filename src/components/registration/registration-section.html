@@ -357,15 +357,29 @@
                 <div class="registration__option-form hidden" id="form-2">
                     <div class="registration__radiobuttons-block">
                         <label class="radio registration__radiobutton-radio">
-                            <input name="changeForms" type="radio" value="legal-form" checked />
+                            <input
+                                class="registration__change-form"
+                                name="changeForms"
+                                type="radio"
+                                value="legalForm"
+                                checked
+                            />
                             <span class="registration__radiobutton-text">Юр. лицо</span>
                         </label>
                         <label class="radio registration__radiobutton-radio">
-                            <input name="changeForms" type="radio" value="fop-form" />
+                            <input
+                                class="registration__change-form"
+                                name="changeForms"
+                                type="radio"
+                                value="fopForm"
+                            />
                             <span class="registration__radiobutton-text">ФОП</span>
                         </label>
                     </div>
-                    <div class="registration__option-sub-form hidden" id="legal-form">
+                    <div
+                        class="registration__option-sub-form hidden registration__body_active"
+                        id="legalForm"
+                    >
                         <div class="registration__details-block">
                             <h3 class="registration__sub-title">1. Реквизиты</h3>
                             <div class="registration__input-block">
@@ -753,10 +767,7 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="registration__option-sub-form hidden registration__body_active"
-                        id="fop-form"
-                    >
+                    <div class="registration__option-sub-form hidden" id="fopForm">
                         <div class="registration__details-block">
                             <h3 class="registration__sub-title">1. Реквизиты</h3>
                             <div class="registration__input-block">
