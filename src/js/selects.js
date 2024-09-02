@@ -27,4 +27,12 @@ export function selects() {
         getElement(".registration__current-region-legal", true),
         getElement(".registration__select-region-legal", true),
     );
+    select(
+        getElement(".registration__current-region-fop", true),
+        getElement(".registration__select-region-fop", true),
+    );
+    select(
+        getElement(".registration__current-country-fop", true),
+        getElement(".registration__select-country-fop", true),
+    );
 }

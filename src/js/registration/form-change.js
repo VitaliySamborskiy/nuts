@@ -13,3 +13,5 @@ export function useFormChange(headerTabs, bodyTabs) {
         });
     });
 }
+
+export function useFormChangeRadio(headerTabs, bodyTabs) {}

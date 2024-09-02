@@ -1,7 +1,6 @@
 export function select(currentElement, selectors) {
     selectors.forEach((selector) => {
         const selectSvg = selector.querySelector(".select__svg");
-        // const selectBody = selector.querySelector(".select__body");
         const selectHeader = selector.querySelector(".select__header");
 
         selector.addEventListener("click", (event) => {

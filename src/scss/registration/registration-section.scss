@@ -137,7 +137,9 @@
         }
     }
 
-    &__select-country {
+    &__select-country,
+    &__select-country-legal,
+    &__select-country-fop {
         z-index: 2;
     }
 
