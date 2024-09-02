@@ -3,6 +3,7 @@ import { getElement } from "./base/get-element-dom.js";
 import { useInputActive } from "./registration/input-active.js";
 import { usePhotoReplacement } from "./registration/photo-replacement.js";
 import { useFormChange, useFormChangeRadio } from "./registration/form-change.js";
+import { useRegistrationValidate } from "./registration/form-registration-validate.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     useInputActive(getElement(".registration__input", true));
@@ -30,4 +31,5 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".registration__current-region-legal"),
         getElement(".region-legal"),
     );
+    useRegistrationValidate(getElement(".registration__forms"));
 });

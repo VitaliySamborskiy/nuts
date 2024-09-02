@@ -323,10 +323,26 @@
     margin-top: 150px;
 
     @include breakpoints(md) {
-        margin-top: 150px;
+        margin-top: 130px;
     }
 
     @include breakpoints(sm) {
         margin-top: 90px;
+    }
+}
+
+.registration__margin-contact {
+    margin-top: 195px;
+
+    @include breakpoints(md) {
+        margin-top: 150px;
+    }
+
+    @include breakpoints(sm) {
+        margin-top: 70px;
+    }
+
+    @include breakpoints(xs) {
+        margin-top: 50px;
     }
 }

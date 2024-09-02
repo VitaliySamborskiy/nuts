@@ -2,11 +2,29 @@
     &__content {
         margin: 98px auto 0;
         padding-left: 20px;
+
+        @include breakpoints(xl) {
+            width: 99%;
+            padding-left: 0;
+        }
+
+        @include breakpoints(md) {
+            margin: 65px auto 0;
+        }
+
+        @include breakpoints(xs) {
+            margin: 55px auto 0;
+        }
     }
 
     &__title {
         font-size: 32px;
         line-height: 100%;
+
+        @include breakpoints(md) {
+            font-size: 30px;
+            text-align: center;
+        }
     }
 
     &__sub-title {
@@ -15,6 +33,15 @@
         font-size: 17px;
         line-height: 188%;
         font-family: $supportFonts;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        @include breakpoints(sm) {
+            text-align: center;
+        }
     }
 
     &__tabs-block {
@@ -22,8 +49,23 @@
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 13px;
+        padding: 0 40px 13px 30px;
         border-bottom: 1px solid $registrationBorder;
+        overflow: hidden;
+
+        @include breakpoints(xl) {
+            width: 95%;
+            padding: 0 50px 13px 40px;
+        }
+
+        @include breakpoints(md) {
+            padding: 0 20px 13px 10px;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+            padding: 0 10px 13px 10px;
+        }
     }
 
     &__tab {
@@ -36,6 +78,14 @@
             text-align: center;
             transition: 0.2s ease-in-out;
 
+            @include breakpoints(md) {
+                font-size: 13px;
+            }
+
+            @include breakpoints(sm) {
+                font-size: 10px;
+            }
+
             &:after {
                 content: "";
                 position: absolute;
@@ -45,13 +95,12 @@
                 height: 3px;
                 width: 0;
                 transition: width 0.7s ease-in-out;
-            }
+                background: $mainGreen;
 
-            &-first {
-                margin-left: 32px;
-            }
-            &-second {
-                margin-right: 48px;
+                @include breakpoints(md) {
+                    top: 27px;
+                    left: -10%;
+                }
             }
         }
 
@@ -60,15 +109,17 @@
             font-size: 15px;
             line-height: 113%;
 
+            @include breakpoints(md) {
+                font-size: 13px;
+            }
+
             &:after {
                 content: "";
-                position: absolute;
-                left: -20%;
-                top: 29px;
-                display: block;
-                height: 3px;
-                background: $mainGreen;
                 width: 150%;
+
+                @include breakpoints(md) {
+                    width: 120%;
+                }
             }
         }
     }
@@ -82,14 +133,37 @@
         justify-content: space-between;
         margin: 20px 0 0 2px;
         gap: 30px;
+
+        @include breakpoints(sm) {
+            gap: 15px;
+            flex-wrap: wrap;
+        }
     }
 
     &__forms-personal-data {
         width: 43%;
+
+        @include breakpoints(xl) {
+            width: 48%;
+        }
+
+        @include breakpoints(sm) {
+            margin: 0 auto;
+            min-width: 310px;
+        }
+
+        @include breakpoints(xs) {
+            width: 100%;
+            min-width: 0;
+        }
     }
 
     &__personal-block {
         margin-top: 43px;
+
+        @include breakpoints(xl) {
+            margin-top: 35px;
+        }
     }
 
     &__form {
@@ -107,6 +181,10 @@
         font-size: 14px;
         line-height: 121%;
         font-family: $supportFonts;
+
+        @include breakpoints(xl) {
+            font-size: 13px;
+        }
     }
 
     &__label {
@@ -118,6 +196,10 @@
         transition:
             top,
             0.5s ease-in-out;
+
+        @include breakpoints(md) {
+            top: 14px;
+        }
 
         &_active {
             background-color: $backgroundColor;
@@ -131,6 +213,18 @@
         width: 85%;
         border: 1px solid $registrationBorder;
         transition: border 0.5s ease-in-out;
+
+        @include breakpoints(xl) {
+            width: 95%;
+        }
+
+        @include breakpoints(md) {
+            padding: 12px 15px;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
 
         &:hover {
             border: 1px solid $subGreat;
@@ -157,6 +251,22 @@
         display: flex;
         z-index: 0;
 
+        @include breakpoints(md) {
+            padding: 12px 15px;
+        }
+
+        &:hover {
+            border: 1px solid $subGreat;
+        }
+
+        @include breakpoints(xl) {
+            width: 95%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+
         &-inactive {
             background: $manufacturingBackground;
             opacity: 0.5;
@@ -170,6 +280,14 @@
 
     &__select-body {
         width: 85%;
+
+        @include breakpoints(xl) {
+            width: 95%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
 
         &-wrapper {
             height: 280px;
@@ -193,12 +311,24 @@
     &__item {
         padding: 15px 19px 0 19px;
 
+        @include breakpoints(md) {
+            padding: 12px 15px 0 15px;
+        }
+
         &:after {
             margin-top: 15px;
+
+            @include breakpoints(md) {
+                margin-top: 12px;
+            }
         }
 
         &:last-child {
             padding-bottom: 15px;
+
+            @include breakpoints(md) {
+                padding-bottom: 12px;
+            }
         }
     }
 
@@ -207,21 +337,44 @@
 
     &__addresses-block {
         margin-top: 45px;
+
+        @include breakpoints(xl) {
+            margin-top: 30px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 15px;
+        }
     }
 
     &__password-block {
         margin-top: 48px;
+
+        @include breakpoints(xl) {
+            margin-top: 34px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 15px;
+        }
     }
 
     &__forms-applications-data {
         margin-top: 65px;
-        width: 43%;
+
+        @include breakpoints(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__photo {
         &-block {
             width: 130px;
             position: relative;
+
+            @include breakpoints(xs) {
+                margin: 0 auto;
+            }
         }
 
         &-label {
@@ -257,12 +410,19 @@
             align-items: center;
         }
 
-        &-text {
+        &-text,
+        &-text-green {
             font-size: 13px;
             line-height: 246%;
             color: $checkboxTextColor;
             font-family: $supportFonts;
             margin-left: 12px;
+        }
+
+        &-text-green {
+            color: $mainGreen;
+            margin-left: 5px;
+            font-weight: 600;
         }
     }
 
@@ -271,12 +431,9 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-    }
 
-    &__radiobutton-radio {
-        input {
-            & + span {
-            }
+        @include breakpoints(xl) {
+            margin-top: 10px;
         }
     }
 
@@ -289,9 +446,44 @@
 
     &__details-block {
         margin-top: 56px;
+
+        @include breakpoints(xl) {
+            margin-top: 20px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 15px;
+        }
     }
 
     &__details-legal {
         margin-top: 47px;
+
+        @include breakpoints(xl) {
+            margin-top: 25px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 15px;
+        }
+    }
+
+    &__button-block {
+        margin-top: 17px;
+
+        @include breakpoints(md) {
+            width: 297px;
+            margin: 17px auto 0;
+        }
+    }
+
+    &__text-button {
+        margin-top: 20px;
+        padding: 14px 186px;
+
+        @include breakpoints(md) {
+            padding: 12px 100px;
+            font-size: 14px;
+        }
     }
 }
