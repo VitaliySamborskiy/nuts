@@ -1,14 +1,11 @@
-export function useInputActive(inputArr) {
-    inputArr.forEach((element) => {
+export function useInputActive(inputArr, labelArr) {
+    inputArr.forEach((element, index) => {
         element.addEventListener("input", () => {
             let inputState = false;
             if (element.value.trim() !== "") {
                 inputState = true;
             }
-            element.previousElementSibling.classList.toggle(
-                "registration__label_active",
-                inputState,
-            );
+            labelArr[index].classList.toggle("registration__label_active", inputState);
         });
     });
 }

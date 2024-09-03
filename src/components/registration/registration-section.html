@@ -2,7 +2,7 @@
     <div class="registration__content">
         <h2 class="registration__title">Регистрация</h2>
 
-        <form class="registration__forms" name="registrationForms">
+        <form class="registration__forms" id="registrationForms">
             <div class="registration__forms-block">
                 <div class="registration__forms-personal-data">
                     <h3 class="registration__sub-title">1. Контактные данные</h3>
@@ -28,7 +28,7 @@
                                     class="registration__input"
                                     id="personalInformation"
                                     type="text"
-                                    name=""
+                                    name="fullName"
                                 />
                             </div>
                             <div class="registration__input-block">
@@ -366,7 +366,12 @@
                         <div class="registration__form">
                             <div class="registration__input-block">
                                 <label class="registration__label" for="password">Пароль*</label>
-                                <input class="registration__input" id="password" type="password" />
+                                <input
+                                    class="registration__input"
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                />
                             </div>
                             <div class="registration__input-block">
                                 <label class="registration__label" for="confirmPassword"
@@ -376,6 +381,7 @@
                                     class="registration__input"
                                     id="confirmPassword"
                                     type="password"
+                                    name="confirmPassword"
                                 />
                             </div>
                         </div>
@@ -392,6 +398,7 @@
                                 type="file"
                                 accept="image/jpeg, image/png"
                                 id="avatar"
+                                name="photo"
                             />
                         </label>
                     </div>
@@ -400,12 +407,7 @@
                         id="form-1"
                     >
                         <div class="registration__fop-block">
-                            <input
-                                class="checkbox__input"
-                                type="checkbox"
-                                name="myCheckbox"
-                                id="fop"
-                            />
+                            <input class="checkbox__input" type="checkbox" id="fop" />
                             <label for="fop" class="checkbox__label registration__checkbox-label">
                                 <svg
                                     viewBox="0 0 20 20"
@@ -452,6 +454,7 @@
                                         class="registration__input"
                                         id="details"
                                         type="password"
+                                        name="requisites"
                                     />
                                 </div>
                             </div>
@@ -890,6 +893,7 @@
                                             class="registration__input"
                                             id="city-legal"
                                             type="text"
+                                            name="cityLegal"
                                         />
                                     </div>
                                     <div class="registration__input-block">
@@ -900,6 +904,7 @@
                                             class="registration__input"
                                             id="addresses-legal"
                                             type="text"
+                                            name="addressesLegal"
                                         />
                                     </div>
                                     <div class="registration__input-block">
@@ -910,6 +915,7 @@
                                             class="registration__input"
                                             id="index-legal"
                                             type="text"
+                                            name="indexLegal"
                                         />
                                     </div>
                                 </div>
@@ -1071,7 +1077,6 @@
                     </div>
                 </div>
             </div>
-            <!--            <div class="registration__">-->
             <div class="registration__button-block">
                 <input class="checkbox__input" type="checkbox" name="agreeCheckbox" id="agree" />
                 <label for="agree" class="checkbox__label registration__checkbox-label">
@@ -1095,7 +1100,6 @@
                     button_text="Продолжить"
                 />
             </div>
-            <!--            </div>-->
         </form>
     </div>
 </section>

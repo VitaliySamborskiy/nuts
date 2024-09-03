@@ -1,7 +1,10 @@
-export function getElement(element, arr = null) {
-    if (arr) {
-        return document.querySelectorAll(element);
-    } else {
-        return document.querySelector(element);
+export function getElement(element, method = null) {
+    switch (method) {
+        case "all":
+            return document.querySelectorAll(element);
+        case "id":
+            return document.getElementById(element);
+        default:
+            return document.querySelector(element);
     }
 }

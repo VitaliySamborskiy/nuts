@@ -4,7 +4,7 @@ import { useGetFirestore } from "./base/useGetFierstore.js";
 
 export async function swiperInit(app) {
     const videoData = await useGetFirestore(app, "videoId", "main-pages");
-    const playersMainPage = getElement(".manufacturing__player", true);
+    const playersMainPage = getElement(".manufacturing__player", "all");
     swiper(
         getElement(".manufacturing__swiper-video"),
         getElement(".manufacturing__button-prev"),

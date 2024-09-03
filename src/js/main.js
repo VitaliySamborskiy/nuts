@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     await swiperInit(app);
     await renders(app);
     filterProducts(
-        getElement(".product__card", true),
+        getElement(".product__card", "all"),
         getElement(".product-filter__apply-button"),
         getElement(".product-filter__cross-button"),
         getElement(".product-filter__higher-price"),
