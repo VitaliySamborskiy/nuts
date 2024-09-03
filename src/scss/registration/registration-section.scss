@@ -489,16 +489,29 @@
 
     &__error-block {
         position: absolute;
-        top: 90%;
-        left: 5%;
+        top: calc(88% - 1px);
+        left: 2%;
         background: #cd1515;
-        padding: 8px 15px;
+        padding: 5px 15px;
         z-index: 2;
+        border-radius: 5px;
+
+        &:after {
+            content: "";
+            padding: 5px;
+            position: absolute;
+            background: #cd1515;
+            top: calc(0% - 4px);
+            left: 10%;
+            transform: rotate(45deg);
+            z-index: -1;
+            border-radius: 2px;
+        }
     }
 
     &__error-text {
         font-size: 11px;
-        font-weight: 600;
+        //font-weight: 500;
         color: cornsilk;
     }
 }
