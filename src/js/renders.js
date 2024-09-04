@@ -5,8 +5,8 @@ import { getElement } from "./base/get-element-dom.js";
 import { swiper } from "./base/swiper.js";
 
 export async function renders(app) {
-    const dataProducts = await useGetFirestore(app, "products");
     const dataNews = await useGetFirestore(app, "news");
+    const dataProducts = await useGetFirestore(app, "products");
     const swipersCard = useRenderCards(dataProducts, getElement(".product__cards"));
     swipersCard.forEach((element) => {
         swiper(element.swiper, element.prev, element.next, "auto", 0);

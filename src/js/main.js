@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     selects();
     burgerMenu();
     await swiperInit(app);
-    await renders(app);
+    // await renders(app);
     filterProducts(
         getElement(".product__card", "all"),
         getElement(".product-filter__apply-button"),

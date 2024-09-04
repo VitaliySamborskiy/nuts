@@ -1,28 +1,48 @@
-import { getElement } from "../base/get-element-dom.js";
-
-export function useRegistrationValidate(formRegistration, inputArr) {
-    inputArr.forEach((element) => {
+export function useRegistrationValidate(formRegistration, inputArr, messagesError, regExp) {
+    inputArr.forEach((element, index) => {
         element.addEventListener("input", () => {
-            const form = new FormData(formRegistration);
-
-            validateInput(form, "fullName", "фио не вказано!", 0);
-            validateInput(form, "email", "не коректна почта!", 1);
+            if (element.name in messagesError) {
+                validateInput(
+                    element.name,
+                    messagesError[element.name],
+                    index,
+                    element,
+                    regExp[element.name],
+                );
+            }
+        });
+        element.addEventListener("blur", () => {
+            if (element.name in messagesError) {
+                validateInput(
+                    element.name,
+                    messagesError[element.name],
+                    index,
+                    element,
+                    regExp[element.name],
+                );
+            }
         });
     });
 
-    function validateInput(formData, inputName, textError, inputIndex) {
+    function validateInput(inputName, textError, inputIndex, elementInput, regExp = null) {
+        const formData = new FormData(formRegistration);
+        const errorElement = elementInput.parentElement.querySelector(".registration__error-block");
         try {
-            if (formData.get(inputName).trim() === "") {
-                throw new Error(textError);
+            if (formData.get(elementInput.name) === "") {
+                throw new Error(textError.void);
             }
-            let input = inputArr[inputIndex];
-            errorRemove(getElement(".registration__error-block"));
+            if (!formData.get(elementInput.name).match(regExp) && regExp) {
+                throw new Error(textError.regExp);
+            }
+            if (
+                formData.get("password") !== formData.get("confirmPassword") &&
+                textError.password
+            ) {
+                throw new Error(textError.password);
+            }
+            errorRemove(errorElement, elementInput);
         } catch (error) {
-            errorAddClass(
-                inputArr[inputIndex],
-                error.message,
-                getElement(".registration__error-block"),
-            );
+            errorAddClass(elementInput, error.message, errorElement);
         }
     }
 
@@ -32,51 +52,17 @@ export function useRegistrationValidate(formRegistration, inputArr) {
             div.classList.add("registration__error-block");
             let html = `<p class="registration__error-text">${errorText}</p>`;
             div.innerHTML = html;
+            input.classList.add("registration__error-input");
             input.parentElement.appendChild(div);
+        } else {
+            input.parentElement.querySelector(".registration__error-text").textContent = errorText;
         }
     }
 
-    function errorRemove(errorElement) {
+    function errorRemove(errorElement, input) {
         if (errorElement) {
+            input.classList.remove("registration__error-input");
             errorElement.remove();
         }
     }
 }
-
-// export function useRegistrationValidate(formRegistration, inputArr) {
-//     inputArr.forEach((element) => {
-//         element.addEventListener("input", (event) => {
-//             const form = new FormData(formRegistration);
-//
-//             validateInput(form, "fullName", "ПІБ не вказано!", 0);
-//             validateInput(form, "email", "Некоректна адреса електронної пошти!", 1);
-//         });
-//     });
-//
-//     function validateInput(formData, inputName, textError, inputIndex) {
-//         const input = inputArr[inputIndex];
-//         const errorElement = input.parentElement.querySelector(".registration__error-block");
-//
-//         if (formData.get(inputName).trim() === "") {
-//             errorAddClass(input, textError, errorElement);
-//         } else {
-//             errorRemove(errorElement);
-//         }
-//     }
-//
-//     function errorAddClass(input, errorText, existingError) {
-//         if (!existingError) {
-//             let div = document.createElement("div");
-//             div.classList.add("registration__error-block");
-//             let html = `<p class="registration__error-text">${errorText}</p>`;
-//             div.innerHTML = html;
-//             input.parentElement.appendChild(div);
-//         }
-//     }
-//
-//     function errorRemove(errorElement) {
-//         if (errorElement) {
-//             errorElement.remove();
-//         }
-//     }
-// }
