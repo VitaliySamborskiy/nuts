@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
+        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
         <title>Регистрация</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/main-CPrsgRWU.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/registration-DFAFQnDt.js"></script>
+      <link rel="modulepreload" crossorigin href="/nuts/assets/main-D3ttXanS.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/registration-CUoT_qpS.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/registration-DffFFIRj.css">
     </head>
     <body>
         <div class="wrapper">
@@ -238,123 +239,1119 @@
     <div class="registration__content">
         <h2 class="registration__title">Регистрация</h2>
 
-        <form class="registration__forms-block">
-            <div class="registration__forms-personal-data">
-                <h3 class="registration__sub-title">1. Контактные данные</h3>
-                <div class="registration__tabs-block">
-                    <button class="registration__tab{=$component_class}">
-    <span class="registration__tab-text-first">Физическое лицо</span>
-</button>
-
-                    <button class="registration__tab{=$component_class}">
-    <span class="registration__tab-text-second">Юридическое лицо</span>
-</button>
-
-                </div>
-                <div class="registration__personal-block">
-                    <div class="registration__form">
-                        <div class="registration__input-block">
-                            <label class="registration__label" for="personalInformation"
-                                >ФИО*</label
+        <form class="registration__forms" id="registrationForms">
+            <div class="registration__forms-block">
+                <div class="registration__forms-personal-data">
+                    <h3 class="registration__sub-title">1. Контактные данные</h3>
+                    <ul class="registration__tabs-block">
+                        <li>
+                            <a
+                                class="registration__tab-text registration__tab_active"
+                                href="#form-1"
+                                >Физическое лицо</a
                             >
-                            <input
-                                class="registration__input"
-                                id="personalInformation"
-                                type="text"
-                            />
+                        </li>
+                        <li>
+                            <a class="registration__tab-text" href="#form-2">Юридическое лицо</a>
+                        </li>
+                    </ul>
+                    <div class="registration__personal-block">
+                        <div class="registration__form">
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="personalInformation"
+                                    >ФИО*</label
+                                >
+                                <input
+                                    class="registration__input"
+                                    id="personalInformation"
+                                    type="text"
+                                    name="fullName"
+                                />
+                            </div>
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="email">Email*</label>
+                                <input
+                                    class="registration__input"
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                />
+                            </div>
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="phone">Телефон*</label>
+                                <input
+                                    class="registration__input"
+                                    id="phone"
+                                    type="text"
+                                    name="phone"
+                                />
+                            </div>
                         </div>
-                        <div class="registration__input-block">
-                            <label class="registration__label" for="email">Email*</label>
-                            <input class="registration__input" id="email" type="email" />
+                    </div>
+
+                    <div class="registration__addresses-block">
+                        <h3 class="registration__sub-title">2. Адрес</h3>
+                        <div class="registration__form">
+                            <div class="select registration__select-country">
+                                <div class="registration__select-header select__header">
+                                    <span class="select__current registration__current-country"
+                                        >Страна</span
+                                    >
+                                    <svg class="select__svg registration__select-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </div>
+                                <ul class="select__body registration__select-body">
+                                    <li class="select__item registration__item">Україна</li>
+                                    <li class="select__item registration__item">Молдова</li>
+                                    <li class="select__item registration__item">Польща</li>
+                                    <li class="select__item registration__item">Румунія</li>
+                                    <li class="select__item registration__item">Німеччина</li>
+                                </ul>
+                            </div>
+                            <div class="select registration__select-region">
+                                <div
+                                    class="region registration__select-header registration__select-header-inactive select__header"
+                                >
+                                    <span class="select__current registration__current-region"
+                                        >Область</span
+                                    >
+                                    <svg class="select__svg registration__select-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </div>
+                                <ul
+                                    class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                    data-region="Україна"
+                                    data-administrative="Область"
+                                >
+                                    <li class="select__item registration__item">
+                                        Вінницька область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Волинська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Дніпропетровська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Донецька область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Житомирська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Закарпатська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Запорізька область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Івано-Франківська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Київська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Кіровоградська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Луганська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Львівська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Миколаївська область
+                                    </li>
+                                    <li class="select__item registration__item">Одеська область</li>
+                                    <li class="select__item registration__item">
+                                        Полтавська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Рівненська область
+                                    </li>
+                                    <li class="select__item registration__item">Сумська область</li>
+                                    <li class="select__item registration__item">
+                                        Тернопільська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Харківська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Херсонська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Хмельницька область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Черкаська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Чернівецька область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Чернігівська область
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Автономна Республіка Крим
+                                    </li>
+                                    <li class="select__item registration__item">м. Київ</li>
+                                    <li class="select__item registration__item">м. Севастополь</li>
+                                </ul>
+
+                                <ul
+                                    class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                    data-region="Молдова"
+                                    data-administrative="Район"
+                                >
+                                    <li class="select__item registration__item">Анений Ной</li>
+                                    <li class="select__item registration__item">Басарабяска</li>
+                                    <li class="select__item registration__item">Бричани</li>
+                                    <li class="select__item registration__item">Бєльці</li>
+                                    <li class="select__item registration__item">Кагул</li>
+                                    <li class="select__item registration__item">Кантемир</li>
+                                    <li class="select__item registration__item">Каларяш</li>
+                                    <li class="select__item registration__item">Чимішлія</li>
+                                    <li class="select__item registration__item">Кріулень</li>
+                                    <li class="select__item registration__item">Дондюшани</li>
+                                    <li class="select__item registration__item">Дубесарь</li>
+                                    <li class="select__item registration__item">Єдинець</li>
+                                    <li class="select__item registration__item">Фалешть</li>
+                                    <li class="select__item registration__item">Флорешть</li>
+                                    <li class="select__item registration__item">Глодяни</li>
+                                    <li class="select__item registration__item">Хинчешть</li>
+                                    <li class="select__item registration__item">Єлова</li>
+                                    <li class="select__item registration__item">Яловень</li>
+                                    <li class="select__item registration__item">Кагул</li>
+                                    <li class="select__item registration__item">Кантарь</li>
+                                    <li class="select__item registration__item">Кахул</li>
+                                    <li class="select__item registration__item">Кишинів</li>
+                                    <li class="select__item registration__item">Леова</li>
+                                    <li class="select__item registration__item">Ніспорень</li>
+                                    <li class="select__item registration__item">Окниця</li>
+                                    <li class="select__item registration__item">Орхей</li>
+                                    <li class="select__item registration__item">Резина</li>
+                                    <li class="select__item registration__item">Ришкань</li>
+                                    <li class="select__item registration__item">Сорока</li>
+                                    <li class="select__item registration__item">Шолданешть</li>
+                                    <li class="select__item registration__item">Штефан-Воде</li>
+                                    <li class="select__item registration__item">Страшень</li>
+                                    <li class="select__item registration__item">Сундер</li>
+                                    <li class="select__item registration__item">Тараклія</li>
+                                    <li class="select__item registration__item">Теленешть</li>
+                                    <li class="select__item registration__item">Унгень</li>
+                                    <li class="select__item registration__item">Гагаузія</li>
+                                </ul>
+
+                                <ul
+                                    class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                    data-region="Польща"
+                                    data-administrative="Воєводство"
+                                >
+                                    <li class="select__item registration__item">
+                                        Нижньосілезьке воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Куявсько-Поморське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Люблінське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Любуське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Лодзьке воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Малопольське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Мазовецьке воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Опольське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Підкарпатське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Підляське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Поморське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Сілезьке воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Свентокшиське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Вармінсько-Мазурське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Великопольське воєводство
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Західнопоморське воєводство
+                                    </li>
+                                </ul>
+
+                                <ul
+                                    class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                    data-region="Румунія"
+                                    data-administrative="Повіт"
+                                >
+                                    <li class="select__item registration__item">Алба повіт</li>
+                                    <li class="select__item registration__item">Арад повіт</li>
+                                    <li class="select__item registration__item">Аргеш повіт</li>
+                                    <li class="select__item registration__item">Бакеу повіт</li>
+                                    <li class="select__item registration__item">Біхор повіт</li>
+                                    <li class="select__item registration__item">
+                                        Бистриця-Несеуд повіт
+                                    </li>
+                                    <li class="select__item registration__item">Ботошань повіт</li>
+                                    <li class="select__item registration__item">Брашов повіт</li>
+                                    <li class="select__item registration__item">Бреїла повіт</li>
+                                    <li class="select__item registration__item">
+                                        Бухарест муніципій
+                                    </li>
+                                    <li class="select__item registration__item">Бузеу повіт</li>
+                                    <li class="select__item registration__item">
+                                        Караш-Северін повіт
+                                    </li>
+                                    <li class="select__item registration__item">Келераш повіт</li>
+                                    <li class="select__item registration__item">Клуж повіт</li>
+                                    <li class="select__item registration__item">Констанца повіт</li>
+                                    <li class="select__item registration__item">Ковасна повіт</li>
+                                    <li class="select__item registration__item">Димбовіца повіт</li>
+                                    <li class="select__item registration__item">Долж повіт</li>
+                                    <li class="select__item registration__item">Галац повіт</li>
+                                    <li class="select__item registration__item">Джурджу повіт</li>
+                                    <li class="select__item registration__item">Горж повіт</li>
+                                    <li class="select__item registration__item">Харгіта повіт</li>
+                                    <li class="select__item registration__item">Хунедоара повіт</li>
+                                    <li class="select__item registration__item">Яломіца повіт</li>
+                                    <li class="select__item registration__item">Ясси повіт</li>
+                                    <li class="select__item registration__item">Ілфов повіт</li>
+                                    <li class="select__item registration__item">Марамуреш повіт</li>
+                                    <li class="select__item registration__item">Мехедінць повіт</li>
+                                    <li class="select__item registration__item">Муреш повіт</li>
+                                    <li class="select__item registration__item">Нямц повіт</li>
+                                    <li class="select__item registration__item">Олт повіт</li>
+                                    <li class="select__item registration__item">Прахова повіт</li>
+                                    <li class="select__item registration__item">Селаж повіт</li>
+                                    <li class="select__item registration__item">Сату-Маре повіт</li>
+                                    <li class="select__item registration__item">Сібіу повіт</li>
+                                    <li class="select__item registration__item">Сучава повіт</li>
+                                    <li class="select__item registration__item">Телеорман повіт</li>
+                                    <li class="select__item registration__item">Тіміш повіт</li>
+                                    <li class="select__item registration__item">Тулча повіт</li>
+                                    <li class="select__item registration__item">Вилча повіт</li>
+                                    <li class="select__item registration__item">Васлуй повіт</li>
+                                    <li class="select__item registration__item">Вранча повіт</li>
+                                </ul>
+
+                                <ul
+                                    class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                    data-region="Німеччина"
+                                    data-administrative="Федеральна земля"
+                                >
+                                    <li class="select__item registration__item">
+                                        Баден-Вюртемберг
+                                    </li>
+                                    <li class="select__item registration__item">Баварія</li>
+                                    <li class="select__item registration__item">Берлін</li>
+                                    <li class="select__item registration__item">Бранденбург</li>
+                                    <li class="select__item registration__item">Бремен</li>
+                                    <li class="select__item registration__item">Гамбург</li>
+                                    <li class="select__item registration__item">Гессен</li>
+                                    <li class="select__item registration__item">
+                                        Мекленбург-Передня Померанія
+                                    </li>
+                                    <li class="select__item registration__item">Нижня Саксонія</li>
+                                    <li class="select__item registration__item">
+                                        Північний Рейн-Вестфалія
+                                    </li>
+                                    <li class="select__item registration__item">Рейнланд-Пфальц</li>
+                                    <li class="select__item registration__item">Саксонія</li>
+                                    <li class="select__item registration__item">
+                                        Саксонія-Ангальт
+                                    </li>
+                                    <li class="select__item registration__item">
+                                        Шлезвіг-Гольштейн
+                                    </li>
+                                    <li class="select__item registration__item">Тюрінгія</li>
+                                </ul>
+                            </div>
+
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="city">Город*</label>
+                                <input
+                                    class="registration__input"
+                                    id="city"
+                                    type="text"
+                                    name="city"
+                                />
+                            </div>
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="addresses">Адрес</label>
+                                <input
+                                    class="registration__input"
+                                    id="addresses"
+                                    type="text"
+                                    name="addresses"
+                                />
+                            </div>
                         </div>
-                        <div class="registration__input-block">
-                            <label class="registration__label" for="phone">Телефон*</label>
-                            <input class="registration__input" id="phone" type="number" />
+                    </div>
+
+                    <div class="registration__password-block">
+                        <h3 class="registration__sub-title">3. Пароль</h3>
+                        <div class="registration__form">
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="password">Пароль*</label>
+                                <input
+                                    class="registration__input"
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                />
+                            </div>
+                            <div class="registration__input-block">
+                                <label class="registration__label" for="confirmPassword"
+                                    >Подтвердите пароль*</label
+                                >
+                                <input
+                                    class="registration__input"
+                                    id="confirmPassword"
+                                    type="password"
+                                    name="confirmPassword"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="registration__addresses-block">
-                    <h3 class="registration__sub-title">2. Адрес</h3>
-                    <div class="registration__form">
-                        <div class="select registration__select-country">
-    <div class="registration__select-header select__header">
-        <span class="select__current registration__current-country">Страна</span>
-        <svg class="select__svg registration__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body registration__select-body"><div class='select__item registration__item'>Україна</div>
-                           <div class='select__item registration__item'>Молдова</div>
-                           <div class='select__item registration__item'>Польша</div>
-                           <div class='select__item registration__item'>Румунія</div>
-                           <div class='select__item registration__item'>Німечіна</div></div>
-</div>
-
-                        <div class="select registration__select-region">
-    <div class="registration__select-header select__header">
-        <span class="select__current registration__current-region">Область</span>
-        <svg class="select__svg registration__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body registration__select-body"><div class='select__item registration__item'>Україна</div>
-                           <div class='select__item registration__item'>Молдова</div>
-                           <div class='select__item registration__item'>Польша</div>
-                           <div class='select__item registration__item'>Румунія</div>
-                           <div class='select__item registration__item'>Німечіна</div></div>
-</div>
-
-                        <div class="registration__input-block">
-                            <label class="registration__label" for="city">Город*</label>
-                            <input class="registration__input" id="city" type="text" />
-                        </div>
-                        <div class="registration__input-block">
-                            <label class="registration__label" for="addresses">Адрес</label>
-                            <input class="registration__input" id="addresses" type="text" />
+                <div
+                    class="registration__forms-applications-data registration__forms-personal-data"
+                >
+                    <div class="registration__photo-block">
+                        <label class="registration__photo-label" for="avatar">
+                            <img class="registration__input-img" src="" />
+                            <input
+                                class="registration__photo-input"
+                                type="file"
+                                accept="image/jpeg, image/png"
+                                id="avatar"
+                                name="photo"
+                            />
+                        </label>
+                    </div>
+                    <div
+                        class="registration__option-form hidden registration__body_active"
+                        id="form-1"
+                    >
+                        <div class="registration__fop-block">
+                            <input class="checkbox__input" type="checkbox" id="fop" />
+                            <label for="fop" class="checkbox__label registration__checkbox-label">
+                                <svg
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="checkbox__svg registration__checkbox"
+                                >
+                                    <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+                                </svg>
+                                <span class="registration__checkbox-text">Являюсь ФОП</span></label
+                            >
                         </div>
                     </div>
-                </div>
-
-                <div class="registration__password-block">
-                    <h3 class="registration__sub-title">3. Пароль</h3>
-                    <div class="registration__form">
-                        <div class="registration__input-block">
-                            <label class="registration__label" for="password">Пароль*</label>
-                            <input class="registration__input" id="password" type="password" />
+                    <div class="registration__option-form hidden" id="form-2">
+                        <div class="registration__radiobuttons-block">
+                            <label class="radio registration__radiobutton-radio">
+                                <input
+                                    class="registration__change-form"
+                                    name="changeForms"
+                                    type="radio"
+                                    value="legalForm"
+                                    checked
+                                />
+                                <span class="registration__radiobutton-text">Юр. лицо</span>
+                            </label>
+                            <label class="radio registration__radiobutton-radio">
+                                <input
+                                    class="registration__change-form"
+                                    name="changeForms"
+                                    type="radio"
+                                    value="fopForm"
+                                />
+                                <span class="registration__radiobutton-text">ФОП</span>
+                            </label>
                         </div>
-                        <div class="registration__input-block">
-                            <label class="registration__label" for="confirmPassword"
-                                >Подтвердите пароль*</label
-                            >
-                            <input
-                                class="registration__input"
-                                id="confirmPassword"
-                                type="password"
-                            />
+                        <div
+                            class="registration__option-sub-form hidden registration__body_active"
+                            id="legalForm"
+                        >
+                            <div class="registration__details-block">
+                                <h3 class="registration__sub-title">1. Реквизиты</h3>
+                                <div class="registration__input-block">
+                                    <label class="registration__label" for="details">ОКПО</label>
+                                    <input
+                                        class="registration__input"
+                                        id="details"
+                                        type="password"
+                                        name="requisites"
+                                    />
+                                </div>
+                            </div>
+                            <div class="registration__details-legal">
+                                <h3 class="registration__sub-title">2. Юридический адрес</h3>
+                                <div class="registration__form">
+                                    <div class="select registration__select-country-legal">
+                                        <div class="registration__select-header select__header">
+                                            <span
+                                                class="select__current registration__current-country-legal"
+                                                >Страна</span
+                                            >
+                                            <svg class="select__svg registration__select-svg">
+                                                <use href="#arrow_down"></use>
+                                            </svg>
+                                        </div>
+                                        <ul class="select__body registration__select-body">
+                                            <li class="select__item registration__item">Україна</li>
+                                            <li class="select__item registration__item">Молдова</li>
+                                            <li class="select__item registration__item">Польща</li>
+                                            <li class="select__item registration__item">Румунія</li>
+                                            <li class="select__item registration__item">
+                                                Німеччина
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="select registration__select-region-legal">
+                                        <div
+                                            class="region-legal registration__select-header registration__select-header-inactive select__header"
+                                        >
+                                            <span
+                                                class="select__current registration__current-region-legal"
+                                                >Область</span
+                                            >
+                                            <svg class="select__svg registration__select-svg">
+                                                <use href="#arrow_down"></use>
+                                            </svg>
+                                        </div>
+                                        <ul
+                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                            data-region="Україна"
+                                            data-administrative="Область"
+                                        >
+                                            <li class="select__item registration__item">
+                                                Вінницька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Волинська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Дніпропетровська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Донецька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Житомирська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Закарпатська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Запорізька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Івано-Франківська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Київська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Кіровоградська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Луганська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Львівська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Миколаївська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Одеська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Полтавська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Рівненська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Сумська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Тернопільська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Харківська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Херсонська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Хмельницька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Черкаська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Чернівецька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Чернігівська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Автономна Республіка Крим
+                                            </li>
+                                            <li class="select__item registration__item">м. Київ</li>
+                                            <li class="select__item registration__item">
+                                                м. Севастополь
+                                            </li>
+                                        </ul>
+
+                                        <ul
+                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                            data-region="Молдова"
+                                            data-administrative="Район"
+                                        >
+                                            <li class="select__item registration__item">
+                                                Анений Ной
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Басарабяска
+                                            </li>
+                                            <li class="select__item registration__item">Бричани</li>
+                                            <li class="select__item registration__item">Бєльці</li>
+                                            <li class="select__item registration__item">Кагул</li>
+                                            <li class="select__item registration__item">
+                                                Кантемир
+                                            </li>
+                                            <li class="select__item registration__item">Каларяш</li>
+                                            <li class="select__item registration__item">
+                                                Чимішлія
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Кріулень
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Дондюшани
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Дубесарь
+                                            </li>
+                                            <li class="select__item registration__item">Єдинець</li>
+                                            <li class="select__item registration__item">Фалешть</li>
+                                            <li class="select__item registration__item">
+                                                Флорешть
+                                            </li>
+                                            <li class="select__item registration__item">Глодяни</li>
+                                            <li class="select__item registration__item">
+                                                Хинчешть
+                                            </li>
+                                            <li class="select__item registration__item">Єлова</li>
+                                            <li class="select__item registration__item">Яловень</li>
+                                            <li class="select__item registration__item">Кагул</li>
+                                            <li class="select__item registration__item">Кантарь</li>
+                                            <li class="select__item registration__item">Кахул</li>
+                                            <li class="select__item registration__item">Кишинів</li>
+                                            <li class="select__item registration__item">Леова</li>
+                                            <li class="select__item registration__item">
+                                                Ніспорень
+                                            </li>
+                                            <li class="select__item registration__item">Окниця</li>
+                                            <li class="select__item registration__item">Орхей</li>
+                                            <li class="select__item registration__item">Резина</li>
+                                            <li class="select__item registration__item">Ришкань</li>
+                                            <li class="select__item registration__item">Сорока</li>
+                                            <li class="select__item registration__item">
+                                                Шолданешть
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Штефан-Воде
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Страшень
+                                            </li>
+                                            <li class="select__item registration__item">Сундер</li>
+                                            <li class="select__item registration__item">
+                                                Тараклія
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Теленешть
+                                            </li>
+                                            <li class="select__item registration__item">Унгень</li>
+                                            <li class="select__item registration__item">
+                                                Гагаузія
+                                            </li>
+                                        </ul>
+
+                                        <ul
+                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                            data-region="Польща"
+                                            data-administrative="Воєводство"
+                                        >
+                                            <li class="select__item registration__item">
+                                                Нижньосілезьке воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Куявсько-Поморське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Люблінське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Любуське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Лодзьке воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Малопольське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Мазовецьке воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Опольське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Підкарпатське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Підляське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Поморське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Сілезьке воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Свентокшиське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Вармінсько-Мазурське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Великопольське воєводство
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Західнопоморське воєводство
+                                            </li>
+                                        </ul>
+
+                                        <ul
+                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                            data-region="Румунія"
+                                            data-administrative="Повіт"
+                                        >
+                                            <li class="select__item registration__item">
+                                                Алба повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Арад повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Аргеш повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Бакеу повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Біхор повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Бистриця-Несеуд повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Ботошань повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Брашов повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Бреїла повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Бухарест муніципій
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Бузеу повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Караш-Северін повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Келераш повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Клуж повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Констанца повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Ковасна повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Димбовіца повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Долж повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Галац повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Джурджу повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Горж повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Харгіта повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Хунедоара повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Яломіца повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Ясси повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Ілфов повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Марамуреш повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Мехедінць повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Муреш повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Нямц повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Олт повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Прахова повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Селаж повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Сату-Маре повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Сібіу повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Сучава повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Телеорман повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Тіміш повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Тулча повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Вилча повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Васлуй повіт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Вранча повіт
+                                            </li>
+                                        </ul>
+
+                                        <ul
+                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                            data-region="Німеччина"
+                                            data-administrative="Федеральна земля"
+                                        >
+                                            <li class="select__item registration__item">
+                                                Баден-Вюртемберг
+                                            </li>
+                                            <li class="select__item registration__item">Баварія</li>
+                                            <li class="select__item registration__item">Берлін</li>
+                                            <li class="select__item registration__item">
+                                                Бранденбург
+                                            </li>
+                                            <li class="select__item registration__item">Бремен</li>
+                                            <li class="select__item registration__item">Гамбург</li>
+                                            <li class="select__item registration__item">Гессен</li>
+                                            <li class="select__item registration__item">
+                                                Мекленбург-Передня Померанія
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Нижня Саксонія
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Північний Рейн-Вестфалія
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Рейнланд-Пфальц
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Саксонія
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Саксонія-Ангальт
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Шлезвіг-Гольштейн
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Тюрінгія
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="registration__input-block">
+                                        <label class="registration__label" for="city-legal"
+                                            >Город*</label
+                                        >
+                                        <input
+                                            class="registration__input"
+                                            id="city-legal"
+                                            type="text"
+                                            name="cityLegal"
+                                        />
+                                    </div>
+                                    <div class="registration__input-block">
+                                        <label class="registration__label" for="addresses-legal"
+                                            >Адрес</label
+                                        >
+                                        <input
+                                            class="registration__input"
+                                            id="addresses-legal"
+                                            type="text"
+                                            name="addressesLegal"
+                                        />
+                                    </div>
+                                    <div class="registration__input-block">
+                                        <label class="registration__label" for="index-legal"
+                                            >Индекс</label
+                                        >
+                                        <input
+                                            class="registration__input"
+                                            id="index-legal"
+                                            type="text"
+                                            name="indexLegal"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registration__option-sub-form hidden" id="fopForm">
+                            <div class="registration__details-block">
+                                <h3 class="registration__sub-title">1. Реквизиты</h3>
+                                <div class="registration__input-block">
+                                    <label class="registration__label" for="EDRPOUCode"
+                                        >ЕДРПО</label
+                                    >
+                                    <input
+                                        class="registration__input"
+                                        id="EDRPOUCode"
+                                        type="text"
+                                    />
+                                </div>
+                            </div>
+                            <div class="registration__details-legal">
+                                <h3 class="registration__sub-title">2. Адрес ФОП</h3>
+                                <div class="registration__form">
+                                    <div class="select registration__select-country-fop">
+                                        <div class="registration__select-header select__header">
+                                            <span
+                                                class="select__current registration__current-country-fop"
+                                                >Страна</span
+                                            >
+                                            <svg class="select__svg registration__select-svg">
+                                                <use href="#arrow_down"></use>
+                                            </svg>
+                                        </div>
+                                        <ul class="select__body registration__select-body">
+                                            <li class="select__item registration__item">Україна</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select registration__select-region-fop">
+                                        <div
+                                            class="region-legal registration__select-header select__header"
+                                        >
+                                            <span
+                                                class="select__current registration__current-region-fop"
+                                                >Область</span
+                                            >
+                                            <svg class="select__svg registration__select-svg">
+                                                <use href="#arrow_down"></use>
+                                            </svg>
+                                        </div>
+                                        <ul
+                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
+                                            data-region="Україна"
+                                            data-administrative="Область"
+                                        >
+                                            <li class="select__item registration__item">
+                                                Вінницька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Волинська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Дніпропетровська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Донецька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Житомирська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Закарпатська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Запорізька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Івано-Франківська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Київська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Кіровоградська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Луганська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Львівська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Миколаївська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Одеська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Полтавська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Рівненська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Сумська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Тернопільська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Харківська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Херсонська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Хмельницька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Черкаська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Чернівецька область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Чернігівська область
+                                            </li>
+                                            <li class="select__item registration__item">
+                                                Автономна Республіка Крим
+                                            </li>
+                                            <li class="select__item registration__item">м. Київ</li>
+                                            <li class="select__item registration__item">
+                                                м. Севастополь
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="registration__input-block">
+                                        <label class="registration__label" for="city-fop"
+                                            >Город*</label
+                                        >
+                                        <input
+                                            class="registration__input"
+                                            id="city-fop"
+                                            type="text"
+                                            name="cityFop"
+                                        />
+                                    </div>
+                                    <div class="registration__input-block">
+                                        <label class="registration__label" for="addresses-fop"
+                                            >Адрес</label
+                                        >
+                                        <input
+                                            class="registration__input"
+                                            id="addresses-fop"
+                                            type="text"
+                                            name="addressesFop"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="registration__forms-applications-data">
-                <div class="registration__photo-block">
-                    <label class="registration__photo-label" for="avatar">
-                        <img class="registration__input-img" src="" />
-                        <input
-                            class="registration__photo-input"
-                            type="file"
-                            accept="image/jpeg, image/png"
-                            id="avatar"
-                        />
-                    </label>
-                </div>
-                <div class="registration__fop-block">
-                    <input class="registration__checkbox" id="fop" type="checkbox" />
-                    <label class="registration__checkbox-text" for="fop">Являюсь ФОП</label>
-                </div>
+            <div class="registration__button-block">
+                <input class="checkbox__input" type="checkbox" name="agreeCheckbox" id="agree" />
+                <label for="agree" class="checkbox__label registration__checkbox-label">
+                    <svg
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="checkbox__svg registration__checkbox"
+                    >
+                        <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+                    </svg>
+                    <span class="registration__checkbox-text">Я согласен с </span
+                    ><a class="registration__checkbox-text-green" href="#"
+                        >Условиями регистрации</a
+                    ></label
+                >
+                <button class="green-button registration__text-button">
+    <span class="">Продолжить</span>
+</button>
+
             </div>
         </form>
     </div>
 </section>
 
                 <section class="contact__container">
-    <div class="contact__content catalog-products__margin-contact">
+    <div class="contact__content registration__margin-contact">
         <h2 class="contact__title-mobile">Контакты</h2>
         <div class="contact__info">
             <h2 class="contact__info-title">Контакты</h2>
@@ -439,7 +1436,7 @@
 
             </main>
             <footer class="footer__container">
-    <div class="footer__content catalog-products__margin-footer">
+    <div class="footer__content registration__margin-footer">
         <div class="footer__links-block">
             <a class="footer__logo-link" href="/nuts/index.html"
                 ><img class="footer__logo-img" src="" />
@@ -992,8 +1989,12 @@
             </clipPath>
         </defs>
     </symbol>
+
+    <symbol id="checkbox" viewBox="0 0 20 20">
+        <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+    </symbol>
 </svg>
 
-        </div>
+        </div>
     </body>
 </html>
