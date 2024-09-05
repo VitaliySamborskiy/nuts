@@ -37,6 +37,10 @@
             align-items: center;
             width: 55px;
         }
+
+        @include breakpoints(sm) {
+            display: none;
+        }
     }
 
     &__text {
@@ -296,7 +300,7 @@
             }
         }
 
-        &-svg-active {
+        &-svg_active {
             fill: $mainGreen;
         }
 

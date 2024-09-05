@@ -3,25 +3,25 @@ import { swiper } from "./base/swiper.js";
 import { useGetFirestore } from "./base/useGetFierstore.js";
 
 export async function swiperInit(app) {
-    // const videoData = await useGetFirestore(app, "videoId", "main-pages");
-    // const playersMainPage = getElement(".manufacturing__player", "all");
-    // swiper(
-    //     getElement(".manufacturing__swiper-video"),
-    //     getElement(".manufacturing__button-prev"),
-    //     getElement(".manufacturing__button-next"),
-    //     "auto",
-    //     0,
-    //     null,
-    //     playersMainPage,
-    //     videoData.mainPage,
-    //     getElement(".manufacturing__swiper"),
-    // );
+    const videoData = await useGetFirestore(app, "videoId", "main-pages");
+    const playersMainPage = getElement(".manufacturing__player", "all");
+    swiper(
+        getElement(".manufacturing__swiper-video"),
+        getElement(".manufacturing__button-prev"),
+        getElement(".manufacturing__button-next"),
+        "auto",
+        0,
+        null,
+        playersMainPage,
+        videoData.mainPage,
+        getElement(".manufacturing__swiper"),
+    );
     swiper(
         getElement(".news-swiper__cards"),
         getElement(".news-swiper__prev-button"),
         getElement(".news-swiper__next-button"),
         null,
-        null,
+        0,
         {
             1920: {
                 slidesPerView: 3,

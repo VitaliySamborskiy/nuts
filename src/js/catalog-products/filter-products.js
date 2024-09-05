@@ -1,116 +1,103 @@
+import { getElement } from "../base/get-element-dom.js";
+
 export function filterProducts(
     arrCards,
     applyButton,
     crossButton,
-    loverPrice,
+    lowerPrice,
     higherPrice,
     mainContainer,
 ) {
-    const appliedFilters = {};
     const saveCards = arrCards;
     const cardsPrice = Array.from(arrCards);
-    let arrowStatus;
+    let appliedFilters = {};
 
-    if (mainContainer) {
-        loverPrice.addEventListener("click", () => {
-            arrowStatus = "lover";
-            activeArrow();
-            cardsPrice.sort((a, b) => {
-                return (
-                    parseInt(a.getAttribute("data-price")) - parseInt(b.getAttribute("data-price"))
-                );
-            });
+    applyButton.addEventListener("click", () => {
+        observerSelectsStatus(appliedFilters);
+        selectFilters(arrCards, appliedFilters);
+        queryParameter(appliedFilters, arrCards);
+    });
 
-            cardsPrice.forEach((element) => {
-                mainContainer.appendChild(element);
-            });
-        });
+    crossButton.addEventListener("click", () => {
+        resetAllFilter(mainContainer, saveCards, arrCards);
+        observerSelectsStatus(appliedFilters);
+        queryParameter(appliedFilters, arrCards);
+    });
 
-        higherPrice.addEventListener("click", () => {
-            arrowStatus = "higher";
-            activeArrow();
-            cardsPrice.sort((a, b) => {
-                return (
-                    parseInt(b.getAttribute("data-price")) - parseInt(a.getAttribute("data-price"))
-                );
-            });
-
-            cardsPrice.forEach((element) => {
-                mainContainer.appendChild(element);
-            });
-        });
-
-        applyButton.addEventListener("click", () => {
-            appliedFilters.weight = document
-                .querySelector(".product-filter__current-weight")
-                .textContent.trim();
-
-            appliedFilters.taste = document
-                .querySelector(".product-filter__current-taste")
-                .textContent.trim();
-
-            arrCards.forEach((card) => {
-                let filterChange = true;
-
-                if (appliedFilters.weight !== "Масса") {
-                    const itemWeight = parseInt(card.getAttribute("data-weight"));
-                    const [min, max] = appliedFilters.weight.split("-").map(Number);
-                    if (itemWeight < min || itemWeight > max) {
-                        filterChange = false;
-                    }
-                }
-
-                if (appliedFilters.taste !== "Вкус") {
-                    const itemTaste = card.getAttribute("data-taste");
-                    if (appliedFilters.taste !== itemTaste) {
-                        filterChange = false;
-                    }
-                }
-
-                card.classList.toggle("hidden", !filterChange);
-            });
-        });
-
-        crossButton.addEventListener("click", () => {
-            resetFilter(arrCards, ".product-filter__current-weight", "Масса");
-            resetFilter(arrCards, ".product-filter__current-taste", "Вкус");
-            saveCards.forEach((element) => {
-                mainContainer.appendChild(element);
-            });
-            arrowStatus = null;
-            activeArrow();
-        });
-    }
-
-    function activeArrow() {
-        switch (arrowStatus) {
-            case "lover":
-                loverPrice.children[0].firstChild.classList.add("product-filter__cost-svg-active");
-                higherPrice.children[0].firstChild.classList.remove(
-                    "product-filter__cost-svg-active",
-                );
-                break;
-            case "higher":
-                loverPrice.children[0].firstChild.classList.remove(
-                    "product-filter__cost-svg-active",
-                );
-                higherPrice.children[0].firstChild.classList.add("product-filter__cost-svg-active");
-                break;
-            case null:
-                loverPrice.children[0].firstChild.classList.remove(
-                    "product-filter__cost-svg-active",
-                );
-                higherPrice.children[0].firstChild.classList.remove(
-                    "product-filter__cost-svg-active",
-                );
-                break;
-        }
-    }
+    priseFilter(higherPrice, mainContainer, cardsPrice, "descending");
+    priseFilter(lowerPrice, mainContainer, cardsPrice, "ascending");
+    getQueryParameter(appliedFilters, arrCards);
 }
 
-function resetFilter(arrCards, element, text) {
+function selectFilters(cards, appliedFilters) {
+    cards.forEach((card) => {
+        let filterChange = true;
+
+        if (appliedFilters.weight !== "Масса") {
+            const itemWeight = parseInt(card.getAttribute("data-weight"));
+            const [min, max] = appliedFilters.weight.split("-").map(Number);
+            if (itemWeight < min || itemWeight > max) {
+                filterChange = false;
+            }
+        }
+
+        if (appliedFilters.taste !== "Вкус" && filterChange) {
+            const itemTaste = card.getAttribute("data-taste");
+            if (appliedFilters.taste !== itemTaste) {
+                filterChange = false;
+            }
+        }
+
+        card.classList.toggle("hidden", !filterChange);
+    });
+}
+
+function resetAllFilter(mainContainer, cardsSave, mainCards) {
+    resetSelectFilter(mainCards, ".product-filter__current-weight", "Масса");
+    resetSelectFilter(mainCards, ".product-filter__current-taste", "Вкус");
+    cardsSave.forEach((element) => {
+        mainContainer.appendChild(element);
+    });
+}
+
+function resetSelectFilter(arrCards, element, text) {
     arrCards.forEach((item) => {
         item.classList.remove("hidden");
     });
-    document.querySelector(element).textContent = text;
+    getElement(element).textContent = text;
+}
+
+function observerSelectsStatus(appliedFilters) {
+    appliedFilters.weight = getElement(".product-filter__current-weight").textContent.trim();
+    appliedFilters.taste = getElement(".product-filter__current-taste").textContent.trim();
+}
+
+function priseFilter(arrowButton, mainContainer, arrCard, sortType = null) {
+    arrowButton.addEventListener("click", () => {
+        arrCard.sort((a, b) => {
+            return sortType === "ascending"
+                ? parseInt(a.getAttribute("data-price")) - parseInt(b.getAttribute("data-price"))
+                : parseInt(b.getAttribute("data-price")) - parseInt(a.getAttribute("data-price"));
+        });
+
+        arrCard.forEach((element) => {
+            mainContainer.appendChild(element);
+        });
+    });
+}
+
+function queryParameter(appliedFilters) {
+    const queryParams = new URLSearchParams({
+        weight: appliedFilters.weight,
+        taste: appliedFilters.taste,
+    });
+
+    window.history.replaceState(null, null, "?" + queryParams.toString());
+}
+
+function getQueryParameter(appliedFilters, arrCards) {
+    const queryParams = new URLSearchParams(window.location.search);
+    appliedFilters.weight = queryParams.get("weight");
+    appliedFilters.taste = queryParams.get("taste");
+    selectFilters(arrCards, appliedFilters);
 }

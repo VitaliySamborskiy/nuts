@@ -118,9 +118,7 @@ export function useRenderCards(arrData, element) {
         fragment.append(cardProduct);
     }
 
-    if (element) {
-        element.append(fragment);
-    }
+    element.append(fragment);
 
     return swiperArr;
 }
