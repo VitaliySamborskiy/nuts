@@ -54,10 +54,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         },
     );
 
-    useInputActive(
-        getElement(".registration__input", "all"),
-        getElement(".registration__label", "all"),
-    );
+    useInputActive(getElement(".input__area", "all"), getElement(".input__label", "all"));
     usePhotoReplacement(
         getElement(".registration__input-img"),
         getElement(".registration__photo-input"),

@@ -15,6 +15,7 @@ export async function swiperInit(app) {
         playersMainPage,
         videoData.mainPage,
         getElement(".manufacturing__swiper"),
+        getElement(".manufacturing__preview-img-block", "all"),
     );
     swiper(
         getElement(".news-swiper__cards"),

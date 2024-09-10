@@ -17,6 +17,7 @@ export function swiper(
     players = null,
     videoUrl = null,
     targetObserver = null,
+    previewVideoElement = null,
 ) {
     const swiper = new Swiper(swiperBlock, {
         autoplay: {
@@ -48,7 +49,7 @@ export function swiper(
 
     function createPlayer() {
         if (players) {
-            onYouTubeIframeAPIReady(videoUrl, players, targetObserver);
+            onYouTubeIframeAPIReady(videoUrl, players, targetObserver, previewVideoElement);
         }
     }
 }

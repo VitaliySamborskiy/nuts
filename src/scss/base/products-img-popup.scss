@@ -1,0 +1,193 @@
+.popup {
+    &__content {
+        position: fixed;
+        background: $mainPageImgBlur;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: none;
+        overflow: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &_active {
+            display: flex;
+        }
+    }
+
+    &__scroll {
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    &__background-block {
+        padding: 25px;
+        width: 40%;
+        max-height: 100%;
+        overflow: auto;
+        position: fixed;
+        background: $backgroundColor;
+        top: -35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: top 0.9s ease-in-out;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include breakpoints(xl) {
+            width: 60%;
+        }
+
+        @include breakpoints(md) {
+            width: 70%;
+        }
+
+        @include breakpoints(sm) {
+            width: 97%;
+            padding: 15px 5px;
+        }
+
+        &_active {
+            top: 50%;
+        }
+    }
+
+    &__title-block {
+        margin: 20px 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include breakpoints(md) {
+            margin: 5px 0 0 30px;
+            gap: 5px;
+        }
+    }
+
+    &__title {
+        font-size: 25px;
+
+        @include breakpoints(md) {
+            font-size: 20px;
+        }
+    }
+
+    &__cross {
+        fill: $cross;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        transition: fill 0.5s ease-in-out;
+        z-index: 4;
+
+        &:hover {
+            fill: $crossActive;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__swiper {
+        position: relative;
+        z-index: 1;
+        width: 90%;
+        margin: 0 auto;
+
+        @include breakpoints(md) {
+            width: 100%;
+        }
+    }
+
+    &__svg-next,
+    &__svg-prev {
+        fill: $cross;
+        width: 90px;
+        height: 90px;
+        transition: fill 0.5s ease-in-out;
+
+        @include breakpoints(md) {
+            width: 70px;
+            height: 70px;
+        }
+
+        @include breakpoints(sm) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__button-prev,
+    &__button-next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: 90px;
+        height: 90px;
+        z-index: 2;
+
+        @include breakpoints(md) {
+            width: 70px;
+            height: 70px;
+        }
+
+        @include breakpoints(sm) {
+            width: 50px;
+            height: 50px;
+        }
+
+        &:hover {
+            .popup__svg-next,
+            .popup__svg-prev {
+                fill: $mainGreen;
+            }
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__button-next {
+    }
+
+    &__button-next {
+        right: -3%;
+
+        @include breakpoints(md) {
+            right: -2%;
+        }
+    }
+
+    &__button-prev {
+        left: -3%;
+
+        @include breakpoints(md) {
+            left: -2%;
+        }
+    }
+
+    &__svg-next {
+        transform: rotate(180deg);
+    }
+
+    &__svg-prev {
+        //transform: rotate(90deg);
+    }
+
+    &__hidden {
+        display: none;
+    }
+}

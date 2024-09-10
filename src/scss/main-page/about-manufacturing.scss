@@ -145,25 +145,6 @@
         overflow: hidden;
     }
 
-    &__play {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 73px;
-        height: 73px;
-        padding: 5px 0 0 5px;
-        //background: $subGreat;
-        border: 2px solid $subGreat;
-        //opacity: 0;
-    }
-
-    &__play-svg {
-        width: 25px;
-        height: 25px;
-        fill: $backgroundColor;
-    }
-
     &__player {
         width: 700px;
         background: $gray;
@@ -230,6 +211,7 @@
     }
 
     &__youtube-container {
+        position: relative;
         background: $manufacturingBackground;
         overflow: hidden;
         width: 100%;
@@ -246,5 +228,40 @@
             /* ...and bring it back again */
             margin-left: -100%;
         }
+    }
+
+    &__preview-img {
+        &-block {
+            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &_active {
+                display: none;
+            }
+
+            &:hover {
+                .manufacturing__play {
+                    background: $mainGreen;
+                    border: 1px solid $mainGreen;
+                }
+            }
+        }
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 4px 0 0 4px;
+        border: 2px solid $backgroundColor;
+    }
+
+    &__play-svg {
+        width: 14px;
+        height: 17px;
+        fill: $backgroundColor;
     }
 }

@@ -1,9 +1,10 @@
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { getElement } from "./get-element-dom.js";
 
 export function burgerMenu() {
-    const burger = document.querySelector(".burger");
-    const burgerBackground = document.querySelector(".burger__background");
-    const scrollableElement = document.querySelector(".burger__scroll");
+    const burger = getElement(".burger");
+    const burgerBackground = getElement(".burger__background");
+    const scrollableElement = getElement(".burger__scroll");
 
     burger.addEventListener("click", (event) => {
         const icon = event.target.closest(".burger__icon");

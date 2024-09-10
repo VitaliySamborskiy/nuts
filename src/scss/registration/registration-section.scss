@@ -172,62 +172,15 @@
         gap: 13px;
     }
 
-    &__input-block {
-        position: relative;
-    }
-
-    &__label,
     &__input {
-        font-size: 14px;
-        line-height: 121%;
-        font-family: $supportFonts;
-
-        @include breakpoints(xl) {
-            font-size: 13px;
-        }
-    }
-
-    &__label {
-        position: absolute;
-        display: block;
-        padding: 0 5px;
-        top: 17px;
-        left: 12px;
-        transition:
-            top,
-            0.5s ease-in-out;
-
-        @include breakpoints(md) {
-            top: 14px;
-        }
-
-        &_active {
-            background-color: $backgroundColor;
-            font-size: 6px;
-            top: 0;
-        }
-    }
-
-    &__input {
-        padding: 15px 15px;
         width: 85%;
-        border: 1px solid $registrationBorder;
-        transition: border 0.5s ease-in-out;
 
         @include breakpoints(xl) {
             width: 95%;
         }
 
-        @include breakpoints(md) {
-            padding: 12px 15px;
-        }
-
         @include breakpoints(sm) {
             width: 100%;
-        }
-
-        &:hover {
-            border: 1px solid $subGreat;
         }
     }
 

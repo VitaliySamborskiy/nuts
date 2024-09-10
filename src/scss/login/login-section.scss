@@ -1,0 +1,100 @@
+.login {
+    &__content {
+        width: 395px;
+        margin: 110px auto 0;
+
+        @include breakpoints(md) {
+            margin: 90px auto 0;
+        }
+
+        @include breakpoints(sm) {
+            max-width: 400px;
+            width: 95%;
+            margin: 60px auto 0;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 100%;
+
+        @include breakpoints(md) {
+            font-size: 30px;
+        }
+    }
+
+    &__form {
+        margin: 42px auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+
+        @include breakpoints(sm) {
+            margin: 25px auto 0;
+        }
+    }
+
+    &__input {
+        width: 100%;
+    }
+
+    &__block-buttons {
+        margin-top: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoints(sm) {
+            margin-top: 10px;
+        }
+    }
+
+    &__link-reset-password,
+    &__link-register {
+        color: $mainGreen;
+        font-family: $supportFonts;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 246%;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__button {
+        margin-top: 6px;
+        padding: 13px 175px;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 3px;
+            width: 100%;
+            padding: 13px 0;
+        }
+    }
+
+    &__link-register {
+        margin-top: 10px;
+        position: relative;
+
+        @include breakpoints(sm) {
+            margin-top: 5px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 0;
+            background-color: $mainGreen;
+            height: 2px;
+            width: 100%;
+        }
+    }
+}

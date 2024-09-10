@@ -5,7 +5,7 @@ export function useInputActive(inputArr, labelArr) {
             if (element.value.trim() !== "") {
                 inputState = true;
             }
-            labelArr[index].classList.toggle("registration__label_active", inputState);
+            labelArr[index].classList.toggle("input__label_active", inputState);
         });
     });
 }

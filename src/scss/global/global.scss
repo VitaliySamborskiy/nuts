@@ -226,7 +226,6 @@ button {
 .radio {
     display: block;
     cursor: pointer;
-    //user-select: none;
     text-align: left;
 
     input {
@@ -266,6 +265,60 @@ button {
 
         &:checked + span:after {
             transform: scale(1, 1);
+        }
+    }
+}
+
+//input
+
+.input {
+    &__block {
+        position: relative;
+    }
+
+    &__label,
+    &__area {
+        font-size: 14px;
+        line-height: 121%;
+        font-family: $supportFonts;
+
+        @include breakpoints(xl) {
+            font-size: 13px;
+        }
+    }
+
+    &__area {
+        padding: 15px 15px;
+        border: 1px solid $registrationBorder;
+        transition: border 0.5s ease-in-out;
+
+        @include breakpoints(md) {
+            padding: 12px 15px;
+        }
+
+        &:hover {
+            border: 1px solid $subGreat;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        display: block;
+        padding: 0 5px;
+        top: 17px;
+        left: 12px;
+        transition:
+            top,
+            0.5s ease-in-out;
+
+        @include breakpoints(md) {
+            top: 14px;
+        }
+
+        &_active {
+            background-color: $backgroundColor;
+            font-size: 6px;
+            top: 0;
         }
     }
 }

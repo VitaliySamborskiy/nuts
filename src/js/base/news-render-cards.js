@@ -1,7 +1,7 @@
 import { useGetImg } from "./useGetImg.js";
 
 export function useRenderNewsCards(arrData, elements) {
-    let fragment = document.createDocumentFragment();
+    const fragment = document.createDocumentFragment();
 
     arrData.forEach((data) => {
         let html = ``;

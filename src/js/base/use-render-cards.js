@@ -99,6 +99,9 @@ export function useRenderCards(arrData, element) {
         cardProduct.setAttribute("data-weight", data.weight);
         cardProduct.setAttribute("data-taste", data.taste);
         cardProduct.setAttribute("data-price", data.cationPrice ? data.cationPrice : data.price);
+        cardProduct.setAttribute("data-imgUrl", JSON.stringify(data.imgUrl));
+        cardProduct.setAttribute("data-title", data.title);
+        cardProduct.setAttribute("data-prises", JSON.stringify([data.price, data.cationPrice]));
         cardProduct.innerHTML = html;
 
         swiperArr.push({

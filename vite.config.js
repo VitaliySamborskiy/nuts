@@ -13,6 +13,7 @@ export default defineConfig({
                 404: resolve(__dirname, "404.html"),
                 catalogProducts: resolve(__dirname, "src/pages/catalog-products.html"),
                 registration: resolve(__dirname, "src/pages/registration.html"),
+                login: resolve(__dirname, "src/pages/login.html"),
             },
         },
     },
