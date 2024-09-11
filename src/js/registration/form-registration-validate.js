@@ -1,4 +1,8 @@
+import { usePhotoReplacement } from "./photo-replacement.js";
+import { getElement } from "../base/get-element-dom.js";
+
 export function useRegistrationValidate(formRegistration, inputArr, messagesError, regExp) {
+    let data = {};
     inputArr.forEach((element, index) => {
         element.addEventListener("input", () => {
             if (element.name in messagesError) {
@@ -27,23 +31,47 @@ export function useRegistrationValidate(formRegistration, inputArr, messagesErro
     function validateInput(inputName, textError, inputIndex, elementInput, regExp = null) {
         const formData = new FormData(formRegistration);
         const errorElement = elementInput.parentElement.querySelector(".registration__error-block");
+        const file = formData.get("photoAvatar");
+
         try {
-            if (formData.get(elementInput.name) === "") {
+            if (formData.get(elementInput.name) === "" && textError.void !== null) {
                 throw new Error(textError.void);
             }
-            if (!formData.get(elementInput.name).match(regExp) && regExp) {
+
+            if (elementInput.name === "photoAvatar") {
+                if (!file.name.match(regExp)) {
+                    throw new Error(textError.regExp);
+                } else {
+                    usePhotoReplacement(
+                        getElement(".registration__input-img"),
+                        getElement(".registration__photo-input"),
+                    );
+                }
+            }
+
+            if (
+                "photoAvatar" === elementInput.name
+                    ? false
+                    : !formData.get(elementInput.name).match(regExp) && regExp
+            ) {
                 throw new Error(textError.regExp);
             }
+
             if (
                 formData.get("password") !== formData.get("confirmPassword") &&
                 textError.password
             ) {
                 throw new Error(textError.password);
             }
+
             errorRemove(errorElement, elementInput);
         } catch (error) {
             errorAddClass(elementInput, error.message, errorElement);
         }
+        return (data = {
+            form: formData,
+            errorEl: errorElement,
+        });
     }
 
     function errorAddClass(input, errorText = null, checkError) {

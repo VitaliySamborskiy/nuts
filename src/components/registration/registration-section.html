@@ -402,11 +402,11 @@
                         <label class="registration__photo-label" for="avatar">
                             <img class="registration__input-img" src="" />
                             <input
-                                class="registration__photo-input"
+                                class="registration__photo-input registration__input"
                                 type="file"
                                 accept="image/jpeg, image/png"
                                 id="avatar"
-                                name="photo"
+                                name="photoAvatar"
                             />
                         </label>
                     </div>
@@ -415,7 +415,12 @@
                         id="form-1"
                     >
                         <div class="registration__fop-block">
-                            <input class="checkbox__input" type="checkbox" id="fop" />
+                            <input
+                                class="checkbox__input fop-change"
+                                type="checkbox"
+                                id="fop"
+                                value="fop-form"
+                            />
                             <label for="fop" class="checkbox__label registration__checkbox-label">
                                 <svg
                                     viewBox="0 0 20 20"
@@ -435,7 +440,7 @@
                                     class="registration__change-form"
                                     name="changeForms"
                                     type="radio"
-                                    value="legalForm"
+                                    value="legal-form"
                                     checked
                                 />
                                 <span class="registration__radiobutton-text">Юр. лицо</span>
@@ -445,7 +450,7 @@
                                     class="registration__change-form"
                                     name="changeForms"
                                     type="radio"
-                                    value="fopForm"
+                                    value="fop-form"
                                 />
                                 <span class="registration__radiobutton-text">ФОП</span>
                             </label>
@@ -456,18 +461,38 @@
                         >
                             <div class="registration__details-block">
                                 <h3 class="registration__sub-title">1. Реквизиты</h3>
-                                <div class="input__block">
-                                    <label class="input__label" for="details">ОКПО</label>
-                                    <input
-                                        class="registration__input input__area"
-                                        id="details"
-                                        type="password"
-                                        name="requisites"
-                                    />
+                                <div class="registration__form">
+                                    <div class="input__block">
+                                        <label class="input__label" for="details">ОКПО</label>
+                                        <input
+                                            class="registration__input input__area registration__changes"
+                                            data-change="legal-form"
+                                            id="details"
+                                            type="password"
+                                            name="requisites"
+                                        />
+                                    </div>
+                                    <div class="input__block">
+                                        <label
+                                            class="input__label registration__select-header-inactive-text"
+                                            for="EDRPOUCode"
+                                            >ЕДРПО</label
+                                        >
+                                        <input
+                                            class="registration__input input__area registration__changes registration__select-header-inactive"
+                                            data-change="fop-form"
+                                            id="EDRPOUCode"
+                                            name="EDRPOUCode"
+                                            type="text"
+                                        />
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="registration__details-legal">
-                                <h3 class="registration__sub-title">2. Юридический адрес</h3>
+                                <h3 class="registration__sub-title">
+                                    2. <span class="title-change">Юридический адрес</span>
+                                </h3>
                                 <div class="registration__form">
                                     <div class="select registration__select-country-legal">
                                         <div class="registration__select-header select__header">
@@ -916,161 +941,11 @@
                                     <div class="input__block">
                                         <label class="input__label" for="index-legal">Индекс</label>
                                         <input
-                                            class="registration__input input__area"
+                                            class="registration__input input__area registration__changes"
+                                            data-change="legal-form"
                                             id="index-legal"
                                             type="text"
                                             name="indexLegal"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="registration__option-sub-form hidden" id="fopForm">
-                            <div class="registration__details-block">
-                                <h3 class="registration__sub-title">1. Реквизиты</h3>
-                                <div class="input__block">
-                                    <label class="input__label" for="EDRPOUCode">ЕДРПО</label>
-                                    <input
-                                        class="registration__input input__area"
-                                        id="EDRPOUCode"
-                                        type="text"
-                                    />
-                                </div>
-                            </div>
-                            <div class="registration__details-legal">
-                                <h3 class="registration__sub-title">2. Адрес ФОП</h3>
-                                <div class="registration__form">
-                                    <div class="select registration__select-country-fop">
-                                        <div class="registration__select-header select__header">
-                                            <span
-                                                class="select__current registration__current-country-fop"
-                                                >Страна</span
-                                            >
-                                            <svg class="select__svg registration__select-svg">
-                                                <use href="#arrow_down"></use>
-                                            </svg>
-                                        </div>
-                                        <ul class="select__body registration__select-body">
-                                            <li class="select__item registration__item">Україна</li>
-                                        </ul>
-                                    </div>
-                                    <div class="select registration__select-region-fop">
-                                        <div
-                                            class="region-legal registration__select-header select__header"
-                                        >
-                                            <span
-                                                class="select__current registration__current-region-fop"
-                                                >Область</span
-                                            >
-                                            <svg class="select__svg registration__select-svg">
-                                                <use href="#arrow_down"></use>
-                                            </svg>
-                                        </div>
-                                        <ul
-                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
-                                            data-region="Україна"
-                                            data-administrative="Область"
-                                        >
-                                            <li class="select__item registration__item">
-                                                Вінницька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Волинська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Дніпропетровська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Донецька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Житомирська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Закарпатська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Запорізька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Івано-Франківська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Київська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Кіровоградська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Луганська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Львівська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Миколаївська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Одеська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Полтавська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Рівненська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Сумська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Тернопільська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Харківська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Херсонська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Хмельницька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Черкаська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Чернівецька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Чернігівська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Автономна Республіка Крим
-                                            </li>
-                                            <li class="select__item registration__item">м. Київ</li>
-                                            <li class="select__item registration__item">
-                                                м. Севастополь
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="input__block">
-                                        <label class="input__label" for="city-fop">Город*</label>
-                                        <input
-                                            class="registration__input input__area"
-                                            id="city-fop"
-                                            type="text"
-                                            name="cityFop"
-                                        />
-                                    </div>
-                                    <div class="input__block">
-                                        <label class="input__label" for="addresses-fop"
-                                            >Адрес</label
-                                        >
-                                        <input
-                                            class="registration__input input__area"
-                                            id="addresses-fop"
-                                            type="text"
-                                            name="addressesFop"
                                         />
                                     </div>
                                 </div>
