@@ -120,12 +120,12 @@ function queryParameter(dataAttribute) {
     window.history.replaceState(null, null, "?" + queryParams.toString());
 }
 
-function getQueryParameter(queryParametersObg, headerTabs, bodyTabs, bodyChangesInput) {
-    const queryParams = new URLSearchParams(window.location.search);
-    // queryParametersObg.selectedUserTypeHeader = queryParams.get("userType");
-    // queryParametersObg.selectedUserTypeBody = queryParams.get("userBody");
-    // queryParametersObg.selectedLegalType = queryParams.get("legalType");
-    formChangeTabHeader(queryParametersObg.selectedUserTypeHeader, headerTabs);
-    formChangeTabBody(queryParametersObg.selectedUserTypeBody, bodyTabs);
-    radioInputChange(bodyChangesInput, queryParametersObg.selectedLegalType);
-}
+// function getQueryParameter(queryParametersObg, headerTabs, bodyTabs, bodyChangesInput) {
+//     const queryParams = new URLSearchParams(window.location.search);
+//     // queryParametersObg.selectedUserTypeHeader = queryParams.get("userType");
+//     // queryParametersObg.selectedUserTypeBody = queryParams.get("userBody");
+//     // queryParametersObg.selectedLegalType = queryParams.get("legalType");
+//     formChangeTabHeader(queryParametersObg.selectedUserTypeHeader, headerTabs);
+//     formChangeTabBody(queryParametersObg.selectedUserTypeBody, bodyTabs);
+//     radioInputChange(bodyChangesInput, queryParametersObg.selectedLegalType);
+// }
