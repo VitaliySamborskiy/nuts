@@ -11,11 +11,14 @@
                             <a
                                 class="registration__tab-text registration__tab_active"
                                 href="#form-1"
+                                data-tab="individual"
                                 >Физическое лицо</a
                             >
                         </li>
                         <li>
-                            <a class="registration__tab-text" href="#form-2">Юридическое лицо</a>
+                            <a class="registration__tab-text" href="#form-2" data-tab="legal"
+                                >Юридическое лицо</a
+                            >
                         </li>
                     </ul>
                     <div class="registration__personal-block">
@@ -438,6 +441,7 @@
                             <label class="radio registration__radiobutton-radio">
                                 <input
                                     class="registration__change-form"
+                                    data-legal-type="legal"
                                     name="changeForms"
                                     type="radio"
                                     value="legal-form"
@@ -448,6 +452,7 @@
                             <label class="radio registration__radiobutton-radio">
                                 <input
                                     class="registration__change-form"
+                                    data-legal-type="entrepreneur"
                                     name="changeForms"
                                     type="radio"
                                     value="fop-form"
@@ -466,7 +471,7 @@
                                         <label class="input__label" for="details">ОКПО</label>
                                         <input
                                             class="registration__input input__area registration__changes"
-                                            data-change="legal-form"
+                                            data-change="legal"
                                             id="details"
                                             type="password"
                                             name="requisites"
@@ -480,7 +485,7 @@
                                         >
                                         <input
                                             class="registration__input input__area registration__changes registration__select-header-inactive"
-                                            data-change="fop-form"
+                                            data-change="entrepreneur"
                                             id="EDRPOUCode"
                                             name="EDRPOUCode"
                                             type="text"
@@ -942,7 +947,7 @@
                                         <label class="input__label" for="index-legal">Индекс</label>
                                         <input
                                             class="registration__input input__area registration__changes"
-                                            data-change="legal-form"
+                                            data-change="legal"
                                             id="index-legal"
                                             type="text"
                                             name="indexLegal"

@@ -1,7 +1,7 @@
 import { selectRegion } from "./registration/select-region-active.js";
 import { getElement } from "./base/get-element-dom.js";
 import { useInputActive } from "./registration/input-active.js";
-import { useFormChange, useFormChangeRadio } from "./registration/form-change.js";
+import { useFormChange } from "./registration/form-change.js";
 import { useRegistrationValidate } from "./registration/form-registration-validate.js";
 import { useNumberMask } from "./registration/phone-mask.js";
 
@@ -66,12 +66,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".registration__option-form", "all"),
         getElement(".registration__change-form", "all"),
         getElement(".fop-change"),
-    );
-    useFormChangeRadio(
-        getElement(".registration__change-form", "all"),
         getElement(".registration__changes", "all"),
         getElement(".title-change"),
     );
+    // useFormChangeRadio(
+    //     getElement(".registration__change-form", "all"),
+    //     getElement(".registration__changes", "all"),
+    //     getElement(".title-change"),
+    // );
     selectRegion(
         getElement(".registration__current-country"),
         getElement(".registration__select-body-wrapper", "all"),

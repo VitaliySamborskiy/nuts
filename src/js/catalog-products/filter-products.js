@@ -15,13 +15,13 @@ export function filterProducts(
     applyButton.addEventListener("click", () => {
         observerSelectsStatus(appliedFilters);
         selectFilters(arrCards, appliedFilters);
-        queryParameter(appliedFilters, arrCards);
+        queryParameter(appliedFilters);
     });
 
     crossButton.addEventListener("click", () => {
         resetAllFilter(mainContainer, saveCards, arrCards);
         observerSelectsStatus(appliedFilters);
-        queryParameter(appliedFilters, arrCards);
+        queryParameter(appliedFilters);
     });
 
     priseFilter(higherPrice, mainContainer, cardsPrice, "descending");
