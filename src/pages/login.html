@@ -4,14 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
-        <title>404</title>
+        <title>Вход</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/main-D57yHfPX.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/login-Dpw9FoA0.js"></script>
+      <link rel="modulepreload" crossorigin href="/nuts/assets/main-D57yHfPX.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/input-active-B2-SbERl.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/404-BVbNeOns.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/login-CvGUa1Ru.css">
     </head>
     <body>
         <div class="wrapper">
@@ -234,21 +236,32 @@
 </header>
 
             <main class="main">
-                <section class="error__container">
-    <div class="error__content">
-        <img class="error__img" src="" />
-        <p class="error__text">Страница не найдена</p>
-        <a class="error__button transparent-button" href="/nuts/index.html">
-            <svg class="error__svg">
-                <use href="#arrow"></use>
-            </svg>
-            <span class="error__button-text">Вернуться на Главную страницу</span>
-        </a>
+                <section class="login__container">
+    <div class="login__content">
+        <h2 class="login__title">Войти в личный кабинет</h2>
+        <form class="login__form" name="">
+            <div class="input__block">
+                <label class="input__label" for="loginEmail">Email</label>
+                <input class="login__input input__area" id="loginEmail" name="loginEmail" />
+            </div>
+            <div class="input__block">
+                <label class="input__label" for="loginPassword">Пароль</label>
+                <input class="login__input input__area" id="loginPassword" name="loginPassword" />
+            </div>
+        </form>
+        <div class="login__block-buttons">
+            <a class="login__link-reset-password" href="#">Забыли пароль?</a>
+            <button class="green-button login__button">
+    <span class="nvcn">Войти</span>
+</button>
+
+            <a class="login__link-register" href="/nuts/src/pages/registration.html">Регистрация</a>
+        </div>
     </div>
 </section>
 
                 <section class="contact__container">
-    <div class="contact__content error__margin-contact">
+    <div class="contact__content registration__margin-contact">
         <h2 class="contact__title-mobile">Контакты</h2>
         <div class="contact__info">
             <h2 class="contact__info-title">Контакты</h2>
@@ -333,7 +346,7 @@
 
             </main>
             <footer class="footer__container">
-    <div class="footer__content error__margin-footer">
+    <div class="footer__content registration__margin-footer">
         <div class="footer__links-block">
             <a class="footer__logo-link" href="/nuts/index.html"
                 ><img class="footer__logo-img" src="" />

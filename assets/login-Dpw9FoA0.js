@@ -1,0 +1,1 @@
+import{g as t}from"./main-D57yHfPX.js";import{u as e}from"./input-active-B2-SbERl.js";document.addEventListener("DOMContentLoaded",async function(){e(t(".input__area","all"),t(".input__label","all"))});

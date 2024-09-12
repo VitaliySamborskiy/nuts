@@ -8,11 +8,11 @@
         async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
     ></script>
-    <script type="module" crossorigin src="/nuts/assets/catalogProducts-CLwp9lQb.js"></script>
-    <link rel="modulepreload" crossorigin href="/nuts/assets/main-D3ttXanS.js">
-    <link rel="modulepreload" crossorigin href="/nuts/assets/use-render-cards-xA2s2149.js">
+    <script type="module" crossorigin src="/nuts/assets/catalogProducts-WqLT0enj.js"></script>
+    <link rel="modulepreload" crossorigin href="/nuts/assets/main-D57yHfPX.js">
+    <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-Bg8NesNf.js">
     <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-    <link rel="stylesheet" crossorigin href="/nuts/assets/catalogProducts-DrFzReUq.css">
+    <link rel="stylesheet" crossorigin href="/nuts/assets/catalogProducts-CR1AX9Vl.css">
 
     <body>
         <div class="wrapper">
@@ -53,7 +53,7 @@
 
                         <p class="header__top-personal">Ваша персональная скидка - 5%</p>
                         <div class="header__top-authentication">
-                            <a class="header__top-entrance" href="#">
+                            <a class="header__top-entrance" href="/nuts/src/pages/login.html">
                                 <img class="header__top-img" src="" />
                                 <span class="header__top-text-entrance">Вход</span></a
                             >
@@ -325,6 +325,40 @@
     <span class="">Загрузить еще</span>
 </button>
 
+</section>
+
+                <section class="popup__content">
+    <div class="popup__background-block">
+        <svg class="popup__cross">
+            <use href="#cross"></use>
+        </svg>
+        <div class="swiper popup__swiper">
+            <div class="swiper-wrapper popup__swiper-wrapper"></div>
+            <button class="popup__button-prev">
+                <svg class="popup__svg-prev">
+                    <use href="#arrow-bracket"></use>
+                </svg>
+            </button>
+            <button class="popup__button-next">
+                <svg class="popup__svg-next">
+                    <use href="#arrow-bracket"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="popup__title-block">
+            <h3 class="popup__title"></h3>
+            <div class="popup__price">
+                <p class="product__card-bottom-price-discount product__card-bottom-price-gray">
+                    <span></span>
+                    <span>грн.</span>
+                </p>
+                <p class="product__card-bottom-price-regular product__card-bottom-price-green">
+                    <span></span>
+                    <span>грн.</span>
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
                 <section class="eco-nuts__container">
@@ -1062,6 +1096,21 @@
 
     <symbol id="checkbox" viewBox="0 0 20 20">
         <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+    </symbol>
+
+    <symbol id="cross" viewBox="0 0 12 12">
+        <path
+            d="M12 1.2L10.8 0L6 4.8L1.2 0L0 1.2L4.8 6L0 10.8L1.2 12L6 7.2L10.8 12L12 10.8L7.2 6L12 1.2Z"
+        />
+    </symbol>
+
+    <symbol id="arrow-bracket" viewBox="0 0 512.000000 512.000000">
+        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
+            <path
+                d="M2485 3840 l-1280 -1280 1280 -1280 1280 -1280 80 80 80 80 -1200
+1200 -1200 1200 1200 1200 1200 1200 -80 80 -80 80 -1280 -1280z"
+            />
+        </g>
     </symbol>
 </svg>
 

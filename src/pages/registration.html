@@ -9,10 +9,11 @@
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/registration-DFAFQnDt.js"></script>
-      <link rel="modulepreload" crossorigin href="/nuts/assets/main-D3ttXanS.js">
+      <script type="module" crossorigin src="/nuts/assets/registration-DPLt5ZEB.js"></script>
+      <link rel="modulepreload" crossorigin href="/nuts/assets/main-D57yHfPX.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/input-active-B2-SbERl.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/registration-DffFFIRj.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/registration-BbtGCO2D.css">
     </head>
     <body>
         <div class="wrapper">
@@ -53,7 +54,7 @@
 
                         <p class="header__top-personal">Ваша персональная скидка - 5%</p>
                         <div class="header__top-authentication">
-                            <a class="header__top-entrance" href="#">
+                            <a class="header__top-entrance" href="/nuts/src/pages/login.html">
                                 <img class="header__top-img" src="" />
                                 <span class="header__top-text-entrance">Вход</span></a
                             >
@@ -248,39 +249,40 @@
                             <a
                                 class="registration__tab-text registration__tab_active"
                                 href="#form-1"
+                                data-tab="individual"
                                 >Физическое лицо</a
                             >
                         </li>
                         <li>
-                            <a class="registration__tab-text" href="#form-2">Юридическое лицо</a>
+                            <a class="registration__tab-text" href="#form-2" data-tab="legal"
+                                >Юридическое лицо</a
+                            >
                         </li>
                     </ul>
                     <div class="registration__personal-block">
                         <div class="registration__form">
-                            <div class="registration__input-block">
-                                <label class="registration__label" for="personalInformation"
-                                    >ФИО*</label
-                                >
+                            <div class="input__block">
+                                <label class="input__label" for="personalInformation">ФИО*</label>
                                 <input
-                                    class="registration__input"
+                                    class="registration__input input__area"
                                     id="personalInformation"
                                     type="text"
                                     name="fullName"
                                 />
                             </div>
-                            <div class="registration__input-block">
-                                <label class="registration__label" for="email">Email*</label>
+                            <div class="input__block">
+                                <label class="input__label" for="email">Email*</label>
                                 <input
-                                    class="registration__input"
+                                    class="registration__input input__area"
                                     id="email"
                                     type="email"
                                     name="email"
                                 />
                             </div>
-                            <div class="registration__input-block">
-                                <label class="registration__label" for="phone">Телефон*</label>
+                            <div class="input__block">
+                                <label class="input__label" for="phone">Телефон*</label>
                                 <input
-                                    class="registration__input"
+                                    class="registration__input input__area"
                                     id="phone"
                                     type="text"
                                     name="phone"
@@ -587,19 +589,19 @@
                                 </ul>
                             </div>
 
-                            <div class="registration__input-block">
-                                <label class="registration__label" for="city">Город*</label>
+                            <div class="input__block">
+                                <label class="input__label" for="city">Город*</label>
                                 <input
-                                    class="registration__input"
+                                    class="registration__input input__area"
                                     id="city"
                                     type="text"
                                     name="city"
                                 />
                             </div>
-                            <div class="registration__input-block">
-                                <label class="registration__label" for="addresses">Адрес</label>
+                            <div class="input__block">
+                                <label class="input__label" for="addresses">Адрес</label>
                                 <input
-                                    class="registration__input"
+                                    class="registration__input input__area"
                                     id="addresses"
                                     type="text"
                                     name="addresses"
@@ -611,21 +613,21 @@
                     <div class="registration__password-block">
                         <h3 class="registration__sub-title">3. Пароль</h3>
                         <div class="registration__form">
-                            <div class="registration__input-block">
-                                <label class="registration__label" for="password">Пароль*</label>
+                            <div class="input__block">
+                                <label class="input__label" for="password">Пароль*</label>
                                 <input
-                                    class="registration__input"
+                                    class="registration__input input__area"
                                     id="password"
                                     type="password"
                                     name="password"
                                 />
                             </div>
-                            <div class="registration__input-block">
-                                <label class="registration__label" for="confirmPassword"
+                            <div class="input__block">
+                                <label class="input__label" for="confirmPassword"
                                     >Подтвердите пароль*</label
                                 >
                                 <input
-                                    class="registration__input"
+                                    class="registration__input input__area"
                                     id="confirmPassword"
                                     type="password"
                                     name="confirmPassword"
@@ -641,11 +643,11 @@
                         <label class="registration__photo-label" for="avatar">
                             <img class="registration__input-img" src="" />
                             <input
-                                class="registration__photo-input"
+                                class="registration__photo-input registration__input"
                                 type="file"
                                 accept="image/jpeg, image/png"
                                 id="avatar"
-                                name="photo"
+                                name="photoAvatar"
                             />
                         </label>
                     </div>
@@ -654,7 +656,12 @@
                         id="form-1"
                     >
                         <div class="registration__fop-block">
-                            <input class="checkbox__input" type="checkbox" id="fop" />
+                            <input
+                                class="checkbox__input fop-change"
+                                type="checkbox"
+                                id="fop"
+                                value="fop-form"
+                            />
                             <label for="fop" class="checkbox__label registration__checkbox-label">
                                 <svg
                                     viewBox="0 0 20 20"
@@ -672,9 +679,10 @@
                             <label class="radio registration__radiobutton-radio">
                                 <input
                                     class="registration__change-form"
+                                    data-legal-type="legal"
                                     name="changeForms"
                                     type="radio"
-                                    value="legalForm"
+                                    value="legal-form"
                                     checked
                                 />
                                 <span class="registration__radiobutton-text">Юр. лицо</span>
@@ -682,9 +690,10 @@
                             <label class="radio registration__radiobutton-radio">
                                 <input
                                     class="registration__change-form"
+                                    data-legal-type="entrepreneur"
                                     name="changeForms"
                                     type="radio"
-                                    value="fopForm"
+                                    value="fop-form"
                                 />
                                 <span class="registration__radiobutton-text">ФОП</span>
                             </label>
@@ -695,18 +704,38 @@
                         >
                             <div class="registration__details-block">
                                 <h3 class="registration__sub-title">1. Реквизиты</h3>
-                                <div class="registration__input-block">
-                                    <label class="registration__label" for="details">ОКПО</label>
-                                    <input
-                                        class="registration__input"
-                                        id="details"
-                                        type="password"
-                                        name="requisites"
-                                    />
+                                <div class="registration__form">
+                                    <div class="input__block">
+                                        <label class="input__label" for="details">ОКПО</label>
+                                        <input
+                                            class="registration__input input__area registration__changes"
+                                            data-change="legal"
+                                            id="details"
+                                            type="password"
+                                            name="requisites"
+                                        />
+                                    </div>
+                                    <div class="input__block">
+                                        <label
+                                            class="input__label registration__select-header-inactive-text"
+                                            for="EDRPOUCode"
+                                            >ЕДРПО</label
+                                        >
+                                        <input
+                                            class="registration__input input__area registration__changes registration__select-header-inactive"
+                                            data-change="entrepreneur"
+                                            id="EDRPOUCode"
+                                            name="EDRPOUCode"
+                                            type="text"
+                                        />
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="registration__details-legal">
-                                <h3 class="registration__sub-title">2. Юридический адрес</h3>
+                                <h3 class="registration__sub-title">
+                                    2. <span class="title-change">Юридический адрес</span>
+                                </h3>
                                 <div class="registration__form">
                                     <div class="select registration__select-country-legal">
                                         <div class="registration__select-header select__header">
@@ -1132,192 +1161,34 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="registration__input-block">
-                                        <label class="registration__label" for="city-legal"
-                                            >Город*</label
-                                        >
+                                    <div class="input__block">
+                                        <label class="input__label" for="city-legal">Город*</label>
                                         <input
-                                            class="registration__input"
+                                            class="registration__input input__area"
                                             id="city-legal"
                                             type="text"
                                             name="cityLegal"
                                         />
                                     </div>
-                                    <div class="registration__input-block">
-                                        <label class="registration__label" for="addresses-legal"
+                                    <div class="input__block">
+                                        <label class="input__label" for="addresses-legal"
                                             >Адрес</label
                                         >
                                         <input
-                                            class="registration__input"
+                                            class="registration__input input__area"
                                             id="addresses-legal"
                                             type="text"
                                             name="addressesLegal"
                                         />
                                     </div>
-                                    <div class="registration__input-block">
-                                        <label class="registration__label" for="index-legal"
-                                            >Индекс</label
-                                        >
+                                    <div class="input__block">
+                                        <label class="input__label" for="index-legal">Индекс</label>
                                         <input
-                                            class="registration__input"
+                                            class="registration__input input__area registration__changes"
+                                            data-change="legal"
                                             id="index-legal"
                                             type="text"
                                             name="indexLegal"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="registration__option-sub-form hidden" id="fopForm">
-                            <div class="registration__details-block">
-                                <h3 class="registration__sub-title">1. Реквизиты</h3>
-                                <div class="registration__input-block">
-                                    <label class="registration__label" for="EDRPOUCode"
-                                        >ЕДРПО</label
-                                    >
-                                    <input
-                                        class="registration__input"
-                                        id="EDRPOUCode"
-                                        type="text"
-                                    />
-                                </div>
-                            </div>
-                            <div class="registration__details-legal">
-                                <h3 class="registration__sub-title">2. Адрес ФОП</h3>
-                                <div class="registration__form">
-                                    <div class="select registration__select-country-fop">
-                                        <div class="registration__select-header select__header">
-                                            <span
-                                                class="select__current registration__current-country-fop"
-                                                >Страна</span
-                                            >
-                                            <svg class="select__svg registration__select-svg">
-                                                <use href="#arrow_down"></use>
-                                            </svg>
-                                        </div>
-                                        <ul class="select__body registration__select-body">
-                                            <li class="select__item registration__item">Україна</li>
-                                        </ul>
-                                    </div>
-                                    <div class="select registration__select-region-fop">
-                                        <div
-                                            class="region-legal registration__select-header select__header"
-                                        >
-                                            <span
-                                                class="select__current registration__current-region-fop"
-                                                >Область</span
-                                            >
-                                            <svg class="select__svg registration__select-svg">
-                                                <use href="#arrow_down"></use>
-                                            </svg>
-                                        </div>
-                                        <ul
-                                            class="hidden select__body registration__select-body registration__select-body-wrapper"
-                                            data-region="Україна"
-                                            data-administrative="Область"
-                                        >
-                                            <li class="select__item registration__item">
-                                                Вінницька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Волинська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Дніпропетровська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Донецька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Житомирська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Закарпатська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Запорізька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Івано-Франківська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Київська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Кіровоградська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Луганська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Львівська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Миколаївська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Одеська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Полтавська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Рівненська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Сумська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Тернопільська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Харківська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Херсонська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Хмельницька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Черкаська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Чернівецька область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Чернігівська область
-                                            </li>
-                                            <li class="select__item registration__item">
-                                                Автономна Республіка Крим
-                                            </li>
-                                            <li class="select__item registration__item">м. Київ</li>
-                                            <li class="select__item registration__item">
-                                                м. Севастополь
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="registration__input-block">
-                                        <label class="registration__label" for="city-fop"
-                                            >Город*</label
-                                        >
-                                        <input
-                                            class="registration__input"
-                                            id="city-fop"
-                                            type="text"
-                                            name="cityFop"
-                                        />
-                                    </div>
-                                    <div class="registration__input-block">
-                                        <label class="registration__label" for="addresses-fop"
-                                            >Адрес</label
-                                        >
-                                        <input
-                                            class="registration__input"
-                                            id="addresses-fop"
-                                            type="text"
-                                            name="addressesFop"
                                         />
                                     </div>
                                 </div>
@@ -1992,6 +1863,21 @@
 
     <symbol id="checkbox" viewBox="0 0 20 20">
         <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+    </symbol>
+
+    <symbol id="cross" viewBox="0 0 12 12">
+        <path
+            d="M12 1.2L10.8 0L6 4.8L1.2 0L0 1.2L4.8 6L0 10.8L1.2 12L6 7.2L10.8 12L12 10.8L7.2 6L12 1.2Z"
+        />
+    </symbol>
+
+    <symbol id="arrow-bracket" viewBox="0 0 512.000000 512.000000">
+        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
+            <path
+                d="M2485 3840 l-1280 -1280 1280 -1280 1280 -1280 80 80 80 80 -1200
+1200 -1200 1200 1200 1200 1200 1200 -80 80 -80 80 -1280 -1280z"
+            />
+        </g>
     </symbol>
 </svg>
 
