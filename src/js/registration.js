@@ -2,10 +2,13 @@ import { selectRegion } from "./registration/select-region-active.js";
 import { getElement } from "./base/get-element-dom.js";
 import { useInputActive } from "./registration/input-active.js";
 import { useFormChange } from "./registration/form-change.js";
-import { useRegistrationValidate } from "./registration/form-registration-validate.js";
+import { useRegistrationValidate } from "./base/form-validate.js";
 import { useNumberMask } from "./registration/phone-mask.js";
+import { useCreateUser } from "./registration/registration-users.js";
+import { setupApp } from "./main.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
+    const app = await setupApp();
     useRegistrationValidate(
         getElement("registrationForms", "id"),
         getElement(".registration__input", "all"),
@@ -57,8 +60,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             cityFop: /[a-zа-яціїєґ\\-]+/gi,
             photoAvatar: /([a-z0-9а-яціїєґ\s_\\.\-\\(\\):])+(\.png|\.jpg|\.jpeg)$/gi,
         },
+        useCreateUser,
+        getElement(".registration__text-button"),
+        app,
     );
-
     useNumberMask(getElement("phone", "id"), "UA", /\+/g, "+380");
     useInputActive(getElement(".input__area", "all"), getElement(".input__label", "all"));
     useFormChange(
@@ -69,11 +74,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".registration__changes", "all"),
         getElement(".title-change"),
     );
-    // useFormChangeRadio(
-    //     getElement(".registration__change-form", "all"),
-    //     getElement(".registration__changes", "all"),
-    //     getElement(".title-change"),
-    // );
     selectRegion(
         getElement(".registration__current-country"),
         getElement(".registration__select-body-wrapper", "all"),

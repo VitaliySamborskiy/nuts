@@ -1,13 +1,7 @@
 import { getElement } from "../base/get-element-dom.js";
+import { useSetQueryParameter, useGetQueryParameter } from "../base/querry-parameter.js";
 
-export function filterProducts(
-    arrCards,
-    applyButton,
-    crossButton,
-    lowerPrice,
-    higherPrice,
-    mainContainer,
-) {
+export function filterProducts(arrCards, applyButton, crossButton, lowerPrice, higherPrice, mainContainer) {
     const saveCards = arrCards;
     const cardsPrice = Array.from(arrCards);
     let appliedFilters = {};
@@ -15,13 +9,13 @@ export function filterProducts(
     applyButton.addEventListener("click", () => {
         observerSelectsStatus(appliedFilters);
         selectFilters(arrCards, appliedFilters);
-        queryParameter(appliedFilters);
+        useSetQueryParameter(["weight", "taste"], Object.values(appliedFilters));
     });
 
     crossButton.addEventListener("click", () => {
         resetAllFilter(mainContainer, saveCards, arrCards);
         observerSelectsStatus(appliedFilters);
-        queryParameter(appliedFilters);
+        useSetQueryParameter(["weight", "taste"], Object.values(appliedFilters));
     });
 
     priseFilter(higherPrice, mainContainer, cardsPrice, "descending");
@@ -86,18 +80,7 @@ function priseFilter(arrowButton, mainContainer, arrCard, sortType = null) {
     });
 }
 
-function queryParameter(appliedFilters) {
-    const queryParams = new URLSearchParams({
-        weight: appliedFilters.weight,
-        taste: appliedFilters.taste,
-    });
-
-    window.history.replaceState(null, null, "?" + queryParams.toString());
-}
-
 function getQueryParameter(appliedFilters, arrCards) {
-    const queryParams = new URLSearchParams(window.location.search);
-    appliedFilters.weight = queryParams.get("weight");
-    appliedFilters.taste = queryParams.get("taste");
+    appliedFilters = useGetQueryParameter(["weight", "taste"], ["weight", "taste"]);
     selectFilters(arrCards, appliedFilters);
 }

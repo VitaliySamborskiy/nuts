@@ -1,4 +1,4 @@
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
 
 export function useGetImg(url, element) {
     const storage = getStorage();
@@ -10,4 +10,20 @@ export function useGetImg(url, element) {
         .catch((err) => {
             console.log(err);
         });
+}
+
+export async function useSetImg(file) {
+    let imageUrl = "";
+    const storage = getStorage();
+    const mountainRef = ref(storage, `/users_avatar/${file.name}`);
+    try {
+        const snapshot = await uploadBytes(mountainRef, file);
+        imageUrl = await getDownloadURL(snapshot.ref);
+        console.log(`File uploaded successfully. URL: ${imageUrl}`);
+        return imageUrl;
+    } catch (error) {
+        console.error(`Error uploading file: ${error}`);
+    }
+
+    return imageUrl;
 }

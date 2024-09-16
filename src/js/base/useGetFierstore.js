@@ -22,6 +22,30 @@ export async function useSetProduct(app, documentId, data) {
     });
 }
 
+export async function useSetUserData(app, userID, dataObj) {
+    const db = getFirestore(app);
+    await setDoc(doc(db, "user", userID), {
+        name: dataObj.name,
+        email: dataObj.email,
+        phone: dataObj.phone,
+        city: dataObj.city,
+        addresses: dataObj.addresses,
+        password: dataObj.password,
+        verifyPassword: dataObj.verifyPassword,
+        avatar: dataObj.avatar,
+        requisites: dataObj.requisites,
+        EDRPOUCode: dataObj.EDRPOUCode,
+        companyLegalCity: dataObj.companyLegalCity,
+        companyLegalAddress: dataObj.companyLegalAddress,
+        companyLegalIndex: dataObj.companyLegalIndex,
+        selectCountry: dataObj.selectCountry,
+        selectRegion: dataObj.selectRegion,
+        companyLegalSelectCountry: dataObj.companyLegalSelectCountry,
+        companyLegalSelectRegion: dataObj.companyLegalSelectRegion,
+        role: dataObj.role,
+    });
+}
+
 export async function useSetNews(app, documentId, data) {
     const db = getFirestore(app);
     const productsRef = collection(db, "news");

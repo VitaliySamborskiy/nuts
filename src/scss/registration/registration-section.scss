@@ -444,39 +444,4 @@
             font-size: 14px;
         }
     }
-
-    &__error-block {
-        position: absolute;
-        top: calc(88% - 3px);
-        left: 2%;
-        background: #cd1515;
-        padding: 3px 15px;
-        z-index: 1;
-        border-radius: 5px;
-
-        &:after {
-            content: "";
-            padding: 5px;
-            position: absolute;
-            background: #cd1515;
-            top: calc(0% - 4px);
-            left: 10%;
-            z-index: -1;
-            transform: rotate(45deg);
-            border-radius: 2px;
-        }
-    }
-
-    &__error-input {
-        border: solid 1px #cd1515;
-
-        &:hover {
-            border: solid 1px #cd1515;
-        }
-    }
-
-    &__error-text {
-        font-size: 11px;
-        color: cornsilk;
-    }
 }
