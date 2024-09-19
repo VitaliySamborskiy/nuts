@@ -20,15 +20,36 @@
                     main-page-title="Орех Причерноморья"
                     main-page-text="Единственный в Украине сад совместного
                     выращивание фундука и грецкого ореха"
-                    main-page-text-block-class="homepage__text-block"
+                    main-page-text-block-class="company-page__text-block"
                     main-page-class=""
-                    main-page-play-class="homepage__margin-play"
-                    main-page-img-block-class="homepage__block-img"
+                    main-page-play-class="company-page__margin-play"
+                    main-page-img-block-class="company-page__block-img"
                     main-page-img-class="company-page__img"
-                    main-page-title-class="homepage__title"
-                    main-page-text-class="homepage__text"
+                    main-page-title-class="company-page__title"
+                    main-page-text-class="company-page__text"
                 />
-                <load src="src/components/base/hectares.html" />
+                <load
+                    src="src/components/base/about-manufacturer.html"
+                    background-class="company__background"
+                    button-class="hidden"
+                    preview-img-class="company__preview-img"
+                    preview-img-block-class="company__preview-img-block"
+                    text-block="<div class='company__text-block'><p class='company__text'>
+                Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады ореха
+                грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
+                </p>
+                <p class='company__text'>
+                    Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
+                    непривитого грецкого ореха, фундука и шиповника.
+                </p>
+                <p class='company__text'>
+                    Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания интенсивного
+                    сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
+                </p></div>"
+                />
+                <load src="src/components/about-company/about-ceo.html" />
+                <load src="src/components/base/hectares.html" margin-top="about__company-hectares-margin" />
+                <load src="src/components/about-company/gallery.html" />
                 <load
                     src="src/components/base/eco-section.html"
                     eco-img-class="company-page-eco__img"
@@ -49,5 +70,6 @@
         </div>
         <script type="module" src="/src/js/main.js"></script>
         <script type="module" src="/src/js/about-company.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>

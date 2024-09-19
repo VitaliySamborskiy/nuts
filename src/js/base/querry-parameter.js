@@ -3,10 +3,12 @@ export function useNewQueryParameter(queryKey, queryValue) {
     for (let i = 0; i < queryKey.length; i++) {
         url.searchParams.set(queryKey[i], queryValue[i]);
     }
+
+    window.history.replaceState(null, null, url);
 }
 
 export function useSetQueryParameter(queryKey, queryValue) {
-    let queryParams = new URLSearchParams(window.location.href);
+    let queryParams = new URLSearchParams(window.location.search);
     for (let i = 0; i < queryKey.length; i++) {
         queryParams.set(queryKey[i], queryValue[i]);
     }

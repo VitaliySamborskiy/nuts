@@ -147,3 +147,15 @@
         }
     }
 }
+
+.about__company-hectares-margin {
+    margin: 150px auto 0;
+
+    @include breakpoints(md) {
+        margin: 100px auto 0;
+    }
+
+    @include breakpoints(sm) {
+        margin: 65px auto 0;
+    }
+}

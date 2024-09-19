@@ -1,22 +1,12 @@
-<section class="manufacturing__background">
+<section class="manufacturing__background {=$background-class}">
     <div class="manufacturing__container">
         <div class="manufacturing__content">
             <div class="manufacturing__text-block">
                 <h2 class="manufacturing__title">О производителе</h2>
-                <p class="manufacturing__text-first">
-                    <span class="green manufacturing__text-green"
-                        >Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья”</span
-                    >
-                    выращивает смешанные сады ореха грецкого с фундуком, а также ореха грецкого с
-                    шиповником, на площади более 150 гектаров.
-                </p>
-                <p class="manufacturing__text-second">
-                    Помимо этого кооператив занимается выращиванием посадочного материала, саженцов
-                    привитого и непривитого грецкого ореха, фундука и шиповника.
-                </p>
+                {=$text-block}
                 <load
                     src="src/components/base/button.html"
-                    class_button="transparent-button manufacturing__text-button"
+                    class_button="transparent-button {=$button-class}"
                     class_button_text=""
                     component_class=""
                     button_text="Подробнее"
@@ -28,7 +18,7 @@
                         <div class="swiper-slide">
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
-                                    <img class="manufacturing__preview-img" src="" />
+                                    <img class="{=$preview-img-class}" src="" />
                                     <load
                                         src="src/components/base/button.html"
                                         class_button="play-button manufacturing__play"
@@ -42,7 +32,7 @@
                         <div class="swiper-slide">
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
-                                    <img class="manufacturing__preview-img" src="" />
+                                    <img class="{=$preview-img-class}" src="" />
                                     <load
                                         src="src/components/base/button.html"
                                         class_button="play-button manufacturing__play"

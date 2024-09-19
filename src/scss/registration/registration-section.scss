@@ -172,6 +172,10 @@
         gap: 13px;
     }
 
+    &__checkbox-block {
+        position: relative;
+    }
+
     &__input {
         width: 85%;
 
@@ -359,6 +363,7 @@
     }
 
     &__checkbox {
+        position: relative;
         width: 14px;
         height: 14px;
         border: 2px solid $mainGreen;
@@ -427,6 +432,7 @@
     }
 
     &__button-block {
+        position: relative;
         margin-top: 17px;
 
         @include breakpoints(md) {

@@ -137,6 +137,10 @@
         }
 
         @include breakpoints(sm) {
+            width: 94%;
+        }
+
+        @include breakpoints(xs) {
             width: 100%;
         }
     }
@@ -234,7 +238,7 @@
         &-block {
             cursor: pointer;
             position: absolute;
-            width: 100%;
+            max-width: 100%;
             height: 100%;
 
             &_active {

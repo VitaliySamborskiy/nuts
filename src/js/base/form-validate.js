@@ -2,30 +2,28 @@ import { usePhotoReplacement } from "../registration/photo-replacement.js";
 import { getElement } from "./get-element-dom.js";
 let validateStatus = true;
 
-export function useRegistrationValidate(form, inputArr, messagesError, regExp, callback, button, app) {
+export function useValidate(form, inputArr, messagesError, regExp, callback, button, app = null) {
     inputArr.forEach((element, index) => {
         element.addEventListener("input", () => {
             if (element.name in messagesError) {
                 validateInput(element.name, messagesError[element.name], index, element, regExp[element.name]);
             }
-            console.log(validateStatus);
         });
         element.addEventListener("blur", () => {
             if (element.name in messagesError) {
                 validateInput(element.name, messagesError[element.name], index, element, regExp[element.name]);
             }
+            console.log(validateStatus);
         });
         button.addEventListener("click", (event) => {
             event.preventDefault();
             if (element.name in messagesError) {
                 validateInput(element.name, messagesError[element.name], index, element, regExp[element.name]);
             }
-            console.log(validateStatus);
         });
     });
 
     button.addEventListener("click", () => {
-        console.log(validateStatus);
         if (validateStatus) {
             callback(app, form);
         }
@@ -40,7 +38,6 @@ export function useRegistrationValidate(form, inputArr, messagesError, regExp, c
             if (formData.get(elementInput.name) === "" && textError.void !== null) {
                 throw new Error(textError.void);
             }
-
             if (elementInput.name === "photoAvatar") {
                 if (!file.name.match(regExp)) {
                     throw new Error(textError.regExp);
@@ -67,6 +64,24 @@ export function useRegistrationValidate(form, inputArr, messagesError, regExp, c
             errorAddClass(elementInput, error.message, errorElement);
         }
     }
+}
+
+export function checkboxValidate(form, name, checkbox, textError, button) {
+    button.addEventListener("click", () => {
+        const formData = new FormData(form);
+        const errorElement = checkbox.parentElement.querySelector(".error__block");
+
+        console.log(formData);
+        try {
+            if (formData.get(name) !== "on") {
+                throw new Error(textError.check);
+            }
+
+            errorRemove(errorElement, checkbox);
+        } catch (error) {
+            errorAddClass(checkbox, error.message, errorElement);
+        }
+    });
 }
 
 export function errorAddClass(input, errorText = null, checkError) {

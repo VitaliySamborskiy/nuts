@@ -1,4 +1,4 @@
-import { useGetFirestore } from "./base/useGetFierstore.js";
+import { useGetFirestore } from "./base/use-fire-store.js";
 import { setupApp } from "./main.js";
 import { getElement } from "./base/get-element-dom.js";
 import { useRenderCards } from "./base/use-render-cards.js";

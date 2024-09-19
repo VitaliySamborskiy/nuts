@@ -1,0 +1,262 @@
+.ceo {
+    &__content {
+        width: 99%;
+        margin: 190px auto 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+
+        @include breakpoints(xl) {
+            width: 100%;
+            gap: 20px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 140px;
+            width: 85%;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 80px;
+            width: 95%;
+            gap: 25px;
+        }
+
+        @include breakpoints(xs) {
+            gap: 40px;
+            width: 100%;
+        }
+    }
+
+    &__representations {
+        &-block {
+            display: flex;
+            width: 65%;
+            padding-left: 20px;
+            gap: 40px;
+
+            @include breakpoints(xl) {
+                gap: 25px;
+                padding: 0;
+            }
+
+            @include breakpoints(md) {
+                margin: 0 auto;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            @include breakpoints(sm) {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            @include breakpoints(xs) {
+                flex-wrap: wrap-reverse;
+                gap: 15px;
+            }
+        }
+
+        &-button {
+            padding: 16px 44px;
+            margin-top: 60px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+
+            @include breakpoints(sm) {
+                margin-top: 30px;
+                padding: 12px 35px;
+            }
+
+            @include breakpoints(xs) {
+                display: flex;
+                margin: 30px auto 0;
+            }
+        }
+
+        &-img-block {
+            @include breakpoints(sm) {
+                min-width: 235px;
+                width: 37%;
+                margin: 0 auto;
+            }
+
+            @include breakpoints(xs) {
+                width: 100%;
+            }
+        }
+
+        &-img {
+            width: 100%;
+        }
+
+        &-title {
+            margin-top: 30px;
+            font-size: 32px;
+
+            @include breakpoints(sm) {
+                margin-top: 10px;
+                font-size: 30px;
+            }
+
+            @include breakpoints(xs) {
+                text-align: center;
+            }
+        }
+
+        &-text {
+            margin-top: 12px;
+            width: 280px;
+            font-size: 16px;
+            line-height: 131%;
+            font-family: $productFonts;
+
+            @include breakpoints(sm) {
+                width: 100%;
+            }
+
+            @include breakpoints(xs) {
+                text-align: center;
+            }
+        }
+
+        &-goal-block {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            @include breakpoints(sm) {
+                margin-top: 15px;
+            }
+        }
+
+        &-svg {
+            width: 36px;
+            height: 28px;
+
+            @include breakpoints(sm) {
+                min-width: 20px;
+                min-height: 15px;
+            }
+        }
+
+        &-text-block {
+            width: 52%;
+
+            @include breakpoints(md) {
+                width: 49%;
+            }
+            @include breakpoints(sm) {
+                margin: 0 auto;
+                min-width: 245px;
+            }
+
+            @include breakpoints(xs) {
+                width: 100%;
+            }
+        }
+
+        &-text-italic {
+            padding: 11px 0 0 13px;
+            font-size: 15px;
+            line-height: 117%;
+            letter-spacing: 0.01em;
+            font-style: italic;
+
+            @include breakpoints(sm) {
+                padding: 11px 0 0 4px;
+            }
+
+            @include breakpoints(sm) {
+                padding: 11px 0 0 13px;
+            }
+        }
+    }
+
+    &__history {
+        &-block {
+            width: 453px;
+            background: $mainGreen;
+            padding: 31px 30px 43px 47px;
+            position: relative;
+            overflow: hidden;
+
+            @include breakpoints(md) {
+                width: 100%;
+            }
+
+            @include breakpoints(sm) {
+                padding: 25px 20px 30px 20px;
+            }
+        }
+
+        &-title {
+            color: $backgroundColor;
+            font-size: 32px;
+
+            @include breakpoints(md) {
+                text-align: center;
+            }
+
+            @include breakpoints(sm) {
+                margin-top: 10px;
+                font-size: 30px;
+            }
+        }
+
+        &-text-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 34px;
+
+            @include breakpoints(sm) {
+                margin-top: 20px;
+                gap: 12px;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            color: $backgroundColor;
+            font-size: 14px;
+            line-height: 157%;
+            font-family: $supportFonts;
+
+            @include breakpoints(md) {
+                text-align: center;
+            }
+        }
+
+        &-svg {
+            position: absolute;
+            width: 322px;
+            height: 322px;
+            top: 40%;
+            left: 47%;
+            transform-origin: center top;
+            animation: logoAnimation 5s ease-in-out infinite;
+
+            @include breakpoints(md) {
+                top: 30%;
+                left: 65%;
+            }
+        }
+    }
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(8deg) translateY(2px);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(-2px);
+    }
+    100% {
+        transform: rotate(8deg) translateY(2px);
+    }
+}

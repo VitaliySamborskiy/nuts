@@ -1,4 +1,4 @@
-import { useGetImg } from "./useGetImg.js";
+import { useImg } from "./use-img.js";
 
 export function useRenderNewsCards(arrData, elements) {
     const fragment = document.createDocumentFragment();
@@ -27,7 +27,7 @@ export function useRenderNewsCards(arrData, elements) {
         let cardNews = document.createElement("div");
         cardNews.classList.add("swiper-slide");
         cardNews.innerHTML = html;
-        useGetImg(data.url[0], cardNews.querySelector(`.news-swiper__card-img`));
+        useImg(data.url[0], cardNews.querySelector(`.news-swiper__card-img`));
 
         fragment.appendChild(cardNews);
     });

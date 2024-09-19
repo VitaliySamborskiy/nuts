@@ -1,0 +1,45 @@
+.company {
+    &__background {
+        background: transparent;
+        margin-top: 100px;
+        padding: 0;
+    }
+
+    &__text-block {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        line-height: 1.6;
+
+        @include breakpoints(xl) {
+            margin-top: 30px;
+            line-height: 1.4;
+        }
+
+        @include breakpoints(md) {
+            align-items: center;
+            line-height: 1.6;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 15px;
+        }
+    }
+
+    &__text {
+        width: 90%;
+
+        @include breakpoints(xl) {
+            width: 100%;
+        }
+
+        @include breakpoints(md) {
+            text-align: center;
+        }
+
+        @include breakpoints(sm) {
+            font-size: 14px;
+        }
+    }
+}

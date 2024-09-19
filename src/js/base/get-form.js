@@ -6,17 +6,11 @@ export function getFormInfo(form, keyName) {
     let formResult = {};
 
     for (let i = 0; i < formValue.length; i++) {
-        formResult[keyName[i]] = formValue[i];
+        formResult[keyName[i]] = formValue[i] !== undefined ? formValue[i] : null;
     }
 
     return formResult;
 }
-
-// export function useGetFormSelects(select, baseValue) {
-//     let value;
-//     value = getElement(select).textContent !== baseValue ? null : getElement(select).textContent;
-//     return value;
-// }
 
 export function useGetFormSelects(obj, key, select, baseValue) {
     for (let i = 0; i < key.length; i++) {
