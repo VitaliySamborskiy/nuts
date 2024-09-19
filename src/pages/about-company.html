@@ -4,18 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
-        <title>Каталог продукции</title>
+        <title>О компании</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/catalogProducts-BwYTUf2l.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/aboutCompany-86gK2VUo.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-BjcFCJsn.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/use-fire-store-CevuTT15.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-CCToneb5.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/querry-parameter-BbPXVIy4.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/news-render-cards-5JPaMB-Z.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/catalogProducts-CjDkqLuD.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/aboutCompany-81530wP6.css">
     </head>
     <body>
         <div class="wrapper">
@@ -220,14 +219,15 @@
 </header>
 
             <main class="main">
-                <section class="main-page {=$main-page-class}">
-    <div class="main-page__img-block products-page__block-img">
-        <img class="main-page__img products-page__img" src="" />
+                <section class="main-page ">
+    <div class="main-page__img-block company-page__block-img">
+        <img class="main-page__img company-page__img" src="" />
     </div>
-    <div class="main-page__container products-page__text-block">
-        <h2 class="main-page__title products-page__title">Каталог продукции</h2>
-        <p class="main-page__text hidden">{=$main-page-text}</p>
-        <a href="#" class="main-page__play-block hidden">
+    <div class="main-page__container company-page__text-block">
+        <h2 class="main-page__title company-page__title">Орех Причерноморья</h2>
+        <p class="main-page__text company-page__text">Единственный в Украине сад совместного
+                    выращивание фундука и грецкого ореха</p>
+        <a href="#" class="main-page__play-block company-page__margin-play">
             <button class="play-button main-page__play">
     <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
@@ -236,206 +236,306 @@
     </div>
 </section>
 
-                <section class="product product__container">
-    <div class="product__main-page hidden">
-        <h2 class="product__main-page-title">Продукция</h2>
-        <p class="product__main-page-text">
-            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника
-            в удобной, надежной, вакуумной упаковке разного объема
-        </p>
-    </div>
-    <div class="product-filter__shop-block {=$class-filter}">
-        <div class="product-filter__block">
-            <p class="product-filter__text">Фильтр</p>
-            <svg class="product-filter__svg"><use href="#filter"></use></svg>
-        </div>
-        <div class="product-filter__filter-block">
-            <div class="select product-filter__select-taste">
-    <div class="product-filter__select-header-taste select__header">
-        <span class="select__current product-filter__current-taste">Вкус</span>
-        <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body product-filter__select-body-taste"><div class='select__item product-filter__item'>сладкий</div>
-                           <div class='select__item product-filter__item'>солоний</div></div>
-</div>
-
-            <div class="select product-filter__select-weight">
-    <div class="product-filter__select-header-weight select__header">
-        <span class="select__current product-filter__current-weight">Масса</span>
-        <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body product-filter__select-body-weight"><div class='select__item product-filter__item'>30-39</div>
-                           <div class='select__item product-filter__item'>40-49</div>
-                           <div class='select__item product-filter__item'>50-59</div>
-                           <div class='select__item product-filter__item'>60-69</div>
-                           <div class='select__item product-filter__item'>70-99</div>
-                           <div class='select__item product-filter__item'>100-250</div></div>
-</div>
-
-            <div class="product-filter__cost-block">
-                <p class="product-filter__cost-text">Стоимость</p>
-                <div class="product-filter__cost-arrows">
-                    <button class="product-filter__cost-button product-filter__higher-price">
-    <span class=""><svg class='product-filter__cost-svg-top'>
-                <use href='#arrow'></use></svg></span>
+                <section class="manufacturing__background company__background">
+    <div class="manufacturing__container">
+        <div class="manufacturing__content">
+            <div class="manufacturing__text-block">
+                <h2 class="manufacturing__title">О производителе</h2>
+                <div class='company__text-block'><p class='company__text'>
+                Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады ореха
+                грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
+                </p>
+                <p class='company__text'>
+                    Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
+                    непривитого грецкого ореха, фундука и шиповника.
+                </p>
+                <p class='company__text'>
+                    Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания интенсивного
+                    сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
+                </p></div>
+                <button class="transparent-button hidden">
+    <span class="">Подробнее</span>
 </button>
 
-                    <button class="product-filter__cost-button product-filter__lower-price">
-    <span class=""><svg class='product-filter__cost-svg-bottom'>
-                    <use href='#arrow'></use></svg></span>
+            </div>
+            <div class="manufacturing__swiper">
+                <div class="swiper manufacturing__swiper-video">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="manufacturing__youtube-container">
+                                <div class="manufacturing__preview-img-block">
+                                    <img class="company__preview-img" src="" />
+                                    <button class="play-button manufacturing__play">
+    <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
 </button>
 
+                                </div>
+                                <div class="manufacturing__player"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="manufacturing__youtube-container">
+                                <div class="manufacturing__preview-img-block">
+                                    <img class="company__preview-img" src="" />
+                                    <button class="play-button manufacturing__play">
+    <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
+</button>
+
+                                </div>
+                                <div class="manufacturing__player"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="manufacturing__navigation">
+                        <div class="manufacturing__button-prev">
+                            <svg class="manufacturing__svg-prev">
+                                <use href="#arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="manufacturing__button-next">
+                            <svg class="manufacturing__svg-next">
+                                <use href="#arrow"></use>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="product-filter__end-buttons">
-            <button class="green-button product-filter__apply-button">
-    <span class="">Применить</span>
-</button>
-
-            <button class="product-filter__cross-button">
-    <span class=""><svg class='product-filter__cross-svg'>
-                    <use href='#cross'></use></svg> Сбросить</span>
-</button>
-
-        </div>
     </div>
-    <div class="product__cards"></div>
-    <a
-        href="/nuts/src/pages/catalog-products.html"
-        class="transparent-button product__button hidden"
-        >Перейти в магазин</a
-    >
-    <button class="transparent-button product__button-load-card">
-    <span class="">Загрузить еще</span>
-</button>
-
 </section>
 
-                <section class="popup__content">
-    <div class="popup__background-block">
-        <svg class="popup__cross">
-            <use href="#cross"></use>
+                <section class="ceo__container">
+    <div class="ceo__content">
+        <div class="ceo__representations-block">
+            <picture class="ceo__representations-img-block">
+                <img class="ceo__representations-img" src="" alt="Павел Тулба CEO" />
+            </picture>
+            <div class="ceo__representations-text-block">
+                <h2 class="ceo__representations-title">Павел Тулба</h2>
+                <p class="ceo__representations-text">Учередитель и владелец предприятия “Орех Причерноморья”</p>
+                <div class="ceo__representations-goal-block">
+                    <svg class="ceo__representations-svg"><use href="#quotes"></use></svg>
+                    <p class="ceo__representations-text-italic">
+                        Главная наша цель – получить максимальную прибыль с одного гектара.
+                    </p>
+                </div>
+                <button class="transparent-button ceo__representations-button">
+    <span class="{=$class_button_text}">Написать нам</span>
+</button>
+
+            </div>
+        </div>
+        <div class="ceo__history-block">
+            <h2 class="ceo__history-title">История предприятия</h2>
+            <div class="ceo__history-text-items">
+                <p class="ceo__history-text">
+                    Наше предприятие основано в 2012 году для закладки смешанного сада грецкого ореха и фундука.
+                </p>
+                <p class="ceo__history-text">
+                    На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
+                    выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
+                    выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
+                    выращиванию трюфелей на корнях фундука.
+                </p>
+                <p class="ceo__history-text">
+                    Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
+                </p>
+            </div>
+            <svg class="ceo__history-svg"><use href="#logo"></use></svg>
+        </div>
+    </div>
+</section>
+
+                <section class="hectares__container">
+    <div class="hectares__content about__company-hectares-margin">
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">240</h3>
+                <p class="hectares__title-support">Га</p>
+            </div>
+            <p class="hectares__text">Cмешанных садов</p>
+        </div>
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">1</h3>
+                <p class="hectares__title-support">Га</p>
+            </div>
+            <p class="hectares__text">Тепличного комплекса</p>
+        </div>
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">10</h3>
+                <p class="hectares__title-support">Га</p>
+            </div>
+            <p class="hectares__text">Первая промышленная плантация шиповника в Украине</p>
+        </div>
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">80</h3>
+                <p class="hectares__title-support">%</p>
+            </div>
+            <p class="hectares__text">Приживаемости саженцев</p>
+        </div>
+    </div>
+</section>
+
+                <section class="gallery__container">
+    <div class="gallery__content">
+        <h2 class="gallery__title">Галерея</h2>
+        <p class="gallery__sub-text">Кадры социальной активности компании</p>
+        <div class="gallery__block-cc">
+            <div class="gallery__block-items">
+                <div class="gallery__block gallery__item-1">
+                    <picture class="gallery__img-block">
+                        <img class="gallery__img" src="" />
+                    </picture>
+                    <div class="gallery__card-block">
+                        <div class="gallery__card-block-text">
+                            <h3 class="gallery__card-title">SIAL Paris 2018</h3>
+                            <p class="gallery__card-text">
+                                В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании
+                                правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы
+                                <span class="gallery__card-span">SIAL Paris 2018</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gallery__background"></div>
+                </div>
+                <div class="gallery__block gallery__item-2">
+                    <picture class="gallery__img-block">
+                        <img class="gallery__img" src="" />
+                    </picture>
+                    <div class="gallery__card-block">
+                        <div class="gallery__card-block-text">
+                            <h3 class="gallery__card-title">SIAL Paris 2018</h3>
+                            <p class="gallery__card-text">
+                                В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании
+                                правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы
+                                <span class="gallery__card-span">SIAL Paris 2018</span>
+                            </p>
+                        </div>
+                        <div class="gallery__background"></div>
+                    </div>
+                </div>
+                <div class="gallery__youtube-container gallery__item-3">
+                    <div class="gallery__preview">
+                        <picture class="gallery__preview-img-block">
+                            <img class="gallery__preview-img" src="" />
+                        </picture>
+                        <button class="play-button gallery__play">
+    <span class="{=$class_button_text}"><svg class='play-button-svg gallery__play-svg'><use href=#play></use></svg></span>
+</button>
+
+                        <div class="gallery__preview-text-block">
+                            <h2 class="gallery__preview-title">Проект UBHDP</h2>
+                            <p class="gallery__preview-text">
+                                Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP
+                                за возможность получить консультацию от мировых специалистов!
+                            </p>
+                        </div>
+                        <div class="gallery__preview-background"></div>
+                    </div>
+                    <div class="gallery__player"></div>
+                </div>
+                <div class="gallery__block gallery__item-4">
+                    <picture class="gallery__img-block">
+                        <img class="gallery__img" src="" />
+                    </picture>
+                    <div class="gallery__card-block">
+                        <div class="gallery__card-block-text">
+                            <h3 class="gallery__card-title">SIAL Paris 2018</h3>
+                            <p class="gallery__card-text">
+                                В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании
+                                правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы
+                                <span class="gallery__card-span">SIAL Paris 2018</span>
+                            </p>
+                        </div>
+                        <div class="gallery__background"></div>
+                    </div>
+                </div>
+                <div class="gallery__block gallery__item-5">
+                    <picture class="gallery__img-block">
+                        <img class="gallery__img" src="" />
+                    </picture>
+                    <div class="gallery__card-block">
+                        <div class="gallery__card-block-text">
+                            <h3 class="gallery__card-title">SIAL Paris 2018</h3>
+                            <p class="gallery__card-text">
+                                В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании
+                                правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы
+                                <span class="gallery__card-span">SIAL Paris 2018</span>
+                            </p>
+                        </div>
+                        <div class="gallery__background"></div>
+                    </div>
+                </div>
+                <div class="gallery__youtube-container gallery__item-6">
+                    <div class="gallery__preview">
+                        <picture class="gallery__preview-img-block">
+                            <img class="gallery__preview-img" src="" />
+                        </picture>
+                        <button class="play-button gallery__play gallery__play-mini">
+    <span class="{=$class_button_text}"><svg class='play-button-svg gallery__play-svg'><use href=#play></use></svg></span>
+</button>
+
+                        <div class="gallery__preview-text-block">
+                            <h2 class="gallery__preview-title">Проект UBHDP</h2>
+                            <p class="gallery__preview-text">
+                                Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP
+                                за возможность получить консультацию от мировых специалистов!
+                            </p>
+                        </div>
+                        <div class="gallery__preview-background"></div>
+                    </div>
+                    <div class="gallery__player"></div>
+                </div>
+            </div>
+        </div>
+        <button class="transparent-button gallery__button">
+    <span class="{=$class_button_text}">Смотреть всю галерею</span>
+</button>
+
+    </div>
+</section>
+
+                <section class="main-page eco__content">
+    <div class="main-page__img-block eco__img-block">
+        <img class="main-page__img company-page-eco__img" src="" />
+    </div>
+    <div class="main-page__container eco__block">
+        <svg class="eco__svg">
+            <use href="#eco"></use>
         </svg>
-        <div class="swiper popup__swiper">
-            <div class="swiper-wrapper popup__swiper-wrapper"></div>
-            <button class="popup__button-prev">
-                <svg class="popup__svg-prev">
-                    <use href="#arrow-bracket"></use>
-                </svg>
-            </button>
-            <button class="popup__button-next">
-                <svg class="popup__svg-next">
-                    <use href="#arrow-bracket"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="popup__title-block">
-            <h3 class="popup__title"></h3>
-            <div class="popup__price">
-                <p class="product__card-bottom-price-discount product__card-bottom-price-gray">
-                    <span></span>
-                    <span>грн.</span>
-                </p>
-                <p class="product__card-bottom-price-regular product__card-bottom-price-green">
-                    <span></span>
-                    <span>грн.</span>
-                </p>
-            </div>
-        </div>
+        <h2 class="main-page__title eco__title">Эко продукция</h2>
+        <p class="main-page__text eco__text">Выращиваем каждое деревцо с любовью, на экологически
+                    чистой земле, без использования пестицидов и химии</p>
     </div>
 </section>
 
-                <section class="eco-nuts__container">
-    <div class="eco-nuts__content">
-        <div class="eco-nuts__text-block">
-            <h2 class="eco-nuts__title">Экологически чистый грецкий орех</h2>
-            <h3 class="eco-nuts__title-sub">Оптом, и в розницу</h3>
-            <div class="eco-nuts__text-scroll-block">
-                <div class="eco-nuts__scrollbar"></div>
-                <div class="eco-nuts__text-scroll">
-                    <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья”
-                        выращивает смешанные сады ореха грецкого с фундуком, а также ореха грецкого
-                        с шиповником, на площади более 150 гектаров.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала,
-                        саженцов привитого и непривитого грецкого ореха, фундука и шиповника.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для
-                        выращивания интенсивного сада, воспроизводства саженцев в питомнике и
-                        выращивания трюфеля.
-                    </p>
-                    <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки
-                        смешанного сада грецкого ореха и фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять
-                        свои насаждения. Кроме выращивания грецкого ореха и фундука, мы занимаемся
-                        выращиванием саженцев, разведением и выращиванием овец, а также являемся
-                        первой в Украине компанией, приступившей к промышленному выращиванию
-                        трюфелей на корнях фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего
-                        кооператива.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья”
-                        выращивает смешанные сады ореха грецкого с фундуком, а также ореха грецкого
-                        с шиповником, на площади более 150 гектаров.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала,
-                        саженцов привитого и непривитого грецкого ореха, фундука и шиповника.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для
-                        выращивания интенсивного сада, воспроизводства саженцев в питомнике и
-                        выращивания трюфеля.
-                    </p>
-                    <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки
-                        смешанного сада грецкого ореха и фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять
-                        свои насаждения. Кроме выращивания грецкого ореха и фундука, мы занимаемся
-                        выращиванием саженцев, разведением и выращиванием овец, а также являемся
-                        первой в Украине компанией, приступившей к промышленному выращиванию
-                        трюфелей на корнях фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего
-                        кооператива.
-                    </p>
+                <section class="news-swiper__container">
+    <div class="news-swiper__content">
+        <div class="news-swiper__title-block">
+            <div class="news-swiper__text-block">
+                <h2 class="news-swiper__title">Новости</h2>
+                <p class="news-swiper__text">Свежие новости и полезная информация</p>
+            </div>
+            <div class="news-swiper__navigation">
+                <div class="news-swiper__prev-button news-swiper__button">
+                    <svg class="news-swiper__prev-svg news-swiper__svg">
+                        <use href="#arrow"></use>
+                    </svg>
+                </div>
+                <div class="news-swiper__next-button news-swiper__button">
+                    <svg class="news-swiper__next-svg news-swiper__svg">
+                        <use href="#arrow"></use>
+                    </svg>
                 </div>
             </div>
         </div>
-        <div class="eco-nuts__swiper-block">
-            <div class="swiper eco-nuts__swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" /></div>
-                </div>
-                <div class="swiper__block">
-                    <div class="eco-nuts__button-prev swiper__button-prev">
-                        <svg class="swiper__svg-prev">
-                            <use href="#arrow"></use>
-                        </svg>
-                    </div>
-                    <div class="eco-nuts__button-next swiper__button-next">
-                        <svg class="swiper__svg-next">
-                            <use href="#arrow"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+        <div class="news-swiper__cards">
+            <div class="swiper-wrapper news-swiper__renders"></div>
         </div>
+        <a href="#" class="transparent-button news-swiper__link">Смотреть все новости</a>
     </div>
 </section>
 
@@ -1111,5 +1211,6 @@
 </svg>
 
         </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>

@@ -1,1 +1,0 @@
-function c(s,i){s.forEach((t,u)=>{t.addEventListener("input",()=>{a(t,t.value.trim()!=="",i,u)}),t.addEventListener("focus",()=>{t.value.trim()===""&&a(t,t.value.trim()==="",i,u)}),t.addEventListener("blur",()=>{a(t,t.value.trim()!=="",i,u)})})}function a(s,i,t,u){let v=!1;i&&(v=!0),t[u].classList.toggle("input__label_active",v)}export{c as u};
