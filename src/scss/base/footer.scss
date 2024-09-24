@@ -163,3 +163,15 @@
         margin-top: 45px;
     }
 }
+
+.gallery__margin-footer {
+    margin-top: 128px;
+
+    @include breakpoints(md) {
+        margin-top: 90px;
+    }
+
+    @include breakpoints(sm) {
+        margin-top: 45px;
+    }
+}

@@ -1,5 +1,5 @@
 import { getElement } from "./get-element-dom.js";
-import { useImg } from "./use-img.js";
+import { useGetImg } from "./use-img.js";
 import { swiper } from "./swiper.js";
 
 export function useRenderPopupProduct(data, elements) {
@@ -42,7 +42,7 @@ function renderCards(elementWrapper, imgData) {
 
     const imgElements = fragment.querySelectorAll(".popup__img");
     imgElements.forEach((element, index) => {
-        useImg(imgData[index], element);
+        useGetImg(imgData[index], element);
     });
 
     elementWrapper.appendChild(fragment);

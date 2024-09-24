@@ -50,11 +50,4 @@ export async function swiperInit(app) {
             },
         },
     );
-    swiper(
-        getElement(".swiper"),
-        getElement(".eco-nuts__button-prev"),
-        getElement(".eco-nuts__button-next"),
-        "auto",
-        0,
-    );
 }

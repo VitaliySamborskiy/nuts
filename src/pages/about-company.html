@@ -49,23 +49,28 @@
                 />
                 <load src="src/components/about-company/about-ceo.html" />
                 <load src="src/components/base/hectares.html" margin-top="about__company-hectares-margin" />
-                <load src="src/components/about-company/gallery.html" />
+                <load
+                    src="src/components/about-company/gallery-section.html"
+                    link-class=""
+                    button-class="hidden"
+                    button-block-class="gallery__button-block"
+                />
                 <load
                     src="src/components/base/eco-section.html"
                     eco-img-class="company-page-eco__img"
                     eco-title="Эко продукция"
                     eco-text="Выращиваем каждое деревцо с любовью, на экологически
                     чистой земле, без использования пестицидов и химии"
-                    eco-class="eco__content"
-                    eco-text-block-class="eco__block"
+                    eco-class="about-company__eco-margin"
+                    eco-text-block-class="about-company__block"
                     eco-title-class="eco__title"
                     eco-text-class="eco__text"
                     eco-img-block-class="eco__img-block"
                 />
-                <load src="src/components/base/news-swiper-section.html" />
-                <load src="src/components/base/contact.html" margin-top="catalog-products__margin-contact" />
+                <load src="src/components/base/news-swiper-section.html" margin-top="about-company__margin-news" />
+                <load src="src/components/base/contact.html" margin-top="about-company__margin-contact" />
             </main>
-            <load src="src/components/base/footer.html" margin-top="catalog-products__margin-footer" />
+            <load src="src/components/base/footer.html" margin-top="about-company__margin-footer" />
             <load src="src/components/base/sprite.html" />
         </div>
         <script type="module" src="/src/js/main.js"></script>

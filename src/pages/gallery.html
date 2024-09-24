@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="../assets/img/logo-1.svg" />
+        <link rel="stylesheet" href="../scss/gallery-page.scss" />
+        <title>Галерея</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <load src="src/components/base/header.html" />
+            <main class="main">
+                <load
+                    src="src/components/base/main-page.html"
+                    main-page-title="Галерея"
+                    main-page-text="Кадры социальной активности компании"
+                    main-page-text-block-class="gallery-page__text-block"
+                    main-page-class=""
+                    main-page-play-class="gallery-page__hidden"
+                    main-page-img-block-class="gallery-page__block-img"
+                    main-page-img-class="gallery-page__img"
+                    main-page-title-class="gallery-page__title"
+                    main-page-text-class="gallery-page__text"
+                />
+                <load
+                    src="src/components/about-company/gallery-section.html"
+                    margin-class-body="gallery__body-margin"
+                    title-class="hidden"
+                    link-class="hidden"
+                    button-class=""
+                />
+                <load src="src/components/base/contact.html" margin-top="gallery__margin-contact" />
+            </main>
+            <load src="src/components/base/footer.html" margin-top="gallery__margin-footer" />
+            <load src="src/components/base/sprite.html" />
+        </div>
+        <script type="module" src="/src/js/gallery-page.js"></script>
+        <script type="module" src="/src/js/main.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+    </body>
+</html>

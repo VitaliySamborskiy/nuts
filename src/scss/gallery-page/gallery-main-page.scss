@@ -1,0 +1,65 @@
+.gallery-page {
+    &__text-block {
+        margin-top: 238px;
+        gap: 12px;
+
+        @include breakpoints(md) {
+            margin-top: 180px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 100px;
+        }
+
+        @include breakpoints(xs) {
+            margin-top: 70px;
+        }
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &__block-img {
+        height: 600px;
+
+        @include breakpoints(md) {
+            height: 450px;
+        }
+
+        @include breakpoints(sm) {
+            height: 300px;
+        }
+
+        @include breakpoints(xs) {
+            height: 230px;
+        }
+    }
+
+    &__img {
+    }
+
+    &__title {
+        @include breakpoints(md) {
+            font-size: 45px;
+        }
+        @include breakpoints(sm) {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        @include breakpoints(md) {
+            font-size: 18px;
+            width: 60%;
+        }
+        @include breakpoints(sm) {
+            font-size: 14px;
+            width: 70%;
+        }
+
+        @include breakpoints(xs) {
+            width: 90%;
+        }
+    }
+}

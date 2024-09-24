@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
 
-export function useImg(url, element) {
+export function useGetImg(url, element) {
     const storage = getStorage();
     const fileRef = ref(storage, url);
     getDownloadURL(fileRef)

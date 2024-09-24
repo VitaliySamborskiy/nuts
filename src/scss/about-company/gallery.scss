@@ -4,15 +4,37 @@
         margin: 175px auto 0;
         text-align: center;
         width: 99%;
+
+        @include breakpoints(xl) {
+            margin: 145px auto 0;
+            padding-left: 0;
+        }
+
+        @include breakpoints(md) {
+            margin: 80px auto 0;
+            width: 100%;
+        }
+
+        @include breakpoints(sm) {
+            margin: 70px auto 0;
+        }
     }
 
     &__title {
+        @include breakpoints(md) {
+            font-size: 30px;
+        }
     }
 
     &__sub-text {
         margin-top: 20px;
         font-size: 18px;
         line-height: 122%;
+
+        @include breakpoints(md) {
+            margin-top: 10px;
+            font-size: 14px;
+        }
     }
 
     &__block {
@@ -30,16 +52,61 @@
         }
     }
 
+    &__body-margin {
+        margin-top: 92px;
+    }
+
+    &__title-block {
+        padding-bottom: 65px;
+
+        @include breakpoints(md) {
+            padding-bottom: 25px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include breakpoints(md) {
+            gap: 10px;
+        }
+    }
+
     &__block-items {
-        margin-top: 65px;
         display: grid;
         grid-template-columns: repeat(12, 2fr);
-        //grid-template-rows: 556px 556px 409px;
+        grid-template-rows: repeat(2, 556px) 404px;
         grid-gap: 30px;
         grid-template-areas:
             "header header header header header header header header-2 header-2 header-2 header-2 header-2"
             "main main main main main main main main main main main main"
             "footer footer footer footer footer-2 footer-2 footer-2 footer-2 footer-3 footer-3 footer-3 footer-3";
+        @include breakpoints(xl) {
+            grid-template-rows: repeat(2, 500px) 404px;
+        }
+
+        @include breakpoints(md) {
+            grid-gap: 10px;
+            grid-template-rows: repeat(2, 400px) 300px;
+        }
+
+        @include breakpoints(sm) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 300px);
+            grid-template-areas:
+                "header"
+                "main"
+                "main-1"
+                "main-2"
+                "main-3"
+                "footer";
+        }
+
+        @include breakpoints(xs) {
+            grid-template-rows: repeat(3, 280px);
+        }
     }
 
     &__item-1 {
@@ -48,32 +115,82 @@
 
     &__item-2 {
         grid-area: header-2;
+
+        @include breakpoints(sm) {
+            grid-area: main;
+        }
     }
 
     &__item-3 {
         grid-area: main;
+
+        @include breakpoints(sm) {
+            grid-area: main-1;
+        }
     }
 
     &__item-4 {
         grid-area: footer;
+
+        @include breakpoints(sm) {
+            grid-area: main-2;
+        }
     }
 
     &__item-5 {
         grid-area: footer-2;
+
+        @include breakpoints(sm) {
+            grid-area: main-3;
+        }
     }
 
     &__item-6 {
         grid-area: footer-3;
+
+        @include breakpoints(sm) {
+            grid-area: footer;
+        }
     }
 
     &__img-block {
+        position: relative;
+        overflow: hidden;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 560px;
+        z-index: -2;
+
+        @include breakpoints(sm) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @include breakpoints(xs) {
+            height: 270px;
+        }
     }
 
     &__img {
-        display: flex;
+        position: absolute;
         width: 100%;
-        z-index: -1;
+        height: 100%;
+        object-fit: cover;
+
+        @include breakpoints(sm) {
+            min-width: 800px;
+            object-fit: cover;
+        }
+
+        @include breakpoints(xs) {
+            min-width: 400px;
+        }
     }
 
     &__card-block {
@@ -85,12 +202,25 @@
 
     &__card-block-text {
         padding: 80px 0 0 40px;
+
+        @include breakpoints(xl) {
+            padding: 50px 0 0 30px;
+            transition: top 0.8s ease-in-out;
+        }
+
+        @include breakpoints(md) {
+            padding: 20px 0 0 20px;
+        }
     }
 
     &__card-title {
         font-size: 22px;
         color: $backgroundColor;
         text-align: start;
+
+        @include breakpoints(md) {
+            font-size: 18px;
+        }
     }
 
     &__card-text {
@@ -100,6 +230,16 @@
         line-height: 147%;
         color: $backgroundColor;
         text-align: start;
+
+        @include breakpoints(xl) {
+            width: 80%;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 10px;
+            font-size: 12px;
+            width: 90%;
+        }
     }
 
     &__card-span {
@@ -118,12 +258,62 @@
     }
 
     &__youtube-container {
+        position: relative;
+        background: $manufacturingBackground;
+        overflow: hidden;
+        width: 100%;
+        //padding: 40px 0;
+        /* Keep it the right aspect-ratio */
+        //aspect-ratio: 16/6.9;
+        /* No clicking/hover effects */
+        //pointer-events: none;
+
+        @include breakpoints(sm) {
+            aspect-ratio: auto;
+            height: 300px;
+        }
+
+        @include breakpoints(xs) {
+            height: 280px;
+        }
+
+        &-mini {
+            //aspect-ratio: 16/15.8;
+
+            @include breakpoints(sm) {
+                aspect-ratio: auto;
+                height: 300px;
+            }
+
+            @include breakpoints(xs) {
+                height: 280px;
+            }
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Extend it beyond the viewport... */
+            width: 300%;
+            height: 100%;
+            /* ...and bring it back again */
+            margin-left: -100%;
+            z-index: 0;
+        }
     }
 
     &__preview {
-        position: relative;
+        //position: relative;
         overflow: hidden;
+        display: block;
         background: $textColor;
+        z-index: 1;
+        height: 100%;
+
+        &_active {
+            display: none;
+        }
 
         &:hover {
             .gallery__preview-background {
@@ -132,18 +322,76 @@
 
             .gallery__preview-text-block {
                 top: 65%;
+
+                @include breakpoints(xl) {
+                    top: 60%;
+                }
+            }
+
+            .gallery__play {
+                @include breakpoints(md) {
+                    top: 40%;
+                }
+
+                @include breakpoints(xs) {
+                    top: 30%;
+                }
             }
 
             .gallery__play-mini {
-                top: 32%;
+                top: 27%;
+
+                @include breakpoints(xl) {
+                    top: 26%;
+                }
+
+                @include breakpoints(md) {
+                    top: 20%;
+                }
+
+                @include breakpoints(xs) {
+                    top: 30%;
+                }
             }
         }
     }
 
     &__preview-img-block {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        //align-items: center;
+        width: 100%;
+        height: 560px;
+        //height: 506px;
+        z-index: 1;
+
+        @include breakpoints(sm) {
+            height: 300px;
+            width: 100%;
+        }
+
+        @include breakpoints(xs) {
+            height: 280px;
+        }
     }
 
     &__preview-img {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include breakpoints(sm) {
+            //height: 500px;
+            min-width: 335px;
+        }
+
+        @include breakpoints(xs) {
+            min-width: 295px;
+        }
     }
 
     &__preview-background {
@@ -160,22 +408,42 @@
     &__preview-text-block {
         width: 50%;
         position: absolute;
-        top: 120%;
+        top: 130%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
         transition: top 0.6s ease-in-out;
+
+        @include breakpoints(xl) {
+            top: 140%;
+            width: 65%;
+            transition: top 0.8s ease-in-out;
+        }
+
+        @include breakpoints(md) {
+            width: 80%;
+        }
     }
 
     &__preview-title {
         margin-top: 28px;
         color: $backgroundColor;
         font-size: 22px;
+
+        @include breakpoints(md) {
+            margin-top: 0;
+            font-size: 18px;
+        }
     }
 
     &__preview-text {
         margin-top: 15px;
         color: $backgroundColor;
+
+        @include breakpoints(md) {
+            margin-top: 8px;
+            font-size: 12px;
+        }
     }
 
     &__play-svg {
@@ -193,18 +461,86 @@
         border: 2px solid $backgroundColor;
         z-index: 2;
 
+        @include breakpoints(xl) {
+            top: 45%;
+        }
+
+        @include breakpoints(md) {
+            padding: 8px 4px 4px 4px;
+            width: 45px;
+            height: 45px;
+            transition: top 0.8s ease-in-out;
+        }
+
         &-mini {
             position: absolute;
             top: 52%;
             left: 50%;
             transform: translate(-50%, -50%);
             transition: top 0.6s ease-in-out;
+
+            @include breakpoints(xl) {
+                transition: top 0.8s ease-in-out;
+            }
+
+            @include breakpoints(md) {
+                padding: 8px 4px 4px 4px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+
+    &__button-block {
+        margin-top: 70px;
+
+        @include breakpoints(md) {
+            margin-top: 30px;
         }
     }
 
     &__button {
-        margin-top: 70px;
-        padding: 17px 34px;
+        padding: 16px 34px;
         font-size: 14px;
+
+        @include breakpoints(md) {
+            padding: 12px 20px;
+        }
+    }
+
+    &__button-load {
+        margin-top: 70px;
+        padding: 16px 38px;
+
+        @include breakpoints(md) {
+            margin-top: 30px;
+        }
+    }
+
+    &__svg {
+        position: absolute;
+        width: 322px;
+        height: 322px;
+        top: 13%;
+        left: 55%;
+        transform-origin: center top;
+        animation: logoAnimation 5s ease-in-out infinite;
+
+        @include breakpoints(md) {
+            top: 15%;
+            left: 45%;
+        }
+    }
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(8deg) translateY(2px);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(-2px);
+    }
+    100% {
+        transform: rotate(8deg) translateY(2px);
     }
 }

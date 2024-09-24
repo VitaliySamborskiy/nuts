@@ -1,4 +1,4 @@
-import { useImg } from "./use-img.js";
+import { useGetImg } from "./use-img.js";
 
 export function useRenderCards(arrData, element) {
     let fragment = document.createDocumentFragment();
@@ -114,7 +114,7 @@ export function useRenderCards(arrData, element) {
             const imgElement = cardProduct.querySelectorAll(`.product__slide`);
             let index = 0;
             imgElement.forEach((element) => {
-                useImg(data.imgUrl[index++], element);
+                useGetImg(data.imgUrl[index++], element);
             });
         }
 

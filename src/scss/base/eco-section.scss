@@ -82,3 +82,28 @@
         }
     }
 }
+
+.about-company__eco-margin {
+    margin-top: 118px;
+
+    @include breakpoints(md) {
+        margin-top: 80px;
+    }
+}
+
+.about-company__block {
+    padding: 260px 0 0;
+    gap: 20px;
+
+    @include breakpoints(xl) {
+        padding: 160px 0 0;
+    }
+
+    @include breakpoints(md) {
+        padding: 110px 0 0;
+    }
+
+    @include breakpoints(sm) {
+        padding: 90px 0 0;
+    }
+}
