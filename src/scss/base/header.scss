@@ -32,6 +32,12 @@
         &-authentication {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+
+            &-wrapper {
+                display: flex;
+                align-items: center;
+            }
 
             &-block {
                 width: 57.8%;
@@ -52,17 +58,25 @@
 
         &-entrance {
             display: flex;
+            align-items: center;
+            width: 75px;
 
             @include breakpoints(sm) {
                 display: none;
             }
         }
 
+        &-svg {
+            margin-right: 5px;
+            height: 10px;
+            width: 10px;
+        }
+
         &-img {
             padding: 1px;
-            width: 15px;
-            height: 15px;
-            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+            margin-right: 2px;
             border-radius: 100%;
         }
 
@@ -73,6 +87,42 @@
 
             @include breakpoints(md) {
                 margin-right: 20px;
+            }
+        }
+
+        &-name {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        &-name-link {
+            width: 60%;
+            display: flex;
+            align-items: center;
+        }
+
+        &-user {
+            width: 100%;
+        }
+
+        &-remove {
+            &-block {
+                margin-right: 15px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            &-svg {
+                height: 12px;
+                width: 12px;
+                fill: $crossActive;
+            }
+
+            &-text {
+                color: $crossActive;
+                font-weight: 600;
+                font-size: 14px;
             }
         }
 

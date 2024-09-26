@@ -19,12 +19,17 @@
                             svg=""
                         />
                         <p class="header__top-personal">Ваша персональная скидка - 5%</p>
-                        <div class="header__top-authentication">
-                            <a class="header__top-entrance" href="/nuts/src/pages/login.html">
-                                <img class="header__top-img" src="" />
-                                <span class="header__top-text-entrance">Вход</span></a
-                            >
-                            <a class="header__top-registration" href="/nuts/src/pages/registration.html">Регистрация</a>
+                        <div class="header__top-authentication header__top-authentication-user">
+                            <div class="header__top-authentication-wrapper">
+                                <a class="header__top-entrance" href="/nuts/src/pages/login.html">
+                                    <svg class="header__top-svg"><use href="#authentication"></use></svg>
+                                    <!--                                    <img class="header__top-img" src="" />-->
+                                    <span class="header__top-text-entrance">Вход</span></a
+                                >
+                                <a class="header__top-registration" href="/nuts/src/pages/registration.html"
+                                    >Регистрация</a
+                                >
+                            </div>
                             <load
                                 src="src/components/base/select.html"
                                 body_selector="<div class='select__item header__select-item'>UA</div>

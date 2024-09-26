@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".registration__text-button"),
         app,
     );
-
     checkboxValidate(
         getElement("registrationForms", "id"),
         "agreeCheckbox",

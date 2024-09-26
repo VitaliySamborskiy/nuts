@@ -3,6 +3,9 @@ import { getFormInfo, useGetFormSelects } from "../base/get-form.js";
 import { useSetUserData } from "../base/use-fire-store.js";
 import { useSetImg } from "../base/use-img.js";
 import { getElement } from "../base/get-element-dom.js";
+import { useRenderUserInfo } from "../base/header-render-user.js";
+import { useSetCookie } from "../base/cookies.js";
+import { useInputClear } from "../base/input-clear.js";
 
 export function useCreateUser(app, formRegistration) {
     const auth = getAuth(app);
@@ -67,13 +70,17 @@ export function useCreateUser(app, formRegistration) {
                 phoneNumber: formInformation.phone,
             });
             await useSetUserData(app, userInfo.user.uid, formInformation);
-            console.log(userInfo.user);
+            window.location.pathname = "/nuts/src/pages/personal-cabinet-page.html";
+            useRenderUserInfo(userInfo.user, getElement(".header__top-authentication-wrapper"));
+            useSetCookie(userInfo.user);
+            useInputClear(getElement(".input__area", "all"));
+            // console.log(userInfo.user);
         })
         .catch((error) => {
             userInfo.errorCode = error.code;
             userInfo.errorMessage = error.message;
-            console.log(error.message);
-            console.log(error.message);
+            // console.log(error.message);
+            // console.log(error.message);
         });
 }
 

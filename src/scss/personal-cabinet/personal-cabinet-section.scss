@@ -1,0 +1,216 @@
+.personal-cabinet {
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 107px;
+        padding-left: 23px;
+
+        @include breakpoints(xl) {
+            gap: 30px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 80px;
+            padding-left: 0;
+            gap: 10px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 50px;
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    &__site-bar {
+        @include breakpoints(xl) {
+            width: 20%;
+        }
+
+        @include breakpoints(md) {
+            width: 220px;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__block-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 65px;
+        gap: 30px;
+
+        @include breakpoints(md) {
+            margin-top: 45px;
+        }
+
+        @include breakpoints(sm) {
+            display: none;
+            top: 20px;
+            left: 0;
+            padding: 25px;
+            width: 100%;
+            position: absolute;
+            background: $backgroundColor;
+            border: 2px solid $mainGreen;
+            margin-top: 20px;
+            gap: 15px;
+        }
+
+        &_active {
+            display: flex;
+        }
+    }
+
+    &__menu-cross {
+        display: none;
+
+        @include breakpoints(sm) {
+            position: absolute;
+            fill: $gray;
+            top: 15px;
+            right: 15px;
+            height: 15px;
+            width: 15px;
+            transition: fill 0.5s ease-in-out;
+        }
+
+        &:hover {
+            fill: $crossActive;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 100%;
+
+        @include breakpoints(md) {
+            font-size: 30px;
+        }
+
+        @include breakpoints(sm) {
+            text-align: center;
+        }
+    }
+
+    &__button {
+        display: none;
+
+        @include breakpoints(sm) {
+            padding: 5px 15px;
+            margin: 10px auto 0;
+            display: block;
+            width: 220px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    &__links-block {
+    }
+
+    &__sub-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 178%;
+    }
+
+    &__links-items {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 180%;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+        }
+    }
+
+    &__links-items {
+    }
+
+    &__work-area {
+        display: flex;
+        width: 75%;
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__block {
+        @include breakpoints(sm) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    &__personal-manager {
+        margin-top: 3px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include breakpoints(sm) {
+            flex-wrap: wrap;
+            gap: 0;
+            width: 100%;
+            margin-top: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-name {
+            font-size: 16px;
+            line-height: 200%;
+
+            @include breakpoints(md) {
+                font-size: 13px;
+            }
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            @include breakpoints(md) {
+                gap: 5px;
+            }
+        }
+
+        &-svg {
+            height: 12px;
+            width: 12px;
+        }
+
+        &-text {
+            color: $mainGreen;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 160%;
+            font-family: $supportFonts;
+        }
+    }
+
+    &__personal-discount {
+        margin-top: 8px;
+        color: $mainGreen;
+        font-weight: 600;
+        font-size: 16px;
+        font-family: $supportFonts;
+
+        @include breakpoints(md) {
+            font-size: 13px;
+        }
+    }
+}
