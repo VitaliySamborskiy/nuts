@@ -1,4 +1,4 @@
-import{u as Xt,g as U,L as Qt,f as dt,i as Zt,h as en,_ as qe,C as $e,r as Ke,j as tn,S as J,k as _,l as O,E as Pe,m as nn,n as ht,o as rn,p as sn,q as ft,F as Ae,t as f,v as on,w as an,x as K,y as G,z as Y,A as cn,B as ln}from"./main-_zEzRe2m.js";function ki(n,e){let t="";t+=`<a class="header__top-name-link" href="/nuts/src/pages/personal-cabinet-page.html"><img class="header__top-img" src="" />
+import{u as Xt,g as U,L as Qt,f as dt,i as Zt,h as en,_ as qe,C as $e,r as Ke,j as tn,S as J,k as _,l as O,E as Pe,m as nn,n as ht,o as rn,p as sn,q as ft,F as Ae,t as f,v as on,w as an,x as K,y as G,z as Y,A as cn,B as ln}from"./main-CeywqeAh.js";function ki(n,e){let t="";t+=`<a class="header__top-name-link" href="/nuts/src/pages/personal-cabinet-page.html"><img class="header__top-img" src="" />
             <span class="header__top-name">${n.displayName}</span>               
            </a>
           <button class="header__top-remove-block"
