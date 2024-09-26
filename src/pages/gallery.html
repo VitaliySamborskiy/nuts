@@ -4,16 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
-        <title>Вход</title>
-        <script
-            async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
-        ></script>
-      <script type="module" crossorigin src="/nuts/assets/login-D-2Onq2D.js"></script>
+        <title>Галерея</title>
+      <script type="module" crossorigin src="/nuts/assets/gallery-kFKwjpxA.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-_zEzRe2m.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/input-clear-DjvY22lU.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/use-fire-store-DHc80lR4.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/gallery-CW5-yLy0.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/login-B0c_jebD.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/gallery-CfI8wJl6.css">
     </head>
     <body>
         <div class="wrapper">
@@ -223,32 +220,43 @@
 </header>
 
             <main class="main">
-                <section class="login__container">
-    <div class="login__content">
-        <h2 class="login__title">Войти в личный кабинет</h2>
-        <form class="login__form" name="loginForm" id="loginForm">
-            <div class="input__block">
-                <label class="input__label" for="loginEmail">Email</label>
-                <input class="login__input input__area" id="loginEmail" name="loginEmail" />
-            </div>
-            <div class="input__block">
-                <label class="input__label" for="loginPassword">Пароль</label>
-                <input class="login__input input__area" id="loginPassword" name="loginPassword" />
-            </div>
-        </form>
-        <div class="login__block-buttons">
-            <a class="login__link-reset-password" href="#">Забыли пароль?</a>
-            <button class="green-button login__button">
-    <span class="{=$class_button_text}">Войти</span>
+                <section class="main-page ">
+    <div class="main-page__img-block gallery-page__block-img">
+        <img class="main-page__img gallery-page__img" src="" />
+    </div>
+    <div class="main-page__container gallery-page__text-block">
+        <h2 class="main-page__title gallery-page__title">Галерея</h2>
+        <p class="main-page__text gallery-page__text">Кадры социальной активности компании</p>
+        <a href="#" class="main-page__play-block gallery-page__hidden">
+            <button class="play-button main-page__play">
+    <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
 
-            <a class="login__link-register" href="/nuts/src/pages/registration.html">Регистрация</a>
+        </a>
+    </div>
+</section>
+
+                <section class="gallery__container">
+    <div class="gallery__content gallery__body-margin">
+        <div class="gallery__title-block hidden">
+            <h2 class="gallery__title">Галерея</h2>
+            <p class="gallery__sub-text">Кадры социальной активности компании</p>
+        </div>
+        <div class="gallery__box"></div>
+        <div class="{=$button-block-class}">
+            <a class="transparent-button gallery__button hidden" href="/nuts/src/pages/gallery.html"
+                >Смотреть всю галерею</a
+            >
+            <button class="transparent-button gallery__button gallery__button-load ">
+    <span class="{=$class_button_text}">Посмотреть еще</span>
+</button>
+
         </div>
     </div>
 </section>
 
                 <section class="contact__container">
-    <div class="contact__content registration__margin-contact">
+    <div class="contact__content gallery__margin-contact">
         <h2 class="contact__title-mobile">Контакты</h2>
         <div class="contact__info">
             <h2 class="contact__info-title">Контакты</h2>
@@ -333,7 +341,7 @@
 
             </main>
             <footer class="footer__container">
-    <div class="footer__content registration__margin-footer">
+    <div class="footer__content gallery__margin-footer">
         <div class="footer__links-block">
             <a class="footer__logo-link" href="/nuts/index.html"
                 ><img class="footer__logo-img" src="" />
@@ -937,5 +945,6 @@
 </svg>
 
         </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>

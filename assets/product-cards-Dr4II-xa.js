@@ -1,4 +1,4 @@
-import{u as n,a as m,g as i,b as l}from"./main-BjcFCJsn.js";function x(r,e){let c=document.createDocumentFragment(),p=[];if(r.length===0)return e.innerHTML="<p>Сталася помилка. Або продукція відсутня</p>";for(let t of r){let a="",d="";t.imgUrl.forEach(()=>{d+='<div class="swiper-slide"><img class="product__slide" src="" /></div>'}),a=`${t.action||t.newProduct?`<div class ="product__card-flag ${t.action?"product__card-flag-discount":"product__card-flag-new"}">
+import{u as n,a as m,g as i,b as l}from"./main-_zEzRe2m.js";function x(r,e){let c=document.createDocumentFragment(),p=[];if(r.length===0)return e.innerHTML="<p>Сталася помилка. Або продукція відсутня</p>";for(let t of r){let a="",d="";t.imgUrl.forEach(()=>{d+='<div class="swiper-slide"><img class="product__slide" src="" /></div>'}),a=`${t.action||t.newProduct?`<div class ="product__card-flag ${t.action?"product__card-flag-discount":"product__card-flag-new"}">
                 <p class ="product__card-flag-text">${t.action?"АКЦИЯ":"НОВИНКА"}</p>
             </div>`:""}  
             <a href="#" class="">

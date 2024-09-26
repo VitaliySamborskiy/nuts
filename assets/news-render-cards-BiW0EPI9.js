@@ -1,4 +1,4 @@
-import{u as i}from"./main-BjcFCJsn.js";function w(c,n){const r=document.createDocumentFragment();c.forEach(s=>{let a="";a=`<div class="news-swiper__card">
+import{u as i}from"./main-_zEzRe2m.js";function t(c,n){const r=document.createDocumentFragment();c.forEach(s=>{let a="";a=`<div class="news-swiper__card">
              <img class="news-swiper__card-img" src=""  alt="зображення новини"/>
              <div class="news-swiper__card-text-block">
                  <p class="news-swiper__card-date">${s.date}</p>
@@ -15,4 +15,4 @@ import{u as i}from"./main-BjcFCJsn.js";function w(c,n){const r=document.createDo
                      </span>
                  </a>
              </div>
-        </div>`;let e=document.createElement("div");e.classList.add("swiper-slide"),e.innerHTML=a,i(s.url[0],e.querySelector(".news-swiper__card-img")),r.appendChild(e)}),n.append(r)}export{w as u};
+        </div>`;let e=document.createElement("div");e.classList.add("swiper-slide"),e.innerHTML=a,i(s.url[0],e.querySelector(".news-swiper__card-img")),r.appendChild(e)}),n.append(r)}export{t as u};

@@ -4,16 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
-        <title>Вход</title>
+        <title>Личный кабинет</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/login-D-2Onq2D.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/personalCabinetPage-DruP7Zet.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-_zEzRe2m.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/input-clear-DjvY22lU.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/login-B0c_jebD.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/personalCabinetPage-C8SzMufv.css">
     </head>
     <body>
         <div class="wrapper">
@@ -223,26 +222,55 @@
 </header>
 
             <main class="main">
-                <section class="login__container">
-    <div class="login__content">
-        <h2 class="login__title">Войти в личный кабинет</h2>
-        <form class="login__form" name="loginForm" id="loginForm">
-            <div class="input__block">
-                <label class="input__label" for="loginEmail">Email</label>
-                <input class="login__input input__area" id="loginEmail" name="loginEmail" />
-            </div>
-            <div class="input__block">
-                <label class="input__label" for="loginPassword">Пароль</label>
-                <input class="login__input input__area" id="loginPassword" name="loginPassword" />
-            </div>
-        </form>
-        <div class="login__block-buttons">
-            <a class="login__link-reset-password" href="#">Забыли пароль?</a>
-            <button class="green-button login__button">
-    <span class="{=$class_button_text}">Войти</span>
+                <section class="personal-cabinet__container">
+    <div class="personal-cabinet__content">
+        <div class="personal-cabinet__site-bar">
+            <h2 class="personal-cabinet__title">Учетная запись</h2>
+            <button class="green-button personal-cabinet__button">
+    <span class="{=$class_button_text}">меню учетной записи</span>
 </button>
 
-            <a class="login__link-register" href="/nuts/src/pages/registration.html">Регистрация</a>
+            <div class="personal-cabinet__block-list">
+                <div class="personal-cabinet__links-block">
+                    <svg class="personal-cabinet__menu-cross"><use href="#cross"></use></svg>
+                    <h3 class="personal-cabinet__sub-title">Мои заказы</h3>
+                    <ul class="personal-cabinet__links-items">
+                        <li>
+                            <a class="personal-cabinet__link" href="#">История заказов</a>
+                        </li>
+                        <li>
+                            <a class="personal-cabinet__link" href="#">История транзакций</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="personal-cabinet__links-block">
+                    <h3 class="personal-cabinet__sub-title">Моя учетная запись</h3>
+                    <ul class="personal-cabinet____links-items">
+                        <li>
+                            <a class="personal-cabinet__link" href="#">Контактная информация</a>
+                        </li>
+                        <li>
+                            <a class="personal-cabinet__link" href="#">Пароль</a>
+                        </li>
+                        <li>
+                            <a class="personal-cabinet__link" href="#">Адрес</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="personal-cabinet__work-area">
+            <div class="personal-cabinet__personal-manager">
+                <div class="personal-cabinet__block">
+                    <p class="personal-cabinet__personal-manager-name">Ваш личный менеджер Олег</p>
+                    <a class="personal-cabinet__personal-manager-link" href="tel:+38 067 777 14 12"
+                        ><svg class="personal-cabinet__personal-manager-svg"><use href="#phone"></use></svg
+                        ><span class="personal-cabinet__personal-manager-text">+38 067 777 14 12</span></a
+                    >
+                </div>
+                <p class="personal-cabinet__personal-discount">Ваша персональная скидка - 5%</p>
+            </div>
+            <div></div>
         </div>
     </div>
 </section>
