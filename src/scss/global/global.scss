@@ -299,6 +299,14 @@ button {
         &:hover {
             border: 1px solid $subGreat;
         }
+
+        &:active {
+            border: 1px solid $subGreat;
+        }
+
+        &:focus {
+            border: 1px solid $subGreat;
+        }
     }
 
     &__label {
@@ -352,6 +360,14 @@ button {
         border: solid 1px #cd1515;
 
         &:hover {
+            border: solid 1px #cd1515;
+        }
+
+        &:active {
+            border: solid 1px #cd1515;
+        }
+
+        &:focus {
             border: solid 1px #cd1515;
         }
     }

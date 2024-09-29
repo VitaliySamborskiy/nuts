@@ -3,8 +3,10 @@ import { getElement } from "./base/get-element-dom.js";
 import { setupApp } from "./main.js";
 import { useLoginUser } from "./login/fire-base-login.js";
 import { useValidate } from "./base/form-validate.js";
+import { useInputClear } from "./base/input-clear.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
+    useInputClear(getElement(".input__area", "all"));
     const app = await setupApp();
     useInputActive(getElement(".input__area", "all"), getElement(".input__label", "all"));
     const user = useLoginUser(app, getElement(".login__form"), getElement(".login__button"));

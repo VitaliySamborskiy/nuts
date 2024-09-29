@@ -101,6 +101,7 @@ export function errorAddClass(input, errorText = null, checkError) {
 function errorRemove(errorElement, input) {
     if (errorElement) {
         input.classList.remove("error__input");
+        input.style.border = "1px solid $subGreat";
         errorElement.remove();
         validateStatus = true;
     }

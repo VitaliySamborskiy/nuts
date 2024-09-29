@@ -7,8 +7,10 @@ import { useNumberMask } from "./registration/phone-mask.js";
 import { useCreateUser } from "./registration/registration-users.js";
 import { setupApp } from "./main.js";
 import { rendersFormLegal } from "./registration/renders-form.js";
+import { useInputClear } from "./base/input-clear.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
+    useInputClear(getElement(".input__area", "all"));
     const app = await setupApp();
     rendersFormLegal(
         getElement(".registration__tab-text", "all"),

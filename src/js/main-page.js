@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         null,
         playersMainPage,
         videoData.mainPage,
-        getElement(".manufacturing__swiper"),
+        getElement(".manufacturing__swiper", "all"),
         getElement(".manufacturing__preview-img-block", "all"),
         "manufacturing__preview-img-block_active",
     );

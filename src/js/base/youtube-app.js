@@ -4,27 +4,28 @@ let players = new Map();
 
 export function onYouTubeIframeAPIReady(videoIds, elements, targetObservers, previewVideoElements, activeClass) {
     for (let i = 0; i < elements.length; i++) {
-        target.set(elements[i], targetObservers[i]);
-        previewVideo.set(elements[i], previewVideoElements[i]);
-        players.set(
-            elements[i],
-            new YT.Player(elements[i], {
-                videoId: videoIds[i],
-                playerVars: {
-                    controls: 0,
-                    rel: 0,
-                    fs: 0,
-                    enablejsapi: 1,
-                    modestbranding: 1,
-                },
-                events: {
-                    onReady: (event) => changePreviewElement(event, activeClass, elements[i]),
-                    onStateChange: (event) => onPlayerStateChange(event, i, activeClass, elements[i]),
-                },
-            }),
-        );
+        if (elements[i].tagName.toLowerCase() !== "iframe") {
+            target.set(elements[i], targetObservers[i]);
+            previewVideo.set(elements[i], previewVideoElements[i]);
+            players.set(
+                elements[i],
+                new YT.Player(elements[i], {
+                    videoId: videoIds[i],
+                    playerVars: {
+                        controls: 0,
+                        rel: 0,
+                        fs: 0,
+                        enablejsapi: 1,
+                        modestbranding: 1,
+                    },
+                    events: {
+                        onReady: (event) => changePreviewElement(event, activeClass, elements[i]),
+                        onStateChange: (event) => onPlayerStateChange(event, i, activeClass, elements[i]),
+                    },
+                }),
+            );
+        }
     }
-    console.log(players);
 }
 
 function onPlayerStateChange(event, index, activeClass, element) {
@@ -52,7 +53,6 @@ function turningPreviewElement(event, index, activeClass, element) {
         players.forEach((player, key) => {
             if (key !== element) {
                 player.pauseVideo();
-                console.log(player);
                 previewVideo.get(key).classList.remove(activeClass);
             }
         });

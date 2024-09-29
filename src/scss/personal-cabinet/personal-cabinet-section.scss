@@ -69,6 +69,7 @@
         display: none;
 
         @include breakpoints(sm) {
+            display: block;
             position: absolute;
             fill: $gray;
             top: 15px;

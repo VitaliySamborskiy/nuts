@@ -2,7 +2,7 @@ import { setupApp } from "./main.js";
 import { useGetImg } from "./base/use-img.js";
 import { getElement } from "./base/get-element-dom.js";
 import { useGetFirestore } from "./base/use-fire-store.js";
-import { useGalleryRenders } from "./base/gallery.js";
+import { useGalleryRenders } from "./gallery/gallery.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = await setupApp();

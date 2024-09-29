@@ -23,7 +23,6 @@
                             <div class="header__top-authentication-wrapper">
                                 <a class="header__top-entrance" href="/nuts/src/pages/login.html">
                                     <svg class="header__top-svg"><use href="#authentication"></use></svg>
-                                    <!--                                    <img class="header__top-img" src="" />-->
                                     <span class="header__top-text-entrance">Вход</span></a
                                 >
                                 <a class="header__top-registration" href="/nuts/src/pages/registration.html"
@@ -59,7 +58,7 @@
                         <div class="burger__scroll">
                             <div class="burger__top-block">
                                 <a class="burger__link-logo" href="#"
-                                    ><img class="burger__logo-img" src="" /><span class="burger__logo-text"
+                                    ><img class="burger__logo-img" src="" alt="logo" /><span class="burger__logo-text"
                                         >ОРЕХ ПРИЧЕРНОМОРЬЯ</span
                                     ></a
                                 >
@@ -77,26 +76,10 @@
                                     >
                                     <a class="burger__registration" href="#">Регистрация</a>
                                 </div>
-                                <ul class="burger__links-communication">
-                                    <li class="burger__link">
-                                        <a href="#"
-                                            ><svg class="burger__svg">
-                                                <use href="#facebook"></use></svg
-                                        ></a>
-                                    </li>
-                                    <li class="burger__link">
-                                        <a href="#"
-                                            ><svg class="burger__svg">
-                                                <use href="#instagram"></use></svg
-                                        ></a>
-                                    </li>
-                                    <li class="burger__link">
-                                        <a href="#"
-                                            ><svg class="burger__svg">
-                                                <use href="#youtube"></use></svg
-                                        ></a>
-                                    </li>
-                                </ul>
+                                <load
+                                    src="src/components/base/social-media.html"
+                                    sub-class="burger__links-communication"
+                                />
                             </div>
                             <div class="burger__menu">
                                 <ul class="burger__links">
@@ -126,32 +109,13 @@
                     </div>
                 </div>
                 <a class="header__center-link" href="/nuts/index.html"
-                    ><img class="header__center-logo" src="" /><span class="header__center-logo-text"
+                    ><img class="header__center-logo" src="" alt="logo" /><span class="header__center-logo-text"
                         >ОРЕХ ПРИЧЕРНОМОРЬЯ</span
                     ></a
                 >
                 <div class="header__center-block">
                     <div class="header__center-communication">
-                        <ul class="header__center-buttons">
-                            <li>
-                                <a href="#" class="header__center-button"
-                                    ><svg class="header__center-button-svg">
-                                        <use href="#viber"></use></svg
-                                ></a>
-                            </li>
-                            <li>
-                                <a href="#" class="header__center-button"
-                                    ><svg class="header__center-button-svg">
-                                        <use href="#whatsApp"></use></svg
-                                ></a>
-                            </li>
-                            <li>
-                                <a href="#" class="header__center-button"
-                                    ><svg class="header__center-button-svg">
-                                        <use href="#telegram"></use></svg
-                                ></a>
-                            </li>
-                        </ul>
+                        <load src="src/components/base/social-button.html" sub-class-button="header__center-buttons" />
                         <div class="header__center-phones">
                             <a class="header__center-phone" href="tel:+38 (044) 750-50-11"
                                 ><span class="header__center-green">+38 (044)</span> 750-50-11</a
@@ -168,7 +132,6 @@
                             class_button_text="nvcn"
                             component_class=""
                             button_text="Заказать звонок"
-                            svg=""
                         />
                         <p class="header__center-text">Ждем Вашего звонка ежедневно с 9 до 18</p>
                     </div>

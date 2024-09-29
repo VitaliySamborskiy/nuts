@@ -45,12 +45,12 @@
         @include breakpoints(md) {
             margin: 35px auto 0;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            column-gap: 20px;
+            column-gap: 8px;
             row-gap: 15px;
         }
 
         @include breakpoints(sm) {
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(298px, 1fr));
         }
 
         @include breakpoints(sm) {
@@ -272,6 +272,9 @@
             letter-spacing: 0.01em;
 
             @include breakpoints(sm) {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 width: 100%;
                 margin-top: 5px;
                 font-size: 14px;
@@ -390,7 +393,7 @@
                     letter-spacing: 0.01em;
                     font-family: $supportFonts;
 
-                    @include breakpoints(sm) {
+                    @include breakpoints(md) {
                         margin-right: 5px;
                         font-size: 14px;
                     }
@@ -413,9 +416,9 @@
                     letter-spacing: 0.01em;
                     font-family: $supportFonts;
 
-                    @include breakpoints(sm) {
+                    @include breakpoints(md) {
                         margin: 5px 0 0 3px;
-                        font-size: 12px;
+                        font-size: 14px;
                     }
 
                     &:after {
@@ -444,7 +447,7 @@
                     letter-spacing: 0.01em;
                     font-family: $supportFonts;
 
-                    @include breakpoints(sm) {
+                    @include breakpoints(md) {
                         font-size: 15px;
                     }
 
@@ -462,7 +465,7 @@
                 padding: 11px 36px;
                 font-size: 14px;
 
-                @include breakpoints(sm) {
+                @include breakpoints(md) {
                     padding: 7px 34px;
                     font-size: 12px;
                 }
