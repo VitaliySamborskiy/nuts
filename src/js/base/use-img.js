@@ -7,6 +7,7 @@ export function useGetImg(url, element) {
     getDownloadURL(fileRef)
         .then((res) => {
             element.src = res;
+            element.setAttribute("loading", "lazy");
         })
         .catch((err) => {
             console.log(err);

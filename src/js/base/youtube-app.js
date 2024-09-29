@@ -4,27 +4,42 @@ let players = new Map();
 
 export function onYouTubeIframeAPIReady(videoIds, elements, targetObservers, previewVideoElements, activeClass) {
     for (let i = 0; i < elements.length; i++) {
-        if (elements[i].tagName.toLowerCase() !== "iframe") {
-            target.set(elements[i], targetObservers[i]);
-            previewVideo.set(elements[i], previewVideoElements[i]);
-            players.set(
-                elements[i],
-                new YT.Player(elements[i], {
-                    videoId: videoIds[i],
-                    playerVars: {
-                        controls: 0,
-                        rel: 0,
-                        fs: 0,
-                        enablejsapi: 1,
-                        modestbranding: 1,
-                    },
-                    events: {
-                        onReady: (event) => changePreviewElement(event, activeClass, elements[i]),
-                        onStateChange: (event) => onPlayerStateChange(event, i, activeClass, elements[i]),
-                    },
-                }),
-            );
-        }
+        const videoObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        console.log("ok");
+                        YouTubeIframe(elements, i, videoIds, targetObservers, previewVideoElements, activeClass);
+                    }
+                });
+            },
+            { rootMargin: "100px" },
+        );
+        videoObserver.observe(elements[i]);
+    }
+}
+
+function YouTubeIframe(elements, index, videoIds, targetObservers, previewVideoElements, activeClass) {
+    if (elements[index].tagName.toLowerCase() !== "iframe") {
+        target.set(elements[index], targetObservers[index]);
+        previewVideo.set(elements[index], previewVideoElements[index]);
+        players.set(
+            elements[index],
+            new YT.Player(elements[index], {
+                videoId: videoIds[index],
+                playerVars: {
+                    controls: 0,
+                    rel: 0,
+                    fs: 0,
+                    enablejsapi: 1,
+                    modestbranding: 1,
+                },
+                events: {
+                    onReady: (event) => changePreviewElement(event, activeClass, elements[index]),
+                    onStateChange: (event) => onPlayerStateChange(event, index, activeClass, elements[index]),
+                },
+            }),
+        );
     }
 }
 

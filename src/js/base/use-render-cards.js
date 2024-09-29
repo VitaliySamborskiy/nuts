@@ -13,7 +13,7 @@ export function useRenderCards(arrData, element) {
         let img = "";
 
         data.imgUrl.forEach(() => {
-            img += `<div class="swiper-slide"><img class="product__slide" src="" alt="product img"/></div>`;
+            img += `<div class="swiper-slide"><img class="product__slide" src="" alt="product img" loading="lazy"/></div>`;
         });
 
         html = `${
@@ -28,7 +28,7 @@ export function useRenderCards(arrData, element) {
             <a href="#" class="">
                 <div class="product__card-swiper">
                     <div class="product__card-search">
-                    <button class="circle-button">
+                    <button class="circle-button" aria-label="product preview">
                     <svg class='circle-button-svg'>
                         <use href='#search'></use></svg>
                         </button>

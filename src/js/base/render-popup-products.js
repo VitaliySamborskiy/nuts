@@ -36,7 +36,9 @@ function renderCards(elementWrapper, imgData) {
         const img = document.createElement("img");
         div.classList.add("swiper-slide");
         img.classList.add("popup__img");
-        img.setAttribute("alt", "avatar");
+        img.setAttribute("alt", "images-product");
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("data-src", data.imgUrl);
         div.appendChild(img);
         fragment.appendChild(div);
     });
