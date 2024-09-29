@@ -1,5 +1,5 @@
-import{g as t,D as o,u as g}from"./main-CeywqeAh.js";function p(e,r,a){r.sort((l,i)=>l.index-i.index),console.log(r),_(r,e),a&&a.addEventListener("click",()=>{_(r,e)})}function _(e,r){let a=document.createDocumentFragment();const l=e.splice(0,6);if(l.length!==0){l.forEach((s,c)=>{s.urlImg?a.appendChild(d(s,c)):a.appendChild(u(s,c))});const i=document.createElement("div");i.classList.add("gallery__block-items"),i.appendChild(a),r.appendChild(i);const n=t(".gallery__player","all"),y=Array.from(n).map(s=>s.getAttribute("data-id"));o(y,t(".gallery__player","all"),t(".gallery__youtube-container","all"),t(".gallery__preview","all"),"gallery__preview_active")}}function d(e,r){let a="";a=`<picture class="gallery__img-block">
-            <img class="gallery__img" src="" />
+import{g as s,D as o,u as g}from"./main-CwHzDYgD.js";function p(e,r,a){r.sort((l,i)=>l.index-i.index),console.log(r),_(r,e),a&&a.addEventListener("click",()=>{_(r,e)})}function _(e,r){let a=document.createDocumentFragment();const l=e.splice(0,6);if(l.length!==0){l.forEach((t,c)=>{t.urlImg?a.appendChild(d(t,c)):a.appendChild(u(t,c))});const i=document.createElement("div");i.classList.add("gallery__block-items"),i.appendChild(a),r.appendChild(i);const n=s(".gallery__player","all"),y=Array.from(n).map(t=>t.getAttribute("data-id"));o(y,s(".gallery__player","all"),s(".gallery__youtube-container","all"),s(".gallery__preview","all"),"gallery__preview_active")}}function d(e,r){let a="";a=`<picture class="gallery__img-block">
+            <img class="gallery__img" src="" alt="зображення картки галереї"/>
         </picture>
         <div class="gallery__card-block">
             <div class="gallery__card-block-text">
@@ -11,7 +11,7 @@ import{g as t,D as o,u as g}from"./main-CeywqeAh.js";function p(e,r,a){r.sort((l
         </div>
         <div class="gallery__background"><svg class="gallery__svg"><use href="#logo"></use></svg></div>`;const l=document.createElement("div");return l.className=`gallery__block gallery__item-${++r}`,l.innerHTML=a,g(e.urlImg,l.querySelector(".gallery__img")),l}function u(e,r){let a="";a=`<div class="gallery__preview">
                         <picture class="gallery__preview-img-block">
-                            <img class="gallery__preview-img" src="" />
+                            <img class="gallery__preview-img" src="" alt="предв'ю для відео"/>
                         </picture>
                         <button class='play-button gallery__play ${++r%6==0||e.mini?"gallery__play-mini":""}'>
                             <svg class='play-button-svg gallery__play-svg'><use href=#play></use></svg>
