@@ -4,7 +4,6 @@ import { getElement } from "../base/get-element-dom.js";
 
 export function useGalleryRenders(containers, dataArr, button) {
     dataArr.sort((a, b) => a.index - b.index);
-    console.log(dataArr);
     rendersCardGallery(dataArr, containers);
 
     if (button) {
@@ -76,7 +75,7 @@ function rendersVideoCard(data, index) {
                         <picture class="gallery__preview-img-block">
                             <img class="gallery__preview-img" src="" alt="предв'ю для відео"/>
                         </picture>
-                        <button class='play-button gallery__play ${++index % 6 == 0 || data.mini ? "gallery__play-mini" : ""}'>
+                        <button class='play-button gallery__play ${++index % 6 == 0 || data.mini ? "gallery__play-mini" : ""}' aria-label="play-video">
                             <svg class='play-button-svg gallery__play-svg'><use href=#play></use></svg>
                         </button>
                         <div class="gallery__preview-text-block">

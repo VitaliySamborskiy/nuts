@@ -2,8 +2,8 @@
     <div class="product__main-page {=$class-title}">
         <h2 class="product__main-page-title">Продукция</h2>
         <p class="product__main-page-text">
-            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника
-            в удобной, надежной, вакуумной упаковке разного объема
+            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника в удобной,
+            надежной, вакуумной упаковке разного объема
         </p>
     </div>
     <div class="product-filter__shop-block {=$class-filter}">
@@ -46,6 +46,7 @@
                         class_button="product-filter__cost-button product-filter__higher-price"
                         class_button_text=""
                         component_class=""
+                        aria-label="sort prices from the most expensive to the least expensive products"
                         button_text="<svg class='product-filter__cost-svg-top'>
                 <use href='#arrow'></use></svg>"
                     />
@@ -54,6 +55,7 @@
                         class_button="product-filter__cost-button product-filter__lower-price"
                         class_button_text=""
                         component_class=""
+                        aria-label="sort prices from the cheapest to the most expensive products"
                         button_text="<svg class='product-filter__cost-svg-bottom'>
                     <use href='#arrow'></use></svg>"
                     />
@@ -79,9 +81,7 @@
         </div>
     </div>
     <div class="product__cards"></div>
-    <a
-        href="/nuts/src/pages/catalog-products.html"
-        class="transparent-button product__button {=$product-link-class}"
+    <a href="/nuts/src/pages/catalog-products.html" class="transparent-button product__button {=$product-link-class}"
         >Перейти в магазин</a
     >
     <load

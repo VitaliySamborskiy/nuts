@@ -50,7 +50,7 @@ export function useRenderCards(arrData, element) {
                     </div>
                 </div>
                 <div class="product__card-text-block">
-                    <h4 class="product__card-type">${data.nutsType}</h4>
+                    <h3 class="product__card-type">${data.nutsType}</h3>
                     <p class="product__card-art">Арт:${data.art}</p>
                     <h3 class="product__card-title">${data.title}</h3>
                     <div class="product__card-info">
