@@ -2,8 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="you ended up on a 404 page, this could be due to an incorrect url or because the page does not exist"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
+        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
         <title>404</title>
         <script
             async
@@ -11,7 +15,7 @@
         ></script>
       <script type="module" crossorigin src="/nuts/assets/main-2kuTH5xP.js"></script>
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/404-CTAykPfT.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/404-DgcfYcDK.css">
     </head>
     <body>
         <div class="wrapper">
@@ -44,7 +48,7 @@
                                 <use href="#phone"></use></svg
                             ><span class="header__center-green">+38 (044)</span> 750-50-11</a
                         >
-                        <button class="header__top-mobile-order">
+                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">
     <span class="">Заказать звонок</span>
 </button>
 
@@ -99,7 +103,7 @@
                             <div class="burger__gray-block">
                                 <div class="burger__authentication">
                                     <a class="burger__entrance" href="#">
-                                        <img class="burger__img" src="" />
+                                        <img class="burger__img" src="" alt="avatar" />
                                         <span class="burger__text-entrance">Вход</span></a
                                     >
                                     <a class="burger__registration" href="#">Регистрация</a>
@@ -188,7 +192,7 @@
                         </div>
                     </div>
                     <div class="header__center-order">
-                        <button class="green-button header__center-button-order">
+                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">
     <span class="nvcn">Заказать звонок</span>
 </button>
 
@@ -221,7 +225,7 @@
             <main class="main">
                 <section class="error__container">
     <div class="error__content">
-        <img class="error__img" src="" />
+        <img class="error__img" src="" alt="404" />
         <p class="error__text">Страница не найдена</p>
         <a class="error__button transparent-button" href="/nuts/index.html">
             <svg class="error__svg">
@@ -914,6 +918,6 @@
     </symbol>
 </svg>
 
-        </div>
+        </div>
     </body>
 </html>

@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
+        <meta name="description" content="Gallery page where you can view achievements and events within the company" />
+        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
         <title>Галерея</title>
-      <script type="module" crossorigin src="/nuts/assets/gallery-DR5IJzqg.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/gallery-C_ZK8Yit.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-2kuTH5xP.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/use-fire-store-hmTsu6ty.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/gallery-BivzMy85.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/gallery-9kId28_H.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
       <link rel="stylesheet" crossorigin href="/nuts/assets/gallery-4NjWO3cA.css">
     </head>
@@ -43,7 +44,7 @@
                                 <use href="#phone"></use></svg
                             ><span class="header__center-green">+38 (044)</span> 750-50-11</a
                         >
-                        <button class="header__top-mobile-order">
+                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">
     <span class="">Заказать звонок</span>
 </button>
 
@@ -98,7 +99,7 @@
                             <div class="burger__gray-block">
                                 <div class="burger__authentication">
                                     <a class="burger__entrance" href="#">
-                                        <img class="burger__img" src="" />
+                                        <img class="burger__img" src="" alt="avatar" />
                                         <span class="burger__text-entrance">Вход</span></a
                                     >
                                     <a class="burger__registration" href="#">Регистрация</a>
@@ -187,7 +188,7 @@
                         </div>
                     </div>
                     <div class="header__center-order">
-                        <button class="green-button header__center-button-order">
+                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">
     <span class="nvcn">Заказать звонок</span>
 </button>
 
@@ -226,8 +227,8 @@
         <h2 class="main-page__title gallery-page__title">Галерея</h2>
         <p class="main-page__text gallery-page__text">Кадры социальной активности компании</p>
         <div class="main-page__play-block gallery-page__hidden">
-            <button class="play-button main-page__play">
-    <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
+            <button class="play-button main-page__play" aria-label="play-video">
+    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
 
         </div>
@@ -245,7 +246,7 @@
             <a class="transparent-button gallery__button hidden" href="/nuts/src/pages/gallery.html"
                 >Смотреть всю галерею</a
             >
-            <button class="transparent-button gallery__button gallery__button-load ">
+            <button class="transparent-button gallery__button gallery__button-load " aria-label="{=$aria-label}">
     <span class="{=$class_button_text}">Посмотреть еще</span>
 </button>
 
@@ -935,7 +936,7 @@
     </symbol>
 </svg>
 
-        </div>
+        </div>
         <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>

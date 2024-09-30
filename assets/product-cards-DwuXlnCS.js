@@ -26,7 +26,7 @@ import{u as n,a as m,g as i,b as l}from"./main-2kuTH5xP.js";function x(r,e){let 
                     </div>
                 </div>
                 <div class="product__card-text-block">
-                    <h4 class="product__card-type">${t.nutsType}</h4>
+                    <h3 class="product__card-type">${t.nutsType}</h3>
                     <p class="product__card-art">Арт:${t.art}</p>
                     <h3 class="product__card-title">${t.title}</h3>
                     <div class="product__card-info">

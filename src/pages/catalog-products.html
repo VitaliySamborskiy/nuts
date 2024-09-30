@@ -3,16 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Check out our product catalogue, where you can choose the most beautiful and delicious products for yourself."
+        />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
         <title>Каталог продукции</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/catalogProducts-VW6zSyvv.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/catalogProducts-B5ZUE_Q5.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-2kuTH5xP.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/use-fire-store-hmTsu6ty.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-JmAgqWhE.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-DwuXlnCS.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/querry-parameter-BbPXVIy4.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
       <link rel="stylesheet" crossorigin href="/nuts/assets/catalogProducts-DWi0yFkN.css">
@@ -48,7 +52,7 @@
                                 <use href="#phone"></use></svg
                             ><span class="header__center-green">+38 (044)</span> 750-50-11</a
                         >
-                        <button class="header__top-mobile-order">
+                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">
     <span class="">Заказать звонок</span>
 </button>
 
@@ -103,7 +107,7 @@
                             <div class="burger__gray-block">
                                 <div class="burger__authentication">
                                     <a class="burger__entrance" href="#">
-                                        <img class="burger__img" src="" />
+                                        <img class="burger__img" src="" alt="avatar" />
                                         <span class="burger__text-entrance">Вход</span></a
                                     >
                                     <a class="burger__registration" href="#">Регистрация</a>
@@ -192,7 +196,7 @@
                         </div>
                     </div>
                     <div class="header__center-order">
-                        <button class="green-button header__center-button-order">
+                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">
     <span class="nvcn">Заказать звонок</span>
 </button>
 
@@ -231,8 +235,8 @@
         <h2 class="main-page__title products-page__title">Каталог продукции</h2>
         <p class="main-page__text hidden">{=$main-page-text}</p>
         <div class="main-page__play-block hidden">
-            <button class="play-button main-page__play">
-    <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
+            <button class="play-button main-page__play" aria-label="play-video">
+    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
 
         </div>
@@ -243,8 +247,8 @@
     <div class="product__main-page hidden">
         <h2 class="product__main-page-title">Продукция</h2>
         <p class="product__main-page-text">
-            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника
-            в удобной, надежной, вакуумной упаковке разного объема
+            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника в удобной,
+            надежной, вакуумной упаковке разного объема
         </p>
     </div>
     <div class="product-filter__shop-block {=$class-filter}">
@@ -278,12 +282,12 @@
             <div class="product-filter__cost-block">
                 <p class="product-filter__cost-text">Стоимость</p>
                 <div class="product-filter__cost-arrows">
-                    <button class="product-filter__cost-button product-filter__higher-price">
+                    <button class="product-filter__cost-button product-filter__higher-price" aria-label="sort prices from the most expensive to the least expensive products">
     <span class=""><svg class='product-filter__cost-svg-top'>
                 <use href='#arrow'></use></svg></span>
 </button>
 
-                    <button class="product-filter__cost-button product-filter__lower-price">
+                    <button class="product-filter__cost-button product-filter__lower-price" aria-label="sort prices from the cheapest to the most expensive products">
     <span class=""><svg class='product-filter__cost-svg-bottom'>
                     <use href='#arrow'></use></svg></span>
 </button>
@@ -292,11 +296,11 @@
             </div>
         </div>
         <div class="product-filter__end-buttons">
-            <button class="green-button product-filter__apply-button">
+            <button class="green-button product-filter__apply-button" aria-label="{=$aria-label}">
     <span class="">Применить</span>
 </button>
 
-            <button class="product-filter__cross-button">
+            <button class="product-filter__cross-button" aria-label="{=$aria-label}">
     <span class=""><svg class='product-filter__cross-svg'>
                     <use href='#cross'></use></svg> Сбросить</span>
 </button>
@@ -304,12 +308,10 @@
         </div>
     </div>
     <div class="product__cards"></div>
-    <a
-        href="/nuts/src/pages/catalog-products.html"
-        class="transparent-button product__button hidden"
+    <a href="/nuts/src/pages/catalog-products.html" class="transparent-button product__button hidden"
         >Перейти в магазин</a
     >
-    <button class="transparent-button product__button-load-card">
+    <button class="transparent-button product__button-load-card" aria-label="{=$aria-label}">
     <span class="">Загрузить еще</span>
 </button>
 
@@ -358,62 +360,54 @@
                 <div class="eco-nuts__scrollbar"></div>
                 <div class="eco-nuts__text-scroll">
                     <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья”
-                        выращивает смешанные сады ореха грецкого с фундуком, а также ореха грецкого
-                        с шиповником, на площади более 150 гектаров.
+                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады
+                        ореха грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
                     </p>
                     <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала,
-                        саженцов привитого и непривитого грецкого ореха, фундука и шиповника.
+                        Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
+                        непривитого грецкого ореха, фундука и шиповника.
                     </p>
                     <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для
-                        выращивания интенсивного сада, воспроизводства саженцев в питомнике и
-                        выращивания трюфеля.
+                        Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания
+                        интенсивного сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
                     </p>
                     <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки
-                        смешанного сада грецкого ореха и фундука.
+                        История предприятия Наше предприятие основано в 2012 году для закладки смешанного сада грецкого
+                        ореха и фундука.
                     </p>
                     <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять
-                        свои насаждения. Кроме выращивания грецкого ореха и фундука, мы занимаемся
-                        выращиванием саженцев, разведением и выращиванием овец, а также являемся
-                        первой в Украине компанией, приступившей к промышленному выращиванию
-                        трюфелей на корнях фундука.
+                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
+                        выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
+                        выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
+                        выращиванию трюфелей на корнях фундука.
                     </p>
                     <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего
-                        кооператива.
+                        Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
                     </p>
                     <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья”
-                        выращивает смешанные сады ореха грецкого с фундуком, а также ореха грецкого
-                        с шиповником, на площади более 150 гектаров.
+                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады
+                        ореха грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
                     </p>
                     <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала,
-                        саженцов привитого и непривитого грецкого ореха, фундука и шиповника.
+                        Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
+                        непривитого грецкого ореха, фундука и шиповника.
                     </p>
                     <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для
-                        выращивания интенсивного сада, воспроизводства саженцев в питомнике и
-                        выращивания трюфеля.
+                        Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания
+                        интенсивного сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
                     </p>
                     <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки
-                        смешанного сада грецкого ореха и фундука.
+                        История предприятия Наше предприятие основано в 2012 году для закладки смешанного сада грецкого
+                        ореха и фундука.
                     </p>
                     <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять
-                        свои насаждения. Кроме выращивания грецкого ореха и фундука, мы занимаемся
-                        выращиванием саженцев, разведением и выращиванием овец, а также являемся
-                        первой в Украине компанией, приступившей к промышленному выращиванию
-                        трюфелей на корнях фундука.
+                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
+                        выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
+                        выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
+                        выращиванию трюфелей на корнях фундука.
                     </p>
                     <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего
-                        кооператива.
+                        Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
                     </p>
                 </div>
             </div>
@@ -421,9 +415,9 @@
         <div class="eco-nuts__swiper-block">
             <div class="swiper eco-nuts__swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" /></div>
+                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
+                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
+                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
                 </div>
                 <div class="swiper__block">
                     <div class="eco-nuts__button-prev swiper__button-prev">

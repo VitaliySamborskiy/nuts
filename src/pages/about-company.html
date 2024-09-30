@@ -3,17 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
+        <meta
+            name="description"
+            content="This is a page that tells about the company, its philosophy of work, where you can view the gallery, and company news."
+        />
+        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
         <title>О компании</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/aboutCompany-BW5yVH0_.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/aboutCompany-B2NWL90N.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-2kuTH5xP.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/use-fire-store-hmTsu6ty.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/news-render-cards-CRLg0wN6.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/gallery-BivzMy85.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/gallery-9kId28_H.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
       <link rel="stylesheet" crossorigin href="/nuts/assets/aboutCompany-BJZMwKTN.css">
     </head>
@@ -48,7 +52,7 @@
                                 <use href="#phone"></use></svg
                             ><span class="header__center-green">+38 (044)</span> 750-50-11</a
                         >
-                        <button class="header__top-mobile-order">
+                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">
     <span class="">Заказать звонок</span>
 </button>
 
@@ -103,7 +107,7 @@
                             <div class="burger__gray-block">
                                 <div class="burger__authentication">
                                     <a class="burger__entrance" href="#">
-                                        <img class="burger__img" src="" />
+                                        <img class="burger__img" src="" alt="avatar" />
                                         <span class="burger__text-entrance">Вход</span></a
                                     >
                                     <a class="burger__registration" href="#">Регистрация</a>
@@ -192,7 +196,7 @@
                         </div>
                     </div>
                     <div class="header__center-order">
-                        <button class="green-button header__center-button-order">
+                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">
     <span class="nvcn">Заказать звонок</span>
 </button>
 
@@ -232,8 +236,8 @@
         <p class="main-page__text company-page__text">Единственный в Украине сад совместного
                     выращивание фундука и грецкого ореха</p>
         <div class="main-page__play-block company-page__margin-play">
-            <button class="play-button main-page__play">
-    <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
+            <button class="play-button main-page__play" aria-label="play-video">
+    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
 
         </div>
@@ -257,8 +261,8 @@
                     Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания интенсивного
                     сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
                 </p></div>
-                <button class="transparent-button hidden">
-    <span class="">Подробнее</span>
+                <button class="transparent-button hidden" aria-label="{=$aria-label}">
+    <span class="{=$class_button_text}">Подробнее</span>
 </button>
 
             </div>
@@ -269,7 +273,7 @@
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
                                     <img class="company__preview-img" src="" alt="preview video img" />
-                                    <button class="play-button manufacturing__play">
+                                    <button class="play-button manufacturing__play" aria-label="play-video">
     <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
 </button>
 
@@ -281,7 +285,7 @@
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
                                     <img class="company__preview-img" src="" alt="preview video img" />
-                                    <button class="play-button manufacturing__play">
+                                    <button class="play-button manufacturing__play" aria-label="play-video">
     <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
 </button>
 
@@ -323,7 +327,7 @@
                         Главная наша цель – получить максимальную прибыль с одного гектара.
                     </p>
                 </div>
-                <button class="transparent-button ceo__representations-button">
+                <button class="transparent-button ceo__representations-button" aria-label="{=$aria-label}">
     <span class="{=$class_button_text}">Написать нам</span>
 </button>
 
@@ -394,7 +398,7 @@
             <a class="transparent-button gallery__button " href="/nuts/src/pages/gallery.html"
                 >Смотреть всю галерею</a
             >
-            <button class="transparent-button gallery__button gallery__button-load hidden">
+            <button class="transparent-button gallery__button gallery__button-load hidden" aria-label="{=$aria-label}">
     <span class="{=$class_button_text}">Посмотреть еще</span>
 </button>
 
@@ -1125,7 +1129,7 @@
     </symbol>
 </svg>
 
-        </div>
+        </div>
         <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>

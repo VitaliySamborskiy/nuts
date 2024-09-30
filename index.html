@@ -3,16 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Learn about our company, view our products, the latest news and important information on our home page"
+        />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
         <title>ОРЕХ ПРИЧЕРНОМОРЬЯ</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/main-Dhq-CGA0.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/main-BgjGZ4vC.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-2kuTH5xP.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/use-fire-store-hmTsu6ty.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-JmAgqWhE.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-DwuXlnCS.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/news-render-cards-CRLg0wN6.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-CIBol_6L.css">
@@ -48,7 +52,7 @@
                                 <use href="#phone"></use></svg
                             ><span class="header__center-green">+38 (044)</span> 750-50-11</a
                         >
-                        <button class="header__top-mobile-order">
+                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">
     <span class="">Заказать звонок</span>
 </button>
 
@@ -103,7 +107,7 @@
                             <div class="burger__gray-block">
                                 <div class="burger__authentication">
                                     <a class="burger__entrance" href="#">
-                                        <img class="burger__img" src="" />
+                                        <img class="burger__img" src="" alt="avatar" />
                                         <span class="burger__text-entrance">Вход</span></a
                                     >
                                     <a class="burger__registration" href="#">Регистрация</a>
@@ -192,7 +196,7 @@
                         </div>
                     </div>
                     <div class="header__center-order">
-                        <button class="green-button header__center-button-order">
+                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">
     <span class="nvcn">Заказать звонок</span>
 </button>
 
@@ -232,8 +236,8 @@
         <p class="main-page__text homepage__text">Единственный в Украине сад совместного
                     выращивание фундука и грецкого ореха</p>
         <div class="main-page__play-block homepage__margin-play">
-            <button class="play-button main-page__play">
-    <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
+            <button class="play-button main-page__play" aria-label="play-video">
+    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
 
         </div>
@@ -244,8 +248,8 @@
     <div class="product__main-page {=$class-title}">
         <h2 class="product__main-page-title">Продукция</h2>
         <p class="product__main-page-text">
-            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника
-            в удобной, надежной, вакуумной упаковке разного объема
+            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника в удобной,
+            надежной, вакуумной упаковке разного объема
         </p>
     </div>
     <div class="product-filter__shop-block hidden">
@@ -279,12 +283,12 @@
             <div class="product-filter__cost-block">
                 <p class="product-filter__cost-text">Стоимость</p>
                 <div class="product-filter__cost-arrows">
-                    <button class="product-filter__cost-button product-filter__higher-price">
+                    <button class="product-filter__cost-button product-filter__higher-price" aria-label="sort prices from the most expensive to the least expensive products">
     <span class=""><svg class='product-filter__cost-svg-top'>
                 <use href='#arrow'></use></svg></span>
 </button>
 
-                    <button class="product-filter__cost-button product-filter__lower-price">
+                    <button class="product-filter__cost-button product-filter__lower-price" aria-label="sort prices from the cheapest to the most expensive products">
     <span class=""><svg class='product-filter__cost-svg-bottom'>
                     <use href='#arrow'></use></svg></span>
 </button>
@@ -293,11 +297,11 @@
             </div>
         </div>
         <div class="product-filter__end-buttons">
-            <button class="green-button product-filter__apply-button">
+            <button class="green-button product-filter__apply-button" aria-label="{=$aria-label}">
     <span class="">Применить</span>
 </button>
 
-            <button class="product-filter__cross-button">
+            <button class="product-filter__cross-button" aria-label="{=$aria-label}">
     <span class=""><svg class='product-filter__cross-svg'>
                     <use href='#cross'></use></svg> Сбросить</span>
 </button>
@@ -305,12 +309,10 @@
         </div>
     </div>
     <div class="product__cards"></div>
-    <a
-        href="/nuts/src/pages/catalog-products.html"
-        class="transparent-button product__button {=$product-link-class}"
+    <a href="/nuts/src/pages/catalog-products.html" class="transparent-button product__button {=$product-link-class}"
         >Перейти в магазин</a
     >
-    <button class="transparent-button hidden">
+    <button class="transparent-button hidden" aria-label="{=$aria-label}">
     <span class="">Загрузить еще</span>
 </button>
 
@@ -366,8 +368,8 @@
                     Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
                     непривитого грецкого ореха, фундука и шиповника.
                 </p>
-                <button class="transparent-button manufacturing__text-button">
-    <span class="">Подробнее</span>
+                <button class="transparent-button manufacturing__text-button" aria-label="{=$aria-label}">
+    <span class="{=$class_button_text}">Подробнее</span>
 </button>
 
             </div>
@@ -378,7 +380,7 @@
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
                                     <img class="manufacturing__preview-img" src="" alt="preview video img" />
-                                    <button class="play-button manufacturing__play">
+                                    <button class="play-button manufacturing__play" aria-label="play-video">
     <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
 </button>
 
@@ -390,7 +392,7 @@
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
                                     <img class="manufacturing__preview-img" src="" alt="preview video img" />
-                                    <button class="play-button manufacturing__play">
+                                    <button class="play-button manufacturing__play" aria-label="play-video">
     <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
 </button>
 
@@ -457,8 +459,8 @@
     <div class="main-page__container main-goal__block">
         <h2 class="main-page__title main-goal__title">Наша главная цель - получить максимальную прибыль с одного гектара</h2>
         <div class="main-page__play-block main-goal__button">
-            <button class="play-button main-page__play">
-    <span class=""><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
+            <button class="play-button main-page__play" aria-label="play-video">
+    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
 </button>
 
         </div>
