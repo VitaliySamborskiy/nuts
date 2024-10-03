@@ -329,6 +329,33 @@ button {
             top: 0;
         }
     }
+
+    &-photo {
+        &__block {
+            width: 130px;
+            position: relative;
+
+            @include breakpoints(xs) {
+                margin: 0 auto;
+            }
+        }
+
+        &__label {
+        }
+
+        &__input {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+        }
+
+        &__img {
+            aspect-ratio: 9/12;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
 }
 
 //  errors-messages

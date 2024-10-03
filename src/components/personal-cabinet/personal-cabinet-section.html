@@ -14,10 +14,12 @@
                     <h3 class="personal-cabinet__sub-title">Мои заказы</h3>
                     <ul class="personal-cabinet__links-items">
                         <li>
-                            <a class="personal-cabinet__link" href="#">История заказов</a>
+                            <button class="personal-cabinet__link personal-cabinet__link_active">
+                                История заказов
+                            </button>
                         </li>
                         <li>
-                            <a class="personal-cabinet__link" href="#">История транзакций</a>
+                            <button class="personal-cabinet__link">История транзакций</button>
                         </li>
                     </ul>
                 </div>
@@ -25,13 +27,15 @@
                     <h3 class="personal-cabinet__sub-title">Моя учетная запись</h3>
                     <ul class="personal-cabinet____links-items">
                         <li>
-                            <a class="personal-cabinet__link" href="#">Контактная информация</a>
+                            <button class="personal-cabinet__link" id="contactInformation">
+                                Контактная информация
+                            </button>
                         </li>
                         <li>
-                            <a class="personal-cabinet__link" href="#">Пароль</a>
+                            <button class="personal-cabinet__link">Пароль</button>
                         </li>
                         <li>
-                            <a class="personal-cabinet__link" href="#">Адрес</a>
+                            <button class="personal-cabinet__link">Адрес</button>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +52,57 @@
                 </div>
                 <p class="personal-cabinet__personal-discount">Ваша персональная скидка - 5%</p>
             </div>
-            <div></div>
+            <div class="personal-cabinet__renders-area">
+                <div class="personal-cabinet__tablet-order-history">
+                    <table class="personal-cabinet__tablet">
+                        <thead>
+                            <tr class="personal-cabinet__tablet-header">
+                                <th class="personal-cabinet__tablet-block-title">
+                                    <h3 class="personal-cabinet__tablet-title">№ Заказа</h3>
+                                    <svg class="personal-cabinet__tablet-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                                <th class="personal-cabinet__tablet-block-title">
+                                    <h3 class="personal-cabinet__tablet-title">Дата</h3>
+                                    <svg class="personal-cabinet__tablet-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                                <th class="personal-cabinet__tablet-block-title">
+                                    <h3 class="personal-cabinet__tablet-title">Кол - во товаров</h3>
+                                    <svg class="personal-cabinet__tablet-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                                <th class="personal-cabinet__tablet-block-title">
+                                    <h3 class="personal-cabinet__tablet-title">Статус</h3>
+                                    <svg class="personal-cabinet__tablet-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                                <th class="personal-cabinet__tablet-block-title">
+                                    <h3 class="personal-cabinet__tablet-title">Стоимость</h3>
+                                    <svg class="personal-cabinet__tablet-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                                <th class="personal-cabinet__tablet-block-title">
+                                    <h3 class="personal-cabinet__tablet-title">Функции</h3>
+                                    <svg class="personal-cabinet__tablet-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="personal-cabinet__tablet-info-text">Замовлення відсутні</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -2,7 +2,17 @@ import { usePhotoReplacement } from "../registration/photo-replacement.js";
 import { getElement } from "./get-element-dom.js";
 let validateStatus = true;
 
-export function useValidate(form, inputArr, messagesError, regExp, callback, button, app = null) {
+export function useValidate(
+    form,
+    inputArr,
+    messagesError,
+    regExp,
+    callback,
+    button,
+    app = null,
+    imgBlock = null,
+    imgInput = null,
+) {
     inputArr.forEach((element, index) => {
         element.addEventListener("input", () => {
             if (element.name in messagesError) {
@@ -42,10 +52,7 @@ export function useValidate(form, inputArr, messagesError, regExp, callback, but
                 if (!file.name.match(regExp)) {
                     throw new Error(textError.regExp);
                 } else {
-                    usePhotoReplacement(
-                        getElement(".registration__input-img"),
-                        getElement(".registration__photo-input"),
-                    );
+                    usePhotoReplacement(imgBlock, imgInput);
                 }
             }
 

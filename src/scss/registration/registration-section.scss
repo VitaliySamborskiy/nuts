@@ -329,33 +329,6 @@
         }
     }
 
-    &__photo {
-        &-block {
-            width: 130px;
-            position: relative;
-
-            @include breakpoints(xs) {
-                margin: 0 auto;
-            }
-        }
-
-        &-label {
-        }
-
-        &-input {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            opacity: 0;
-        }
-    }
-
-    &__input-img {
-        aspect-ratio: 9/12;
-        object-fit: cover;
-        width: 100%;
-    }
-
     &__fop-block {
         margin-top: 15px;
         display: flex;

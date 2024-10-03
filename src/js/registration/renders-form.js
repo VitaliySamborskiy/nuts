@@ -2,7 +2,7 @@ import { getElement } from "../base/get-element-dom.js";
 import { selectRegion } from "./select-region-active.js";
 import { select } from "../base/select.js";
 import { useRadioInputChange } from "./form-change.js";
-import { useInputActive } from "./input-active.js";
+import { useInputActive } from "../base/input-active.js";
 import { useValidate } from "../base/form-validate.js";
 import { setupApp } from "../main.js";
 

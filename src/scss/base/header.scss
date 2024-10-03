@@ -35,8 +35,21 @@
             justify-content: space-between;
 
             &-wrapper {
+                gap: 20px;
                 display: flex;
                 align-items: center;
+
+                @include breakpoints(xl) {
+                    gap: 10px;
+                }
+
+                @include breakpoints(md) {
+                    gap: 5px;
+                }
+
+                @include breakpoints(sm) {
+                    display: none;
+                }
             }
 
             &-block {
@@ -59,7 +72,7 @@
         &-entrance {
             display: flex;
             align-items: center;
-            width: 75px;
+            width: 65px;
 
             @include breakpoints(sm) {
                 display: none;
@@ -81,22 +94,27 @@
         }
 
         &-text-entrance {
-            margin-right: 28px;
             font-size: 13px;
             letter-spacing: 0.02em;
-
-            @include breakpoints(md) {
-                margin-right: 20px;
-            }
         }
 
         &-name {
             font-size: 14px;
-            margin-right: 10px;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @include breakpoints(xl) {
+                max-width: 150px;
+            }
+
+            @include breakpoints(md) {
+                max-width: 100px;
+            }
         }
 
         &-name-link {
-            width: 60%;
             display: flex;
             align-items: center;
         }

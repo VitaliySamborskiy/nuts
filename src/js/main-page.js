@@ -3,12 +3,12 @@ import { useRenderCards } from "./base/use-render-cards.js";
 import { getElement } from "./base/get-element-dom.js";
 import { swiper } from "./base/swiper.js";
 import { useRenderNewsCards } from "./base/news-render-cards.js";
-import { setupApp } from "./main.js";
 import { useCards } from "./base/product-cards.js";
 import { useGetImg } from "./base/use-img.js";
+import { fireBaseService } from "./base/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
-    const app = await setupApp();
+    const app = fireBaseService.getApp();
     const videoData = await useGetFirestore(app, "videoId", "main-pages");
     const playersMainPage = getElement(".manufacturing__player", "all");
     const dataNews = await useGetFirestore(app, "news");

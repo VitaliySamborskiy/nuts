@@ -11,8 +11,6 @@ export function getImages() {
     useGetImg("logo-1.svg", getElement(".footer__logo-img"));
     useGetImg("gs://nuts-17b69.appspot.com/31318052.webp", getElement(".error__img"));
 
-    useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".registration__input-img"));
-
     const popup = getElement(".popup__img", "all");
     const imgPopup = [
         "gs://nuts-17b69.appspot.com/product_card/box_cardboard_1.webp",

@@ -1,17 +1,21 @@
 import { selectRegion } from "./registration/select-region-active.js";
 import { getElement } from "./base/get-element-dom.js";
-import { useInputActive } from "./registration/input-active.js";
+import { useInputActive } from "./base/input-active.js";
 import { useFormChange } from "./registration/form-change.js";
 import { checkboxValidate, useValidate } from "./base/form-validate.js";
-import { useNumberMask } from "./registration/phone-mask.js";
-import { useCreateUser } from "./registration/registration-users.js";
-import { setupApp } from "./main.js";
+import { useNumberMask } from "./base/phone-mask.js";
+import { useCreateUser } from "./base/autintificate.js";
 import { rendersFormLegal } from "./registration/renders-form.js";
 import { useInputClear } from "./base/input-clear.js";
+import { useGetImg } from "./base/use-img.js";
+import { fireBaseService } from "./base/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
+    const app = fireBaseService.getApp();
     useInputClear(getElement(".input__area", "all"));
-    const app = await setupApp();
+
+    useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".registration__input-img"));
+
     rendersFormLegal(
         getElement(".registration__tab-text", "all"),
         getElement(".registration__legal"),
@@ -72,6 +76,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         useCreateUser,
         getElement(".registration__text-button"),
         app,
+        getElement(".registration__input-img"),
+        getElement(".registration__photo-input"),
     );
     checkboxValidate(
         getElement("registrationForms", "id"),
