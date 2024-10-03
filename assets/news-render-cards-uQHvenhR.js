@@ -1,4 +1,4 @@
-import{u as i}from"./main-2kuTH5xP.js";function d(n,c){const r=document.createDocumentFragment();n.forEach(s=>{let a="";a=`<div class="news-swiper__card">
+import{a as i}from"./main-B8gcuJg5.js";function d(n,c){const r=document.createDocumentFragment();n.forEach(s=>{let a="";a=`<div class="news-swiper__card">
              <img class="news-swiper__card-img" src=""  alt="зображення новини" loading="lazy"/>
              <div class="news-swiper__card-text-block">
                  <p class="news-swiper__card-date">${s.date}</p>
