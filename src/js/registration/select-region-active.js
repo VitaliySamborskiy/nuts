@@ -4,7 +4,7 @@ export function selectRegion(currentCountry, arrRegionsItems, currentText, class
             return null;
         }
 
-        classElementAction.classList.remove("registration__select-header-inactive");
+        classElementAction.classList.remove("inputs-select__header-inactive");
 
         arrRegionsItems.forEach((item) => {
             item.classList.remove("select__body");

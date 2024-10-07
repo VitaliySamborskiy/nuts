@@ -1,0 +1,84 @@
+.inputs-select {
+    &__header {
+        padding: 15px 19px;
+        line-height: 121%;
+        font-weight: 500;
+        border: 1px solid $registrationBorder;
+        justify-content: space-between;
+        font-family: $supportFonts;
+        display: flex;
+        z-index: 0;
+
+        @include breakpoints(md) {
+            padding: 12px 15px;
+        }
+
+        &:hover {
+            border: 1px solid $subGreat;
+        }
+
+        &-inactive {
+            background: $inactive;
+            opacity: 0.3;
+            pointer-events: none;
+
+            &:hover {
+                background: $inactive;
+            }
+
+            &-text {
+                opacity: 0.3;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__body {
+        width: 100%;
+
+        &-wrapper {
+            height: 280px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $filter;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $subGreat;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &__item {
+        padding: 15px 19px 0 19px;
+
+        @include breakpoints(md) {
+            padding: 12px 15px 0 15px;
+        }
+
+        &:after {
+            margin-top: 15px;
+
+            @include breakpoints(md) {
+                margin-top: 12px;
+            }
+        }
+
+        &:last-child {
+            padding-bottom: 15px;
+
+            @include breakpoints(md) {
+                padding-bottom: 12px;
+            }
+        }
+    }
+
+    &__svg {
+    }
+}

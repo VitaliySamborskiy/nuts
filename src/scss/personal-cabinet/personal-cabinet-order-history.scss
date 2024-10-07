@@ -1,5 +1,5 @@
 .personal-cabinet {
-    &__tablet-order-history {
+    &__table-order-history {
         @include breakpoints(md) {
             overflow-x: scroll;
 
@@ -14,9 +14,17 @@
                 border-radius: 10px;
             }
         }
+
+        @include breakpoints(sm) {
+            width: 103%;
+        }
+
+        @include breakpoints(xs) {
+            width: 104%;
+        }
     }
 
-    &__tablet {
+    &__table {
         margin-top: 50px;
         width: 102%;
         position: absolute;
@@ -26,7 +34,7 @@
             position: relative;
             left: 0;
             width: 100%;
-            min-width: 726px;
+            min-width: 778px;
         }
 
         @include breakpoints(sm) {
@@ -39,9 +47,9 @@
             display: flex;
             justify-content: space-between;
 
-            @include breakpoints(md) {
-                gap: 5px;
-            }
+            //@include breakpoints(md) {
+            //    gap: 5px;
+            //}
         }
 
         &-block-title {
@@ -49,6 +57,9 @@
             padding: 23px 0 15px;
             display: flex;
             align-items: center;
+            justify-content: center;
+            width: 18%;
+            font-family: $supportFonts;
 
             @include breakpoints(md) {
                 padding: 15px 0 15px;
@@ -70,6 +81,11 @@
             fill: $gray;
             width: 10px;
             height: 6px;
+            transition: fill 0.5s ease-in-out;
+
+            &:hover {
+                fill: $mainGreen;
+            }
 
             @include breakpoints(md) {
                 margin: 2px 0 0 3px;
@@ -84,9 +100,6 @@
             font-weight: 700;
             transition: background-color 0.5s ease-in-out;
 
-            &:hover {
-            }
-
             @include breakpoints(md) {
                 padding: 60px 0;
                 left: 44%;
@@ -95,6 +108,74 @@
             @include breakpoints(sm) {
                 padding: 30px 0;
                 left: 50%;
+            }
+        }
+
+        &-row {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.5s ease-in-out;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: flex;
+                width: 100%;
+                height: 1px;
+                background: $gray;
+            }
+
+            &:hover {
+                background: $tabletActive;
+            }
+        }
+
+        &-value {
+            width: 18%;
+            margin: 0 auto;
+            padding: 15px 0 13px;
+            font-size: 14px;
+            line-height: 229%;
+            text-align: center;
+            font-family: $supportFonts;
+
+            @include breakpoints(md) {
+                font-size: 12px;
+            }
+        }
+
+        &-title {
+        }
+
+        &-svg-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+
+            @include breakpoints(md) {
+                gap: 8px;
+            }
+        }
+
+        &-value-svg {
+            cursor: pointer;
+            width: 22px;
+            height: 22px;
+            fill: $gray;
+            transition: fill 0.5s ease-in-out;
+
+            @include breakpoints(md) {
+                width: 16px;
+                height: 16px;
+            }
+
+            &:hover {
+                fill: $mainGreen;
             }
         }
     }

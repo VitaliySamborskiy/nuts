@@ -188,9 +188,13 @@
         }
     }
 
+    &__select-region,
+    &__select-region-legal {
+        z-index: 3;
+    }
+
     &__select-country,
-    &__select-country-legal,
-    &__select-country-fop {
+    &__select-country-legal {
         z-index: 4;
     }
 
@@ -198,23 +202,7 @@
     }
 
     &__select-header {
-        padding: 15px 19px;
         width: 85%;
-        line-height: 121%;
-        font-weight: 500;
-        border: 1px solid $registrationBorder;
-        justify-content: space-between;
-        font-family: $supportFonts;
-        display: flex;
-        z-index: 0;
-
-        @include breakpoints(md) {
-            padding: 12px 15px;
-        }
-
-        &:hover {
-            border: 1px solid $subGreat;
-        }
 
         @include breakpoints(xl) {
             width: 95%;
@@ -222,21 +210,6 @@
 
         @include breakpoints(sm) {
             width: 100%;
-        }
-
-        &-inactive {
-            background: $inactive;
-            opacity: 0.3;
-            pointer-events: none;
-
-            &:hover {
-                background: $inactive;
-            }
-
-            &-text {
-                opacity: 0.3;
-                pointer-events: none;
-            }
         }
     }
 
@@ -250,51 +223,6 @@
         @include breakpoints(sm) {
             width: 100%;
         }
-
-        &-wrapper {
-            height: 280px;
-            overflow-y: scroll;
-
-            &::-webkit-scrollbar {
-                width: 5px;
-            }
-
-            &::-webkit-scrollbar-track {
-                background: $filter;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                background: $subGreat;
-                border-radius: 5px;
-            }
-        }
-    }
-
-    &__item {
-        padding: 15px 19px 0 19px;
-
-        @include breakpoints(md) {
-            padding: 12px 15px 0 15px;
-        }
-
-        &:after {
-            margin-top: 15px;
-
-            @include breakpoints(md) {
-                margin-top: 12px;
-            }
-        }
-
-        &:last-child {
-            padding-bottom: 15px;
-
-            @include breakpoints(md) {
-                padding-bottom: 12px;
-            }
-        }
-    }
-
-    &__select-svg {
     }
 
     &__addresses-block {

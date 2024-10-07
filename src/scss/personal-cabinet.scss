@@ -1,5 +1,9 @@
 @import "varible";
 
+@import "base/inputs-base";
+@import "base/inputs-select";
 @import "personal-cabinet/personal-cabinet-section";
 @import "personal-cabinet/personal-cabinet-rename-form";
 @import "personal-cabinet/personal-cabinet-order-history";
+@import "personal-cabinet/personal-cabinet-address";
+@import "registration/registration-section";

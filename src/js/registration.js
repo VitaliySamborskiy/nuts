@@ -9,6 +9,7 @@ import { rendersFormLegal } from "./registration/renders-form.js";
 import { useInputClear } from "./base/input-clear.js";
 import { useGetImg } from "./base/use-img.js";
 import { fireBaseService } from "./base/fire-base-service.js";
+import { select } from "./base/select.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
@@ -89,9 +90,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         },
         getElement(".registration__text-button"),
     );
+    select(getElement(".registration__current-country", "all"), getElement(".registration__select-country", "all"));
+    select(getElement(".registration__current-region", "all"), getElement(".registration__select-region", "all"));
     selectRegion(
         getElement(".registration__current-country"),
-        getElement(".registration__select-body-wrapper", "all"),
+        getElement(".inputs-select__body-wrapper", "all"),
         getElement(".registration__current-region"),
         getElement(".region"),
     );

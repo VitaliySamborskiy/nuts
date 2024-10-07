@@ -6,24 +6,26 @@ import { buttonChange } from "./personal-cabinet/button-cange.js";
 import { rendersContactInformation } from "./personal-cabinet/renders-contact-information.js";
 import { userService } from "./base/user-service.js";
 import { fireBaseService } from "./base/fire-base-service.js";
+import { renderTable } from "./personal-cabinet/renders-tablet.js";
+import { rendersAddressForm } from "./personal-cabinet/renders-address-form.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
-    // let userDate;
 
     useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".personal-cabinet__img"));
 
     setTimeout(() => {
         let userDate = userService.getUser();
 
-        console.log(userDate);
+        renderTable(getElement(".personal-cabinet__renders-area"), getElement("table", "id"));
         rendersContactInformation(
             userDate,
             getElement(".personal-cabinet__renders-area"),
             getElement("contactInformation", "id"),
             app,
         );
-    }, 700);
+        rendersAddressForm(getElement(".personal-cabinet__renders-area"), getElement("addressForm", "id"), userDate);
+    }, 600);
 
     useMenuPopup(
         getElement(".personal-cabinet__button"),
@@ -33,6 +35,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     );
 
     useInputClear(getElement(".input__area", "all"));
-
     buttonChange(getElement(".personal-cabinet__link", "all"));
 });

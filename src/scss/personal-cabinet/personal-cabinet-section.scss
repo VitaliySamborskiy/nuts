@@ -58,6 +58,7 @@
             border: 2px solid $mainGreen;
             margin-top: 20px;
             gap: 15px;
+            z-index: 2;
         }
 
         &_active {
@@ -257,5 +258,13 @@
         @include breakpoints(md) {
             font-size: 13px;
         }
+    }
+
+    &__select-country-legal {
+        z-index: 2;
+    }
+
+    &__select-region-legal {
+        z-index: 1;
     }
 }

@@ -20,24 +20,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         useGetImg(youTubeImg[i], youTube[i]);
     }
     useGetImg("gs://nuts-17b69.appspot.com/companies/companies_3.webp", getElement(".ceo__representations-img"));
-    // const gallery = getElement(".gallery__img", "all");
-    // const galleryImg = [
-    //     "gs://nuts-17b69.appspot.com/gallery/gallery_2.webp",
-    //     "gs://nuts-17b69.appspot.com/gallery/gallery_3.webp",
-    //     "gs://nuts-17b69.appspot.com/gallery/gallery_5.webp",
-    //     "gs://nuts-17b69.appspot.com/gallery/gallery_6.webp",
-    // ];
-    // for (let i = 0; i < gallery.length; i++) {
-    //     useGetImg(galleryImg[i], gallery[i]);
-    // }
-    // const galleryPreviewElement = getElement(".gallery__preview-img", "all");
-    // const galleryPreview = [
-    //     "gs://nuts-17b69.appspot.com/gallery/gallery_4.webp",
-    //     "gs://nuts-17b69.appspot.com/gallery/gallery_7.webp",
-    // ];
-    // for (let i = 0; i < galleryPreviewElement.length; i++) {
-    //     useGetImg(galleryPreview[i], galleryPreviewElement[i]);
-    // }
     const videoData = await useGetFirestore(app, "videoId", "main-pages");
     const playersMainPage = getElement(".manufacturing__player", "all");
     swiper(
