@@ -1,15 +1,17 @@
-class UserService {
-    #user;
+function useService() {
+    let user;
 
-    setUser(userData) {
-        this.#user = userData;
+    function setUser(userData) {
+        user = userData;
     }
 
-    getUser() {
-        return this.#user;
+    function getUser() {
+        return user;
     }
+
+    return { setUser, getUser };
 }
 
-const userService = new UserService();
+const userService = useService();
 
 export { userService };

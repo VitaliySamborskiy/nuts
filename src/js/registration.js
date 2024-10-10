@@ -76,9 +76,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         useCreateUser,
         getElement(".registration__text-button"),
-        app,
         getElement(".registration__input-img"),
         getElement(".registration__photo-input"),
+        [app, getElement("registrationForms", "id")],
     );
     checkboxValidate(
         getElement("registrationForms", "id"),

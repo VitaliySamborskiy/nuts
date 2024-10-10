@@ -1,5 +1,6 @@
 import { usePhotoReplacement } from "../registration/photo-replacement.js";
-import { getElement } from "./get-element-dom.js";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
+
 let validateStatus = true;
 
 export function useValidate(
@@ -9,7 +10,7 @@ export function useValidate(
     regExp,
     callback,
     button,
-    app = null,
+    callbackArgs = null,
     imgBlock = null,
     imgInput = null,
 ) {
@@ -35,7 +36,9 @@ export function useValidate(
 
     button.addEventListener("click", () => {
         if (validateStatus) {
-            callback(app, form);
+            callback(...callbackArgs);
+        } else {
+            Notify.warning("Перевірте всі поля вводу");
         }
     });
 

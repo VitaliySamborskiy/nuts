@@ -1,11 +1,12 @@
-export function renderTable(container, button, data) {
-    renderHeader(data, container);
-    button.addEventListener("click", () => {
-        renderHeader(data, container);
-    });
+export function renderOrderTable(container, data) {
+    renderOrderHeader(data, container);
 }
 
-function renderHeader(data, container) {
+export function renderTableTransaction(container, data) {
+    renderTransactionHeader(data, container);
+}
+
+function renderOrderHeader(data, container) {
     let html = ``;
     html = `<div class="personal-cabinet__table-order-history">
                     <table class="personal-cabinet__table">
@@ -49,14 +50,47 @@ function renderHeader(data, container) {
                                 </th>
                             </tr>
                         </thead>
-                      ${data ? renderValueTable(data) : renderDefaultValue()}
+                      ${data ? renderOrderValueTable(data) : renderDefaultValue()}
                     </table>
                 </div>`;
 
     container.innerHTML = html;
 }
 
-function renderValueTable(dataArr) {
+function renderTransactionHeader(data, container) {
+    let html = ``;
+    html += `<div class="personal-cabinet__table-order-history">
+                    <table class="personal-cabinet__table">
+                        <thead>
+                            <tr class="personal-cabinet__table-header personal-cabinet__table-header-transaction">
+                                <th class="personal-cabinet__table-transaction">
+                                    <h3 class="personal-cabinet__table-title">Добавлено</h3>
+                                    <svg class="personal-cabinet__table-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                                <th class="personal-cabinet__table-transaction">
+                                    <h3 class="personal-cabinet__table-title">Статус</h3>
+                                    <svg class="personal-cabinet__table-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                                <th class="personal-cabinet__table-transaction">
+                                    <h3 class="personal-cabinet__table-title">Сумма</h3>
+                                    <svg class="personal-cabinet__table-svg">
+                                        <use href="#arrow_down"></use>
+                                    </svg>
+                                </th>
+                            </tr>
+                        </thead>
+                         ${data ? renderTransactionValueTable(data) : renderDefaultValue()}
+                    </table>
+                </div>`;
+
+    container.innerHTML = html;
+}
+
+function renderOrderValueTable(dataArr) {
     const tableBody = document.createElement("tbody");
 
     dataArr.forEach((data, index) => {
@@ -69,12 +103,45 @@ function renderValueTable(dataArr) {
                                 <td class="personal-cabinet__table-value">${data.orderPrise}</td>
                                 <td class="personal-cabinet__table-value">
                                     <div class="personal-cabinet__table-svg-block">
-                                        <svg class="personal-cabinet__table-value-svg">
+                                        <svg class="personal-cabinet__table-value-svg eye">
                                             <use href="#eye"></use>
                                         </svg>
+                                        <div class="personal-cabinet__table-show-order-block">
+                                            <p class="personal-cabinet__table-show-order">Просмотреть заказ</p>
+                                        </div>
                                         <svg class="personal-cabinet__table-value-svg">
                                             <use href="#copying"></use>
                                         </svg>
+                                    </div>
+                                </td>
+                            </tr>`;
+        tableBody.innerHTML += html;
+    });
+
+    return tableBody;
+}
+
+function renderTransactionValueTable(dataArr) {
+    const tableBody = document.createElement("tbody");
+
+    dataArr.forEach((data, index) => {
+        let html = ``;
+        html += `<tr class="personal-cabinet__table-row">
+                                <td class="personal-cabinet__table-value-transaction personal-cabinet__table-value">
+                                    ${data.date}
+                                </td>
+                                <td class="personal-cabinet__table-value-transaction personal-cabinet__table-value">
+                                    ${data.status}
+                                </td>
+                                <td class="personal-cabinet__table-value-transaction personal-cabinet__table-value">
+                                    <div class="personal-cabinet__table-svg-block">
+                                        <span>${data.orderPrise}</span>
+                                        <svg class="personal-cabinet__table-value-svg eye">
+                                            <use href="#eye"></use>
+                                        </svg>
+                                        <div class="personal-cabinet__table-show-order-block">
+                                            <p class="personal-cabinet__table-show-order">Просмотреть заказ</p>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>`;
@@ -88,7 +155,7 @@ function renderDefaultValue() {
     let html = ``;
     html += `  <tbody>
                       <tr>
-                         <td class="personal-cabinet__table-info-text">Замовлення відсутні</td>
+                         <td class="personal-cabinet__table-info-text">Дані відсутні</td>
                       </tr>
                </tbody>`;
 

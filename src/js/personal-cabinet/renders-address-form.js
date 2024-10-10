@@ -5,15 +5,15 @@ import { useValidate } from "../base/form-validate.js";
 import { select } from "../base/select.js";
 import { selectsFormRenders } from "../base/renders-selection-form.js";
 import { useGetImg } from "../base/use-img.js";
+import { updateAddressDetailsInformation } from "./update-addres-details-information.js";
 
-export function rendersAddressForm(container, button, data) {
-    button.addEventListener("click", () => {
-        data.role.company ? renderAddressFormCompanion(container) : renderAddressFormPerson(container);
-        formFunctionActivate();
-    });
+export function rendersAddressForm(container, data, app) {
+    data.role.company
+        ? renderAddressFormCompanion(container, data, app)
+        : renderAddressFormPerson(container, data, app);
 }
 
-function renderAddressFormPerson(container) {
+function renderAddressFormPerson(container, data, app) {
     let html = ``;
     html = ` <div class="personal-cabinet__address">
                     <h3 class="personal-cabinet__address-title">Адрес</h3>
@@ -37,9 +37,11 @@ function renderAddressFormPerson(container) {
                 </div>`;
 
     container.innerHTML = html;
+
+    formFunctionActivate("addressUserForm", data, app);
 }
 
-function renderAddressFormCompanion(container) {
+function renderAddressFormCompanion(container, data, app) {
     let html = ``;
     html = ` <div class="personal-cabinet__address-section-legal">
                     <form class="personal-cabinet__address-legal" id="addressUserLegalForm">
@@ -98,7 +100,7 @@ function renderAddressFormCompanion(container) {
                                         class="personal-cabinet__input input__area"
                                         id="cityLegal"
                                         type="text"
-                                        name="city"
+                                        name="cityLegal"
                                     />
                                 </div>
                                 <div class="input__block">
@@ -147,25 +149,33 @@ function renderAddressFormCompanion(container) {
         "gs://nuts-17b69.appspot.com/personal-cabinet/personal-cabinet.webp",
         getElement(".personal-cabinet__address-img"),
     );
+    formFunctionActivate("addressUserLegalForm", data, app);
 }
 
-function formFunctionActivate() {
+function formFunctionActivate(form, data, app) {
     useInputActive(getElement(".input__area", "all"), getElement(".input__label", "all"));
     useValidate(
-        getElement("addressUserForm", "id"),
+        getElement(form, "id"),
         getElement(".personal-cabinet__input", "all"),
         {
             city: {
                 void: "не вказане місто",
                 regExp: "Назви міст не мають мати цифри в собі та інші заборонені символи",
             },
+
+            cityLegal: {
+                void: "не вказане місто",
+                regExp: "Назви міст не мають мати цифри в собі та інші заборонені символи",
+            },
         },
         {
             city: /[a-zа-яціїєґ\\-]+/gi,
+            cityLegal: /[a-zа-яціїєґ\\-]+/gi,
         },
 
-        () => {},
+        updateAddressDetailsInformation,
         getElement(".personal-cabinet__address-button"),
+        [getElement(form, "id"), data, app],
     );
 
     select(getElement(".registration__current-country", "all"), getElement(".registration__select-country", "all"));
@@ -186,10 +196,12 @@ function formFunctionActivate() {
         getElement(".personal-cabinet__current-region-legal", "all"),
         getElement(".personal-cabinet__select-region-legal", "all"),
     );
-    selectRegion(
-        getElement(".personal-cabinet__current-country-legal"),
-        getElement(".personal-cabinet__body-wrapper", "all"),
-        getElement(".personal-cabinet__current-region-legal"),
-        getElement(".region-legal"),
-    );
+    try {
+        selectRegion(
+            getElement(".personal-cabinet__current-country-legal"),
+            getElement(".personal-cabinet__body-wrapper", "all"),
+            getElement(".personal-cabinet__current-region-legal"),
+            getElement(".region-legal"),
+        );
+    } catch (e) {}
 }

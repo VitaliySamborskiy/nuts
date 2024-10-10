@@ -18,6 +18,7 @@
     "awesome-phonenumber": "^7.0.1",
     "firebase": "^10.12.5",
     "gh-pages": "^6.1.1",
+    "notiflix": "^3.2.7",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
     "scroll-lock": "^2.1.5",

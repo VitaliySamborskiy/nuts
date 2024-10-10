@@ -5,20 +5,20 @@ import {
     updateProfile,
     onAuthStateChanged,
     signOut,
+    updateEmail,
 } from "firebase/auth";
-import { errorAddClass } from "./form-validate.js";
 import { getElement } from "./get-element-dom.js";
 import { getFormInfo } from "./get-form.js";
 import { useRenderUserInfo } from "./header-render-user.js";
-import { useGetCookie, useSetCookie } from "./cookies.js";
+// import { useGetCookie, useSetCookie } from "./cookies.js";
 import { useInputClear } from "./input-clear.js";
 import { useGetFirestore, useSetUserData } from "./use-fire-store.js";
 import { useSetImg } from "./use-img.js";
 import { useGetFormSelects } from "./get-form.js";
 import { userService } from "./user-service.js";
+import { Notify } from "notiflix/build/notiflix-notify-aio.js";
 
 let auth;
-let userData;
 let userInfo = {
     user: null,
     errorCode: null,
@@ -31,29 +31,21 @@ function createAuth(app) {
     }
 }
 
-export function useLoginUser(app, formLogin, submitButton) {
+export function useLoginUser(app, formLogin) {
     createAuth(app);
 
-    submitButton.addEventListener("click", () => {
-        let userInfoForm = getFormInfo(formLogin, ["email", "password"]);
+    let userInfoForm = getFormInfo(formLogin, ["email", "password"]);
 
-        signInWithEmailAndPassword(auth, userInfoForm.email, userInfoForm.password)
-            .then((userCredential) => {
-                userInfo.user = userCredential.user;
-                window.location.pathname = "/nuts/src/pages/personal-cabinet-page.html";
-                useRenderUserInfo(userInfo.user, getElement(".header__top-authentication-wrapper"));
-                useSetCookie(userInfo.user);
-                useInputClear(getElement(".input__area", "all"));
-            })
-            .catch((err) => {
-                const input = getElement("loginPassword", "id");
-                errorAddClass(
-                    input,
-                    "Помилка аундетифікації, перевірте пароль або почту",
-                    input.parentElement.querySelector(".error__block"),
-                );
-            });
-    });
+    signInWithEmailAndPassword(auth, userInfoForm.email, userInfoForm.password)
+        .then((userCredential) => {
+            userInfo.user = userCredential.user;
+            window.location.pathname = "/nuts/src/pages/personal-cabinet-page.html";
+            useRenderUserInfo(userInfo.user, getElement(".header__top-authentication-wrapper"));
+            useInputClear(getElement(".input__area", "all"));
+        })
+        .catch((err) => {
+            Notify.failure(`Помилка аундетифікації, перевірте пароль або почту ${err}`);
+        });
 
     return userInfo;
 }
@@ -117,12 +109,10 @@ export function useCreateUser(app, formRegistration) {
             await useSetUserData(app, userInfo.user.uid, formInformation);
             window.location.pathname = "/nuts/src/pages/personal-cabinet-page.html";
             useRenderUserInfo(userInfo.user, getElement(".header__top-authentication-wrapper"));
-            useSetCookie(userInfo.user);
             useInputClear(getElement(".input__area", "all"));
         })
         .catch((error) => {
-            userInfo.errorCode = error.code;
-            userInfo.errorMessage = error.message;
+            Notify.failure(`Помилка реестрації, ${error}`);
         });
 }
 
@@ -139,15 +129,34 @@ function roleUser(obj) {
 }
 //testTEST1@
 
-// export async function autoLogin(app) {
-//     createAuth(app);
-//     const userinfo = useGetCookie("userInfo");
-//     console.log(userinfo);
-//     const re = userinfo.refreshToken;
-//
-//     const user = firebase.auth().currentUser;
-//
-// }
+export async function updateUserProfile(app, userData) {
+    createAuth(app);
+    return updateProfile(auth.currentUser, userData)
+        .then((user) => {
+            return {
+                displayName: userData.displayName,
+                photoURL: userData.photoURL,
+                phoneNumber: userData.phone,
+            };
+        })
+        .catch((err) => console.log(err));
+}
+
+export async function updateUserEmail(app, newEmail) {
+    createAuth(app);
+    if (!auth.currentUser) {
+        throw new Error("No authenticated user found");
+    }
+
+    try {
+        await updateEmail(auth.currentUser, newEmail);
+        console.log("Email updated successfully");
+        return { success: true, message: "Email updated successfully" };
+    } catch (error) {
+        console.log("Error updating email:", error);
+        throw error;
+    }
+}
 
 export async function useUserStateChanged(app) {
     createAuth(app);

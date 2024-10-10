@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
     useInputClear(getElement(".input__area", "all"));
     useInputActive(getElement(".input__area", "all"), getElement(".input__label", "all"));
-    const user = useLoginUser(app, getElement(".login__form"), getElement(".login__button"));
+
     useValidate(
         getElement("loginForm", "id"),
         getElement(".login__input", "all"),
@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         {
             loginEmail: /[0-9a-zа-яціїєґ\\.\\@]+@[0-9a-zа-яціїєґ\\.]+/gi,
         },
-        () => {},
+        useLoginUser,
         getElement(".login__button"),
+        [app, getElement(".login__form")],
     );
 });

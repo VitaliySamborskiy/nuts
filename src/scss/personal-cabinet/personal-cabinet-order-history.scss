@@ -46,10 +46,6 @@
             background: $tabletHeader;
             display: flex;
             justify-content: space-between;
-
-            //@include breakpoints(md) {
-            //    gap: 5px;
-            //}
         }
 
         &-block-title {
@@ -152,6 +148,7 @@
         }
 
         &-svg-block {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -178,5 +175,58 @@
                 fill: $mainGreen;
             }
         }
+
+        &-header-transaction {
+            margin: 0;
+        }
+
+        &-value-transaction {
+            margin: 0;
+            width: 19%;
+        }
+
+        &-transaction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 23px 0 15px;
+            font-family: $supportFonts;
+            width: 20%;
+        }
+
+        &-show-order-block {
+            position: absolute;
+            top: -43px;
+            right: 2px;
+            background: $mainGreen;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 27px;
+                left: 45%;
+                width: 20px;
+                height: 20px;
+                background: inherit;
+                transform: rotate(45deg);
+                z-index: -2;
+            }
+        }
+
+        &-show-order {
+            padding: 8px;
+            width: 110px;
+            color: $backgroundColor;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 100%;
+            text-align: center;
+        }
     }
+}
+
+.eye:hover + .personal-cabinet__table-show-order-block {
+    opacity: 1;
 }

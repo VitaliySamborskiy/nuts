@@ -21,16 +21,5 @@ export function useRenderDefaultInfo(container, button) {
     button.addEventListener("click", () => {
         window.location.pathname = "/nuts/index.html";
         signOutUser();
-
-        // let html = ``;
-        // html = ` <a class="header__top-entrance" href="/nuts/src/pages/login.html">
-        //     <svg class="header__top-svg"><use href="#authentication"></use></svg>
-        //     <span class="header__top-text-entrance">Вход</span></a
-        // >
-        // <a class="header__top-registration" href="/nuts/src/pages/registration.html"
-        //     >Регистрация</a
-        // >`;
-        //
-        // container.innerHTML = html;
     });
 }

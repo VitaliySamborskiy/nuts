@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
+import { getStorage, ref, getDownloadURL, uploadBytes, deleteObject } from "firebase/storage";
 
 export function useGetImg(url, element) {
     const storage = getStorage();
@@ -34,4 +34,17 @@ function uniqueNamesImg(imageName) {
     const uniqueName = uuidv4();
     const nameImg = imageName.split(".").pop();
     return `${uniqueName}.${nameImg}`;
+}
+
+export function deleteImage(photoURL) {
+    const storage = getStorage();
+    const desertRef = ref(storage, photoURL);
+
+    deleteObject(desertRef)
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 }
