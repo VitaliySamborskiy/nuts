@@ -17,6 +17,8 @@ export default defineConfig({
                 aboutCompany: resolve(__dirname, "src/pages/about-company.html"),
                 gallery: resolve(__dirname, "src/pages/gallery.html"),
                 personalCabinetPage: resolve(__dirname, "src/pages/personal-cabinet-page.html"),
+                paymentDelivery: resolve(__dirname, "src/pages/payment-delivery.html"),
+                wholesaleCorporateClients: resolve(__dirname, "src/pages/wholesale-corporate-clients.html"),
             },
         },
     },
