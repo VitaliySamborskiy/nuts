@@ -1,0 +1,301 @@
+.order-tabs {
+    &__content {
+        margin-top: 81px;
+        padding-left: 15px;
+
+        @include breakpoints(md) {
+            margin-top: 60px;
+            padding-left: 0;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 50px;
+        }
+    }
+
+    &__tabs {
+        &-header {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 130%;
+                left: -25%;
+                content: "";
+                display: flex;
+                width: 150%;
+                height: 1px;
+                background: $headerLine;
+
+                @include breakpoints(sm) {
+                    display: none;
+                }
+            }
+        }
+
+        &-items {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 81%;
+
+            @include breakpoints(sm) {
+                width: 100%;
+            }
+        }
+
+        &-header {
+        }
+
+        &-items {
+            @include breakpoints(sm) {
+                gap: 5px;
+            }
+        }
+    }
+
+    &__tab {
+        &-item {
+        }
+
+        &-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+
+            @include breakpoints(sm) {
+                gap: 6px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 126%;
+                display: flex;
+                width: 0;
+                height: 3px;
+                background: $mainGreen;
+                transition: width 0.5s ease-in-out;
+            }
+
+            &_active {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-svg {
+            fill: $formsCooperationSvg;
+            max-height: 40px;
+            max-width: 40px;
+            transition: fill 0.5s ease-in-out;
+
+            @include breakpoints(md) {
+                max-height: 25px;
+                max-width: 25px;
+            }
+
+            &_active {
+                fill: $mainGreen;
+            }
+        }
+
+        &-text {
+            width: 250%;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 115%;
+            text-align: start;
+
+            @include breakpoints(md) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__body {
+        margin-top: 65px;
+        padding-left: 7px;
+
+        @include breakpoints(md) {
+            margin-top: 45px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 35px;
+        }
+    }
+
+    &__body-block {
+        display: none;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include breakpoints(md) {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        &_active {
+            display: flex;
+        }
+    }
+
+    &__content-text {
+        width: 34%;
+
+        @include breakpoints(md) {
+            min-width: 335px;
+            width: 37%;
+            margin: 0 auto;
+        }
+
+        @include breakpoints(sm) {
+            width: 95%;
+        }
+    }
+
+    &__title {
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 133%;
+
+        @include breakpoints(md) {
+            font-size: 16px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 0;
+        }
+    }
+
+    &__text-items {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+
+        @include breakpoints(md) {
+            gap: 20px;
+        }
+    }
+
+    &__text-item {
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 150%;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 10px;
+        }
+    }
+
+    &__sub-title-block {
+        display: flex;
+    }
+
+    &__sub-svg {
+        position: relative;
+        padding: 7px 0 0 16px;
+
+        @include breakpoints(md) {
+            padding: 5px 0 0 14px;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            display: flex;
+            border-radius: 50%;
+        }
+
+        &::after {
+            top: 0;
+            left: 8px;
+            background: $mainGreen;
+            padding: 18px;
+            z-index: -2;
+
+            @include breakpoints(md) {
+                padding: 16px;
+            }
+        }
+
+        &::before {
+            top: -4px;
+            left: 4px;
+            background: $subGreat;
+            padding: 22px;
+            z-index: -3;
+            opacity: 0.3;
+
+            @include breakpoints(md) {
+                padding: 20px;
+            }
+        }
+    }
+
+    &__svg {
+        fill: $backgroundColor;
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    &__sub-title {
+        margin: 8px 0 0 25px;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+            margin: 8px 0 0 15px;
+        }
+    }
+
+    &__img-block {
+        aspect-ratio: 16/10;
+        overflow: hidden;
+        width: 59%;
+
+        @include breakpoints(md) {
+            margin: 0 auto;
+            min-width: 475px;
+            aspect-ratio: 16/11;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+            min-width: 200px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 16/10;
+        object-fit: cover;
+
+        @include breakpoints(md) {
+            aspect-ratio: 16/11;
+            min-width: 475px;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+            min-width: 200px;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.corporate-clients-page {
+    &__img {
+    }
+
+    &__text-block {
+        margin: 240px 0;
+
+        @include breakpoints(md) {
+            margin: 180px 0;
+        }
+
+        @include breakpoints(sm) {
+            margin: 90px 0;
+        }
+
+        @include breakpoints(xs) {
+            margin: 70px 0;
+        }
+    }
+
+    &__margin-play {
+        display: none;
+    }
+
+    &__block-img {
+        height: 600px;
+
+        @include breakpoints(md) {
+            height: 500px;
+        }
+
+        @include breakpoints(sm) {
+            height: 350px;
+        }
+
+        @include breakpoints(xs) {
+            height: 300px;
+        }
+    }
+
+    &__title {
+        @include breakpoints(md) {
+            font-size: 44px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 0 auto;
+            width: 80%;
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        @include breakpoints(md) {
+            width: 60%;
+            font-size: 18px;
+        }
+
+        @include breakpoints(sm) {
+            width: 90%;
+            font-size: 14px;
+        }
+    }
+}

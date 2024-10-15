@@ -362,3 +362,19 @@
         margin-top: 50px;
     }
 }
+
+.corporate-clients__margin-contact {
+    margin-top: 102px;
+
+    @include breakpoints(md) {
+        margin-top: 150px;
+    }
+
+    @include breakpoints(sm) {
+        margin-top: 70px;
+    }
+
+    @include breakpoints(xs) {
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,94 @@
+.corporate-clients {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        margin: 82px auto 0;
+
+        @include breakpoints(md) {
+            padding-left: 0;
+        }
+
+        @include breakpoints(sm) {
+            display: block;
+        }
+    }
+
+    &__title {
+        width: 40%;
+
+        @include breakpoints(md) {
+            font-size: 30px;
+            width: 30%;
+        }
+
+        @include breakpoints(sm) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &__text-section {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        margin: 13px 0 0;
+
+        @include breakpoints(md) {
+            margin: 0;
+            width: 65%;
+            gap: 15px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 30px;
+            flex-direction: column;
+            width: 100%;
+            gap: 40px;
+        }
+
+        @include breakpoints(xs) {
+            gap: 25px;
+        }
+    }
+
+    &__text-block {
+        height: 113%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 43%;
+
+        @include breakpoints(md) {
+            width: 65%;
+        }
+
+        @include breakpoints(sm) {
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+        }
+
+        @include breakpoints(xs) {
+            gap: 15px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 150%;
+        width: 100%;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+        }
+
+        @include breakpoints(sm) {
+            text-align: center;
+        }
+
+        &-bolt {
+            font-weight: 700;
+        }
+    }
+}

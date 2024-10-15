@@ -6,7 +6,7 @@ import { filterProducts } from "./catalog-products/filter-products.js";
 import { useCards } from "./base/product-cards.js";
 import { useGetImg } from "./base/use-img.js";
 import { fireBaseService } from "./base/fire-base-service.js";
-// import { buttonChange } from "./personal-cabinet/button-cange.js";
+import { select } from "./base/select.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         swiper(element.swiper, element.prev, element.next, "auto", 0);
     });
     swiper(
-        getElement(".swiper"),
+        getElement(".eco-nuts__swiper"),
         getElement(".eco-nuts__button-prev"),
         getElement(".eco-nuts__button-next"),
         "auto",
@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     for (let i = 0; i < productCatalogElement.length; i++) {
         useGetImg(productCatalogImages[i], productCatalogElement[i]);
     }
+
+    select(getElement(".product-filter__current-weight", "all"), getElement(".product-filter__select-weight", "all"));
+    select(getElement(".product-filter__current-taste", "all"), getElement(".product-filter__select-taste", "all"));
 
     useCards(
         getElement(".product__cards"),

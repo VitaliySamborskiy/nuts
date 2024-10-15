@@ -1,22 +1,7 @@
 import { getElement } from "./base/get-element-dom.js";
 import { swiper } from "./base/swiper.js";
-import { useGetFirestore } from "./base/use-fire-store.js";
 
 export async function swiperInit(app) {
-    // const videoData = await useGetFirestore(app, "videoId", "main-pages");
-    // const playersMainPage = getElement(".manufacturing__player", "all");
-    // swiper(
-    //     getElement(".manufacturing__swiper-video"),
-    //     getElement(".manufacturing__button-prev"),
-    //     getElement(".manufacturing__button-next"),
-    //     "auto",
-    //     0,
-    //     null,
-    //     playersMainPage,
-    //     videoData.mainPage,
-    //     getElement(".manufacturing__swiper"),
-    //     getElement(".manufacturing__preview-img-block", "all"),
-    // );
     swiper(
         getElement(".news-swiper__cards"),
         getElement(".news-swiper__prev-button"),

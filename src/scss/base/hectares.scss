@@ -159,3 +159,27 @@
         margin: 65px auto 0;
     }
 }
+
+.corporate-clients__company-hectares-margin {
+    margin: 145px auto 0;
+
+    @include breakpoints(md) {
+        margin: 90px auto 0;
+    }
+
+    @include breakpoints(sm) {
+        margin: 55px auto 0;
+    }
+}
+
+.payment-delivery__company-hectares-margin {
+    margin: 126px auto 0;
+
+    @include breakpoints(md) {
+        margin: 90px auto 0;
+    }
+
+    @include breakpoints(sm) {
+        margin: 55px auto 0;
+    }
+}

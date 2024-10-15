@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="registration page on the website" />
+        <link rel="icon" type="image/svg+xml" href="../assets/img/logo-1.svg" />
+        <link rel="stylesheet" href="../scss/wholesale-corporate-clients.scss" />
+        <title>Оптовым и корпоративным клиентам</title>
+        <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
+        ></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <load src="src/components/base/header.html" />
+            <main class="main">
+                <load
+                    src="src/components/base/main-page.html"
+                    main-page-title="Орех Причерноморья"
+                    main-page-text="Единственный в Украине сад совместного
+                    выращивание фундука и грецкого ореха"
+                    main-page-text-block-class="corporate-clients-page__text-block"
+                    main-page-class=""
+                    main-page-play-class="corporate-clients-page__margin-play"
+                    main-page-img-block-class="corporate-clients-page__block-img"
+                    main-page-img-class="corporate-clients-page__img"
+                    main-page-title-class="corporate-clients-page__title"
+                    main-page-text-class="corporate-clients-page__text"
+                />
+                <load src="src/components/wholesale-corporate-clients/corporate-clients-info.html" />
+                <load src="src/components/wholesale-corporate-clients/forms-cooperation.html" />
+                <load src="src/components/base/hectares.html" margin-top="corporate-clients__company-hectares-margin" />
+                <load
+                    src="src/components/base/eco-section.html"
+                    eco-img-class="eco__img"
+                    eco-title="Эко продукция"
+                    eco-text="Выращиваем каждое деревцо с любовью, на экологически
+                    чистой земле, без использования пестицидов и химии"
+                    eco-class="corporate-clients__eco-margin"
+                    eco-text-block-class="corporate-clients__block"
+                    eco-title-class="eco__title"
+                    eco-text-class="eco__text"
+                    eco-img-block-class="eco__img-block"
+                />
+                <load src="src/components/base/contact.html" margin-top="corporate-clients__margin-contact" />
+            </main>
+            <load src="src/components/base/footer.html" margin-top="corporate-clients__margin-footer" />
+            <load src="src/components/base/sprite.html" />
+        </div>
+        <script type="module" src="/src/js/main.js"></script>
+        <script type="module" src="/src/js/wholesale-corporate-clients.js"></script>
+    </body>
+</html>

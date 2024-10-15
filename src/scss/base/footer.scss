@@ -175,3 +175,15 @@
         margin-top: 45px;
     }
 }
+
+.corporate-clients__margin-footer {
+    margin-top: 77px;
+
+    @include breakpoints(md) {
+        margin-top: 60px;
+    }
+
+    @include breakpoints(sm) {
+        margin-top: 30px;
+    }
+}

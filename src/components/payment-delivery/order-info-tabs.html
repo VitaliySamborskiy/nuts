@@ -1,0 +1,182 @@
+<section class="order-tabs__container">
+    <div class="order-tabs__content">
+        <nav class="order-tabs__tabs-header">
+            <ul class="order-tabs__tabs-items">
+                <li class="order-tabs__tab-item">
+                    <button class="order-tabs__tab-button order-tabs__tab-button_active" data-id="walletContainer">
+                        <svg class="order-tabs__tab-svg order-tabs__tab-svg_active">
+                            <use href="#wallet"></use>
+                        </svg>
+                        <span class="order-tabs__tab-text">Оплата заказа</span>
+                    </button>
+                </li>
+                <li class="order-tabs__tab-item">
+                    <button class="order-tabs__tab-button" data-id="truckContainer">
+                        <svg class="order-tabs__tab-svg">
+                            <use href="#truck"></use>
+                        </svg>
+                        <span class="order-tabs__tab-text">Доставка партии</span>
+                    </button>
+                </li>
+                <li class="order-tabs__tab-item">
+                    <button class="order-tabs__tab-button" data-id="boxContainer">
+                        <svg class="order-tabs__tab-svg">
+                            <use href="#box"></use>
+                        </svg>
+                        <span class="order-tabs__tab-text">Возврат товара</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="order-tabs__body">
+            <div class="order-tabs__body-block order-tabs__body-block_active" id="walletContainer">
+                <div class="order-tabs__content-text">
+                    <h2 class="order-tabs__title">Способы оплаты</h2>
+                    <ul class="order-tabs__text-items">
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#bank"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Безналичный расчет</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Вы можете выбрать “получить реквизиты” для дальнейшей оплаты на карту, или в терминалах.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#cards"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Оплата с помощью банковской карты</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Оплатите Ваш заказ картой любого банка онлайн (LiqPay/Приват24)
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#wallet2"></use>
+                                    </svg>
+                                </div>
+
+                                <h3 class="order-tabs__sub-title">Наличный расчет</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Оплата заказов наложенным платежом в отделении Новой Почты, или наличными курьерами
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <picture class="order-tabs__img-block">
+                    <img class="order-tabs__img" src="" />
+                </picture>
+            </div>
+            <div class="order-tabs__body-block" id="truckContainer">
+                <div class="order-tabs__content-text">
+                    <h2 class="order-tabs__title">Доставка партии</h2>
+                    <ul class="order-tabs__text-items">
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#truck"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Курьерская доставка</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Доставка партии курьерской службой до двери вашего офиса или склада.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#delivery"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Самовывоз</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Вы можете забрать партию товара самостоятельно с нашего склада в удобное для вас время.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#company"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Транспортная компания</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Отправка партии через выбранную вами транспортную компанию в любой регион.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <picture class="order-tabs__img-block">
+                    <img class="order-tabs__img" src="" />
+                </picture>
+            </div>
+            <div class="order-tabs__body-block" id="boxContainer">
+                <div class="order-tabs__content-text">
+                    <h2 class="order-tabs__title">Возврат товара</h2>
+                    <ul class="order-tabs__text-items">
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#return"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Оформление возврата</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Заполните форму возврата на сайте или обратитесь в службу поддержки.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#cards"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Возврат средств</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Возврат средств осуществляется на карту или расчетный счет в течение 3-5 рабочих дней.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#exchange"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Обмен товара</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Вы можете обменять товар на аналогичный в пунктах выдачи или оформить доставку курьером.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <picture class="order-tabs__img-block">
+                    <img class="order-tabs__img" src="" />
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>

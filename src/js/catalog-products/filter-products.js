@@ -4,7 +4,10 @@ import { useSetQueryParameter, useGetQueryParameter } from "../base/querry-param
 export function filterProducts(arrCards, applyButton, crossButton, lowerPrice, higherPrice, mainContainer) {
     const saveCards = arrCards;
     const cardsPrice = Array.from(arrCards);
-    let appliedFilters = {};
+    let appliedFilters = {
+        weight: "Масса",
+        taste: "Вкус",
+    };
 
     applyButton.addEventListener("click", () => {
         observerSelectsStatus(appliedFilters);
@@ -18,6 +21,9 @@ export function filterProducts(arrCards, applyButton, crossButton, lowerPrice, h
         useSetQueryParameter(["weight", "taste"], Object.values(appliedFilters));
     });
 
+    if (window.location.search === "") {
+        useSetQueryParameter(["weight", "taste"], Object.values(appliedFilters));
+    }
     priseFilter(higherPrice, mainContainer, cardsPrice, "descending");
     priseFilter(lowerPrice, mainContainer, cardsPrice, "ascending");
     getQueryParameter(appliedFilters, arrCards);

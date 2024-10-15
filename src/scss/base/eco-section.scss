@@ -91,12 +91,37 @@
     }
 }
 
+.corporate-clients__eco-margin {
+    margin-top: 85px;
+
+    @include breakpoints(md) {
+        margin-top: 70px;
+    }
+}
+
 .about-company__block {
     padding: 260px 0 0;
     gap: 20px;
 
     @include breakpoints(xl) {
         padding: 160px 0 0;
+    }
+
+    @include breakpoints(md) {
+        padding: 110px 0 0;
+    }
+
+    @include breakpoints(sm) {
+        padding: 90px 0 0;
+    }
+}
+
+.corporate-clients__block {
+    padding: 225px 0 0;
+    gap: 20px;
+
+    @include breakpoints(xl) {
+        padding: 150px 0 0;
     }
 
     @include breakpoints(md) {

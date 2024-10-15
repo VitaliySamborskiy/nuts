@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="registration page on the website" />
+        <link rel="icon" type="image/svg+xml" href="../assets/img/logo-1.svg" />
+        <link rel="stylesheet" href="../scss/payment-delivery.scss" />
+        <title>Оплата и доставка</title>
+        <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
+        ></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <load src="src/components/base/header.html" />
+            <main class="main">
+                <load
+                    src="src/components/base/main-page.html"
+                    main-page-title="Оплата и доставка"
+                    main-page-text-block-class="payment-delivery__text-block"
+                    main-page-class=""
+                    main-page-play-class="hidden"
+                    main-page-img-block-class="payment-delivery__block-img"
+                    main-page-img-class="payment-delivery__img"
+                    main-page-title-class="payment-delivery__title"
+                    main-page-text-class="hidden"
+                />
+                <load src="src/components/payment-delivery/order-info-tabs.html" />
+                <load src="src/components/base/hectares.html" margin-top="payment-delivery__company-hectares-margin" />
+                <load
+                    src="src/components/base/main-goal.html"
+                    main-goal-img-class="main-goal__img"
+                    main-goal-title="Наша главная цель - получить максимальную прибыль с одного гектара"
+                    main-goal-text="Cмотреть видео о производстве"
+                    main-goal-class="main-goal__content"
+                    main-goal-text-block-class="main-goal__block"
+                    main-goal-title-class="main-goal__title"
+                    main-goal-play-class="main-goal__button"
+                    main-goal-text-class="main-goal__text"
+                    main-goal-img-block-class="main-goal__img-block"
+                />
+                <load src="src/components/base/contact.html" margin-top="corporate-clients__margin-contact" />
+            </main>
+            <load src="src/components/base/footer.html" margin-top="corporate-clients__margin-footer" />
+            <load src="src/components/base/sprite.html" />
+        </div>
+        <script type="module" src="/src/js/main.js"></script>
+        <script type="module" src="/src/js/payment-delivery.js"></script>
+    </body>
+</html>
