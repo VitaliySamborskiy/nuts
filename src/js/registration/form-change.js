@@ -1,4 +1,4 @@
-import { useGetQueryParameter, useNewQueryParameter, useSetQueryParameter } from "../base/querry-parameter.js";
+import { useGetQueryParameter, useSetQueryParameter } from "../base/querry-parameter.js";
 import { renderForm } from "./renders-form.js";
 import { getElement } from "../base/get-element-dom.js";
 
@@ -25,7 +25,7 @@ export function useFormChange(headerTabs, bodyTabs) {
 
     const queryParameterSearch = new URLSearchParams(window.location.search);
     if (queryParameterSearch.get("legalType") === null) {
-        useNewQueryParameter(["userType", "userBody", "legalType"], Object.values(dataAttributesType));
+        useSetQueryParameter(["userType", "userBody", "legalType"], Object.values(dataAttributesType));
     } else {
         getQueryParameter(dataAttributesType, headerTabs, bodyTabs, bodyChangesItems, elementRadioInputs);
     }
