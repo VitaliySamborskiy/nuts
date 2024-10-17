@@ -1,25 +1,28 @@
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { getElement } from "./get-element-dom.js";
 import { useRenderPopupProduct } from "./render-popup-products.js";
+import { setProduct } from "./services/local-storage.js";
 
-export function useCards(cards, popup, popupBlock, cross) {
+export function useCards(cards, popup, popupBlock, cross, dataArr) {
     const scrollableElement = getElement(".popup__scroll");
     let popupStatus;
 
     cards.addEventListener("click", (event) => {
-        event.preventDefault();
-        const card = event.target.closest(".product__card-search");
-        const dataArr = event.target.closest(".product__card");
+        const cardSearch = event.target.closest(".base-product__search");
+        const buttonNext = event.target.closest(".base-product__button-next");
+        const buttonPrev = event.target.closest(".base-product__button-prev");
+        const card = event.target.closest(".product__link");
 
-        if (card) {
+        if (cardSearch) {
+            event.preventDefault();
             popupStatus = true;
             clickSearch(popup, popupBlock, popupStatus);
             disablePageScroll(scrollableElement);
             useRenderPopupProduct(
                 {
-                    title: dataArr.getAttribute("data-title"),
-                    prices: JSON.parse(dataArr.getAttribute("data-prises")),
-                    images: JSON.parse(dataArr.getAttribute("data-imgUrl")),
+                    title: card.parentElement.getAttribute("data-title"),
+                    prices: JSON.parse(card.parentElement.getAttribute("data-prises")),
+                    images: JSON.parse(card.parentElement.getAttribute("data-imgUrl")),
                 },
                 {
                     title: getElement(".popup__title"),
@@ -29,6 +32,21 @@ export function useCards(cards, popup, popupBlock, cross) {
                     popupBlock: popupBlock,
                 },
             );
+        }
+
+        if (buttonNext) {
+            event.preventDefault();
+        }
+
+        if (buttonPrev) {
+            event.preventDefault();
+        }
+
+        if (card) {
+            const resultData = dataArr.filter((data) => {
+                return data.art === card.parentElement.getAttribute("data-arc");
+            });
+            setProduct(resultData);
         }
     });
 

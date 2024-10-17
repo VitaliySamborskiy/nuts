@@ -1,14 +1,15 @@
-import { useGetFirestore } from "./base/use-fire-store.js";
+import { useGetFirestore } from "./base/fire-base-functions/use-fire-store.js";
 import { useRenderCards } from "./base/use-render-cards.js";
 import { getElement } from "./base/get-element-dom.js";
 import { swiper } from "./base/swiper.js";
 import { useRenderNewsCards } from "./base/news-render-cards.js";
 import { useCards } from "./base/product-cards.js";
-import { useGetImg } from "./base/use-img.js";
-import { fireBaseService } from "./base/fire-base-service.js";
+import { useGetImg } from "./base/fire-base-functions/use-img.js";
+import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
+    const products = await useGetFirestore(app, "products");
     const videoData = await useGetFirestore(app, "videoId", "main-pages");
     const playersMainPage = getElement(".manufacturing__player", "all");
     const dataNews = await useGetFirestore(app, "news");
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".manufacturing__preview-img-block", "all"),
         "manufacturing__preview-img-block_active",
     );
-    const swipersCard = useRenderCards(await useGetFirestore(app, "products"), getElement(".product__cards"));
+    const swipersCard = useRenderCards(products, getElement(".product__cards"));
     swipersCard.forEach((element) => {
         swiper(element.swiper, element.prev, element.next, "auto", 0);
     });
@@ -44,5 +45,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".popup__content"),
         getElement(".popup__background-block"),
         getElement(".popup__cross"),
+        products,
     );
 });

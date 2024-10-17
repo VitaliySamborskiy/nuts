@@ -12,10 +12,10 @@ import { getFormInfo } from "./get-form.js";
 import { useRenderUserInfo } from "./header-render-user.js";
 // import { useGetCookie, useSetCookie } from "./cookies.js";
 import { useInputClear } from "./input-clear.js";
-import { useGetFirestore, useSetUserData } from "./use-fire-store.js";
-import { useSetImg } from "./use-img.js";
+import { useGetFirestore, useSetUserData } from "./fire-base-functions/use-fire-store.js";
+import { useSetImg } from "./fire-base-functions/use-img.js";
 import { useGetFormSelects } from "./get-form.js";
-import { userService } from "./user-service.js";
+import { userService } from "./services/user-service.js";
 import { Notify } from "notiflix/build/notiflix-notify-aio.js";
 
 let auth;

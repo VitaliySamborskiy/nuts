@@ -1,0 +1,333 @@
+.product-page {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 130px;
+        padding-left: 20px;
+        gap: 20px;
+
+        @include breakpoints(xl) {
+            margin-top: 100px;
+        }
+
+        @include breakpoints(md) {
+            flex-wrap: wrap;
+            margin-top: 70px;
+            row-gap: 25px;
+            column-gap: 10px;
+            padding-left: 0;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 50px;
+        }
+    }
+
+    &__swiper-block {
+        margin-top: 5px;
+        position: relative;
+        width: 43%;
+        max-height: 570px;
+        border: 2px solid $subGreat;
+        overflow: hidden;
+
+        @include breakpoints(md) {
+            aspect-ratio: 1/1;
+            max-height: 470px;
+            width: 46%;
+        }
+
+        @include breakpoints(md) {
+            min-width: 415px;
+            margin: 0 auto;
+        }
+
+        @include breakpoints(sm) {
+            min-width: 0;
+            width: 100%;
+            max-width: 550px;
+            aspect-ratio: 1/1;
+            max-height: 100%;
+        }
+    }
+
+    &__flag {
+        z-index: 7;
+        left: 0;
+    }
+
+    &__block-img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        aspect-ratio: 1/1;
+        height: 570px;
+
+        @include breakpoints(md) {
+            max-height: 470px;
+        }
+
+        @include breakpoints(sm) {
+            height: auto;
+            max-height: 100%;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__search-background {
+        top: 7%;
+        left: 93%;
+    }
+
+    &__circle-button {
+        background: $subGreat;
+
+        &:hover {
+            background: $mainGreen;
+        }
+    }
+
+    &__search-svg {
+        margin-top: 3px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__text-content {
+        padding-right: 4px;
+        width: 51.5%;
+
+        @include breakpoints(md) {
+            padding-right: 0;
+            min-width: 415px;
+            margin: 0 auto;
+        }
+
+        @include breakpoints(sm) {
+            min-width: 0;
+            width: 100%;
+            max-width: 550px;
+        }
+    }
+
+    &__header-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__type {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+        color: $mainGreen;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+        }
+    }
+
+    &__art {
+        font-size: 16px;
+        font-family: $supportFonts;
+        letter-spacing: 0.01em;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 107%;
+        width: 80%;
+
+        @include breakpoints(md) {
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+
+    &__info-items {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        @include breakpoints(md) {
+            margin-top: 20px;
+            gap: 12px;
+        }
+
+        @include breakpoints(sx) {
+            margin-top: 10px;
+            gap: 5px;
+        }
+    }
+
+    &__info-item {
+        display: flex;
+        justify-content: space-between;
+        width: 96%;
+
+        @include breakpoints(md) {
+            width: 100%;
+            gap: 15px;
+        }
+
+        @include breakpoints(xs) {
+            gap: 05px;
+        }
+    }
+
+    &__info-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 106%;
+
+        @include breakpoints(md) {
+            font-size: 14px;
+            min-width: 132px;
+        }
+
+        @include breakpoints(sm) {
+            min-width: 117px;
+        }
+    }
+
+    &__info-text {
+        max-width: 365px;
+        width: 100%;
+        height: 40px;
+        font-size: 15px;
+        line-height: 135%;
+        font-family: $supportFonts;
+
+        @include breakpoints(md) {
+            min-height: 40px;
+            height: 100%;
+            font-size: 14px;
+            max-width: 345px;
+        }
+    }
+
+    &__important-block {
+        width: 99%;
+        margin-top: 34px;
+        padding: 20px 11px 25px 17px;
+        background: $backgroundColorProductPage;
+        display: flex;
+        align-items: center;
+        border: solid 1px $listBorder;
+        gap: 30px;
+
+        @include breakpoints(md) {
+            margin-top: 20px;
+            padding: 15px 11px 17px 12px;
+            gap: 15px;
+            width: 100%;
+        }
+    }
+
+    &__important-svg {
+        max-width: 28px;
+        max-height: 28px;
+        background: $subGreat;
+        padding: 2px 0 5px;
+        border-radius: 50%;
+    }
+
+    &__important-text {
+        font-size: 15px;
+        line-height: 138%;
+        font-family: $supportFonts;
+    }
+
+    &__bottom-buy {
+        font-weight: 700;
+        font-size: 16px;
+        padding: 14px 57px;
+
+        @include breakpoints(md) {
+            padding: 12px 45px;
+        }
+
+        @include breakpoints(xs) {
+            padding: 10px 38px;
+        }
+    }
+
+    &__bottom {
+        margin: 34px 3px 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        gap: 20px;
+
+        @include breakpoints(xl) {
+            max-width: 445px;
+            width: 80%;
+        }
+
+        @include breakpoints(md) {
+            margin: 15px 0 0 auto;
+            width: 100%;
+            max-width: 410px;
+        }
+
+        @include breakpoints(sm) {
+            gap: 10px;
+        }
+    }
+}
+
+.base-product {
+    &__button-prev,
+    &__button-next {
+        opacity: 1;
+        top: 46%;
+    }
+
+    &__bottom-price {
+        margin-top: -10px;
+    }
+
+    &__search {
+        opacity: 1;
+    }
+
+    &__bottom-price-text {
+        font-size: 18px;
+
+        @include breakpoints(sm) {
+            font-size: 14px;
+        }
+    }
+
+    &__bottom-price-regular {
+        font-size: 24px;
+
+        @include breakpoints(sm) {
+            font-size: 14px;
+        }
+    }
+
+    &__bottom-price-discount {
+        font-size: 18px;
+
+        @include breakpoints(sm) {
+            font-size: 14px;
+        }
+    }
+}

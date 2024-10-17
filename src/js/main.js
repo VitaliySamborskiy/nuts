@@ -3,7 +3,7 @@ import { getImages } from "./get-images.js";
 import { swiperInit } from "./swiper-init.js";
 import { selects } from "./selects.js";
 import { useUserStateChanged } from "./base/autintificate.js";
-import { fireBaseService } from "./base/fire-base-service.js";
+import { fireBaseService } from "./base/services/fire-base-service.js";
 // import { notificationsInit } from "./base/notifications.js";
 
 document.addEventListener("DOMContentLoaded", async function () {

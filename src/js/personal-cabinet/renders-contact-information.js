@@ -1,4 +1,4 @@
-import { useGetImg } from "../base/use-img.js";
+import { useGetImg } from "../base/fire-base-functions/use-img.js";
 import { getElement } from "../base/get-element-dom.js";
 import { useNumberMask } from "../base/phone-mask.js";
 import { useInputActive } from "../base/input-active.js";

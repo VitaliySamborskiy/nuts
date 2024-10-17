@@ -1,10 +1,10 @@
 import { useMenuPopup } from "./personal-cabinet/popup-menu.js";
 import { getElement } from "./base/get-element-dom.js";
-import { useGetImg } from "./base/use-img.js";
+import { useGetImg } from "./base/fire-base-functions/use-img.js";
 import { useInputClear } from "./base/input-clear.js";
 import { buttonChange } from "./personal-cabinet/button-cange.js";
-import { userService } from "./base/user-service.js";
-import { fireBaseService } from "./base/fire-base-service.js";
+import { userService } from "./base/services/user-service.js";
+import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();

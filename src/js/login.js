@@ -3,7 +3,7 @@ import { getElement } from "./base/get-element-dom.js";
 import { useLoginUser } from "./base/autintificate.js";
 import { useValidate } from "./base/form-validate.js";
 import { useInputClear } from "./base/input-clear.js";
-import { fireBaseService } from "./base/fire-base-service.js";
+import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();

@@ -1,6 +1,6 @@
 import { getFormInfo } from "../base/get-form.js";
-import { getDocumentsId, useUpdateData } from "../base/use-fire-store.js";
-import { deleteImage, useSetImg } from "../base/use-img.js";
+import { getDocumentsId, useUpdateData } from "../base/fire-base-functions/use-fire-store.js";
+import { deleteImage, useSetImg } from "../base/fire-base-functions/use-img.js";
 import { updateUserProfile } from "../base/autintificate.js";
 import { useRenderUserInfo } from "../base/header-render-user.js";
 import { getElement } from "../base/get-element-dom.js";

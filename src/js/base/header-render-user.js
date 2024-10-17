@@ -1,4 +1,4 @@
-import { useGetImg } from "./use-img.js";
+import { useGetImg } from "./fire-base-functions/use-img.js";
 import { getElement } from "./get-element-dom.js";
 import { signOutUser } from "./autintificate.js";
 

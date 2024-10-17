@@ -1,4 +1,4 @@
-import { useGetImg } from "./base/use-img.js";
+import { useGetImg } from "./base/fire-base-functions/use-img.js";
 import { getElement } from "./base/get-element-dom.js";
 
 export function getImages() {

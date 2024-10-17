@@ -1,0 +1,236 @@
+.base-product {
+    &__button {
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 26%;
+            width: 23px;
+            height: 23px;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+            @include breakpoints(sm) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &-prev {
+            left: 4%;
+            transform: rotate(90deg);
+        }
+
+        &-next {
+            right: 4%;
+            transform: rotate(270deg);
+        }
+    }
+
+    &__bottom {
+        width: 98%;
+        margin-top: 31px;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoints(sm) {
+            margin-top: 13px;
+        }
+
+        &-price {
+            display: flex;
+            align-items: center;
+
+            &-text {
+                margin-right: 9px;
+                font-weight: 600;
+                font-size: 15px;
+                letter-spacing: 0.01em;
+                font-family: $supportFonts;
+
+                @include breakpoints(md) {
+                    margin-right: 5px;
+                    font-size: 14px;
+                }
+            }
+
+            &-green {
+                color: $mainGreen;
+            }
+
+            &-gray {
+                color: $gray;
+            }
+
+            &-discount {
+                margin: 5px 0 0 10px;
+                position: relative;
+                display: flex;
+                align-items: end;
+                font-size: 16px;
+                letter-spacing: 0.01em;
+                font-family: $supportFonts;
+
+                @include breakpoints(md) {
+                    margin: 5px 0 0 3px;
+                    font-size: 14px;
+                }
+
+                &:after {
+                    top: 54%;
+                    position: absolute;
+                    display: flex;
+                    background: $gray;
+                    content: "";
+                    height: 2px;
+                    width: 100%;
+                }
+
+                span {
+                    margin-left: 2px;
+                    font-size: 13px;
+
+                    @include breakpoints(sm) {
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            &-regular {
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 0.01em;
+                font-family: $supportFonts;
+
+                @include breakpoints(md) {
+                    font-size: 15px;
+                }
+
+                span {
+                    margin-left: 2px;
+                    font-size: 15px;
+
+                    @include breakpoints(sm) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        &-buy {
+            padding: 11px 36px;
+            font-size: 14px;
+
+            @include breakpoints(md) {
+                padding: 7px 34px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__flag {
+        position: absolute;
+        top: 4%;
+        left: -3px;
+        width: 82px;
+        height: 31px;
+        z-index: 0;
+        clip-path: polygon(
+            5.042% 0%,
+            5.042% 0%,
+            4.901% 0.087%,
+            4.518% 0.38%,
+            3.953% 0.928%,
+            3.267% 1.778%,
+            2.521% 2.978%,
+            1.775% 4.577%,
+            1.089% 6.624%,
+            0.524% 9.165%,
+            0.141% 12.249%,
+            0% 15.925%,
+            0% 15.925%,
+            0% 21.431%,
+            0% 29.484%,
+            0% 39.348%,
+            0% 50.285%,
+            0% 61.561%,
+            0% 72.437%,
+            0% 82.179%,
+            0% 90.049%,
+            0% 95.31%,
+            0% 97.228%,
+            0% 97.228%,
+            0.02% 96.77%,
+            0.094% 95.525%,
+            0.242% 93.69%,
+            0.484% 91.463%,
+            0.84% 89.039%,
+            1.331% 86.615%,
+            1.976% 84.387%,
+            2.796% 82.553%,
+            3.812% 81.308%,
+            5.042% 80.849%,
+            100% 80.849%,
+            90.317% 38.984%,
+            100% 0%,
+            5.042% 0%,
+            5.042% 0%
+        );
+
+        &-new {
+            padding: 7px 15px 12px 12px;
+            background: $flagCardNew;
+        }
+
+        &-discount {
+            padding: 7px 23px 12px 20px;
+            background: $flagCardDiscount;
+        }
+    }
+
+    &__flag-text {
+        color: $backgroundColor;
+        font-weight: 800;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+    }
+
+    &__svg-arrow {
+        width: 23px;
+        height: 23px;
+        fill: $mainPageImgBlur;
+        z-index: 2;
+        transition: fill 0.5s ease-in-out;
+
+        @include breakpoints(sm) {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            fill: $mainGreen;
+        }
+    }
+
+    &__search {
+        position: absolute;
+        top: 27%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $cardSearch;
+        padding: 5px;
+        z-index: 2;
+        border-radius: 100px;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.product__card {
+    &:hover {
+        .base-product__button-prev,
+        .base-product__button-next {
+            opacity: 1;
+        }
+    }
+}

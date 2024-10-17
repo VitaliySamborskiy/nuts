@@ -1,5 +1,5 @@
-import { fireBaseService } from "./base/fire-base-service.js";
-import { useGetImg } from "./base/use-img.js";
+import { fireBaseService } from "./base/services/fire-base-service.js";
+import { useGetImg } from "./base/fire-base-functions/use-img.js";
 import { getElement } from "./base/get-element-dom.js";
 import { tabSection } from "./base/tabs.js";
 

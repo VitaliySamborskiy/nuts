@@ -1,10 +1,10 @@
-import { useGetFirestore } from "./base/use-fire-store.js";
+import { useGetFirestore } from "./base/fire-base-functions/use-fire-store.js";
 import { useRenderNewsCards } from "./base/news-render-cards.js";
 import { getElement } from "./base/get-element-dom.js";
-import { useGetImg } from "./base/use-img.js";
+import { useGetImg } from "./base/fire-base-functions/use-img.js";
 import { swiper } from "./base/swiper.js";
 import { useGalleryRenders } from "./gallery/gallery.js";
-import { fireBaseService } from "./base/fire-base-service.js";
+import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();

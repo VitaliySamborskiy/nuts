@@ -1,4 +1,4 @@
-import { useGetImg } from "./use-img.js";
+import { useGetImg } from "./fire-base-functions/use-img.js";
 
 export function useRenderCards(arrData, element) {
     let fragment = document.createDocumentFragment();
@@ -18,16 +18,16 @@ export function useRenderCards(arrData, element) {
 
         html = `${
             data.action || data.newProduct
-                ? `<div class ="product__card-flag ${
-                      data.action ? "product__card-flag-discount" : "product__card-flag-new"
+                ? `<div class ="base-product__flag product-page__flag ${
+                      data.action ? "base-product__flag-discount" : "base-product__flag-new"
                   }">
-                <p class ="product__card-flag-text">${data.action ? "АКЦИЯ" : "НОВИНКА"}</p>
+                <p class ="base-product__flag-text">${data.action ? "АКЦИЯ" : "НОВИНКА"}</p>
             </div>`
                 : ""
-        }  
-            <a href="#" class="">
+        }
+            <a href="/nuts/src/pages/product-page.html" class="product__link">
                 <div class="product__card-swiper">
-                    <div class="product__card-search">
+                    <div class="base-product__search">
                     <button class="circle-button" aria-label="product preview">
                     <svg class='circle-button-svg'>
                         <use href='#search'></use></svg>
@@ -38,13 +38,13 @@ export function useRenderCards(arrData, element) {
                         ${img}
                         </div>
                     </div>
-                    <div class="product__card-button-prev">
-                        <svg class="product__card-svg-arrow">
+                    <div class="base-product__button-prev">
+                        <svg class="base-product__svg-arrow">
                             <use href="#arrow"></use>
                         </svg>
                     </div>
-                    <div class="product__card-button-next">
-                        <svg class="product__card-svg-arrow">
+                    <div class="base-product__button-next">
+                        <svg class="base-product__svg-arrow">
                             <use href="#arrow"></use>
                         </svg>
                     </div>
@@ -73,20 +73,20 @@ export function useRenderCards(arrData, element) {
                             </div>
                         </div>
                     </div>
-                    <div class="product__card-bottom">
-                        <div class="product__card-bottom-price">
-                            <p class="product__card-bottom-price-text">Цена:</p>
+                    <div class="base-product__bottom">
+                        <div class="base-product__bottom-price">
+                            <p class="base-product__bottom-price-text">Цена:</p>
                             ${
                                 data.price && data.cationPrice
-                                    ? `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
+                                    ? `<p class="base-product__bottom-price-regular base-product__bottom-price-green">
                             ${data.cationPrice}<span>грн.</span></p>
-                            <p class="product__card-bottom-price-discount product__card-bottom-price-gray">
+                            <p class="base-product__bottom-price-discount base-product__bottom-price-gray">
                             ${data.price}<span>грн.</span></p>`
-                                    : `<p class="product__card-bottom-price-regular product__card-bottom-price-green">
+                                    : `<p class="base-product__bottom-price-regular base-product__bottom-price-green">
                             ${data.price}<span>грн.</span></p>`
                             }
                         </div>
-                        <button class="green-button product__card-bottom-buy">
+                        <button class="green-button base-product__bottom-buy">
                             <span>Купить</span>
                         </button>
                     </div>
@@ -95,6 +95,7 @@ export function useRenderCards(arrData, element) {
 
         const cardProduct = document.createElement("div");
         cardProduct.classList.add("product__card");
+
         cardProduct.setAttribute("data-arc", data.art);
         cardProduct.setAttribute("data-weight", data.weight);
         cardProduct.setAttribute("data-taste", data.taste);
@@ -106,8 +107,8 @@ export function useRenderCards(arrData, element) {
 
         swiperArr.push({
             swiper: cardProduct.querySelector(`.swiper`),
-            next: cardProduct.querySelector(`.product__card-button-next`),
-            prev: cardProduct.querySelector(`.product__card-button-prev`),
+            next: cardProduct.querySelector(`.base-product__button-next`),
+            prev: cardProduct.querySelector(`.base-product__button-prev`),
         });
 
         for (let i = 0; i < data.imgUrl.length; ++i) {

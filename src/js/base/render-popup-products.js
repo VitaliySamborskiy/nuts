@@ -1,5 +1,5 @@
 import { getElement } from "./get-element-dom.js";
-import { useGetImg } from "./use-img.js";
+import { useGetImg } from "./fire-base-functions/use-img.js";
 import { swiper } from "./swiper.js";
 
 export function useRenderPopupProduct(data, elements) {
@@ -38,7 +38,7 @@ function renderCards(elementWrapper, imgData) {
         img.classList.add("popup__img");
         img.setAttribute("alt", "images-product");
         img.setAttribute("loading", "lazy");
-        img.setAttribute("data-src", data.imgUrl);
+        img.setAttribute("data-src", imgData.imgUrl);
         div.appendChild(img);
         fragment.appendChild(div);
     });
