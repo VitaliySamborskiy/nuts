@@ -3,23 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Check out our product catalogue, where you can choose the most beautiful and delicious products for yourself."
-        />
+        <meta name="description" content="registration page on the website" />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
-        <title>Каталог продукции</title>
+        <title>Оплата и доставка</title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/catalogProducts-BlBAuycy.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/paymentDelivery-MV76r7g_.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-DOuUIK4A.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/local-storage-Dq6mamxl.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-ChdFZbiX.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/querry-parameter-8F5Ngxzv.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/tabs-Cb3knaNC.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/catalogProducts-B000Tt44.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/paymentDelivery-CD52ePCq.css">
     </head>
     <body>
         <div class="wrapper">
@@ -231,12 +226,12 @@
 </header>
 
             <main class="main">
-                <section class="main-page {=$main-page-class}">
-    <div class="main-page__img-block products-page__block-img">
-        <img class="main-page__img products-page__img" src="" alt="main-page-img" />
+                <section class="main-page ">
+    <div class="main-page__img-block payment-delivery__block-img">
+        <img class="main-page__img payment-delivery__img" src="" alt="main-page-img" />
     </div>
-    <div class="main-page__container products-page__text-block">
-        <h2 class="main-page__title products-page__title">Каталог продукции</h2>
+    <div class="main-page__container payment-delivery__text-block">
+        <h2 class="main-page__title payment-delivery__title">Оплата и доставка</h2>
         <p class="main-page__text hidden">{=$main-page-text}</p>
         <div class="main-page__play-block hidden">
             <button class="play-button main-page__play" aria-label="play-video">
@@ -247,201 +242,240 @@
     </div>
 </section>
 
-                <section class="product product__container">
-    <div class="product__main-page hidden">
-        <h2 class="product__main-page-title">Продукция</h2>
-        <p class="product__main-page-text">
-            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника в удобной,
-            надежной, вакуумной упаковке разного объема
-        </p>
-    </div>
-    <div class="product-filter__shop-block {=$class-filter}">
-        <div class="product-filter__block">
-            <p class="product-filter__text">Фильтр</p>
-            <svg class="product-filter__svg"><use href="#filter"></use></svg>
-        </div>
-        <div class="product-filter__filter-block">
-            <div class="select product-filter__select-taste">
-    <div class="product-filter__select-header-taste select__header">
-        <span class="select__current product-filter__current-taste">Вкус</span>
-        <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body product-filter__select-body-taste"><div class='select__item product-filter__item'>сладкий</div>
-                           <div class='select__item product-filter__item'>солоний</div></div>
-</div>
+                <section class="order-tabs__container">
+    <div class="order-tabs__content">
+        <nav class="order-tabs__tabs-header">
+            <ul class="order-tabs__tabs-items">
+                <li class="order-tabs__tab-item">
+                    <button class="order-tabs__tab-button order-tabs__tab-button_active" data-id="walletContainer">
+                        <svg class="order-tabs__tab-svg order-tabs__tab-svg_active">
+                            <use href="#wallet"></use>
+                        </svg>
+                        <span class="order-tabs__tab-text">Оплата заказа</span>
+                    </button>
+                </li>
+                <li class="order-tabs__tab-item">
+                    <button class="order-tabs__tab-button" data-id="truckContainer">
+                        <svg class="order-tabs__tab-svg">
+                            <use href="#truck"></use>
+                        </svg>
+                        <span class="order-tabs__tab-text">Доставка партии</span>
+                    </button>
+                </li>
+                <li class="order-tabs__tab-item">
+                    <button class="order-tabs__tab-button" data-id="boxContainer">
+                        <svg class="order-tabs__tab-svg">
+                            <use href="#box"></use>
+                        </svg>
+                        <span class="order-tabs__tab-text">Возврат товара</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="order-tabs__body">
+            <div class="order-tabs__body-block order-tabs__body-block_active" id="walletContainer">
+                <div class="order-tabs__content-text">
+                    <h2 class="order-tabs__title">Способы оплаты</h2>
+                    <ul class="order-tabs__text-items">
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#bank"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Безналичный расчет</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Вы можете выбрать “получить реквизиты” для дальнейшей оплаты на карту, или в терминалах.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#cards"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Оплата с помощью банковской карты</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Оплатите Ваш заказ картой любого банка онлайн (LiqPay/Приват24)
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#wallet2"></use>
+                                    </svg>
+                                </div>
 
-            <div class="select product-filter__select-weight">
-    <div class="product-filter__select-header-weight select__header">
-        <span class="select__current product-filter__current-weight">Масса</span>
-        <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body product-filter__select-body-weight"><div class='select__item product-filter__item'>30-39</div>
-                           <div class='select__item product-filter__item'>40-49</div>
-                           <div class='select__item product-filter__item'>50-59</div>
-                           <div class='select__item product-filter__item'>60-69</div>
-                           <div class='select__item product-filter__item'>70-99</div>
-                           <div class='select__item product-filter__item'>100-250</div></div>
-</div>
-
-            <div class="product-filter__cost-block">
-                <p class="product-filter__cost-text">Стоимость</p>
-                <div class="product-filter__cost-arrows">
-                    <button class="product-filter__cost-button product-filter__higher-price" aria-label="sort prices from the most expensive to the least expensive products">
-    <span class=""><svg class='product-filter__cost-svg-top'>
-                <use href='#arrow'></use></svg></span>
-</button>
-
-                    <button class="product-filter__cost-button product-filter__lower-price" aria-label="sort prices from the cheapest to the most expensive products">
-    <span class=""><svg class='product-filter__cost-svg-bottom'>
-                    <use href='#arrow'></use></svg></span>
-</button>
-
+                                <h3 class="order-tabs__sub-title">Наличный расчет</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Оплата заказов наложенным платежом в отделении Новой Почты, или наличными курьерами
+                            </p>
+                        </li>
+                    </ul>
                 </div>
+                <picture class="order-tabs__img-block">
+                    <img class="order-tabs__img" src="" />
+                </picture>
+            </div>
+            <div class="order-tabs__body-block" id="truckContainer">
+                <div class="order-tabs__content-text">
+                    <h2 class="order-tabs__title">Доставка партии</h2>
+                    <ul class="order-tabs__text-items">
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#truck"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Курьерская доставка</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Доставка партии курьерской службой до двери вашего офиса или склада.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#delivery"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Самовывоз</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Вы можете забрать партию товара самостоятельно с нашего склада в удобное для вас время.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#company"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Транспортная компания</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Отправка партии через выбранную вами транспортную компанию в любой регион.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <picture class="order-tabs__img-block">
+                    <img class="order-tabs__img" src="" />
+                </picture>
+            </div>
+            <div class="order-tabs__body-block" id="boxContainer">
+                <div class="order-tabs__content-text">
+                    <h2 class="order-tabs__title">Возврат товара</h2>
+                    <ul class="order-tabs__text-items">
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#return"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Оформление возврата</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Заполните форму возврата на сайте или обратитесь в службу поддержки.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#cards"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Возврат средств</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Возврат средств осуществляется на карту или расчетный счет в течение 3-5 рабочих дней.
+                            </p>
+                        </li>
+                        <li class="order-tabs__text-item">
+                            <div class="order-tabs__sub-title-block">
+                                <div class="order-tabs__sub-svg">
+                                    <svg class="order-tabs__svg">
+                                        <use href="#exchange"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="order-tabs__sub-title">Обмен товара</h3>
+                            </div>
+                            <p class="order-tabs__text">
+                                Вы можете обменять товар на аналогичный в пунктах выдачи или оформить доставку курьером.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <picture class="order-tabs__img-block">
+                    <img class="order-tabs__img" src="" />
+                </picture>
             </div>
         </div>
-        <div class="product-filter__end-buttons">
-            <button class="green-button product-filter__apply-button" aria-label="{=$aria-label}">
-    <span class="">Применить</span>
-</button>
-
-            <button class="product-filter__cross-button" aria-label="{=$aria-label}">
-    <span class=""><svg class='product-filter__cross-svg'>
-                    <use href='#cross'></use></svg> Сбросить</span>
-</button>
-
-        </div>
     </div>
-    <div class="product__cards"></div>
-    <a href="/nuts/src/pages/catalog-products.html" class="transparent-button product__button hidden"
-        >Перейти в магазин</a
-    >
-    <button class="transparent-button product__button-load-card" aria-label="{=$aria-label}">
-    <span class="">Загрузить еще</span>
-</button>
-
 </section>
 
-                <section class="popup__content">
-    <div class="popup__background-block">
-        <svg class="popup__cross">
-            <use href="#cross"></use>
-        </svg>
-        <div class="swiper popup__swiper">
-            <div class="swiper-wrapper popup__swiper-wrapper"></div>
-            <button class="popup__button-prev">
-                <svg class="popup__svg-prev">
-                    <use href="#arrow-bracket"></use>
-                </svg>
-            </button>
-            <button class="popup__button-next">
-                <svg class="popup__svg-next">
-                    <use href="#arrow-bracket"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="popup__title-block">
-            <h3 class="popup__title"></h3>
-            <div class="popup__price">
-                <p class="product__card-bottom-price-discount product__card-bottom-price-gray">
-                    <span></span>
-                    <span>грн.</span>
-                </p>
-                <p class="product__card-bottom-price-regular product__card-bottom-price-green">
-                    <span></span>
-                    <span>грн.</span>
-                </p>
+                <section class="hectares__container">
+    <div class="hectares__content payment-delivery__company-hectares-margin">
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">240</h3>
+                <p class="hectares__title-support">Га</p>
             </div>
+            <p class="hectares__text">Cмешанных садов</p>
+        </div>
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">1</h3>
+                <p class="hectares__title-support">Га</p>
+            </div>
+            <p class="hectares__text">Тепличного комплекса</p>
+        </div>
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">10</h3>
+                <p class="hectares__title-support">Га</p>
+            </div>
+            <p class="hectares__text">Первая промышленная плантация шиповника в Украине</p>
+        </div>
+        <div class="hectares__text-block">
+            <div class="hectares__title-block">
+                <h3 class="hectares__title">80</h3>
+                <p class="hectares__title-support">%</p>
+            </div>
+            <p class="hectares__text">Приживаемости саженцев</p>
         </div>
     </div>
 </section>
 
-                <section class="eco-nuts__container">
-    <div class="eco-nuts__content">
-        <div class="eco-nuts__text-block">
-            <h2 class="eco-nuts__title">Экологически чистый грецкий орех</h2>
-            <h3 class="eco-nuts__title-sub">Оптом, и в розницу</h3>
-            <div class="eco-nuts__text-scroll-block">
-                <div class="eco-nuts__scrollbar"></div>
-                <div class="eco-nuts__text-scroll">
-                    <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады
-                        ореха грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
-                        непривитого грецкого ореха, фундука и шиповника.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания
-                        интенсивного сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
-                    </p>
-                    <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки смешанного сада грецкого
-                        ореха и фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
-                        выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
-                        выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
-                        выращиванию трюфелей на корнях фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады
-                        ореха грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
-                        непривитого грецкого ореха, фундука и шиповника.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания
-                        интенсивного сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
-                    </p>
-                    <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки смешанного сада грецкого
-                        ореха и фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
-                        выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
-                        выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
-                        выращиванию трюфелей на корнях фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
-                    </p>
-                </div>
-            </div>
+                <section class="main-page main-goal__content">
+    <div class="main-page__img-block main-goal__img-block">
+        <img class="main-page__img main-goal__img" src="" alt="goal-img" />
+    </div>
+    <div class="main-page__container main-goal__block">
+        <h2 class="main-page__title main-goal__title">Наша главная цель - получить максимальную прибыль с одного гектара</h2>
+        <div class="main-page__play-block main-goal__button">
+            <button class="play-button main-page__play" aria-label="play-video">
+    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
+</button>
+
         </div>
-        <div class="eco-nuts__swiper-block">
-            <div class="swiper eco-nuts__swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
-                </div>
-                <div class="swiper__block">
-                    <div class="eco-nuts__button-prev swiper__button-prev">
-                        <svg class="swiper__svg-prev">
-                            <use href="#arrow"></use>
-                        </svg>
-                    </div>
-                    <div class="eco-nuts__button-next swiper__button-next">
-                        <svg class="swiper__svg-next">
-                            <use href="#arrow"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p class="main-page__text main-goal__text">Cмотреть видео о производстве</p>
     </div>
 </section>
 
                 <section class="contact__container">
-    <div class="contact__content catalog-products__margin-contact">
+    <div class="contact__content corporate-clients__margin-contact">
         <h2 class="contact__title-mobile">Контакты</h2>
         <div class="contact__info">
             <h2 class="contact__info-title">Контакты</h2>
@@ -519,7 +553,7 @@
 
             </main>
             <footer class="footer__container">
-    <div class="footer__content catalog-products__margin-footer">
+    <div class="footer__content corporate-clients__margin-footer">
         <div class="footer__links-block">
             <a class="footer__logo-link" href="/nuts/index.html"
                 ><img class="footer__logo-img" src="" alt="logo" />
@@ -1419,6 +1453,5 @@
 </svg>
 
         </div>
-        <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>

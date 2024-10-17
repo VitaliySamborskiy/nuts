@@ -1,0 +1,1 @@
+function L(a,i,c,r,d){a.forEach((s,t)=>{s.addEventListener("click",f=>{a.forEach(e=>{e.classList.remove(c),e.firstElementChild.classList.remove(r)}),i.forEach(e=>{e.classList.remove(d)});const l=s.getAttribute("data-id");s.classList.add(c),s.firstElementChild.classList.add(r),i[t].id===l&&i[t].classList.add(d)})})}export{L as t};

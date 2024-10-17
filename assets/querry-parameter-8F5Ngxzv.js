@@ -1,0 +1,1 @@
+function o(t,a){let r=new URLSearchParams(window.location.search);for(let e=0;e<t.length;e++)r.set(t[e],a[e]);window.history.replaceState(null,null,"?"+r.toString())}function l(t,a){const r=new URLSearchParams(window.location.search);let e={};for(let n=0;n<a.length;n++)e[t[n]]=r.get(a[n]);return e}export{l as a,o as u};

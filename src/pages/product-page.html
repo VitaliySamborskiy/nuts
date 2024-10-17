@@ -3,23 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Check out our product catalogue, where you can choose the most beautiful and delicious products for yourself."
-        />
+        <meta name="description" content="registration page on the website" />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
-        <title>Каталог продукции</title>
+        <title></title>
         <script
             async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/catalogProducts-BlBAuycy.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/productPage-D1nQtSVp.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-DOuUIK4A.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/local-storage-Dq6mamxl.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/product-cards-ChdFZbiX.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/querry-parameter-8F5Ngxzv.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/catalogProducts-B000Tt44.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/productPage-9wT0BNPP.css">
     </head>
     <body>
         <div class="wrapper">
@@ -231,209 +227,62 @@
 </header>
 
             <main class="main">
-                <section class="main-page {=$main-page-class}">
-    <div class="main-page__img-block products-page__block-img">
-        <img class="main-page__img products-page__img" src="" alt="main-page-img" />
-    </div>
-    <div class="main-page__container products-page__text-block">
-        <h2 class="main-page__title products-page__title">Каталог продукции</h2>
-        <p class="main-page__text hidden">{=$main-page-text}</p>
-        <div class="main-page__play-block hidden">
-            <button class="play-button main-page__play" aria-label="play-video">
-    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
-</button>
+                <section class="product-page__container"></section>
 
-        </div>
-    </div>
-</section>
-
-                <section class="product product__container">
-    <div class="product__main-page hidden">
-        <h2 class="product__main-page-title">Продукция</h2>
-        <p class="product__main-page-text">
-            Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника в удобной,
-            надежной, вакуумной упаковке разного объема
-        </p>
-    </div>
-    <div class="product-filter__shop-block {=$class-filter}">
-        <div class="product-filter__block">
-            <p class="product-filter__text">Фильтр</p>
-            <svg class="product-filter__svg"><use href="#filter"></use></svg>
-        </div>
-        <div class="product-filter__filter-block">
-            <div class="select product-filter__select-taste">
-    <div class="product-filter__select-header-taste select__header">
-        <span class="select__current product-filter__current-taste">Вкус</span>
-        <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body product-filter__select-body-taste"><div class='select__item product-filter__item'>сладкий</div>
-                           <div class='select__item product-filter__item'>солоний</div></div>
-</div>
-
-            <div class="select product-filter__select-weight">
-    <div class="product-filter__select-header-weight select__header">
-        <span class="select__current product-filter__current-weight">Масса</span>
-        <svg class="select__svg product-filter__select-svg"><use href="#arrow_down"></use></svg>
-    </div>
-    <div class="select__body product-filter__select-body-weight"><div class='select__item product-filter__item'>30-39</div>
-                           <div class='select__item product-filter__item'>40-49</div>
-                           <div class='select__item product-filter__item'>50-59</div>
-                           <div class='select__item product-filter__item'>60-69</div>
-                           <div class='select__item product-filter__item'>70-99</div>
-                           <div class='select__item product-filter__item'>100-250</div></div>
-</div>
-
-            <div class="product-filter__cost-block">
-                <p class="product-filter__cost-text">Стоимость</p>
-                <div class="product-filter__cost-arrows">
-                    <button class="product-filter__cost-button product-filter__higher-price" aria-label="sort prices from the most expensive to the least expensive products">
-    <span class=""><svg class='product-filter__cost-svg-top'>
-                <use href='#arrow'></use></svg></span>
-</button>
-
-                    <button class="product-filter__cost-button product-filter__lower-price" aria-label="sort prices from the cheapest to the most expensive products">
-    <span class=""><svg class='product-filter__cost-svg-bottom'>
-                    <use href='#arrow'></use></svg></span>
-</button>
-
-                </div>
-            </div>
-        </div>
-        <div class="product-filter__end-buttons">
-            <button class="green-button product-filter__apply-button" aria-label="{=$aria-label}">
-    <span class="">Применить</span>
-</button>
-
-            <button class="product-filter__cross-button" aria-label="{=$aria-label}">
-    <span class=""><svg class='product-filter__cross-svg'>
-                    <use href='#cross'></use></svg> Сбросить</span>
-</button>
-
-        </div>
-    </div>
-    <div class="product__cards"></div>
-    <a href="/nuts/src/pages/catalog-products.html" class="transparent-button product__button hidden"
-        >Перейти в магазин</a
-    >
-    <button class="transparent-button product__button-load-card" aria-label="{=$aria-label}">
-    <span class="">Загрузить еще</span>
-</button>
-
-</section>
-
-                <section class="popup__content">
-    <div class="popup__background-block">
-        <svg class="popup__cross">
-            <use href="#cross"></use>
-        </svg>
-        <div class="swiper popup__swiper">
-            <div class="swiper-wrapper popup__swiper-wrapper"></div>
-            <button class="popup__button-prev">
-                <svg class="popup__svg-prev">
-                    <use href="#arrow-bracket"></use>
-                </svg>
-            </button>
-            <button class="popup__button-next">
-                <svg class="popup__svg-next">
-                    <use href="#arrow-bracket"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="popup__title-block">
-            <h3 class="popup__title"></h3>
-            <div class="popup__price">
-                <p class="product__card-bottom-price-discount product__card-bottom-price-gray">
-                    <span></span>
-                    <span>грн.</span>
-                </p>
-                <p class="product__card-bottom-price-regular product__card-bottom-price-green">
-                    <span></span>
-                    <span>грн.</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-                <section class="eco-nuts__container">
-    <div class="eco-nuts__content">
-        <div class="eco-nuts__text-block">
-            <h2 class="eco-nuts__title">Экологически чистый грецкий орех</h2>
-            <h3 class="eco-nuts__title-sub">Оптом, и в розницу</h3>
-            <div class="eco-nuts__text-scroll-block">
-                <div class="eco-nuts__scrollbar"></div>
-                <div class="eco-nuts__text-scroll">
-                    <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады
-                        ореха грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
+                <section class="product-information__container">
+    <div class="product-information__content">
+        <nav class="product-information__tab-header">
+            <ul class="product-information__tab-items">
+                <li class="product-information__tab-item product-information__tab-item_active">Описание</li>
+                <li class="product-information__tab-item">Упаковка</li>
+                <li class="product-information__tab-item">Оплата</li>
+                <li class="product-information__tab-item">Доставка</li>
+            </ul>
+        </nav>
+        <div class="product-information__tab-body">
+            <picture class="product-information__img-block">
+                <img class="product-information__img" src="" />
+            </picture>
+            <div class="product-information__text-content">
+                <div class="product-information__text-block">
+                    <p class="product-information__text">
+                        Уже 4000 лет люди питаются ценными грецкими орехами. Они особенно полезны послеоперационным
+                        больным, детям, кормящим, беременным женщинам. Чтобы вернуть силы, укрепить иммунитет, одолеть
+                        туберкулез, кашель; грецкий орех очищенный, отборный нужно истолочь, смешать с медом (2:1) и
+                        чайную ложку целебной смеси употреблять перед едой.
                     </p>
-                    <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
-                        непривитого грецкого ореха, фундука и шиповника.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания
-                        интенсивного сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
-                    </p>
-                    <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки смешанного сада грецкого
-                        ореха и фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
-                        выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
-                        выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
-                        выращиванию трюфелей на корнях фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Сельскохозяйственный обслуживающий кооператив “Орех Причерноморья” выращивает смешанные сады
-                        ореха грецкого с фундуком, а также ореха грецкого с шиповником, на площади более 150 гектаров.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
-                        непривитого грецкого ореха, фундука и шиповника.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Предприятие укомплектовано всей необходимой техникой и оборудованием для выращивания
-                        интенсивного сада, воспроизводства саженцев в питомнике и выращивания трюфеля.
-                    </p>
-                    <p class="eco-nuts__text">
-                        История предприятия Наше предприятие основано в 2012 году для закладки смешанного сада грецкого
-                        ореха и фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
-                        выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
-                        выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
-                        выращиванию трюфелей на корнях фундука.
-                    </p>
-                    <p class="eco-nuts__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
+                    <p class="product-information__text">
+                        В белке грецких орехов много (15 %) аргинина. Он особенно нужен детям, больным, пожилым людям, в
+                        организме которых аминокислота плохо синтезируется. Аргинин помогает сосудам регенерировать, а
+                        всему организму – победить воспаления.
                     </p>
                 </div>
-            </div>
-        </div>
-        <div class="eco-nuts__swiper-block">
-            <div class="swiper eco-nuts__swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
-                    <div class="swiper-slide"><img class="eco-nuts__img" src="" alt="image of nuts" /></div>
+                <div class="product-information__text-block-list">
+                    <h3 class="product-information__text-title">Другие полезные вещества грецких орехов:</h3>
+                    <ul class="product-information__text-items">
+                        <li class="product-information__text-item">Антиоксиданты защищают печень от повреждений</li>
+                        <li class="product-information__text-item">
+                            Полифенолы не дают образоваться сосудистым тромбам
+                        </li>
+                        <li class="product-information__text-item">
+                            Нейропротекторы улучшают работу мозга, отодвигают старость
+                        </li>
+                    </ul>
                 </div>
-                <div class="swiper__block">
-                    <div class="eco-nuts__button-prev swiper__button-prev">
-                        <svg class="swiper__svg-prev">
-                            <use href="#arrow"></use>
-                        </svg>
-                    </div>
-                    <div class="eco-nuts__button-next swiper__button-next">
-                        <svg class="swiper__svg-next">
-                            <use href="#arrow"></use>
-                        </svg>
-                    </div>
+                <div class="product-information__text-block-list">
+                    <h3 class="product-information__text-title">Нужно систематически есть грецкие орехи, чтобы:</h3>
+                    <ul class="product-information__text-items">
+                        <li class="product-information__text-item">
+                            На 30–40 % снизить риск заболевания раком простаты
+                        </li>
+                        <li class="product-information__text-item">На 50 % – раком молочной железы</li>
+                        <li class="product-information__text-item">
+                            Предотвратить дегенерацию глазной макулы, а значит, улучшить зрение
+                        </li>
+                        <li class="product-information__text-item">
+                            Отрегулировать обмен веществ, выработку инсулина; понизить количество сахара в крови
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -441,7 +290,7 @@
 </section>
 
                 <section class="contact__container">
-    <div class="contact__content catalog-products__margin-contact">
+    <div class="contact__content registration__margin-contact">
         <h2 class="contact__title-mobile">Контакты</h2>
         <div class="contact__info">
             <h2 class="contact__info-title">Контакты</h2>
@@ -519,7 +368,7 @@
 
             </main>
             <footer class="footer__container">
-    <div class="footer__content catalog-products__margin-footer">
+    <div class="footer__content registration__margin-footer">
         <div class="footer__links-block">
             <a class="footer__logo-link" href="/nuts/index.html"
                 ><img class="footer__logo-img" src="" alt="logo" />
@@ -1419,6 +1268,5 @@
 </svg>
 
         </div>
-        <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>

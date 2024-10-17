@@ -1,0 +1,1 @@
+import{a as l,g as e,u as r,f as s}from"./main-DOuUIK4A.js";import{u as o}from"./gallery-SOIufu5_.js";document.addEventListener("DOMContentLoaded",async function(){const a=s.getApp();l("gs://nuts-17b69.appspot.com/gallery/gallery_1.webp",e(".gallery-page__img"));const t=await r(a,"gallery");o(e(".gallery__box"),t,e(".gallery__button-load "))});
