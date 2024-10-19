@@ -4,7 +4,6 @@ import { swiperInit } from "./swiper-init.js";
 import { selects } from "./selects.js";
 import { useUserStateChanged } from "./base/autintificate.js";
 import { fireBaseService } from "./base/services/fire-base-service.js";
-// import { notificationsInit } from "./base/notifications.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
@@ -13,5 +12,4 @@ document.addEventListener("DOMContentLoaded", async function () {
     burgerMenu();
     await swiperInit(app);
     await useUserStateChanged();
-    // notificationsInit();
 });

@@ -9,11 +9,6 @@ import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
-    const products = await useGetFirestore(app, "products");
-    const videoData = await useGetFirestore(app, "videoId", "main-pages");
-    const playersMainPage = getElement(".manufacturing__player", "all");
-    const dataNews = await useGetFirestore(app, "news");
-    useRenderNewsCards(dataNews, getElement(".news-swiper__renders"));
 
     useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-1.webp", getElement(".homepage__img"));
     useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-3.webp", getElement(".main-goal__img"));
@@ -21,6 +16,18 @@ document.addEventListener("DOMContentLoaded", async function () {
     useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_2.webp", getElement(".benefits__hazelnut"));
     useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_3.webp", getElement(".benefits__rosehip"));
     useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-4.webp", getElement(".eco__img"));
+    const youTube = getElement(".manufacturing__preview-img", "all");
+    const youTubeImg = [
+        "gs://nuts-17b69.appspot.com/main_page/main_page-2.webp",
+        "gs://nuts-17b69.appspot.com/companies/companies_2.webp",
+    ];
+    for (let i = 0; i < youTube.length; i++) {
+        useGetImg(youTubeImg[i], youTube[i]);
+    }
+
+    const products = await useGetFirestore(app, "products");
+    const videoData = await useGetFirestore(app, "videoId", "main-pages");
+    useRenderNewsCards(await useGetFirestore(app, "news"), getElement(".news-swiper__renders"));
 
     swiper(
         getElement(".manufacturing__swiper-video"),
@@ -29,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         "auto",
         0,
         null,
-        playersMainPage,
+        getElement(".manufacturing__player", "all"),
         videoData.mainPage,
         getElement(".manufacturing__swiper", "all"),
         getElement(".manufacturing__preview-img-block", "all"),
