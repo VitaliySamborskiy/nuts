@@ -1,5 +1,5 @@
-import{a as i}from"./main-DOuUIK4A.js";function d(n,c){const r=document.createDocumentFragment();n.forEach(s=>{let a="";a=`<div class="news-swiper__card">
-             <img class="news-swiper__card-img" src=""  alt="зображення новини" loading="lazy"/>
+import{a as c}from"./main-BEpViKtm.js";function t(i,n){const r=document.createDocumentFragment();i.forEach(s=>{let a="";a=`<div class="news-swiper__card">
+             <img class="news-swiper__card-img" src=""  alt="зображення новини" loading="lazy" width="408" height="270"/>
              <div class="news-swiper__card-text-block">
                  <p class="news-swiper__card-date">${s.date}</p>
                  <h3 class="news-swiper__card-title">${s.mainTitle}</h3>
@@ -15,4 +15,4 @@ import{a as i}from"./main-DOuUIK4A.js";function d(n,c){const r=document.createDo
                      </span>
                  </a>
              </div>
-        </div>`;let e=document.createElement("div");e.classList.add("swiper-slide"),e.innerHTML=a,i(s.url[0],e.querySelector(".news-swiper__card-img")),r.appendChild(e)}),c.append(r)}export{d as u};
+        </div>`;let e=document.createElement("div");e.classList.add("swiper-slide"),e.innerHTML=a,c(s.url[0],e.querySelector(".news-swiper__card-img")),r.appendChild(e)}),n.append(r)}export{t as u};
