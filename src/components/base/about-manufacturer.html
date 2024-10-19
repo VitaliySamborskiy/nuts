@@ -17,7 +17,14 @@
                         <div class="swiper-slide">
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
-                                    <img class="{=$preview-img-class}" src="" alt="preview video img" />
+                                    <img
+                                        class="{=$preview-img-class}"
+                                        src="#"
+                                        alt="preview video img"
+                                        width="700"
+                                        height="472"
+                                        loading="lazy"
+                                    />
                                     <load
                                         src="src/components/base/button.html"
                                         class_button="play-button manufacturing__play"
@@ -32,7 +39,14 @@
                         <div class="swiper-slide">
                             <div class="manufacturing__youtube-container">
                                 <div class="manufacturing__preview-img-block">
-                                    <img class="{=$preview-img-class}" src="" alt="preview video img" />
+                                    <img
+                                        class="{=$preview-img-class}"
+                                        src="#"
+                                        alt="preview video img"
+                                        width="700"
+                                        height="472"
+                                        loading="lazy"
+                                    />
                                     <load
                                         src="src/components/base/button.html"
                                         class_button="play-button manufacturing__play"
@@ -45,14 +59,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="manufacturing__navigation">
-                        <div class="manufacturing__button-prev">
-                            <svg class="manufacturing__svg-prev">
+                    <div class="swiper__block">
+                        <div class="manufacturing__button-prev swiper__button-prev">
+                            <svg class="swiper__svg-prev">
                                 <use href="#arrow"></use>
                             </svg>
                         </div>
-                        <div class="manufacturing__button-next">
-                            <svg class="manufacturing__svg-next">
+                        <div class="manufacturing__button-next swiper__button-next">
+                            <svg class="swiper__svg-next">
                                 <use href="#arrow"></use>
                             </svg>
                         </div>

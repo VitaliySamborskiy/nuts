@@ -13,7 +13,7 @@ export function useRenderCards(arrData, element) {
         let img = "";
 
         data.imgUrl.forEach(() => {
-            img += `<div class="swiper-slide"><img class="product__slide" src="" alt="product img" loading="lazy"/></div>`;
+            img += `<div class="swiper-slide"><img class="product__slide" src="" alt="product img" loading="lazy" width="406" height="278"/></div>`;
         });
 
         html = `${
