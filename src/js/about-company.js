@@ -8,8 +8,8 @@ import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
-    useRenderNewsCards(await useGetFirestore(app, "news"), getElement(".news-swiper__renders"));
-    useGetImg("gs://nuts-17b69.appspot.com/companies/companies_1.webp", getElement(".company-page__img"));
+
+    await useGetImg("gs://nuts-17b69.appspot.com/companies/companies_1.webp", getElement(".company-page__img"));
     useGetImg("gs://nuts-17b69.appspot.com/companies/companies_4.webp", getElement(".company-page-eco__img"));
     const youTube = getElement(".company__preview-img", "all");
     const youTubeImg = [
@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     useGetImg("gs://nuts-17b69.appspot.com/companies/companies_3.webp", getElement(".ceo__representations-img"));
     const videoData = await useGetFirestore(app, "videoId", "main-pages");
     const playersMainPage = getElement(".manufacturing__player", "all");
+
+    useRenderNewsCards(await useGetFirestore(app, "news"), getElement(".news-swiper__renders"));
     swiper(
         getElement(".manufacturing__swiper-video"),
         getElement(".manufacturing__button-prev"),

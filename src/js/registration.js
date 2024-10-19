@@ -13,9 +13,10 @@ import { select } from "./base/select.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
-    useInputClear(getElement(".input__area", "all"));
 
-    useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".registration__input-img"));
+    await useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".registration__input-img"));
+
+    useInputClear(getElement(".input__area", "all"));
 
     rendersFormLegal(
         getElement(".registration__tab-text", "all"),

@@ -6,7 +6,7 @@ import { tabSection } from "./base/tabs.js";
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
 
-    useGetImg(
+    await useGetImg(
         "gs://nuts-17b69.appspot.com/payment_delivery/payment_delivery_1.webp",
         getElement(".payment-delivery__img"),
     );

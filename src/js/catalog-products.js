@@ -10,6 +10,23 @@ import { select } from "./base/select.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
+
+    await useGetImg(
+        "gs://nuts-17b69.appspot.com/product_catalog/product_catalog_1.webp",
+        getElement(".products-page__img"),
+    );
+
+    const productCatalogImages = [
+        "gs://nuts-17b69.appspot.com/product_catalog/product_catalog_2.webp",
+        "gs://nuts-17b69.appspot.com/main_page/main_page-2.webp",
+        "gs://nuts-17b69.appspot.com/companies/companies_2.webp",
+    ];
+
+    const productCatalogElement = getElement(".eco-nuts__img", "all");
+    for (let i = 0; i < productCatalogElement.length; i++) {
+        useGetImg(productCatalogImages[i], productCatalogElement[i]);
+    }
+
     const products = await useGetFirestore(app, "products");
     const swipersCard = useRenderCards(products, getElement(".product__cards"));
 
@@ -23,19 +40,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         "auto",
         0,
     );
-
-    useGetImg("gs://nuts-17b69.appspot.com/product_catalog/product_catalog_1.webp", getElement(".products-page__img"));
-
-    const productCatalogImages = [
-        "gs://nuts-17b69.appspot.com/product_catalog/product_catalog_2.webp",
-        "gs://nuts-17b69.appspot.com/main_page/main_page-2.webp",
-        "gs://nuts-17b69.appspot.com/companies/companies_2.webp",
-    ];
-
-    const productCatalogElement = getElement(".eco-nuts__img", "all");
-    for (let i = 0; i < productCatalogElement.length; i++) {
-        useGetImg(productCatalogImages[i], productCatalogElement[i]);
-    }
 
     select(getElement(".product-filter__current-weight", "all"), getElement(".product-filter__select-weight", "all"));
     select(getElement(".product-filter__current-taste", "all"), getElement(".product-filter__select-taste", "all"));

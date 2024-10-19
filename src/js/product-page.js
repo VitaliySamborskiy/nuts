@@ -7,6 +7,12 @@ import { useGetImg } from "./base/fire-base-functions/use-img.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
+
+    useGetImg(
+        "gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",
+        getElement(".product-information__img"),
+    );
+
     const productData = getProduct();
 
     await useRenderProductSection(getElement(".product-page__container"), productData, app);
@@ -17,10 +23,5 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".base-product__button-next"),
         "auto",
         0,
-    );
-
-    useGetImg(
-        "gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",
-        getElement(".product-information__img"),
     );
 });
