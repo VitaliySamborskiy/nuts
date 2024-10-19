@@ -6,11 +6,18 @@
         <meta name="description" content="registration page on the website" />
         <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-6Nk3fXAW.svg" />
         <title>Оплата и доставка</title>
+        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgYnVyZ2VyTWVudSB9IGZyb20gIi4vYmFzZS9idXJnZXIuanMiOwppbXBvcnQgeyBnZXRJbWFnZXMgfSBmcm9tICIuL2dldC1pbWFnZXMuanMiOwppbXBvcnQgeyBzd2lwZXJJbml0IH0gZnJvbSAiLi9zd2lwZXItaW5pdC5qcyI7CmltcG9ydCB7IHNlbGVjdHMgfSBmcm9tICIuL3NlbGVjdHMuanMiOwppbXBvcnQgeyB1c2VVc2VyU3RhdGVDaGFuZ2VkIH0gZnJvbSAiLi9iYXNlL2F1dGludGlmaWNhdGUuanMiOwppbXBvcnQgeyBmaXJlQmFzZVNlcnZpY2UgfSBmcm9tICIuL2Jhc2Uvc2VydmljZXMvZmlyZS1iYXNlLXNlcnZpY2UuanMiOwoKZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsIGFzeW5jIGZ1bmN0aW9uICgpIHsKICAgIGNvbnN0IGFwcCA9IGZpcmVCYXNlU2VydmljZS5nZXRBcHAoKTsKICAgIGdldEltYWdlcygpOwogICAgc2VsZWN0cygpOwogICAgYnVyZ2VyTWVudSgpOwogICAgYXdhaXQgc3dpcGVySW5pdChhcHApOwogICAgYXdhaXQgdXNlVXNlclN0YXRlQ2hhbmdlZCgpOwp9KTsK" />
+        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgdXNlR2V0SW1nIH0gZnJvbSAiLi9iYXNlL2ZpcmUtYmFzZS1mdW5jdGlvbnMvdXNlLWltZy5qcyI7CmltcG9ydCB7IGdldEVsZW1lbnQgfSBmcm9tICIuL2Jhc2UvZ2V0LWVsZW1lbnQtZG9tLmpzIjsKaW1wb3J0IHsgZmlyZUJhc2VTZXJ2aWNlIH0gZnJvbSAiLi9iYXNlL3NlcnZpY2VzL2ZpcmUtYmFzZS1zZXJ2aWNlLmpzIjsKaW1wb3J0IHsgdGFiU2VjdGlvbiB9IGZyb20gIi4vYmFzZS90YWJzLmpzIjsKCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCBhc3luYyBmdW5jdGlvbiAoKSB7CiAgICBjb25zdCBhcHAgPSBmaXJlQmFzZVNlcnZpY2UuZ2V0QXBwKCk7CgogICAgYXdhaXQgdXNlR2V0SW1nKAogICAgICAgICJnczovL251dHMtMTdiNjkuYXBwc3BvdC5jb20vcGF5bWVudF9kZWxpdmVyeS9wYXltZW50X2RlbGl2ZXJ5XzEud2VicCIsCiAgICAgICAgZ2V0RWxlbWVudCgiLnBheW1lbnQtZGVsaXZlcnlfX2ltZyIpLAogICAgKTsKCiAgICB1c2VHZXRJbWcoImdzOi8vbnV0cy0xN2I2OS5hcHBzcG90LmNvbS9wYXltZW50X2RlbGl2ZXJ5L3BheW1lbnRfZGVsaXZlcnlfMi53ZWJwIiwgZ2V0RWxlbWVudCgiLm9yZGVyLXRhYnNfX2ltZyIpKTsKICAgIHVzZUdldEltZygiZ3M6Ly9udXRzLTE3YjY5LmFwcHNwb3QuY29tL21haW5fcGFnZS9tYWluX3BhZ2UtMy53ZWJwIiwgZ2V0RWxlbWVudCgiLm1haW4tZ29hbF9faW1nIikpOwogICAgbGV0IGltZ1RhYiA9IFsKICAgICAgICAiZ3M6Ly9udXRzLTE3YjY5LmFwcHNwb3QuY29tL3BheW1lbnRfZGVsaXZlcnkvcGF5bWVudF9kZWxpdmVyeV8yLndlYnAiLAogICAgICAgICJnczovL251dHMtMTdiNjkuYXBwc3BvdC5jb20vcGF5bWVudF9kZWxpdmVyeS9wYXltZW50X2RlbGl2ZXJ5XzQud2VicCIsCiAgICAgICAgImdzOi8vbnV0cy0xN2I2OS5hcHBzcG90LmNvbS9wYXltZW50X2RlbGl2ZXJ5L3BheW1lbnRfZGVsaXZlcnlfNS53ZWJwIiwKICAgIF07CiAgICBsZXQgaW1nVGFiRWxlbWVudCA9IGdldEVsZW1lbnQoIi5vcmRlci10YWJzX19pbWciLCAiYWxsIik7CiAgICBpbWdUYWIuZm9yRWFjaCgodmFsdWUsIGluZGV4KSA9PiB1c2VHZXRJbWcodmFsdWUsIGltZ1RhYkVsZW1lbnRbaW5kZXhdKSk7CgogICAgdGFiU2VjdGlvbigKICAgICAgICBnZXRFbGVtZW50KCIub3JkZXItdGFic19fdGFiLWJ1dHRvbiIsICJhbGwiKSwKICAgICAgICBnZXRFbGVtZW50KCIub3JkZXItdGFic19fYm9keS1ibG9jayIsICJhbGwiKSwKICAgICAgICAib3JkZXItdGFic19fdGFiLWJ1dHRvbl9hY3RpdmUiLAogICAgICAgICJvcmRlci10YWJzX190YWItc3ZnX2FjdGl2ZSIsCiAgICAgICAgIm9yZGVyLXRhYnNfX2JvZHktYmxvY2tfYWN0aXZlIiwKICAgICk7Cn0pOwo=" />
+        <link rel="preload" href="/nuts/assets/Raleway-ExtraBold-CQooVWY1.woff" as="font" type="font/woff" crossorigin />
+        <link rel="preload" href="/nuts/assets/Raleway-Medium-Blgd746U.woff" as="font" type="font/woff" crossorigin />
+        <link rel="preload" href="/nuts/assets/Raleway-SemiBold-0CVifwtp.woff" as="font" type="font/woff" crossorigin />
+        <link rel="preload" href="/nuts/assets/Raleway-Bold-zTm0vDbl.woff" as="font" type="font/woff" crossorigin />
         <script
             async
+            defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
         ></script>
-      <script type="module" crossorigin src="/nuts/assets/paymentDelivery-Cxxzi0mv.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/paymentDelivery-Ck4QAzBi.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-DTtcJXsG.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/tabs-Cb3knaNC.js">
       <link rel="stylesheet" crossorigin href="/nuts/assets/main-wjhWB3DI.css">
@@ -470,7 +477,7 @@
     <div class="main-page__img-block main-goal__img-block">
         <img
             class="main-page__img main-goal__img"
-            src=""
+            src="#"
             alt="goal-img"
             width="{=$width}"
             height="{=$height}"

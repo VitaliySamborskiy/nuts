@@ -73,4 +73,4 @@ import{a as _,g as s,u,s as l,f as n}from"./main-DTtcJXsG.js";import{g as d}from
                 <button class="green-button product-page__bottom-buy">Заказать</button>
             </div>
         </div>
-    </div>`,e.innerHTML=p;let o=s(".product-page__img","all");o.forEach((a,c)=>u(t[0].imgUrl[c],o[c]))}document.addEventListener("DOMContentLoaded",async function(){const e=n.getApp(),t=d();await m(s(".product-page__container"),t,e),l(s(".swiper"),s(".base-product__button-prev"),s(".base-product__button-next"),"auto",0),u("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",s(".product-information__img"))});
+    </div>`,e.innerHTML=p;let o=s(".product-page__img","all");o.forEach((a,c)=>u(t[0].imgUrl[c],o[c]))}document.addEventListener("DOMContentLoaded",async function(){const e=n.getApp();u("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",s(".product-information__img"));const t=d();await m(s(".product-page__container"),t,e),l(s(".swiper"),s(".base-product__button-prev"),s(".base-product__button-next"),"auto",0)});
