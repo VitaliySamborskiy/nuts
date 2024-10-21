@@ -1,8 +1,8 @@
-import { useInputActive } from "./base/input-active.js";
-import { getElement } from "./base/get-element-dom.js";
+import { useInputActive } from "./base/forms-methods/input-active.js";
+import { getElement } from "./base/get-methods/get-element-dom.js";
 import { useLoginUser } from "./base/autintificate.js";
-import { useValidate } from "./base/form-validate.js";
-import { useInputClear } from "./base/input-clear.js";
+import { useValidate } from "./base/forms-methods/form-validate.js";
+import { useInputClear } from "./base/forms-methods/input-clear.js";
 import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {

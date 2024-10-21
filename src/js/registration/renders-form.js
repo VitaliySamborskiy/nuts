@@ -1,10 +1,10 @@
-import { getElement } from "../base/get-element-dom.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 import { selectRegion } from "./select-region-active.js";
 import { select } from "../base/select.js";
 import { useRadioInputChange } from "./form-change.js";
-import { useInputActive } from "../base/input-active.js";
-import { useValidate } from "../base/form-validate.js";
-import { selectsFormRenders } from "../base/renders-selection-form.js";
+import { useInputActive } from "../base/forms-methods/input-active.js";
+import { useValidate } from "../base/forms-methods/form-validate.js";
+import { selectsFormRenders } from "../base/renders-methods/renders-selection-form.js";
 
 export function rendersFormLegal(buttons, container, checkbox) {
     buttons.forEach((item) => {

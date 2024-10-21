@@ -1,6 +1,6 @@
 import { useGetFirestore } from "./base/fire-base-functions/use-fire-store.js";
-import { useRenderNewsCards } from "./base/news-render-cards.js";
-import { getElement } from "./base/get-element-dom.js";
+import { useRenderNewsCards } from "./base/renders-methods/news-render-cards.js";
+import { getElement } from "./base/get-methods/get-element-dom.js";
 import { useGetImg } from "./base/fire-base-functions/use-img.js";
 import { swiper } from "./base/swiper.js";
 import { useGalleryRenders } from "./gallery/gallery.js";
@@ -39,4 +39,38 @@ document.addEventListener("DOMContentLoaded", async function () {
     );
     const galleryInfo = await useGetFirestore(app, "gallery");
     useGalleryRenders(getElement(".gallery__box"), galleryInfo);
+
+    swiper(
+        getElement(".news-swiper__cards"),
+        getElement(".news-swiper__prev-button"),
+        getElement(".news-swiper__next-button"),
+        null,
+        0,
+        {
+            1920: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+            },
+            1440: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+            },
+            1140: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            375: {
+                slidesPerView: 1.4,
+                spaceBetween: 5,
+            },
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 5,
+            },
+        },
+    );
 });

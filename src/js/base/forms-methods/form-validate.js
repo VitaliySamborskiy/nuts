@@ -1,4 +1,4 @@
-import { usePhotoReplacement } from "../registration/photo-replacement.js";
+import { usePhotoReplacement } from "../../registration/photo-replacement.js";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 let validateStatus = true;

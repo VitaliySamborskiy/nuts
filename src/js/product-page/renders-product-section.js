@@ -1,6 +1,6 @@
 import { useGetQueryParameter, useSetQueryParameter } from "../base/querry-parameter.js";
 import { useGetFirestore } from "../base/fire-base-functions/use-fire-store.js";
-import { getElement } from "../base/get-element-dom.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 import { useGetImg } from "../base/fire-base-functions/use-img.js";
 
 export async function useRenderProductSection(container, data, app) {
@@ -24,7 +24,7 @@ function renderProductInfo(container, data) {
 
     data[0].imgUrl.forEach(() => {
         img += `<div class="swiper-slide">
-                   <picture class="product-page__block-img"><img class="product-page__img" src="" alt="product img" loading="lazy"/></picture>
+                   <picture class="product-page__block-img"><img class="product-page__img" src="" alt="product img" loading="lazy" width="553" height="571"/></picture>
                 </div>`;
     });
 

@@ -1,7 +1,7 @@
 import { fireBaseService } from "./base/services/fire-base-service.js";
-import { getProduct } from "./base/services/local-storage.js";
+import { getProduct } from "./base/local-storage.js";
 import { swiper } from "./base/swiper.js";
-import { getElement } from "./base/get-element-dom.js";
+import { getElement } from "./base/get-methods/get-element-dom.js";
 import { useRenderProductSection } from "./product-page/renders-product-section.js";
 import { useGetImg } from "./base/fire-base-functions/use-img.js";
 

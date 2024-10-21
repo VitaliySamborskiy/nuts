@@ -1,4 +1,4 @@
-import { useGetImg } from "./fire-base-functions/use-img.js";
+import { useGetImg } from "../fire-base-functions/use-img.js";
 
 export function useRenderNewsCards(arrData, elements) {
     const fragment = document.createDocumentFragment();

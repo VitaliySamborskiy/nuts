@@ -1,12 +1,12 @@
 import { selectRegion } from "./registration/select-region-active.js";
-import { getElement } from "./base/get-element-dom.js";
-import { useInputActive } from "./base/input-active.js";
+import { getElement } from "./base/get-methods/get-element-dom.js";
+import { useInputActive } from "./base/forms-methods/input-active.js";
 import { useFormChange } from "./registration/form-change.js";
-import { checkboxValidate, useValidate } from "./base/form-validate.js";
-import { useNumberMask } from "./base/phone-mask.js";
+import { checkboxValidate, useValidate } from "./base/forms-methods/form-validate.js";
+import { useNumberMask } from "./base/forms-methods/phone-mask.js";
 import { useCreateUser } from "./base/autintificate.js";
 import { rendersFormLegal } from "./registration/renders-form.js";
-import { useInputClear } from "./base/input-clear.js";
+import { useInputClear } from "./base/forms-methods/input-clear.js";
 import { useGetImg } from "./base/fire-base-functions/use-img.js";
 import { fireBaseService } from "./base/services/fire-base-service.js";
 import { select } from "./base/select.js";

@@ -1,8 +1,8 @@
 import { useGetImg } from "../base/fire-base-functions/use-img.js";
-import { getElement } from "../base/get-element-dom.js";
-import { useNumberMask } from "../base/phone-mask.js";
-import { useInputActive } from "../base/input-active.js";
-import { useValidate } from "../base/form-validate.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
+import { useNumberMask } from "../base/forms-methods/phone-mask.js";
+import { useInputActive } from "../base/forms-methods/input-active.js";
+import { useValidate } from "../base/forms-methods/form-validate.js";
 import { getContactInfoUpdate } from "./get-contact-information.js";
 
 export function rendersContactInformation(data, container, app) {

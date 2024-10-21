@@ -1,7 +1,7 @@
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { getElement } from "./get-element-dom.js";
-import { useRenderPopupProduct } from "./render-popup-products.js";
-import { setProduct } from "./services/local-storage.js";
+import { getElement } from "./get-methods/get-element-dom.js";
+import { useRenderPopupProduct } from "./renders-methods/render-popup-products.js";
+import { setProduct } from "./local-storage.js";
 
 export function useCards(cards, popup, popupBlock, cross, dataArr) {
     const scrollableElement = getElement(".popup__scroll");

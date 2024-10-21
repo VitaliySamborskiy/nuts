@@ -1,6 +1,5 @@
 import { burgerMenu } from "./base/burger.js";
 import { getImages } from "./get-images.js";
-import { swiperInit } from "./swiper-init.js";
 import { selects } from "./selects.js";
 import { useUserStateChanged } from "./base/autintificate.js";
 import { fireBaseService } from "./base/services/fire-base-service.js";
@@ -10,6 +9,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     getImages();
     selects();
     burgerMenu();
-    await swiperInit(app);
     await useUserStateChanged();
 });

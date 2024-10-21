@@ -1,7 +1,7 @@
-import { getFormInfo, useGetFormSelects } from "../base/get-form.js";
+import { getFormInfo, useGetFormSelects } from "../base/get-methods/get-form.js";
 import { getDocumentsId, useUpdateData } from "../base/fire-base-functions/use-fire-store.js";
-import { useInputClear } from "../base/input-clear.js";
-import { getElement } from "../base/get-element-dom.js";
+import { useInputClear } from "../base/forms-methods/input-clear.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 // import { notifications } from "../base/notifications.js";
 

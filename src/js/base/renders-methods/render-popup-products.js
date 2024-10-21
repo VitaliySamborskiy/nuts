@@ -1,6 +1,6 @@
-import { getElement } from "./get-element-dom.js";
-import { useGetImg } from "./fire-base-functions/use-img.js";
-import { swiper } from "./swiper.js";
+import { getElement } from "../get-methods/get-element-dom.js";
+import { useGetImg } from "../fire-base-functions/use-img.js";
+import { swiper } from "../swiper.js";
 
 export function useRenderPopupProduct(data, elements) {
     changesTitle(elements.title, data.title);

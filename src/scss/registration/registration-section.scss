@@ -211,6 +211,18 @@
         @include breakpoints(sm) {
             width: 100%;
         }
+
+        &-inactive-text {
+            color: $registrationBorder;
+            pointer-events: none;
+        }
+
+        &-inactive {
+            background: $inactive;
+            opacity: 0.5;
+            pointer-events: none;
+            transition: background-color 0.5s ease-in-out;
+        }
     }
 
     &__select-body {

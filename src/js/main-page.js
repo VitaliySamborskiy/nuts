@@ -1,8 +1,8 @@
 import { useGetFirestore } from "./base/fire-base-functions/use-fire-store.js";
-import { useRenderCards } from "./base/use-render-cards.js";
-import { getElement } from "./base/get-element-dom.js";
+import { useRenderProductsCards } from "./base/renders-methods/use-render-products-cards.js";
+import { getElement } from "./base/get-methods/get-element-dom.js";
 import { swiper } from "./base/swiper.js";
-import { useRenderNewsCards } from "./base/news-render-cards.js";
+import { useRenderNewsCards } from "./base/renders-methods/news-render-cards.js";
 import { useCards } from "./base/product-cards.js";
 import { useGetImg } from "./base/fire-base-functions/use-img.js";
 import { fireBaseService } from "./base/services/fire-base-service.js";
@@ -42,10 +42,43 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".manufacturing__preview-img-block", "all"),
         "manufacturing__preview-img-block_active",
     );
-    const swipersCard = useRenderCards(products, getElement(".product__cards"));
+    const swipersCard = useRenderProductsCards(products, getElement(".product__cards"));
     swipersCard.forEach((element) => {
         swiper(element.swiper, element.prev, element.next, "auto", 0);
     });
+    swiper(
+        getElement(".news-swiper__cards"),
+        getElement(".news-swiper__prev-button"),
+        getElement(".news-swiper__next-button"),
+        null,
+        0,
+        {
+            1920: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+            },
+            1440: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+            },
+            1140: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            375: {
+                slidesPerView: 1.4,
+                spaceBetween: 5,
+            },
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 5,
+            },
+        },
+    );
 
     useCards(
         getElement(".product__cards"),

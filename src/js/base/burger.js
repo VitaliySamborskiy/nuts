@@ -1,5 +1,5 @@
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { getElement } from "./get-element-dom.js";
+import { getElement } from "./get-methods/get-element-dom.js";
 
 export function burgerMenu() {
     const burger = getElement(".burger");

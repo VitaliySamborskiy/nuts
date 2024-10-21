@@ -1,9 +1,9 @@
-import { useInputActive } from "../base/input-active.js";
-import { getElement } from "../base/get-element-dom.js";
+import { useInputActive } from "../base/forms-methods/input-active.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 import { selectRegion } from "../registration/select-region-active.js";
-import { useValidate } from "../base/form-validate.js";
+import { useValidate } from "../base/forms-methods/form-validate.js";
 import { select } from "../base/select.js";
-import { selectsFormRenders } from "../base/renders-selection-form.js";
+import { selectsFormRenders } from "../base/renders-methods/renders-selection-form.js";
 import { useGetImg } from "../base/fire-base-functions/use-img.js";
 import { updateAddressDetailsInformation } from "./update-addres-details-information.js";
 

@@ -1,6 +1,6 @@
 import { useGetQueryParameter, useSetQueryParameter } from "../base/querry-parameter.js";
 import { renderForm } from "./renders-form.js";
-import { getElement } from "../base/get-element-dom.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 
 let bodyChangesItems;
 let elementRadioInputs;

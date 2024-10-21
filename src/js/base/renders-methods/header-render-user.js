@@ -1,6 +1,6 @@
-import { useGetImg } from "./fire-base-functions/use-img.js";
-import { getElement } from "./get-element-dom.js";
-import { signOutUser } from "./autintificate.js";
+import { useGetImg } from "../fire-base-functions/use-img.js";
+import { getElement } from "../get-methods/get-element-dom.js";
+import { signOutUser } from "../autintificate.js";
 
 export function useRenderUserInfo(data, container) {
     let html = ``;
@@ -19,7 +19,7 @@ export function useRenderUserInfo(data, container) {
 
 export function useRenderDefaultInfo(container, button) {
     button.addEventListener("click", () => {
-        window.location.pathname = "/nuts/index.html";
+        window.location.pathname = "../../../../index.html";
         signOutUser();
     });
 }

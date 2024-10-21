@@ -1,6 +1,6 @@
-import { useInputActive } from "../base/input-active.js";
-import { getElement } from "../base/get-element-dom.js";
-import { useValidate } from "../base/form-validate.js";
+import { useInputActive } from "../base/forms-methods/input-active.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
+import { useValidate } from "../base/forms-methods/form-validate.js";
 
 export function renderPasswordForm(container) {
     let html = ``;

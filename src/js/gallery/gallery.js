@@ -1,6 +1,6 @@
 import { useGetImg } from "../base/fire-base-functions/use-img.js";
 import { onYouTubeIframeAPIReady } from "../base/youtube-app.js";
-import { getElement } from "../base/get-element-dom.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 
 export function useGalleryRenders(containers, dataArr, button) {
     dataArr.sort((a, b) => a.index - b.index);

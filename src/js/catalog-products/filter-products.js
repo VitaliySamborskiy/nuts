@@ -1,4 +1,4 @@
-import { getElement } from "../base/get-element-dom.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 import { useSetQueryParameter, useGetQueryParameter } from "../base/querry-parameter.js";
 
 export function filterProducts(arrCards, applyButton, crossButton, lowerPrice, higherPrice, mainContainer) {

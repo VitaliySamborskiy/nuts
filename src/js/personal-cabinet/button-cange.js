@@ -1,5 +1,5 @@
 import { useGetQueryParameter, useSetQueryParameter } from "../base/querry-parameter.js";
-import { getElement } from "../base/get-element-dom.js";
+import { getElement } from "../base/get-methods/get-element-dom.js";
 import { renderOrderTable, renderTableTransaction } from "./renders-tablet.js";
 import { rendersContactInformation } from "./renders-contact-information.js";
 import { renderPasswordForm } from "./render-password-form.js";
