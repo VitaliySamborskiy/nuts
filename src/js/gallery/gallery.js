@@ -48,7 +48,7 @@ function rendersCardGallery(dataArr, containers) {
 function rendersImageCard(data, index) {
     let html = ``;
     html = `<picture class="gallery__img-block">
-            <img class="gallery__img" src="" alt="зображення картки галереї"/>
+            <img class="gallery__img" src="" alt="зображення картки галереї" loading="lazy"/>
         </picture>
         <div class="gallery__card-block">
             <div class="gallery__card-block-text">
@@ -73,7 +73,7 @@ function rendersVideoCard(data, index) {
     let html = ``;
     html = `<div class="gallery__preview">
                         <picture class="gallery__preview-img-block">
-                            <img class="gallery__preview-img" src="" alt="предв'ю для відео"/>
+                            <img class="gallery__preview-img" src="" alt="предв'ю для відео" loading="lazy"/>
                         </picture>
                         <button class='play-button gallery__play ${++index % 6 == 0 || data.mini ? "gallery__play-mini" : ""}' aria-label="play-video">
                             <svg class='play-button-svg gallery__play-svg'><use href=#play></use></svg>
