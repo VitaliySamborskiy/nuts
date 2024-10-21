@@ -1,5 +1,5 @@
-import{a as _,g as s,u,s as l,f as n}from"./main-DTtcJXsG.js";import{g as d}from"./local-storage-Dq6mamxl.js";import{u as g,a as b}from"./querry-parameter-8F5Ngxzv.js";async function m(e,t,p){if(t)i(e,t),g(["product-art"],[t[0].art]);else{const r=b(["art"],["product-art"]),a=(await _(p,"products")).filter(c=>c.art===r.art);i(e,a)}}function i(e,t){document.title=t[0].title;let p="",r="";t[0].imgUrl.forEach(()=>{r+=`<div class="swiper-slide">
-                   <picture class="product-page__block-img"><img class="product-page__img" src="" alt="product img" loading="lazy"/></picture>
+import{a as _,g as s,u,f as l}from"./main-Bm7yY8q7.js";import{g as n}from"./local-storage-Dq6mamxl.js";import{s as d}from"./swiper-BDI-ONPN.js";import{u as g,a as b}from"./querry-parameter-8F5Ngxzv.js";import"./youtube-app-DMHovVLY.js";async function m(e,t,p){if(t)i(e,t),g(["product-art"],[t[0].art]);else{const r=b(["art"],["product-art"]),a=(await _(p,"products")).filter(c=>c.art===r.art);i(e,a)}}function i(e,t){document.title=t[0].title;let p="",r="";t[0].imgUrl.forEach(()=>{r+=`<div class="swiper-slide">
+                   <picture class="product-page__block-img"><img class="product-page__img" src="" alt="product img" loading="lazy" width="553" height="571"/></picture>
                 </div>`}),p=` <div class="product-page__content">
         <div class="product-page__swiper-block">
             <div class="base-product__search product-page__search-background">
@@ -73,4 +73,4 @@ import{a as _,g as s,u,s as l,f as n}from"./main-DTtcJXsG.js";import{g as d}from
                 <button class="green-button product-page__bottom-buy">Заказать</button>
             </div>
         </div>
-    </div>`,e.innerHTML=p;let o=s(".product-page__img","all");o.forEach((a,c)=>u(t[0].imgUrl[c],o[c]))}document.addEventListener("DOMContentLoaded",async function(){const e=n.getApp();u("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",s(".product-information__img"));const t=d();await m(s(".product-page__container"),t,e),l(s(".swiper"),s(".base-product__button-prev"),s(".base-product__button-next"),"auto",0)});
+    </div>`,e.innerHTML=p;let o=s(".product-page__img","all");o.forEach((a,c)=>u(t[0].imgUrl[c],o[c]))}document.addEventListener("DOMContentLoaded",async function(){const e=l.getApp();u("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",s(".product-information__img"));const t=n();await m(s(".product-page__container"),t,e),d(s(".swiper"),s(".base-product__button-prev"),s(".base-product__button-next"),"auto",0)});
