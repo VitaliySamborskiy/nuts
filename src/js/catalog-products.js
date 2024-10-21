@@ -1,6 +1,6 @@
 import { useGetFirestore } from "./base/fire-base-functions/use-fire-store.js";
 import { getElement } from "./base/get-methods/get-element-dom.js";
-import { useRenderProductsCards } from "./base/renders-methods/use-render-products-cards.js";
+import { useRenderCards } from "./base/use-render-cards.js";
 import { swiper } from "./base/swiper.js";
 import { filterProducts } from "./catalog-products/filter-products.js";
 import { useCards } from "./base/product-cards.js";
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const products = await useGetFirestore(app, "products");
-    const swipersCard = useRenderProductsCards(products, getElement(".product__cards"));
+    const swipersCard = useRenderCards(products, getElement(".product__cards"));
 
     swipersCard.forEach((element) => {
         swiper(element.swiper, element.prev, element.next, "auto", 0);

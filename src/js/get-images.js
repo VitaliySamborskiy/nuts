@@ -6,4 +6,5 @@ export function getImages() {
     useGetImg("logo-1.svg", getElement(".burger__logo-img"));
     useGetImg("user.svg", getElement(".header__top-img"));
     useGetImg("user.svg", getElement(".burger__img"));
+    useGetImg("gs://nuts-17b69.appspot.com/31318052.webp", getElement(".error__img"));
 }

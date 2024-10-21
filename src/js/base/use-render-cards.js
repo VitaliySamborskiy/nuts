@@ -1,6 +1,6 @@
-import { useGetImg } from "../fire-base-functions/use-img.js";
+import { useGetImg } from "./fire-base-functions/use-img.js";
 
-export function useRenderProductsCards(arrData, element) {
+export function useRenderCards(arrData, element) {
     let fragment = document.createDocumentFragment();
     let swiperArr = [];
 

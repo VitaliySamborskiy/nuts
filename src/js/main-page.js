@@ -1,5 +1,5 @@
 import { useGetFirestore } from "./base/fire-base-functions/use-fire-store.js";
-import { useRenderProductsCards } from "./base/renders-methods/use-render-products-cards.js";
+import { useRenderCards } from "./base/use-render-cards.js";
 import { getElement } from "./base/get-methods/get-element-dom.js";
 import { swiper } from "./base/swiper.js";
 import { useRenderNewsCards } from "./base/renders-methods/news-render-cards.js";
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".manufacturing__preview-img-block", "all"),
         "manufacturing__preview-img-block_active",
     );
-    const swipersCard = useRenderProductsCards(products, getElement(".product__cards"));
+    const swipersCard = useRenderCards(products, getElement(".product__cards"));
     swipersCard.forEach((element) => {
         swiper(element.swiper, element.prev, element.next, "auto", 0);
     });
