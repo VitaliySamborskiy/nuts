@@ -1822,7 +1822,7 @@ Content-Type: `+d.contentType+`\r
            </a>
           <button class="header__top-remove-block"
               ><svg class="header__top-remove-svg"><use href="#exit"></use></svg><span class="header__top-remove-text">Вихід</span></button
-          >`,e.innerHTML=t,Sn(n.photoURL,oe(".header__top-img")),Z_(oe(".header__top-authentication-wrapper"),oe(".header__top-remove-block"))}function Z_(n,e){e.addEventListener("click",()=>{window.location.pathname="../../../../index.html",lE()})}function Mu(n){for(let e of n)e.value="",e.parentElement.querySelector(".input__label").classList.remove("input__label_active")}var qc=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{};/** @license
+          >`,e.insertAdjacentHTML("afterbegin",t),Sn(n.photoURL,oe(".header__top-img")),Z_(oe(".header__top-authentication-wrapper"),oe(".header__top-remove-block"))}function Z_(n,e){e.addEventListener("click",()=>{window.location.pathname="../../../../index.html",lE()})}function Mu(n){for(let e of n)e.value="",e.parentElement.querySelector(".input__label").classList.remove("input__label_active")}var qc=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{};/** @license
 Copyright The Closure Library Authors.
 SPDX-License-Identifier: Apache-2.0
 */var nn,Uu;(function(){var n;/** @license
