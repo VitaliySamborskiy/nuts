@@ -1,6 +1,6 @@
-import{a as _,g as s,u,f as l}from"./main-DjolN_Yf.js";import{g as n}from"./local-storage-Dq6mamxl.js";import{s as d}from"./swiper-BDI-ONPN.js";import{u as g,a as b}from"./querry-parameter-8F5Ngxzv.js";import"./youtube-app-DMHovVLY.js";async function m(e,t,p){if(t)i(e,t),g(["product-art"],[t[0].art]);else{const r=b(["art"],["product-art"]),a=(await _(p,"products")).filter(c=>c.art===r.art);i(e,a)}}function i(e,t){document.title=t[0].title;let p="",r="";t[0].imgUrl.forEach(()=>{r+=`<div class="swiper-slide">
+import{a as _,g as s,u,f as l}from"./main-DOJSKYfZ.js";import{g as n}from"./local-storage-Dq6mamxl.js";import{s as d}from"./swiper-BDI-ONPN.js";import{u as g,a as b}from"./querry-parameter-8F5Ngxzv.js";import"./youtube-app-DMHovVLY.js";async function m(e,t,p){if(t)i(e,t),g(["product-art"],[t[0].art]);else{const r=b(["art"],["product-art"]),a=(await _(p,"products")).filter(c=>c.art===r.art);i(e,a)}}function i(e,t){document.title=t[0].title;let p="",r="";t[0].imgUrl.forEach(()=>{r+=`<div class="swiper-slide">
                    <picture class="product-page__block-img"><img class="product-page__img" src="" alt="product img" loading="lazy" width="553" height="571"/></picture>
-                </div>`}),p=` <div class="product-page__content">
+                </div>`}),p=` <div class="product-page__content" data-title="${t[0].title}" data-prises="${t[0].cationPrice?t[0].cationPrice:t[0].price} ">
         <div class="product-page__swiper-block">
             <div class="base-product__search product-page__search-background">
                 <button class="circle-button product-page__circle-button" aria-label="product preview">

@@ -23,12 +23,16 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".registration__legal"),
         getElement(".fop-change"),
     );
+
+    useNumberMask(getElement("phone", "id"), "UA", /\+/g, "+380");
+    console.log(getElement("phone", "id"));
     useValidate(
         getElement("registrationForms", "id"),
         getElement(".registration__input", "all"),
         {
             fullName: {
                 void: "фио не вказано!",
+                regExp: "ФІО вказане у невірному форматі",
             },
             email: {
                 void: "не вказана електрона почта!",
@@ -66,9 +70,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             },
         },
         {
+            fullName: /[a-zа-яціїєґ]+/gi,
             email: /[0-9a-zа-яціїєґ\\.\\@]+@[0-9a-zа-яціїєґ\\.]+/gi,
             city: /[a-zа-яціїєґ\\-]+/gi,
-            phone: /^\+?[0-9]{1,4}[-\s]?[(]?[0-9]{2,4}[)]?[-\s]?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-9]{2}$/gi,
+            phone: /^\+?[0-9]{1,4}[-\s]?[(]?[0-9]{2,4}[)]?[-\s]?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-8]{2}$/gi,
             password: /^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/gi,
             confirmPassword: /^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/gi,
             cityLegal: /[a-zа-яціїєґ\\-]+/gi,
