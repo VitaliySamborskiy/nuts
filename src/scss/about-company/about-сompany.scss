@@ -6,11 +6,11 @@
     }
 
     &__text-block {
-        margin-top: 45px;
+        margin-top: 44px;
         display: flex;
         flex-direction: column;
-        gap: 23px;
-        line-height: 1.6;
+        gap: 32px;
+        line-height: 1.5;
 
         @include breakpoints(xl) {
             margin-top: 30px;

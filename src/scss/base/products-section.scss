@@ -18,11 +18,11 @@
         }
 
         &-text {
-            margin: 33px auto 0;
+            margin: 30px auto 0;
             width: 46%;
             text-align: center;
             font-size: 18px;
-            line-height: 146%;
+            line-height: 155%;
             letter-spacing: 0.01em;
 
             @include breakpoints(sm) {
@@ -33,10 +33,10 @@
     }
 
     &__cards {
-        margin: 62px auto 0;
+        margin: 60px auto 0;
         width: 96%;
         display: grid;
-        column-gap: 30px;
+        column-gap: 28px;
         row-gap: 45px;
         grid-template-columns: repeat(3, 1fr);
 
@@ -60,7 +60,7 @@
     &__card {
         position: relative;
         padding: 1px;
-        width: 410px;
+        width: 409px;
         border: 2px solid $cardBorder;
         transition: border 0.5s ease-in-out;
 
@@ -71,73 +71,6 @@
         &:hover {
             border: 2px solid $subGreat;
         }
-
-        //&-flag {
-        //    position: absolute;
-        //    top: 4%;
-        //    left: -3px;
-        //    width: 82px;
-        //    height: 31px;
-        //    z-index: 0;
-        //    clip-path: polygon(
-        //        5.042% 0%,
-        //        5.042% 0%,
-        //        4.901% 0.087%,
-        //        4.518% 0.38%,
-        //        3.953% 0.928%,
-        //        3.267% 1.778%,
-        //        2.521% 2.978%,
-        //        1.775% 4.577%,
-        //        1.089% 6.624%,
-        //        0.524% 9.165%,
-        //        0.141% 12.249%,
-        //        0% 15.925%,
-        //        0% 15.925%,
-        //        0% 21.431%,
-        //        0% 29.484%,
-        //        0% 39.348%,
-        //        0% 50.285%,
-        //        0% 61.561%,
-        //        0% 72.437%,
-        //        0% 82.179%,
-        //        0% 90.049%,
-        //        0% 95.31%,
-        //        0% 97.228%,
-        //        0% 97.228%,
-        //        0.02% 96.77%,
-        //        0.094% 95.525%,
-        //        0.242% 93.69%,
-        //        0.484% 91.463%,
-        //        0.84% 89.039%,
-        //        1.331% 86.615%,
-        //        1.976% 84.387%,
-        //        2.796% 82.553%,
-        //        3.812% 81.308%,
-        //        5.042% 80.849%,
-        //        100% 80.849%,
-        //        90.317% 38.984%,
-        //        100% 0%,
-        //        5.042% 0%,
-        //        5.042% 0%
-        //    );
-        //
-        //    &-new {
-        //        padding: 7px 15px 12px 12px;
-        //        background: $flagCardNew;
-        //    }
-        //
-        //    &-discount {
-        //        padding: 7px 23px 12px 20px;
-        //        background: $flagCardDiscount;
-        //    }
-        //}
-        //
-        //&-flag-text {
-        //    color: $backgroundColor;
-        //    font-weight: 800;
-        //    font-size: 10px;
-        //    letter-spacing: 0.06em;
-        //}
 
         &-swiper {
             &:hover {
@@ -166,7 +99,7 @@
         &-text-block {
             display: flex;
             flex-direction: column;
-            padding: 20px 17px 13px;
+            padding: 20px 14px 14px;
             max-height: 255px;
             height: 100vh;
 
@@ -319,7 +252,7 @@
 
     &__button {
         margin: 70px auto 0;
-        padding: 14px 27px;
+        padding: 15px 27px;
         font-weight: 700;
         font-size: 15px;
         letter-spacing: 0.02em;

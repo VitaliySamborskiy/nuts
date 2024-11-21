@@ -11,11 +11,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
 
     await useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-1.webp", getElement(".homepage__img"));
-    useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-3.webp", getElement(".main-goal__img"));
-    useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp", getElement(".benefits__nuts"));
-    useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_2.webp", getElement(".benefits__hazelnut"));
-    useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_3.webp", getElement(".benefits__rosehip"));
-    useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-4.webp", getElement(".eco__img"));
+    await useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-3.webp", getElement(".main-goal__img"));
+    await useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp", getElement(".benefits__nuts"));
+    await useGetImg(
+        "gs://nuts-17b69.appspot.com/main_page/main_page-benefit_2.webp",
+        getElement(".benefits__hazelnut"),
+    );
+    await useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_3.webp", getElement(".benefits__rosehip"));
+    await useGetImg("gs://nuts-17b69.appspot.com/main_page/main_page-4.webp", getElement(".eco__img"));
     const youTube = getElement(".manufacturing__preview-img", "all");
     const youTubeImg = [
         "gs://nuts-17b69.appspot.com/main_page/main_page-2.webp",

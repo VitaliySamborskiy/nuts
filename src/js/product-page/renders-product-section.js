@@ -28,7 +28,7 @@ function renderProductInfo(container, data) {
                 </div>`;
     });
 
-    html = ` <div class="product-page__content">
+    html = ` <div class="product-page__content" data-title="${data[0].title}" data-prises="${data[0].cationPrice ? data[0].cationPrice : data[0].price} ">
         <div class="product-page__swiper-block">
             <div class="base-product__search product-page__search-background">
                 <button class="circle-button product-page__circle-button" aria-label="product preview">

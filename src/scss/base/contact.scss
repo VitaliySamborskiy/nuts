@@ -1,6 +1,6 @@
 .contact {
     &__content {
-        margin: 190px auto 0;
+        margin: 191px auto 0;
         display: flex;
         justify-content: space-between;
 
@@ -320,7 +320,7 @@
 }
 
 .catalog-products__margin-contact {
-    margin-top: 150px;
+    margin-top: 140px;
 
     @include breakpoints(md) {
         margin-top: 130px;
@@ -332,7 +332,7 @@
 }
 
 .registration__margin-contact {
-    margin-top: 195px;
+    margin-top: 192px;
 
     @include breakpoints(md) {
         margin-top: 150px;

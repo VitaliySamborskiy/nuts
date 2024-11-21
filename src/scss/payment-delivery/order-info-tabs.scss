@@ -132,7 +132,7 @@
     &__body-block {
         display: none;
         justify-content: space-between;
-        gap: 30px;
+        gap: 25px;
 
         @include breakpoints(md) {
             flex-wrap: wrap;
@@ -284,13 +284,14 @@
     }
 
     &__img {
-        width: 100%;
-        aspect-ratio: 16/10;
+        padding-right: 10px;
+        max-width: 100%;
+        aspect-ratio: 16/9.9;
         object-fit: cover;
 
         @include breakpoints(md) {
-            aspect-ratio: 16/11;
-            min-width: 475px;
+            aspect-ratio: 16/9.9;
+            min-width: 485px;
         }
 
         @include breakpoints(sm) {

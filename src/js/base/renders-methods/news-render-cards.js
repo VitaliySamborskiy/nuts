@@ -13,7 +13,7 @@ export function useRenderNewsCards(arrData, elements) {
                  <p class="news-swiper__card-text">
                      ${data.summary}
                  </p>
-                 <a class="news-swiper__card-link" href="#"
+                 <a class="news-swiper__card-link" href="/nuts/404.html"
                      ><span class="news-swiper__card-link-text"> Читать </span
                      ><span class="news-swiper__card-link-arrow">
                          <svg class="news-swiper__card-svg">

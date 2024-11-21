@@ -1,6 +1,6 @@
 .eco {
     &__content {
-        margin-top: 98px;
+        margin-top: 99px;
 
         @include breakpoints(md) {
             margin-top: 80px;
@@ -9,7 +9,7 @@
 
     &__block {
         padding: 225px 0 0;
-        gap: 25px;
+        gap: 23px;
 
         @include breakpoints(xl) {
             padding: 160px 0 0;
@@ -25,7 +25,7 @@
     }
 
     &__title {
-        margin-top: 17px;
+        margin-top: 21px;
         font-size: 45px;
         letter-spacing: 0.01em;
 
@@ -84,7 +84,7 @@
 }
 
 .about-company__eco-margin {
-    margin-top: 118px;
+    margin-top: 117px;
 
     @include breakpoints(md) {
         margin-top: 80px;
@@ -100,7 +100,7 @@
 }
 
 .about-company__block {
-    padding: 260px 0 0;
+    padding: 254px 0 0;
     gap: 20px;
 
     @include breakpoints(xl) {

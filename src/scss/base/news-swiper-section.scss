@@ -1,7 +1,7 @@
 .news-swiper {
     &__content {
         width: 99%;
-        margin: 85px auto 0;
+        margin: 84px auto 0;
         padding-left: 12px;
         overflow: hidden;
 
@@ -31,7 +31,7 @@
     }
 
     &__text {
-        margin-top: 30px;
+        margin-top: 32px;
         font-size: 18px;
         line-height: 122%;
         letter-spacing: 0.01em;
@@ -153,6 +153,7 @@
         }
 
         &-link {
+            padding-bottom: 6px;
             margin-top: auto;
             display: flex;
             align-items: center;
@@ -173,11 +174,10 @@
         }
 
         &-link-arrow {
-            padding-left: 7px;
+            padding: 5px 0 0 7px;
         }
 
         &-link-text {
-            padding-bottom: 8px;
             transition: color 0.3s ease-in-out;
         }
 
@@ -192,7 +192,7 @@
     &__link {
         display: block;
         width: 230px;
-        margin: 64px auto 0;
+        margin: 61px auto 0;
         padding: 16px 24px;
         font-weight: 700;
         font-size: 15px;
@@ -210,5 +210,5 @@
 }
 
 .about-company__margin-news {
-    margin-top: 88px;
+    margin-top: 87px;
 }
