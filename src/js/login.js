@@ -16,14 +16,16 @@ document.addEventListener("DOMContentLoaded", async function () {
         {
             loginEmail: {
                 void: "не вказана електрона почта!",
-                regExp: "не правильна почта відсутній символ @",
+                regExp: "не правильна почта відсутній символ @, або не вірний домен почти",
             },
             loginPassword: {
                 void: "поле не заповнене",
+                regExp: "пароль має містити латинські літери A-Z, хочаб ону цифру 0-9 та один спеціальний символ з #?!@$%^&*-",
             },
         },
         {
-            loginEmail: /[0-9a-zа-яціїєґ\\.\\@]+@[0-9a-zа-яціїєґ\\.]+/gi,
+            loginEmail: /[0-9a-zа-яціїєґ\\.]+@(gmail\.com|outlook\.com|hotmail\.com|live\.com)+/gi,
+            loginPassword: /^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/gi,
         },
         useLoginUser,
         getElement(".login__button"),

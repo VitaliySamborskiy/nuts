@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".fop-change"),
     );
 
-    useNumberMask(getElement("phone", "id"), "UA", /\+/g, "+380");
-    console.log(getElement("phone", "id"));
+    useNumberMask(getElement("phone-form", "id"), "UA", /\+/g, "+380");
     useValidate(
         getElement("registrationForms", "id"),
         getElement(".registration__input", "all"),
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             },
             email: {
                 void: "не вказана електрона почта!",
-                regExp: "не правильна почта відсутній символ @",
+                regExp: "не правильна почта відсутній символ @, або не вірний домен почти",
             },
             phone: {
                 void: "не вказаний номер телефону",
@@ -63,17 +62,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                 void: null,
                 regExp: "Ваш файл не відповідає формату .png, .jpg, або .jpeg",
             },
-            agreeCheckbox: {
-                void: null,
-                regExp: "null",
-                check: "Ви не підтвердили що згодні з умовами реестрації",
-            },
         },
         {
             fullName: /[a-zа-яціїєґ]+/gi,
-            email: /[0-9a-zа-яціїєґ\\.\\@]+@[0-9a-zа-яціїєґ\\.]+/gi,
+            email: /[0-9a-zа-яціїєґ\\.]+@(gmail\.com|outlook\.com|hotmail\.com|live\.com)+/gi,
             city: /[a-zа-яціїєґ\\-]+/gi,
-            phone: /^\+?[0-9]{1,4}[-\s]?[(]?[0-9]{2,4}[)]?[-\s]?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-8]{2}$/gi,
+            phone: /^\+?[0-9]{1,4}[-\s]?[(]?[0-9]{2,4}[)]?[-\s]?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-9]{2}$/gi,
             password: /^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/gi,
             confirmPassword: /^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/gi,
             cityLegal: /[a-zа-яціїєґ\\-]+/gi,
@@ -82,9 +76,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         useCreateUser,
         getElement(".registration__text-button"),
+        [app, getElement("registrationForms", "id")],
         getElement(".registration__input-img"),
         getElement(".registration__photo-input"),
-        [app, getElement("registrationForms", "id")],
     );
     checkboxValidate(
         getElement("registrationForms", "id"),
@@ -104,7 +98,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         getElement(".registration__current-region"),
         getElement(".region"),
     );
-    useNumberMask(getElement("phone", "id"), "UA", /\+/g, "+380");
     useInputActive(getElement(".input__area", "all"), getElement(".input__label", "all"));
     useFormChange(getElement(".registration__tab-text", "all"), getElement(".registration__option-form", "all"));
 });

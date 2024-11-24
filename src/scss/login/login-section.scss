@@ -66,7 +66,8 @@
 
     &__button {
         margin-top: 6px;
-        padding: 13px 180px;
+        width: 410px;
+        padding: 13px 178px 14px;
 
         @include breakpoints(md) {
             font-size: 14px;
