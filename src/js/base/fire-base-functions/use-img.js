@@ -2,16 +2,29 @@ import { v4 as uuidv4 } from "uuid";
 import { getStorage, ref, getDownloadURL, uploadBytes, deleteObject } from "firebase/storage";
 
 export function useGetImg(url, element) {
-    const storage = getStorage();
-    const fileRef = ref(storage, url);
-    getDownloadURL(fileRef)
-        .then((res) => {
-            element.src = res;
-            // element.setAttribute("loading", "lazy");
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    const observers = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const storage = getStorage();
+                    const fileRef = ref(storage, url);
+                    getDownloadURL(fileRef)
+                        .then((res) => {
+                            element.src = res;
+                            observers.disconnect();
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                        });
+                }
+            });
+        },
+        {
+            rootMargin: "200px",
+        },
+    );
+
+    observers.observe(element);
 }
 
 export async function useSetImg(file) {

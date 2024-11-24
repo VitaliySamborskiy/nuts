@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         "gs://nuts-17b69.appspot.com/corporate_clients/corporate_clients_1.webp",
         getElement(".corporate-clients-page__img"),
     );
-    useGetImg("gs://nuts-17b69.appspot.com/corporate_clients/corporate_clients_3.webp", getElement(".eco__img"));
+    await useGetImg("gs://nuts-17b69.appspot.com/corporate_clients/corporate_clients_3.webp", getElement(".eco__img"));
 
     let imgTab = [
         "gs://nuts-17b69.appspot.com/corporate_clients/corporate_clients_2.webp",
