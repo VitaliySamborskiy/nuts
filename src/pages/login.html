@@ -4,23 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="login page for the site" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
+        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
         <title>Вход</title>
-        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgYnVyZ2VyTWVudSB9IGZyb20gIi4vYmFzZS9idXJnZXIuanMiOw0KaW1wb3J0IHsgZ2V0SW1hZ2VzIH0gZnJvbSAiLi9nZXQtaW1hZ2VzLmpzIjsNCmltcG9ydCB7IHNlbGVjdHMgfSBmcm9tICIuL3NlbGVjdHMuanMiOw0KaW1wb3J0IHsgdXNlVXNlclN0YXRlQ2hhbmdlZCB9IGZyb20gIi4vYmFzZS9hdXRpbnRpZmljYXRlLmpzIjsNCmltcG9ydCB7IGZpcmVCYXNlU2VydmljZSB9IGZyb20gIi4vYmFzZS9zZXJ2aWNlcy9maXJlLWJhc2Utc2VydmljZS5qcyI7DQoNCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCBhc3luYyBmdW5jdGlvbiAoKSB7DQogICAgY29uc3QgYXBwID0gZmlyZUJhc2VTZXJ2aWNlLmdldEFwcCgpOw0KICAgIGdldEltYWdlcygpOw0KICAgIHNlbGVjdHMoKTsNCiAgICBidXJnZXJNZW51KCk7DQogICAgYXdhaXQgdXNlVXNlclN0YXRlQ2hhbmdlZCgpOw0KfSk7DQo=" />
-        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgdXNlSW5wdXRBY3RpdmUgfSBmcm9tICIuL2Jhc2UvZm9ybXMtbWV0aG9kcy9pbnB1dC1hY3RpdmUuanMiOw0KaW1wb3J0IHsgZ2V0RWxlbWVudCB9IGZyb20gIi4vYmFzZS9nZXQtbWV0aG9kcy9nZXQtZWxlbWVudC1kb20uanMiOw0KaW1wb3J0IHsgdXNlTG9naW5Vc2VyIH0gZnJvbSAiLi9iYXNlL2F1dGludGlmaWNhdGUuanMiOw0KaW1wb3J0IHsgdXNlVmFsaWRhdGUgfSBmcm9tICIuL2Jhc2UvZm9ybXMtbWV0aG9kcy9mb3JtLXZhbGlkYXRlLmpzIjsNCmltcG9ydCB7IHVzZUlucHV0Q2xlYXIgfSBmcm9tICIuL2Jhc2UvZm9ybXMtbWV0aG9kcy9pbnB1dC1jbGVhci5qcyI7DQppbXBvcnQgeyBmaXJlQmFzZVNlcnZpY2UgfSBmcm9tICIuL2Jhc2Uvc2VydmljZXMvZmlyZS1iYXNlLXNlcnZpY2UuanMiOw0KDQpkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJET01Db250ZW50TG9hZGVkIiwgYXN5bmMgZnVuY3Rpb24gKCkgew0KICAgIGNvbnN0IGFwcCA9IGZpcmVCYXNlU2VydmljZS5nZXRBcHAoKTsNCiAgICB1c2VJbnB1dENsZWFyKGdldEVsZW1lbnQoIi5pbnB1dF9fYXJlYSIsICJhbGwiKSk7DQogICAgdXNlSW5wdXRBY3RpdmUoZ2V0RWxlbWVudCgiLmlucHV0X19hcmVhIiwgImFsbCIpLCBnZXRFbGVtZW50KCIuaW5wdXRfX2xhYmVsIiwgImFsbCIpKTsNCg0KICAgIHVzZVZhbGlkYXRlKA0KICAgICAgICBnZXRFbGVtZW50KCJsb2dpbkZvcm0iLCAiaWQiKSwNCiAgICAgICAgZ2V0RWxlbWVudCgiLmxvZ2luX19pbnB1dCIsICJhbGwiKSwNCiAgICAgICAgew0KICAgICAgICAgICAgbG9naW5FbWFpbDogew0KICAgICAgICAgICAgICAgIHZvaWQ6ICLQvdC1INCy0LrQsNC30LDQvdCwINC10LvQtdC60YLRgNC+0L3QsCDQv9C+0YfRgtCwISIsDQogICAgICAgICAgICAgICAgcmVnRXhwOiAi0L3QtSDQv9GA0LDQstC40LvRjNC90LAg0L/QvtGH0YLQsCDQstGW0LTRgdGD0YLQvdGW0Lkg0YHQuNC80LLQvtC7IEAiLA0KICAgICAgICAgICAgfSwNCiAgICAgICAgICAgIGxvZ2luUGFzc3dvcmQ6IHsNCiAgICAgICAgICAgICAgICB2b2lkOiAi0L/QvtC70LUg0L3QtSDQt9Cw0L/QvtCy0L3QtdC90LUiLA0KICAgICAgICAgICAgfSwNCiAgICAgICAgfSwNCiAgICAgICAgew0KICAgICAgICAgICAgbG9naW5FbWFpbDogL1swLTlhLXrQsC3Rj9GG0ZbRl9GU0pFcXC5cXEBdK0BbMC05YS160LAt0Y/RhtGW0ZfRlNKRXFwuXSsvZ2ksDQogICAgICAgIH0sDQogICAgICAgIHVzZUxvZ2luVXNlciwNCiAgICAgICAgZ2V0RWxlbWVudCgiLmxvZ2luX19idXR0b24iKSwNCiAgICAgICAgW2FwcCwgZ2V0RWxlbWVudCgiLmxvZ2luX19mb3JtIildLA0KICAgICk7DQp9KTsNCg==" />
+        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgYnVyZ2VyTWVudSB9IGZyb20gIi4vYmFzZS9idXJnZXIuanMiOwppbXBvcnQgeyBnZXRJbWFnZXMgfSBmcm9tICIuL2dldC1pbWFnZXMuanMiOwppbXBvcnQgeyBzZWxlY3RzIH0gZnJvbSAiLi9zZWxlY3RzLmpzIjsKaW1wb3J0IHsgdXNlVXNlclN0YXRlQ2hhbmdlZCB9IGZyb20gIi4vYmFzZS9hdXRpbnRpZmljYXRlLmpzIjsKaW1wb3J0IHsgZmlyZUJhc2VTZXJ2aWNlIH0gZnJvbSAiLi9iYXNlL3NlcnZpY2VzL2ZpcmUtYmFzZS1zZXJ2aWNlLmpzIjsKLy8gaW1wb3J0IHsgbWFwT2JzZXJ2ZXIgfSBmcm9tICIuL2Jhc2UvbG9hZC1nb29nbGUtbWFwLmpzIjsKCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCBhc3luYyBmdW5jdGlvbiAoKSB7CiAgICBjb25zdCBhcHAgPSBmaXJlQmFzZVNlcnZpY2UuZ2V0QXBwKCk7CiAgICBnZXRJbWFnZXMoKTsKICAgIHNlbGVjdHMoKTsKICAgIGJ1cmdlck1lbnUoKTsKICAgIC8vIG1hcE9ic2VydmVyKCk7CiAgICBhd2FpdCB1c2VVc2VyU3RhdGVDaGFuZ2VkKCk7Cn0pOwo=" />
+        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgdXNlSW5wdXRBY3RpdmUgfSBmcm9tICIuL2Jhc2UvZm9ybXMtbWV0aG9kcy9pbnB1dC1hY3RpdmUuanMiOwppbXBvcnQgeyBnZXRFbGVtZW50IH0gZnJvbSAiLi9iYXNlL2dldC1tZXRob2RzL2dldC1lbGVtZW50LWRvbS5qcyI7CmltcG9ydCB7IHVzZUxvZ2luVXNlciB9IGZyb20gIi4vYmFzZS9hdXRpbnRpZmljYXRlLmpzIjsKaW1wb3J0IHsgdXNlVmFsaWRhdGUgfSBmcm9tICIuL2Jhc2UvZm9ybXMtbWV0aG9kcy9mb3JtLXZhbGlkYXRlLmpzIjsKaW1wb3J0IHsgdXNlSW5wdXRDbGVhciB9IGZyb20gIi4vYmFzZS9mb3Jtcy1tZXRob2RzL2lucHV0LWNsZWFyLmpzIjsKaW1wb3J0IHsgZmlyZUJhc2VTZXJ2aWNlIH0gZnJvbSAiLi9iYXNlL3NlcnZpY2VzL2ZpcmUtYmFzZS1zZXJ2aWNlLmpzIjsKCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCBhc3luYyBmdW5jdGlvbiAoKSB7CiAgICBjb25zdCBhcHAgPSBmaXJlQmFzZVNlcnZpY2UuZ2V0QXBwKCk7CiAgICB1c2VJbnB1dENsZWFyKGdldEVsZW1lbnQoIi5pbnB1dF9fYXJlYSIsICJhbGwiKSk7CiAgICB1c2VJbnB1dEFjdGl2ZShnZXRFbGVtZW50KCIuaW5wdXRfX2FyZWEiLCAiYWxsIiksIGdldEVsZW1lbnQoIi5pbnB1dF9fbGFiZWwiLCAiYWxsIikpOwoKICAgIHVzZVZhbGlkYXRlKAogICAgICAgIGdldEVsZW1lbnQoImxvZ2luRm9ybSIsICJpZCIpLAogICAgICAgIGdldEVsZW1lbnQoIi5sb2dpbl9faW5wdXQiLCAiYWxsIiksCiAgICAgICAgewogICAgICAgICAgICBsb2dpbkVtYWlsOiB7CiAgICAgICAgICAgICAgICB2b2lkOiAi0L3QtSDQstC60LDQt9Cw0L3QsCDQtdC70LXQutGC0YDQvtC90LAg0L/QvtGH0YLQsCEiLAogICAgICAgICAgICAgICAgcmVnRXhwOiAi0L3QtSDQv9GA0LDQstC40LvRjNC90LAg0L/QvtGH0YLQsCDQstGW0LTRgdGD0YLQvdGW0Lkg0YHQuNC80LLQvtC7IEAsINCw0LHQviDQvdC1INCy0ZbRgNC90LjQuSDQtNC+0LzQtdC9INC/0L7Rh9GC0LgiLAogICAgICAgICAgICB9LAogICAgICAgICAgICBsb2dpblBhc3N3b3JkOiB7CiAgICAgICAgICAgICAgICB2b2lkOiAi0L/QvtC70LUg0L3QtSDQt9Cw0L/QvtCy0L3QtdC90LUiLAogICAgICAgICAgICAgICAgcmVnRXhwOiAi0L/QsNGA0L7Qu9GMINC80LDRlCDQvNGW0YHRgtC40YLQuCDQu9Cw0YLQuNC90YHRjNC60ZYg0LvRltGC0LXRgNC4IEEtWiwg0YXQvtGH0LDQsSDQvtC90YMg0YbQuNGE0YDRgyAwLTkg0YLQsCDQvtC00LjQvSDRgdC/0LXRhtGW0LDQu9GM0L3QuNC5INGB0LjQvNCy0L7QuyDQtyAjPyFAJCVeJiotIiwKICAgICAgICAgICAgfSwKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgbG9naW5FbWFpbDogL1swLTlhLXrQsC3Rj9GG0ZbRl9GU0pFcXC5dK0AoZ21haWxcLmNvbXxvdXRsb29rXC5jb218aG90bWFpbFwuY29tfGxpdmVcLmNvbSkrL2dpLAogICAgICAgICAgICBsb2dpblBhc3N3b3JkOiAvXig/PS4qP1tBLVpdKSg/PS4qP1swLTldKSg/PS4qP1sjPyFAJCVeJiotXSkuezgsfSQvZ2ksCiAgICAgICAgfSwKICAgICAgICB1c2VMb2dpblVzZXIsCiAgICAgICAgZ2V0RWxlbWVudCgiLmxvZ2luX19idXR0b24iKSwKICAgICAgICBbYXBwLCBnZXRFbGVtZW50KCIubG9naW5fX2Zvcm0iKV0sCiAgICApOwp9KTsK" />
         <link rel="preload" href="/nuts/assets/Raleway-ExtraBold-CQooVWY1.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="/nuts/assets/Raleway-Medium-Blgd746U.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="/nuts/assets/Raleway-SemiBold-0CVifwtp.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="/nuts/assets/Raleway-Bold-zTm0vDbl.woff" as="font" type="font/woff" crossorigin />
-        <script
-            async
-            defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
-        ></script>
-      <script type="module" crossorigin src="/nuts/assets/login-C1jVAjEl.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/login-DVKBUL5F.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-DOJSKYfZ.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/form-validate-CDH3izCh.js">
-      <link rel="stylesheet" crossorigin href="/nuts/assets/login-C4qkYeyU.css">
+      <link rel="stylesheet" crossorigin href="/nuts/assets/login-BRXcYJS_.css">
     </head>
     <body>
         <div class="wrapper">
@@ -330,7 +325,12 @@
             </div>
         </div>
         <div class="contact__map">
-            <iframe class="contact__map-frame" src="https://snazzymaps.com/embed/633570" title="map"></iframe>
+            <iframe
+                class="contact__map-frame"
+                src="https://snazzymaps.com/embed/633570"
+                title="map"
+                loading="lazy"
+            ></iframe>
         </div>
     </div>
 </section>
@@ -1213,6 +1213,6 @@
     </symbol>
 </svg>
 
-        </div>
+        </div>
     </body>
 </html>

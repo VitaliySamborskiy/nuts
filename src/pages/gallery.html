@@ -4,19 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Gallery page where you can view achievements and events within the company" />
-        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
+        <link rel="icon" type="image/svg+xml" href="/nuts/assets/logo-1-Dl5gK-yg.svg" />
         <title>Галерея</title>
-        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgYnVyZ2VyTWVudSB9IGZyb20gIi4vYmFzZS9idXJnZXIuanMiOw0KaW1wb3J0IHsgZ2V0SW1hZ2VzIH0gZnJvbSAiLi9nZXQtaW1hZ2VzLmpzIjsNCmltcG9ydCB7IHNlbGVjdHMgfSBmcm9tICIuL3NlbGVjdHMuanMiOw0KaW1wb3J0IHsgdXNlVXNlclN0YXRlQ2hhbmdlZCB9IGZyb20gIi4vYmFzZS9hdXRpbnRpZmljYXRlLmpzIjsNCmltcG9ydCB7IGZpcmVCYXNlU2VydmljZSB9IGZyb20gIi4vYmFzZS9zZXJ2aWNlcy9maXJlLWJhc2Utc2VydmljZS5qcyI7DQoNCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCBhc3luYyBmdW5jdGlvbiAoKSB7DQogICAgY29uc3QgYXBwID0gZmlyZUJhc2VTZXJ2aWNlLmdldEFwcCgpOw0KICAgIGdldEltYWdlcygpOw0KICAgIHNlbGVjdHMoKTsNCiAgICBidXJnZXJNZW51KCk7DQogICAgYXdhaXQgdXNlVXNlclN0YXRlQ2hhbmdlZCgpOw0KfSk7DQo=" />
+        <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgYnVyZ2VyTWVudSB9IGZyb20gIi4vYmFzZS9idXJnZXIuanMiOwppbXBvcnQgeyBnZXRJbWFnZXMgfSBmcm9tICIuL2dldC1pbWFnZXMuanMiOwppbXBvcnQgeyBzZWxlY3RzIH0gZnJvbSAiLi9zZWxlY3RzLmpzIjsKaW1wb3J0IHsgdXNlVXNlclN0YXRlQ2hhbmdlZCB9IGZyb20gIi4vYmFzZS9hdXRpbnRpZmljYXRlLmpzIjsKaW1wb3J0IHsgZmlyZUJhc2VTZXJ2aWNlIH0gZnJvbSAiLi9iYXNlL3NlcnZpY2VzL2ZpcmUtYmFzZS1zZXJ2aWNlLmpzIjsKLy8gaW1wb3J0IHsgbWFwT2JzZXJ2ZXIgfSBmcm9tICIuL2Jhc2UvbG9hZC1nb29nbGUtbWFwLmpzIjsKCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCBhc3luYyBmdW5jdGlvbiAoKSB7CiAgICBjb25zdCBhcHAgPSBmaXJlQmFzZVNlcnZpY2UuZ2V0QXBwKCk7CiAgICBnZXRJbWFnZXMoKTsKICAgIHNlbGVjdHMoKTsKICAgIGJ1cmdlck1lbnUoKTsKICAgIC8vIG1hcE9ic2VydmVyKCk7CiAgICBhd2FpdCB1c2VVc2VyU3RhdGVDaGFuZ2VkKCk7Cn0pOwo=" />
         <link rel="modulepreload" href="data:text/javascript;base64,aW1wb3J0IHsgdXNlR2V0SW1nIH0gZnJvbSAiLi9iYXNlL2ZpcmUtYmFzZS1mdW5jdGlvbnMvdXNlLWltZy5qcyI7DQppbXBvcnQgeyBnZXRFbGVtZW50IH0gZnJvbSAiLi9iYXNlL2dldC1tZXRob2RzL2dldC1lbGVtZW50LWRvbS5qcyI7DQppbXBvcnQgeyB1c2VHZXRGaXJlc3RvcmUgfSBmcm9tICIuL2Jhc2UvZmlyZS1iYXNlLWZ1bmN0aW9ucy91c2UtZmlyZS1zdG9yZS5qcyI7DQppbXBvcnQgeyB1c2VHYWxsZXJ5UmVuZGVycyB9IGZyb20gIi4vZ2FsbGVyeS9nYWxsZXJ5LmpzIjsNCmltcG9ydCB7IGZpcmVCYXNlU2VydmljZSB9IGZyb20gIi4vYmFzZS9zZXJ2aWNlcy9maXJlLWJhc2Utc2VydmljZS5qcyI7DQoNCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCBhc3luYyBmdW5jdGlvbiAoKSB7DQogICAgY29uc3QgYXBwID0gZmlyZUJhc2VTZXJ2aWNlLmdldEFwcCgpOw0KDQogICAgYXdhaXQgdXNlR2V0SW1nKCJnczovL251dHMtMTdiNjkuYXBwc3BvdC5jb20vZ2FsbGVyeS9nYWxsZXJ5XzEud2VicCIsIGdldEVsZW1lbnQoIi5nYWxsZXJ5LXBhZ2VfX2ltZyIpKTsNCg0KICAgIGNvbnN0IGdhbGxlcnlJbmZvID0gYXdhaXQgdXNlR2V0RmlyZXN0b3JlKGFwcCwgImdhbGxlcnkiKTsNCiAgICB1c2VHYWxsZXJ5UmVuZGVycyhnZXRFbGVtZW50KCIuZ2FsbGVyeV9fYm94IiksIGdhbGxlcnlJbmZvLCBnZXRFbGVtZW50KCIuZ2FsbGVyeV9fYnV0dG9uLWxvYWQgIikpOw0KfSk7DQo=" />
         <link rel="preload" href="/nuts/assets/Raleway-ExtraBold-CQooVWY1.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="/nuts/assets/Raleway-Medium-Blgd746U.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="/nuts/assets/Raleway-SemiBold-0CVifwtp.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="/nuts/assets/Raleway-Bold-zTm0vDbl.woff" as="font" type="font/woff" crossorigin />
-        <script
-            async
-            defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOYtWVmkdH0QsameLbV__VHDh00qdLi8&callback=console.debug&libraries=maps,marker&v=beta"
-        ></script>
       <script type="module" crossorigin src="/nuts/assets/gallery-DAdUSKO2.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-DOJSKYfZ.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/youtube-app-DMHovVLY.js">
@@ -348,7 +343,12 @@
             </div>
         </div>
         <div class="contact__map">
-            <iframe class="contact__map-frame" src="https://snazzymaps.com/embed/633570" title="map"></iframe>
+            <iframe
+                class="contact__map-frame"
+                src="https://snazzymaps.com/embed/633570"
+                title="map"
+                loading="lazy"
+            ></iframe>
         </div>
     </div>
 </section>
@@ -1231,7 +1231,7 @@
     </symbol>
 </svg>
 
-        </div>
+        </div>
         <script async defer src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>
