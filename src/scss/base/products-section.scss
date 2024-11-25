@@ -265,9 +265,9 @@
     }
 
     &__button-load-card {
-        padding: 14px 30px;
-        margin: 70px auto 0;
-        width: 205px;
+        padding: 14px 27px 15px;
+        margin: 72px auto 0;
+        width: 200px;
 
         @include breakpoints(md) {
             margin: 50px auto 0;

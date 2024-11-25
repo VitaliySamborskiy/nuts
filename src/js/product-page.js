@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     await useRenderProductSection(getElement(".product-page__container"), productData, app);
 
     swiper(
-        getElement(".swiper"),
+        getElement(".product-page__swiper"),
         getElement(".base-product__button-prev"),
         getElement(".base-product__button-next"),
         "auto",

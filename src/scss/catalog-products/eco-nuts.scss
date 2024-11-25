@@ -2,7 +2,7 @@
     &__content {
         display: flex;
         width: 99%;
-        margin: 193px auto 0;
+        margin: 196px auto 0;
         gap: 30px;
 
         @include breakpoints(xl) {
@@ -39,7 +39,7 @@
     }
 
     &__title {
-        line-height: 110%;
+        line-height: 105%;
 
         @include breakpoints(md) {
             font-size: 30px;
@@ -48,7 +48,7 @@
     }
 
     &__title-sub {
-        margin-top: 4px;
+        margin-top: 6px;
         font-weight: 600;
         font-size: 24px;
         line-height: 208%;

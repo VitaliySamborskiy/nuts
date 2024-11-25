@@ -1,6 +1,6 @@
 .order-tabs {
     &__content {
-        margin-top: 81px;
+        margin-top: 84px;
         padding-left: 15px;
 
         @include breakpoints(md) {
@@ -19,7 +19,7 @@
 
             &::after {
                 position: absolute;
-                top: 130%;
+                top: 122%;
                 left: -25%;
                 content: "";
                 display: flex;
@@ -63,7 +63,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 15px;
+            gap: 13px;
 
             @include breakpoints(sm) {
                 gap: 6px;
@@ -72,7 +72,8 @@
             &::after {
                 content: "";
                 position: absolute;
-                top: 126%;
+                top: 118%;
+                left: -3%;
                 display: flex;
                 width: 0;
                 height: 3px;
@@ -82,7 +83,7 @@
 
             &_active {
                 &::after {
-                    width: 100%;
+                    width: 104%;
                 }
             }
         }
@@ -117,7 +118,7 @@
     }
 
     &__body {
-        margin-top: 65px;
+        margin-top: 63px;
         padding-left: 7px;
 
         @include breakpoints(md) {
@@ -284,9 +285,10 @@
     }
 
     &__img {
-        padding-right: 10px;
-        max-width: 100%;
-        aspect-ratio: 16/9.9;
+        padding-right: 7px;
+        //max-width: 100%;
+        aspect-ratio: 16/12;
+        max-height: 471px;
         object-fit: cover;
 
         @include breakpoints(md) {

@@ -57,7 +57,7 @@ export function useCards(cards, popup, popupBlock, cross, dataArr) {
     });
 }
 
-function clickSearch(popup, popupBlock, popupStatus) {
+export function clickSearch(popup, popupBlock, popupStatus) {
     setTimeout(
         () => {
             popup.classList.toggle("popup__content_active", popupStatus);

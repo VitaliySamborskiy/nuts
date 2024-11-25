@@ -7,9 +7,9 @@ import { fireBaseService } from "./base/services/fire-base-service.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
-    getImages();
     selects();
     burgerMenu();
     // mapObserver();
     await useUserStateChanged();
+    getImages();
 });

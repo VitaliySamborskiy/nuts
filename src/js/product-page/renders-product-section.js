@@ -2,6 +2,8 @@ import { useGetQueryParameter, useSetQueryParameter } from "../base/querry-param
 import { useGetFirestore } from "../base/fire-base-functions/use-fire-store.js";
 import { getElement } from "../base/get-methods/get-element-dom.js";
 import { useGetImg } from "../base/fire-base-functions/use-img.js";
+import { useRenderPopupProduct } from "../base/renders-methods/render-popup-products.js";
+import { clickSearch } from "../base/product-cards.js";
 
 export async function useRenderProductSection(container, data, app) {
     if (data) {
@@ -28,7 +30,7 @@ function renderProductInfo(container, data) {
                 </div>`;
     });
 
-    html = ` <div class="product-page__content" data-title="${data[0].title}" data-prises="${data[0].cationPrice ? data[0].cationPrice : data[0].price} ">
+    html = ` <div class="product-page__content" data-title="${data[0].title}" data-prises="${JSON.stringify([data[0].cationPrice ? data[0].cationPrice : data[0].price])}" data-imgUrl=${JSON.stringify(data[0].imgUrl)}>
         <div class="product-page__swiper-block">
             <div class="base-product__search product-page__search-background">
                 <button class="circle-button product-page__circle-button" aria-label="product preview">
@@ -46,7 +48,7 @@ function renderProductInfo(container, data) {
             </div>`
                     : ""
             }
-            <div class="swiper">
+            <div class="swiper product-page__swiper">
                 <div class="swiper-wrapper">
                     ${img}
                 </div>
@@ -115,7 +117,35 @@ function renderProductInfo(container, data) {
 
     container.innerHTML = html;
 
-    let imgTabElement = getElement(".product-page__img", "all");
+    const productSection = getElement(".product-page__content");
+    const clickElement = getElement(".product-page__circle-button");
+    const cross = getElement(".popup__cross");
+    let popUpStatus = true;
 
+    clickElement.addEventListener("click", () => {
+        popUpStatus = true;
+        clickSearch(getElement(".popup__content"), getElement(".popup__background-block"), popUpStatus);
+        useRenderPopupProduct(
+            {
+                title: productSection.getAttribute("data-title"),
+                prices: JSON.parse(productSection.getAttribute("data-prises")),
+                images: JSON.parse(productSection.getAttribute("data-imgUrl")),
+            },
+            {
+                title: getElement(".popup__title"),
+                prices: getElement(".popup__price"),
+                slideWrapper: getElement(".popup__swiper-wrapper"),
+                popup: getElement(".popup__content"),
+                popupBlock: getElement(".popup__background-block"),
+            },
+        );
+    });
+
+    cross.addEventListener("click", () => {
+        popUpStatus = false;
+        clickSearch(getElement(".popup__content"), getElement(".popup__background-block"), popUpStatus);
+    });
+
+    const imgTabElement = getElement(".product-page__img", "all");
     imgTabElement.forEach((value, index) => useGetImg(data[0].imgUrl[index], imgTabElement[index]));
 }
