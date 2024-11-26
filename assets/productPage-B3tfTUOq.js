@@ -1,6 +1,6 @@
-import{a as _,g as s,u,f as l}from"./main-t_-LtWPZ.js";import{g as n}from"./local-storage-Dq6mamxl.js";import{s as d}from"./swiper-BDI-ONPN.js";import{u as g,a as b}from"./querry-parameter-8F5Ngxzv.js";import"./youtube-app-DMHovVLY.js";async function m(e,t,p){if(t)i(e,t),g(["product-art"],[t[0].art]);else{const r=b(["art"],["product-art"]),a=(await _(p,"products")).filter(c=>c.art===r.art);i(e,a)}}function i(e,t){document.title=t[0].title;let p="",r="";t[0].imgUrl.forEach(()=>{r+=`<div class="swiper-slide">
+import{a as g,g as e,u as d,f as b}from"./main-BPgowrMU.js";import{c as n,a as m,g as v}from"./product-cards-AWzqhq-0.js";import{s as f}from"./swiper-BDI-ONPN.js";import{u as w,a as h}from"./querry-parameter-8F5Ngxzv.js";import"./youtube-app-DMHovVLY.js";async function $(p,t,r){if(t)l(p,t),w(["product-art"],[t[0].art]);else{const s=h(["art"],["product-art"]),i=(await g(r,"products")).filter(a=>a.art===s.art);l(p,i)}}function l(p,t){document.title=t[0].title;let r="",s="";t[0].imgUrl.forEach(()=>{s+=`<div class="swiper-slide">
                    <picture class="product-page__block-img"><img class="product-page__img" src="" alt="product img" loading="lazy" width="553" height="571"/></picture>
-                </div>`}),p=` <div class="product-page__content" data-title="${t[0].title}" data-prises="${t[0].cationPrice?t[0].cationPrice:t[0].price} ">
+                </div>`}),r=` <div class="product-page__content" data-title="${t[0].title}" data-prises="${JSON.stringify([t[0].cationPrice?t[0].cationPrice:t[0].price])}" data-imgUrl=${JSON.stringify(t[0].imgUrl)}>
         <div class="product-page__swiper-block">
             <div class="base-product__search product-page__search-background">
                 <button class="circle-button product-page__circle-button" aria-label="product preview">
@@ -12,9 +12,9 @@ import{a as _,g as s,u,f as l}from"./main-t_-LtWPZ.js";import{g as n}from"./loca
             ${t[0].action||t[0].newProduct?`<div class ="base-product__flag product-page__flag ${t[0].action?"base-product__flag-discount":"base-product__flag-new"}">
                 <p class ="base-product__flag-text">${t[0].action?"АКЦИЯ":"НОВИНКА"}</p>
             </div>`:""}
-            <div class="swiper">
+            <div class="swiper product-page__swiper">
                 <div class="swiper-wrapper">
-                    ${r}
+                    ${s}
                 </div>
             </div>
             <div class="base-product__button-prev">
@@ -73,4 +73,4 @@ import{a as _,g as s,u,f as l}from"./main-t_-LtWPZ.js";import{g as n}from"./loca
                 <button class="green-button product-page__bottom-buy">Заказать</button>
             </div>
         </div>
-    </div>`,e.innerHTML=p;let o=s(".product-page__img","all");o.forEach((a,c)=>u(t[0].imgUrl[c],o[c]))}document.addEventListener("DOMContentLoaded",async function(){const e=l.getApp();u("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",s(".product-information__img"));const t=n();await m(s(".product-page__container"),t,e),d(s(".swiper"),s(".base-product__button-prev"),s(".base-product__button-next"),"auto",0)});
+    </div>`,p.innerHTML=r;const c=e(".product-page__content"),i=e(".product-page__circle-button"),a=e(".popup__cross");let o=!0;i.addEventListener("click",()=>{o=!0,n(e(".popup__content"),e(".popup__background-block"),o),m({title:c.getAttribute("data-title"),prices:JSON.parse(c.getAttribute("data-prises")),images:JSON.parse(c.getAttribute("data-imgUrl"))},{title:e(".popup__title"),prices:e(".popup__price"),slideWrapper:e(".popup__swiper-wrapper"),popup:e(".popup__content"),popupBlock:e(".popup__background-block")})}),a.addEventListener("click",()=>{o=!1,n(e(".popup__content"),e(".popup__background-block"),o)});const u=e(".product-page__img","all");u.forEach((k,_)=>d(t[0].imgUrl[_],u[_]))}document.addEventListener("DOMContentLoaded",async function(){const p=b.getApp();d("gs://nuts-17b69.appspot.com/main_page/main_page-benefit_1.webp",e(".product-information__img"));const t=v();await $(e(".product-page__container"),t,p),f(e(".product-page__swiper"),e(".base-product__button-prev"),e(".base-product__button-next"),"auto",0)});
