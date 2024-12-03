@@ -7,15 +7,24 @@
             name="description"
             content="Learn about our company, view our products, the latest news and important information on our home page"
         />
-        <link rel="icon" type="image/svg+xml" href="src/assets/img/logo-1.svg" />
-        <link rel="stylesheet" href="src/scss/main.scss" />
-        <link rel="modulepreload" href="/src/js/main.js" />
-        <link rel="modulepreload" href="/src/js/main-page.js" />
-        <link rel="preload" href="/src/assets/forms/Raleway-ExtraBold.woff" as="font" type="font/woff" crossorigin />
-        <link rel="preload" href="/src/assets/forms/Raleway-Medium.woff" as="font" type="font/woff" crossorigin />
-        <link rel="preload" href="/src/assets/forms/Raleway-SemiBold.woff" as="font" type="font/woff" crossorigin />
-        <link rel="preload" href="/src/assets/forms/Raleway-Bold.woff" as="font" type="font/woff" crossorigin />
         <title>ОРЕХ ПРИЧЕРНОМОРЬЯ</title>
+        <link rel="icon" type="image/svg+xml" href="src/assets/img/logo-1.svg" />
+
+        <link rel="stylesheet" href="src/scss/main.scss" />
+        <noscript>
+            <link rel="modulepreload" href="/src/js/main-page.js" />
+            <link rel="modulepreload" href="/src/js/main.js" />
+        </noscript>
+        <script type="application/javascript">
+            // Загрузить содержимое <noscript class="loadLater"></noscript>  после загрузки страницы
+            document.addEventListener("DOMContentLoaded", function (event) {
+                let loadLater = document.querySelector(".loadLater");
+                let head = document.querySelector("head");
+                if (loadLater && head) {
+                    head.insertAdjacentHTML("beforeend", loadLater.innerHTML);
+                }
+            });
+        </script>
     </head>
     <body>
         <div class="wrapper">
