@@ -11,15 +11,12 @@
     </div>
     <div class="main-page__container {=$main-goal-text-block-class}">
         <h2 class="main-page__title {=$main-goal-title-class}">{=$main-goal-title}</h2>
-        <div class="main-page__play-block {=$main-goal-play-class}">
-            <load
-                src="src/components/base/button.html"
-                class_button="play-button main-page__play"
-                component_class=""
-                aria-label="play-video"
-                button_text="<svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg>"
-            />
-        </div>
+        <button
+            class="play-button main-page__play main-page__play-block {=$main-goal-play-class}"
+            aria-label="play-video"
+        >
+            <svg class="play-button-svg main-page__play-svg"><use href="#play"></use></svg>
+        </button>
         <p class="main-page__text {=$main-goal-text-class}">{=$main-goal-text}</p>
     </div>
 </section>

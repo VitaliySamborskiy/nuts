@@ -6,19 +6,17 @@
             alt="main-page-img"
             width="{=$main-page-width}"
             height="{=$main-page-height}"
+            loading="eager"
         />
     </div>
     <div class="main-page__container {=$main-page-text-block-class}">
         <h2 class="main-page__title {=$main-page-title-class}">{=$main-page-title}</h2>
         <p class="main-page__text {=$main-page-text-class}">{=$main-page-text}</p>
-        <div class="main-page__play-block {=$main-page-play-class}">
-            <load
-                src="src/components/base/button.html"
-                class_button="play-button main-page__play"
-                component_class=""
-                aria-label="play-video"
-                button_text="<svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg>"
-            />
-        </div>
+        <button
+            class="play-button main-page__play main-page__play-block {=$main-page-play-class}"
+            aria-label="play-video"
+        >
+            <svg class="play-button-svg main-page__play-svg"><use href="#play"></use></svg>
+        </button>
     </div>
 </section>

@@ -38,16 +38,12 @@ export function useRenderCards(arrData, element) {
                         ${img}
                         </div>
                     </div>
-                    <div class="base-product__button-prev">
-                        <svg class="base-product__svg-arrow">
+                        <svg class="base-product__button-prev base-product__svg-arrow">
                             <use href="#arrow"></use>
                         </svg>
-                    </div>
-                    <div class="base-product__button-next">
-                        <svg class="base-product__svg-arrow">
+                        <svg class="base-product__button-next base-product__svg-arrow">
                             <use href="#arrow"></use>
                         </svg>
-                    </div>
                 </div>
                 <div class="product__card-text-block">
                     <h3 class="product__card-type">${data.nutsType}</h3>
@@ -86,9 +82,7 @@ export function useRenderCards(arrData, element) {
                             ${data.price}<span>грн.</span></p>`
                             }
                         </div>
-                        <button class="green-button base-product__bottom-buy">
-                            <span>Купить</span>
-                        </button>
+                        <button class="green-button base-product__bottom-buy">Купить</button>
                     </div>
                 </div>
             </a>`;
