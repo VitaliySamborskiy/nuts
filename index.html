@@ -15,9 +15,9 @@
         <link rel="preload" href="/nuts/assets/Raleway-SemiBold-0CVifwtp.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="/nuts/assets/Raleway-Bold-zTm0vDbl.woff" as="font" type="font/woff" crossorigin />
         <title>ОРЕХ ПРИЧЕРНОМОРЬЯ</title>
-      <script type="module" crossorigin src="/nuts/assets/main-evi_vJnM.js"></script>
+      <script type="module" crossorigin src="/nuts/assets/main-B_3zuuUp.js"></script>
       <link rel="modulepreload" crossorigin href="/nuts/assets/main-BPgowrMU.js">
-      <link rel="modulepreload" crossorigin href="/nuts/assets/use-render-cards-DEUSj07m.js">
+      <link rel="modulepreload" crossorigin href="/nuts/assets/use-render-cards-GKFLLBP3.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/youtube-app-DMHovVLY.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/swiper-BDI-ONPN.js">
       <link rel="modulepreload" crossorigin href="/nuts/assets/news-render-cards-BogV68yh.js">
@@ -56,9 +56,7 @@
                                 <use href="#phone"></use></svg
                             ><span class="header__center-green">+38 (044)</span> 750-50-11</a
                         >
-                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">
-    <span class="">Заказать звонок</span>
-</button>
+                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">Заказать звонок</button>
 
                         <p class="header__top-personal">Ваша персональная скидка - 5%</p>
                         <div class="header__top-authentication header__top-authentication-user">
@@ -202,9 +200,7 @@
                         </div>
                     </div>
                     <div class="header__center-order">
-                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">
-    <span class="nvcn">Заказать звонок</span>
-</button>
+                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">Заказать звонок</button>
 
                         <p class="header__center-text">Ждем Вашего звонка ежедневно с 9 до 18</p>
                     </div>
@@ -245,18 +241,19 @@
             alt="main-page-img"
             width="2038"
             height="600"
+            loading="eager"
         />
     </div>
     <div class="main-page__container homepage__text-block">
         <h2 class="main-page__title homepage__title">Орех Причерноморья</h2>
         <p class="main-page__text homepage__text">Единственный в Украине сад совместного
                     выращивание фундука и грецкого ореха</p>
-        <div class="main-page__play-block homepage__margin-play">
-            <button class="play-button main-page__play" aria-label="play-video">
-    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
-</button>
-
-        </div>
+        <button
+            class="play-button main-page__play main-page__play-block homepage__margin-play"
+            aria-label="play-video"
+        >
+            <svg class="play-button-svg main-page__play-svg"><use href="#play"></use></svg>
+        </button>
     </div>
 </section>
 
@@ -299,28 +296,20 @@
             <div class="product-filter__cost-block">
                 <p class="product-filter__cost-text">Стоимость</p>
                 <div class="product-filter__cost-arrows">
-                    <button class="product-filter__cost-button product-filter__higher-price" aria-label="sort prices from the most expensive to the least expensive products">
-    <span class=""><svg class='product-filter__cost-svg-top'>
-                <use href='#arrow'></use></svg></span>
-</button>
+                    <button class="product-filter__cost-button product-filter__higher-price" aria-label="sort prices from the most expensive to the least expensive products"><svg class='product-filter__cost-svg-top'>
+                <use href='#arrow'></use></svg></button>
 
-                    <button class="product-filter__cost-button product-filter__lower-price" aria-label="sort prices from the cheapest to the most expensive products">
-    <span class=""><svg class='product-filter__cost-svg-bottom'>
-                    <use href='#arrow'></use></svg></span>
-</button>
+                    <button class="product-filter__cost-button product-filter__lower-price" aria-label="sort prices from the cheapest to the most expensive products"><svg class='product-filter__cost-svg-bottom'>
+                    <use href='#arrow'></use></svg></button>
 
                 </div>
             </div>
         </div>
         <div class="product-filter__end-buttons">
-            <button class="green-button product-filter__apply-button" aria-label="{=$aria-label}">
-    <span class="">Применить</span>
-</button>
+            <button class="green-button product-filter__apply-button" aria-label="{=$aria-label}">Применить</button>
 
-            <button class="product-filter__cross-button" aria-label="{=$aria-label}">
-    <span class=""><svg class='product-filter__cross-svg'>
-                    <use href='#cross'></use></svg> Сбросить</span>
-</button>
+            <button class="product-filter__cross-button" aria-label="{=$aria-label}"><svg class='product-filter__cross-svg'>
+                    <use href='#cross'></use></svg> Сбросить</button>
 
         </div>
     </div>
@@ -328,9 +317,7 @@
     <a href="/nuts/src/pages/catalog-products.html" class="transparent-button product__button {=$product-link-class}"
         >Перейти в магазин</a
     >
-    <button class="transparent-button hidden" aria-label="{=$aria-label}">
-    <span class="">Загрузить еще</span>
-</button>
+    <button class="transparent-button hidden" aria-label="{=$aria-label}">Загрузить еще</button>
 
 </section>
 
@@ -384,9 +371,7 @@
                     Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и
                     непривитого грецкого ореха, фундука и шиповника.
                 </p>
-                <button class="transparent-button manufacturing__text-button" aria-label="{=$aria-label}">
-    <span class="{=$class_button_text}">Подробнее</span>
-</button>
+                <button class="transparent-button manufacturing__text-button" aria-label="{=$aria-label}">Подробнее</button>
 
             </div>
             <div class="manufacturing__swiper">
@@ -403,9 +388,7 @@
                                         height="472"
                                         loading="lazy"
                                     />
-                                    <button class="play-button manufacturing__play" aria-label="play-video">
-    <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
-</button>
+                                    <button class="play-button manufacturing__play" aria-label="play-video"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></button>
 
                                 </div>
                                 <div class="manufacturing__player"></div>
@@ -422,9 +405,7 @@
                                         height="472"
                                         loading="lazy"
                                     />
-                                    <button class="play-button manufacturing__play" aria-label="play-video">
-    <span class="{=$class_button_text}"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></span>
-</button>
+                                    <button class="play-button manufacturing__play" aria-label="play-video"><svg class='play-button-svg manufacturing__play-svg'><use href=#play></use></svg></button>
 
                                 </div>
                                 <div class="manufacturing__player"></div>
@@ -495,12 +476,12 @@
     </div>
     <div class="main-page__container main-goal__block">
         <h2 class="main-page__title main-goal__title">Наша главная цель - получить максимальную прибыль с одного гектара</h2>
-        <div class="main-page__play-block main-goal__button">
-            <button class="play-button main-page__play" aria-label="play-video">
-    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
-</button>
-
-        </div>
+        <button
+            class="play-button main-page__play main-page__play-block main-goal__button"
+            aria-label="play-video"
+        >
+            <svg class="play-button-svg main-page__play-svg"><use href="#play"></use></svg>
+        </button>
         <p class="main-page__text main-goal__text">Cмотреть видео о производстве</p>
     </div>
 </section>

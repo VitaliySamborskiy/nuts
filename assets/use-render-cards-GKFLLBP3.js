@@ -14,16 +14,12 @@ import{u as _}from"./main-BPgowrMU.js";function g(r,s){let a=document.createDocu
                         ${d}
                         </div>
                     </div>
-                    <div class="base-product__button-prev">
-                        <svg class="base-product__svg-arrow">
+                        <svg class="base-product__button-prev base-product__svg-arrow">
                             <use href="#arrow"></use>
                         </svg>
-                    </div>
-                    <div class="base-product__button-next">
-                        <svg class="base-product__svg-arrow">
+                        <svg class="base-product__button-next base-product__svg-arrow">
                             <use href="#arrow"></use>
                         </svg>
-                    </div>
                 </div>
                 <div class="product__card-text-block">
                     <h3 class="product__card-type">${t.nutsType}</h3>
@@ -58,9 +54,7 @@ import{u as _}from"./main-BPgowrMU.js";function g(r,s){let a=document.createDocu
                             ${t.price}<span>грн.</span></p>`:`<p class="base-product__bottom-price-regular base-product__bottom-price-green">
                             ${t.price}<span>грн.</span></p>`}
                         </div>
-                        <button class="green-button base-product__bottom-buy">
-                            <span>Купить</span>
-                        </button>
+                        <button class="green-button base-product__bottom-buy">Купить</button>
                     </div>
                 </div>
             </a>`;const e=document.createElement("div");e.classList.add("product__card"),e.setAttribute("data-arc",t.art),e.setAttribute("data-weight",t.weight),e.setAttribute("data-taste",t.taste),e.setAttribute("data-price",t.cationPrice?t.cationPrice:t.price),e.setAttribute("data-imgUrl",JSON.stringify(t.imgUrl)),e.setAttribute("data-title",t.title),e.setAttribute("data-prises",JSON.stringify([t.price,t.cationPrice])),e.innerHTML=i,c.push({swiper:e.querySelector(".swiper"),next:e.querySelector(".base-product__button-next"),prev:e.querySelector(".base-product__button-prev")});for(let p=0;p<t.imgUrl.length;++p){const o=e.querySelectorAll(".product__slide");let u=0;o.forEach(l=>{_(t.imgUrl[u++],l)})}a.append(e)}return s.append(a),c}export{g as u};

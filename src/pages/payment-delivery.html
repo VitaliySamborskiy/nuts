@@ -48,9 +48,7 @@
                                 <use href="#phone"></use></svg
                             ><span class="header__center-green">+38 (044)</span> 750-50-11</a
                         >
-                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">
-    <span class="">Заказать звонок</span>
-</button>
+                        <button class="header__top-mobile-order" aria-label="{=$aria-label}">Заказать звонок</button>
 
                         <p class="header__top-personal">Ваша персональная скидка - 5%</p>
                         <div class="header__top-authentication header__top-authentication-user">
@@ -194,9 +192,7 @@
                         </div>
                     </div>
                     <div class="header__center-order">
-                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">
-    <span class="nvcn">Заказать звонок</span>
-</button>
+                        <button class="green-button header__center-button-order" aria-label="{=$aria-label}">Заказать звонок</button>
 
                         <p class="header__center-text">Ждем Вашего звонка ежедневно с 9 до 18</p>
                     </div>
@@ -237,17 +233,18 @@
             alt="main-page-img"
             width="1920"
             height="300"
+            loading="eager"
         />
     </div>
     <div class="main-page__container payment-delivery__text-block">
         <h2 class="main-page__title payment-delivery__title">Оплата и доставка</h2>
         <p class="main-page__text hidden">{=$main-page-text}</p>
-        <div class="main-page__play-block hidden">
-            <button class="play-button main-page__play" aria-label="play-video">
-    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
-</button>
-
-        </div>
+        <button
+            class="play-button main-page__play main-page__play-block hidden"
+            aria-label="play-video"
+        >
+            <svg class="play-button-svg main-page__play-svg"><use href="#play"></use></svg>
+        </button>
     </div>
 </section>
 
@@ -501,12 +498,12 @@
     </div>
     <div class="main-page__container main-goal__block">
         <h2 class="main-page__title main-goal__title">Наша главная цель - получить максимальную прибыль с одного гектара</h2>
-        <div class="main-page__play-block main-goal__button">
-            <button class="play-button main-page__play" aria-label="play-video">
-    <span class="{=$class_button_text}"><svg class='play-button-svg main-page__play-svg'><use href=#play></use></svg></span>
-</button>
-
-        </div>
+        <button
+            class="play-button main-page__play main-page__play-block main-goal__button"
+            aria-label="play-video"
+        >
+            <svg class="play-button-svg main-page__play-svg"><use href="#play"></use></svg>
+        </button>
         <p class="main-page__text main-goal__text">Cмотреть видео о производстве</p>
     </div>
 </section>
