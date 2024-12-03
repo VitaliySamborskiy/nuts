@@ -22,5 +22,22 @@ export default defineConfig({
                 productPage: resolve(__dirname, "src/pages/product-page.html"),
             },
         },
+        minify: "terser",
+        terserOptions: {
+            compress: {
+                drop_console: true,
+                sequences: true,
+                conditionals: true,
+                booleans: true,
+                unused: true,
+                dead_code: true,
+                collapse_vars: true,
+                reduce_vars: true,
+                inline: true,
+            },
+            format: {
+                comments: false,
+            },
+        },
     },
 });
