@@ -6,61 +6,61 @@ $productFonts: "Lato";
     font-display: swap;
     font-family: $mainFont;
     font-weight: 800;
-    src: url("/src/assets/forms/Raleway-ExtraBold.woff") format("woff");
+    src: url("/src/assets/forms/Raleway-ExtraBold.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $mainFont;
     font-weight: 700;
-    src: url("/src/assets/forms/Raleway-Bold.woff") format("woff");
+    src: url("/src/assets/forms/Raleway-Bold.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $mainFont;
     font-weight: 600;
-    src: url("/src/assets/forms/Raleway-SemiBold.woff") format("woff");
+    src: url("/src/assets/forms/Raleway-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $mainFont;
     font-weight: 500;
-    src: url("/src/assets/forms/Raleway-Medium.woff") format("woff");
+    src: url("/src/assets/forms/Raleway-Medium.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $supportFonts;
     font-weight: 800;
-    src: url("/src/assets/forms/Montserrat-ExtraBold.woff") format("woff");
+    src: url("/src/assets/forms/montserrat-v29-latin-800.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $supportFonts;
     font-weight: 700;
-    src: url("/src/assets/forms/Montserrat-Bold.woff") format("woff");
+    src: url("/src/assets/forms/montserrat-v29-latin-700.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $supportFonts;
     font-weight: 600;
-    src: url("/src/assets/forms/Montserrat-SemiBold.woff") format("woff");
+    src: url("/src/assets/forms/montserrat-v29-latin-600.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $supportFonts;
     font-weight: 500;
-    src: url("/src/assets/forms/Montserrat-Medium.woff") format("woff");
+    src: url("/src/assets/forms/montserrat-v29-latin-500.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
     font-family: $productFonts;
     font-weight: 500;
-    src: url("/src/assets/forms/Lato-Medium.woff") format("woff");
+    src: url("/src/assets/forms/lato-v24-latin-regular.woff2") format("woff2");
 }

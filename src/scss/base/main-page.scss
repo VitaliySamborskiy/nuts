@@ -5,10 +5,7 @@
     &__img-block {
         display: flex;
         position: relative;
-        top: 0;
-        left: 0;
         width: 100%;
-        overflow: hidden;
 
         &:after {
             position: absolute;
@@ -16,14 +13,11 @@
             width: 100%;
             height: 100%;
             background: $mainPageImgBlur;
-            z-index: 1;
         }
     }
 
     &__img {
-        height: 100%;
         object-fit: cover;
-        z-index: -2;
     }
 
     &__container {
@@ -31,7 +25,6 @@
         flex-direction: column;
         gap: 30px;
         position: absolute;
-        z-index: 1;
     }
 
     &__title {
@@ -39,7 +32,6 @@
         color: $backgroundColor;
         font-weight: 800;
         font-size: 62px;
-        letter-spacing: 0.01em;
     }
 
     &__text {
