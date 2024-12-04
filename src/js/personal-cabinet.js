@@ -9,8 +9,6 @@ import { fireBaseService } from "./base/services/fire-base-service.js";
 document.addEventListener("DOMContentLoaded", async function () {
     const app = fireBaseService.getApp();
 
-    useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".personal-cabinet__img"));
-
     setTimeout(() => {
         let userData = userService.getUser();
 
@@ -20,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             app,
             getElement(".personal-cabinet__block-list"),
         );
-    }, 600);
+    }, 550);
 
     useMenuPopup(
         getElement(".personal-cabinet__button"),
@@ -30,5 +28,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     );
 
     useInputClear(getElement(".input__area", "all"));
-    buttonChange(getElement(".personal-cabinet__link", "all"));
+    try {
+        useGetImg("gs://nuts-17b69.appspot.com/avatar.webp", getElement(".personal-cabinet__img"));
+    } catch (error) {
+        console.log(error);
+    }
 });
